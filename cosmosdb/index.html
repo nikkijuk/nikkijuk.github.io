@@ -38,9 +38,9 @@
 						- Interface definition language with yaml
 						- Generators for common technologies
 						- "kotlin-spring" for spring boot projects
-						- Generates models and api base classes (stubs)
-						- Base classes are extended with inheritance
-						- Model classes are extended with extension methods
+						- Generates models and interfaces for controllers
+						- Interfaces are annotated with jax-rs annotations
+						- Models are data classes
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -51,6 +51,20 @@
 				<section data-markdown>
 					<textarea data-template>
 						![generated artifacts](images/open_api_generated_artifacts.png)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![generated artifacts](images/openapi_generated_user.png)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Application logic is simple
+						- Interfaces contain all needed annotations
+						- Interfaces are extended with inheritance
+						- Model classes are used to serialize/deserialize data
+						- Model classes are extended with extension methods
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -80,7 +94,7 @@
 						### Object Databases
 						.. were good idea - but relational databases won
 						## Not Only Sql Databases
-						Try to save us from Object/Relational Mapping
+						try to save us from Object/Relational Mapping
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -137,7 +151,12 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-            And here we see again how repository is used
+						## Repository usage
+						- just inject it in constructor
+						- use extension method .toEntity () on model
+						- use repository for storage operations
+						- use extension method .toApi () on entity
+						- return result
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -159,7 +178,7 @@
 						## Open issues
 						- sweet spot needs to be found (know when to use)
 						- possibly not useful for high-write data (costs)
-						- migrations might be hard (need programming)
+						- schema migrations might be hard (need programming)
 						- runs on azure, but still needs expertise (proprietary)
 						- multitenancy needs to be tested
 					</textarea>
