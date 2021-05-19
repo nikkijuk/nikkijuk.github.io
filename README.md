@@ -4,16 +4,10 @@ Here will come some presentations with time
 
 ## Scrum patterns
 
-slides
-
-https://nikkijuk.github.io/scrumpatterns/
+[slides](https://nikkijuk.github.io/scrumpatterns/)
 
 ## Cosmos db experiment
 
-slides
+[slides](https://nikkijuk.github.io/cosmosdb/)
 
-https://nikkijuk.github.io/cosmosdb/
-
-code
-
-https://github.com/nikkijuk/cosmosdb-springboot-kotlin-sample
+[code](https://github.com/nikkijuk/cosmosdb-springboot-kotlin-sample)
