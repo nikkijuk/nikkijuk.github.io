@@ -2,6 +2,12 @@
 
 Here will come some presentations with time
 
+## Scrum patterns
+
+slides
+
+https://nikkijuk.github.io/scrumpatterns/
+
 ## Cosmos db experiment
 
 slides
