@@ -39,6 +39,8 @@
 				- concise?, or expressive?
 				-	right defaults?, or safer?
 				- rich programming models?
+				- extensible? fluent?
+				- Developer experience?
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -55,6 +57,20 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
+				"Kotlin improves the signal-to-noise ratio compared to Java. It’s super important to express our ideas and algorithms with something that is easier to understand."
+
+				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+				"Kotlin is a great choice to serve as a host language for internal DSLs. The creators of Kotlin designed wonderful features from many different languages into Kotlin. It’s concise, fluent, lightweight, has low ceremony, and the list goes on. Many of these traits directly impact fluency."
+
+				[Venkat Subramaniam, "Programming DSLs in Kotlin"](https://pragprog.com/titles/vsdsl/programming-dsls-in-kotlin/)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
 						## Safety
 					</textarea>
 				</section>
@@ -66,6 +82,13 @@
 
 						[Tony Hoare](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
 
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						"Kotlin has turned Java’s one-billion–dollar mistake into a powerful feature that has allowed it to deal with the absence of value. The trick is to deal with “null” in the type system. Java is not doing that and it makes a lot of difference."
+
+						[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -86,6 +109,13 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
+					"Kotlin has no primitives, at least not at the programmer level. Instead, it uses Java primitives under the hood to make computation faster. But you, as the programmer, will only be manipulating objects. The object class for integers is different than the object representation of integers in Java. Instead of Integer, you’ll use the Int class."
+
+					[Pierre-Yves Saumont, "The Joy of Kotlin"](https://www.manning.com/books/the-joy-of-kotlin)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
 				"Int is said to be a non-nullable type, whereas Int? is a nullable type. Kotlin uses this mechanism for all types, which exist in two versions: nullable (postfixed with a ?) and non-nullable. The most interesting part of the story is that any non-nullable type is a child type of the corresponding nullable type"
 
 				[Pierre-Yves Saumont, "The Joy of Kotlin"](https://www.manning.com/books/the-joy-of-kotlin)
@@ -102,13 +132,6 @@
 
 							val x: Int? = 3
 							val y: Int = x
-
-					[Pierre-Yves Saumont, "The Joy of Kotlin"](https://www.manning.com/books/the-joy-of-kotlin)
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-					"Kotlin has no primitives, at least not at the programmer level. Instead, it uses Java primitives under the hood to make computation faster. But you, as the programmer, will only be manipulating objects. The object class for integers is different than the object representation of integers in Java. Instead of Integer, you’ll use the Int class."
 
 					[Pierre-Yves Saumont, "The Joy of Kotlin"](https://www.manning.com/books/the-joy-of-kotlin)
 					</textarea>
@@ -166,6 +189,32 @@
 				"Some languages tell you how you should write code. Kotlin isn’t one of those. With Kotlin, you decide which paradigm works best for the application at hand. "
 
 				[Venkat Subramaniam, "Programming Kotlin"](https://pragprog.com/titles/vskotlin/programming-kotlin/)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+				"Coroutines are lightweight threads; you can create hundreds of thousands of them, whereas you cannot create that many threads. They provide you with building blocks that allow better scalability and allow new constructs, especially if you deal with asynchronous calls and applications with a lot of I/O, which is typically the case on the server side."
+
+				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
+					</textarea>
+				<section data-markdown>
+					<textarea data-template>
+				"Coroutines are now the default way to go Reactive in Kotlin. (..) When you select Kotlin and one of the Reactive dependencies on start.spring.io, the Coroutines dependency will be automatically added."
+
+				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
+					</textarea>
+				</section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+				"Pleasure is important as well! We mostly use Kotlin for work, but since we spend so much time doing it, I think it’s really important for it to be a pleasurable experience. And I enjoy using Kotlin much more than Java."
+
+				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Dsl's
 					</textarea>
 				</section>
 			</div>
