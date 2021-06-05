@@ -221,7 +221,6 @@
 				"One of Kotlin’s most popular features is its support for coroutines, which allow developers to write concurrent code as though it was synchronous. That support makes it much easier to write concurrent code that employs coroutines than using other techniques, like callback methods or reactive streams."
 
 				[Ken Kousen, "Kotlin Cookbook"](https://www.oreilly.com/library/view/kotlin-cookbook/9781492046660/)
-
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -238,7 +237,21 @@
 				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
 					</textarea>
 				</section>
+				<section data-markdown>
+					<textarea data-template>
+					"The convention of running all coroutines inside coroutineScope to ensure that if one fails, all will be cancelled, is known as structured concurrency."
+
+						  suspend fun main() = coroutineScope {
+						    for (i in 0 until 10) {
+						      launch {
+						        delay(1000L - i * 10)
+						        print("❤️$i ")
+							}}}
+
+					[Ken Kousen, "Kotlin Cookbook"](https://www.oreilly.com/library/view/kotlin-cookbook/9781492046660/)
+					</textarea>
 				</section>
+
 				<section data-markdown>
 					<textarea data-template>
 						## DX
