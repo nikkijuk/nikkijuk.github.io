@@ -92,16 +92,14 @@
 					<textarea data-template>
 						"And then I went and invented the null pointer. You either have to check every reference, or you risk disaster"
 
-						"what would be a significant improvement would be to make all variables not-null by default. Then, when a programmer decides that they want to use a null reference, they can opt-in to using a nullable type as opposed to opting-out of nullable types in cases where they either do not need or want nullable types."
-
-						[Tony Hoare, "I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement."](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
+						[Tony Hoare](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						"Kotlin has turned Java’s one-billion–dollar mistake into a powerful feature that has allowed it to deal with the absence of value. The trick is to deal with “null” in the type system. Java is not doing that and it makes a lot of difference."
+						"what would be a significant improvement would be to make all variables not-null by default. Then, when a programmer decides that they want to use a null reference, they can opt-in to using a nullable type as opposed to opting-out of nullable types in cases where they either do not need or want nullable types."
 
-						[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
+						[Tony Hoare](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -119,6 +117,12 @@
 						https://en.wikipedia.org/wiki/Void_safety
 					</textarea>
 				</section>
+				<section data-markdown>
+					<textarea data-template>
+						"Kotlin has turned Java’s one-billion–dollar mistake into a powerful feature that has allowed it to deal with the absence of value. The trick is to deal with “null” in the type system. Java is not doing that and it makes a lot of difference."
+
+						[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
+					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
@@ -225,13 +229,6 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-				"Coroutines are now the default way to go Reactive in Kotlin. (..) When you select Kotlin and one of the Reactive dependencies on start.spring.io, the Coroutines dependency will be automatically added."
-
-				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
 				"Coroutines are lightweight threads; you can create hundreds of thousands of them, whereas you cannot create that many threads. They provide you with building blocks that allow better scalability and allow new constructs, especially if you deal with asynchronous calls and applications with a lot of I/O, which is typically the case on the server side."
 
 				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
@@ -239,7 +236,14 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-					"The convention of running all coroutines inside coroutineScope to ensure that if one fails, all will be cancelled, is known as structured concurrency."
+				"Coroutines are now the default way to go Reactive in Kotlin. (..) When you select Kotlin and one of the Reactive dependencies on start.spring.io, the Coroutines dependency will be automatically added."
+
+				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+					### Easier, not easy, concurrency
 
 						  suspend fun main() = coroutineScope {
 						    for (i in 0 until 10) {
@@ -247,6 +251,8 @@
 						        delay(1000L - i * 10)
 						        print("❤️$i ")
 							}}}
+
+					"The convention of running all coroutines inside coroutineScope to ensure that if one fails, all will be cancelled, is known as structured concurrency."
 
 					[Ken Kousen, "Kotlin Cookbook"](https://www.oreilly.com/library/view/kotlin-cookbook/9781492046660/)
 					</textarea>
