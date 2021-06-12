@@ -1,6 +1,10 @@
 # Experiments worth sharing
 
-Here will come some presentations with time
+Very opinionated slidesets and presentation. 
+
+## Why Kotlin?
+
+[slides](https://nikkijuk.github.io/whykotlin/)
 
 ## Scrum patterns
 
