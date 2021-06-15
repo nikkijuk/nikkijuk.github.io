@@ -209,9 +209,32 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-				"Good programmers worry about data structures and their relationships." – Linus Torvalds
+				"Although the mechanisms provided by object-oriented programming can assist in implementing clean designs, they do not, by themselves, guarantee good design."
 
-				"The object-oriented model makes it easy to build up programs by accretion. What this often means, in practice, is that it provides a structured way to write spaghetti code." - Paul Graham
+				[John Ousterhout, A Philosophy of Software Design]()
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+
+					"Both inheritance and delegation, which are distinctive design tools in OO programming, promote reuse by way of extending one class from another."
+
+					[Venkat Subramaniam, "Programming Kotlin"](https://pragprog.com/titles/vskotlin/programming-kotlin/)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+
+				"Instead of extending an existing class, give your new class a private field that references an instance of the existing class. This design is called composition because the existing class becomes a component of the new one. Each instance method in the new class invokes the corresponding method on the contained instance of the existing class and returns the results. This is known as forwarding, and the methods in the new class are known as forwarding methods."
+
+				[Joshua Bloch, Effective Java, 3rd ed.]()
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+				"We often shy away from delegation since it takes more effort to implement than inheritance. Kotlin supports both inheritance and delegation, so we can freely choose between them based on the problem at hand."
+
+				[Venkat Subramaniam, "Programming Kotlin"](https://pragprog.com/titles/vskotlin/programming-kotlin/)
 					</textarea>
 				</section>
 				<section data-markdown>
