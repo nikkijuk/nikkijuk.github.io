@@ -209,6 +209,13 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
+				"Good programmers worry about data structures and their relationships." – Linus Torvalds
+
+				"The object-oriented model makes it easy to build up programs by accretion. What this often means, in practice, is that it provides a structured way to write spaghetti code." - Paul Graham
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
 				"The term functional programming refers to a style of coding that favors immutability, is easy to make concurrent when using pure functions, uses transformations over looping, and uses filters over conditional statements."
 
 				[Ken Kousen, "Kotlin Cookbook"](https://www.oreilly.com/library/view/kotlin-cookbook/9781492046660/)
@@ -304,10 +311,18 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-					### Example: If Null Execute Statement
+					### Idioms, Example
 
+						  // If Null Execute Statement
 							val values = ...
-							val email = values["email"] ?: throw IllegalStateException("Email is missing!")
+							val email = values["email"]
+						      ?: throw IllegalStateException("Email is missing!")
+
+						  // standard delegates, lazy
+							val p: String by lazy { "compute the string" }
+
+						  // extension functions
+						  fun String.spaceToCamelCase() { ... }
 
 					[Kotlin idioms](https://kotlinlang.org/docs/idioms.html)
 					</textarea>
