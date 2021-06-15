@@ -20,7 +20,7 @@
 					<textarea data-template>
 				### Why kotlin?
 
-				"Programs must be written for people to read, and only incidentally for machines to execute." —Harold Abelson, Structure and Interpretation of Computer Programs
+				"Programs must be written for people to read, and only incidentally for machines to execute." —Harold Abelson
 
 				Jukka Nikki, Java Programmer
 
@@ -45,6 +45,22 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
+				## Motivation
+				- higher level languages have low accidental complexity
+				-	high essential complexity makes software development hard
+				- reducing accidental complexity still matters
+				- making it easier to work with essential complexity is crucial
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![essential complexity](images/no_silver_bullet_essential_complexity.png)
+
+						[Fred Brooks, No Silver Bullet](https://en.wikipedia.org/wiki/No_Silver_Bullet)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
 						## Clarity
 					</textarea>
 				</section>
@@ -64,16 +80,9 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-				"Kotlin is a great choice to serve as a host language for internal DSLs. The creators of Kotlin designed wonderful features from many different languages into Kotlin. It’s concise, fluent, lightweight, has low ceremony, and the list goes on. Many of these traits directly impact fluency."
+				"DSLs can enjoy fluency when hosted on top of Kotlin. Kotlin is a language of low ceremony. For example, it doesn’t insist on having ; at the end of each line. Functions that are marked infix can be called without a dot and parentheses. By using overloaded operators, where it makes sense, we can make the syntax of a DSL obvious."
 
 				[Venkat Subramaniam, "Programming DSLs in Kotlin"](https://pragprog.com/titles/vsdsl/programming-dsls-in-kotlin/)
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						![essential complexity](images/no_silver_bullet_essential_complexity.png)
-
-						[Fred Brooks, No Silver Bullet](https://en.wikipedia.org/wiki/No_Silver_Bullet)
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -98,6 +107,13 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
+				"if a programming language makes it easier to do the wrong thing than the right thing, then the wrong thing shall be done more often. "
+
+				[Nick Bensema, c2 wiki on "Programming Languages Shape Thoughts"](https://wiki.c2.com/?ProgrammingLanguagesShapeThoughts)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
 						"And then I went and invented the null pointer. You either have to check every reference, or you risk disaster"
 
 						[Tony Hoare](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
@@ -108,13 +124,6 @@
 						"what would be a significant improvement would be to make all variables not-null by default. Then, when a programmer decides that they want to use a null reference, they can opt-in to using a nullable type as opposed to opting-out of nullable types in cases where they either do not need or want nullable types."
 
 						[Tony Hoare](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-				"if a programming language makes it easier to do the wrong thing than the right thing, then the wrong thing shall be done more often. "
-
-				[Nick Bensema, c2 wiki on "Programming Languages Shape Thoughts"](https://wiki.c2.com/?ProgrammingLanguagesShapeThoughts)
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -137,6 +146,13 @@
 						"Kotlin has turned Java’s one-billion–dollar mistake into a powerful feature that has allowed it to deal with the absence of value. The trick is to deal with “null” in the type system. Java is not doing that and it makes a lot of difference."
 
 						[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						"Kotlin guesses the type by looking forward to the value used to initialize the field. (..) It’s generally wise, however, to specify the type. By doing so, you can check that the type inferred by Kotlin is the type you expect. Believe me, that won’t always be the case!"
+
+						[Pierre-Yves Saumont, "The Joy of Kotlin"](https://www.manning.com/books/the-joy-of-kotlin)
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -166,13 +182,6 @@
 							val y: Int = x
 
 					[Pierre-Yves Saumont, "The Joy of Kotlin"](https://www.manning.com/books/the-joy-of-kotlin)
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						"Kotlin guesses the type by looking forward to the value used to initialize the field. (..) It’s generally wise, however, to specify the type. By doing so, you can check that the type inferred by Kotlin is the type you expect. Believe me, that won’t always be the case!"
-
-						[Pierre-Yves Saumont, "The Joy of Kotlin"](https://www.manning.com/books/the-joy-of-kotlin)
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -325,27 +334,27 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						### Idiomatic, code
+					"There's nothing that says you have to use idiomatic structures like trailing lambdas or scope functions in your code. However, if you take the time to learn them, you'll often get a better understanding of what the language is particularly good at, and therefore write better code that takes advantage of what Kotlin can really do."
 
-						"An idiomatic way of writing some code is when you write it in a very specific way because of language-specific idioms that other languages don't have. (..) Often, someone trying a new language without using the idioms specific to this language will not write idiomatic code."
-
-						[What is idiomatic?](https://softwareengineering.stackexchange.com/questions/94563/what-is-idiomatic)
+					[Brett McLaughlin, Programming Kotlin Applications](https://www.wiley.com/en-us/Programming+Kotlin+Applications%3A+Building+Mobile+and+Server+Side+Applications+with+Kotlin-p-9781119696216)
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-					### Idioms, Example
+					### some simple idioms
 
 						  // If Null Execute Statement
-							val values = ...
-							val email = values["email"]
+						  val email = values["email"]
 						      ?: throw IllegalStateException("Email is missing!")
 
 						  // standard delegates, lazy
-							val p: String by lazy { "compute the string" }
+						  val p: String by lazy { "compute the string" }
 
-						  // extension functions
+						  // extension functions (compiles to static method)
 						  fun String.spaceToCamelCase() { ... }
+
+						  // return "default" if value or transform result is null
+						  val mapped = value?.let { transformValue(it) } ?: "default"
 
 					[Kotlin idioms](https://kotlinlang.org/docs/idioms.html)
 					</textarea>
@@ -364,18 +373,6 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-				"Pleasure is important as well! We mostly use Kotlin for work, but since we spend so much time doing it, I think it’s really important for it to be a pleasurable experience. And I enjoy using Kotlin much more than Java."
-
-				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Is it worth it?
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
 						"Does switching languages help? Maybe it's just enough for the programmers to learn other languages?"
 
 						[c2 wiki on "Programming Languages Shape Thoughts"](https://wiki.c2.com/?ProgrammingLanguagesShapeThoughts)
@@ -383,16 +380,23 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						![essence of software development](images/no_silver_bullet_essence_of_software_development.png)
+				"Pleasure is important as well! We mostly use Kotlin for work, but since we spend so much time doing it, I think it’s really important for it to be a pleasurable experience. And I enjoy using Kotlin much more than Java."
 
-						[Fred Brooks, No Silver Bullet](https://en.wikipedia.org/wiki/No_Silver_Bullet)
+				[Sebastian Deleuze, The State of Kotlin Support in Spring](https://blog.jetbrains.com/kotlin/2020/08/the-state-of-kotlin-support-in-spring/)
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						<img alt="weniger, .." src="images/weniger_schlecht_programmieren.jpeg" width="30%">
+						## Summary
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						"If this is true, building software will always be hard. There is inherently no silver bullett."
 
-						"If this is true, building software will always be hard. There is inherently no silver bullett." - Fred Brooks.
+						![essence of software development](images/no_silver_bullet_essence_of_software_development.png)
+
+						[Fred Brooks, No Silver Bullet](https://en.wikipedia.org/wiki/No_Silver_Bullet)
 					</textarea>
 				</section>
 			</div>
