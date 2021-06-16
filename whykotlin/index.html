@@ -150,6 +150,13 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
+				"Although Java does not allow one to express null-safety in its type system, Spring Framework, Spring Data, and Reactor now provide null-safety of their API via tooling-friendly annotations. By default, types from Java APIs used in Kotlin are recognized as platform types for which null-checks are relaxed. Kotlin’s support for JSR 305 annotations combined with nullability annotations provide null-safety for the related Spring API in Kotlin. The JSR 305 checks can be configured by adding the -Xjsr305 compiler flag"
+
+				[Spring Boot documentation](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/boot-features-kotlin.html)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
 						"Kotlin guesses the type by looking forward to the value used to initialize the field. (..) It’s generally wise, however, to specify the type. By doing so, you can check that the type inferred by Kotlin is the type you expect. Believe me, that won’t always be the case!"
 
 						[Pierre-Yves Saumont, "The Joy of Kotlin"](https://www.manning.com/books/the-joy-of-kotlin)
