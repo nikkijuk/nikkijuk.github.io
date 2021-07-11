@@ -2,6 +2,10 @@
 
 Very opinionated slidesets and presentation. 
 
+## Laws of Software Development?
+
+[slides](https://nikkijuk.github.io/softwarelaws/)
+
 ## Why Kotlin?
 
 [slides](https://nikkijuk.github.io/whykotlin/)
