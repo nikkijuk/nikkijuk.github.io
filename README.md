@@ -2,6 +2,10 @@
 
 Very opinionated slidesets and presentation. 
 
+## Becoming Software Developer
+
+[slides](https://nikkijuk.github.io/becomingdeveloper/)
+
 ## Laws of Software Development?
 
 [slides](https://nikkijuk.github.io/softwarelaws/)
