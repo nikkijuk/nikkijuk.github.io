@@ -6,9 +6,15 @@ Very opinionated slidesets and presentation.
 
 [slides](https://nikkijuk.github.io/becomingdeveloper/)
 
+or [Kevlin Henney's "It Depends."](https://www.youtube.com/watch?v=rNSVZs66o48)
+
+since it's not important how you learn to learn, but that you understand that it's process.
+
 ## Software Development Laws
 
 [slides](https://nikkijuk.github.io/softwarelaws/)
+
+or [[Kevlin Henney's "Old is New New"](https://www.youtube.com/watch?v=AbgsfeGvg3E)
 
 ## Why Kotlin?
 
