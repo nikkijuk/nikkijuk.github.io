@@ -14,7 +14,7 @@ since it's not important how you learn to learn, but that you understand that it
 
 [slides](https://nikkijuk.github.io/softwarelaws/)
 
-or [[Kevlin Henney's "Old is New New"](https://www.youtube.com/watch?v=AbgsfeGvg3E)
+or [Kevlin Henney's "Old is The New New"](https://www.youtube.com/watch?v=AbgsfeGvg3E)
 
 ## Why Kotlin?
 
