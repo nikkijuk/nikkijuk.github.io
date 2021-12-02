@@ -131,18 +131,6 @@
 						</textarea>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-				#### Oh my 400!
-
-				<img alt="call failure" src="images/microservices_client_service.jpg" width="40%">
-
-				- The request hasn’t reached the provider
-				- The request has reached the provider, but it blew up during processing
-				-	The provider processed the request, but the response was lost
-
-						</textarea>
-				</section>
 
 				<section data-markdown>
 					<textarea data-template>
@@ -162,9 +150,48 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### can't we fake it?
+				#### Oh my 400! What happened?
 
-				use http rpc aka "rest" and think all errors are alike
+				<img alt="call failure" src="images/microservices_client_service.jpg" width="40%">
+
+				- The request hasn’t reached the provider
+				- The request has reached the provider, but it blew up during processing
+				-	The provider processed the request, but the response was lost
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				##### [principles to follow](https://priyalwalpita.medium.com/coupling-and-cohesion-in-microservices-235ed9203843)
+
+				<img alt="microservices coupling and cohesion" src="images/microservices_coupling_cohesion.png" width="100%">
+
+				Single purpose, high cohesion, loose coupling?
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [distributed monolith - symptoms](https://www.simplethread.com/youre-not-actually-building-microservices/)
+
+				- A change to one microservice often requires changes to other microservices
+				- Deploying one microservice requires other microservices to be deployed at the same time
+				- Your microservices are overly chatty
+				- The same developers work across a large number of microservices
+				- Many of your microservices share a datastore
+				- Your microservices share a lot of the same code or models
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="distributed monolith" src="images/distributed_monolith_strip.jpeg" width="60%">
+
+				“worst of all worlds. You’ve taken the relative simplicity of a single monolithic codebase,
+				and you’ve traded it in for a deeply intertwined distributed system."	- Justin Etheredge
 
 						</textarea>
 				</section>
@@ -185,43 +212,47 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### what you might be missing
+				#### Without distribution (ACID, single db)
 
 				- strong consistency
-				- isolation
-				- commits & rollbacks
+				- isolation of operations
+				- atomic commits & rollbacks
+				- changes are durable
 				- referential integrity
-				- where clause
-				- ...
+				- joins between entities
+				- where clauses & subqueries
+				- single source of truth
+				- locking possible ...
 
 						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### what we need instead
+				#### With distribution (n services & data sources)
 
-        - stable api's
-				- idempotent operations
-				- stateless retries
-				- timeout handling
-				- referential integrity
-				- where clause
-				- ...
+				- consistent at the end of "distributed transaction"
+				- changes visible when "local transaction" commits
+				- need to use compensation instead of rollback
+				- errors might prevent part of state changes and result inconsistent state
+				- integrity checks need to be programmed
+				- no joins, wheres & subqueries without copies of data or queries to other servics
+				- copies of data need to be synced programmatically
+				- no locks ...
 
-						</textarea>
-				</section>
-
-
-				<section data-markdown>
-					<textarea data-template>
-				# Eventual consistency
 						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				# idempotency & compensation
+				#### failures & retries & idempotency & compensation
+
+				- any operation can fail or timeout
+				- operations should be idempotent to support retry
+				- if retry is not possible compensation might be needed to minimize harm
+				- compensation might not return data to original state
+
+
 						</textarea>
 				</section>
 
