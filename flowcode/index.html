@@ -31,6 +31,203 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				# Definition of program
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Program = Coordination + Computation
+
+				"We can build a complete programming model out of two separate pieces -
+				the computation model and the coordination model
+
+				The computation model allows programmers to build a single
+				computational activity: a single-threaded, step-at-a-time computation.
+
+				The coordination model is the glue that binds separate activities into an ensemble."
+				-	David Gelernter, Nicholas Carriero, 1992
+
+				</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				### Ensembles
+
+				"We will define an asynchronous ensemble (ensemble, for short) as a collection of
+				asynchronous activities that communicate.
+				An activity is a program, process, thread or any agent capable in principle
+				of simulating a Turing Machine. It could be a person;
+				it could be (recursively) another whole ensemble."
+				-	David Gelernter, Nicholas Carriero, 1992
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				### Computations
+
+				"a computation language by itself is useless. A computation must communicate with its environment or
+				it serves no purpose. And the environment, insofar as it must ultimately be a person or people, can
+				only be an active agent. A computation must perform operations whose purpose is to get information from
+				or convey it to the environment, and these operations are a coordination language"
+				-	David Gelernter, Nicholas Carriero, 1992
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Fairytale
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				Once upon a time King of Monolithian ruled his land with good system.
+				Kings orders were consistent, system checked that their integrity was fine,
+				they were made in isolation and committed to everyone simultaneously.
+				If execution of orders was not possible they were rolled before harm was done.
+				Everyone knew orders of King, and there always only one copy of them.
+				This went well for a long time.
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				It happened one day that Princess of Monolithian integrated with Prince of Distributian.
+				Integration was done using pigeons, riding messengers and smoke signals.
+				Pigeons were hunted, messengers drink too much and were late, smoke signals didn't work on rainy days.
+				Laws were no more consistent, it was hard to know which messages were valid,
+				if messages were complete and came to right order.
+				Correcting falsely interpreted laws was hard, and often done only in one Kingdom.
+				King didn't anymore know which laws were followed in Monolithian and Distributian...
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				King understood that Monolithian and Distributian were autonomous Kingdoms
+				and needed to work closely together.
+				Keeping laws consistent was effortful but mandatory, since both kingdoms could change them.
+				Often when problem occured in one kingdom, fixes and compensative actions were executed in both.
+				King remembered how easy everything was before,
+				but when younger rebellious Princess of Monolithian started on-off relatioship with
+				Prince of Microservian King was happy that he already knew what to expect ...
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Distributed computing
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Oh my 400!
+
+				<img alt="call failure" src="images/microservices_client_service.jpg" width="40%">
+
+				- The request hasn’t reached the provider
+				- The request has reached the provider, but it blew up during processing
+				-	The provider processed the request, but the response was lost
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Fallacies
+
+				- The network is reliable.
+				- Latency is zero.
+				- Bandwidth is infinite.
+				- The network is secure.
+				- Topology doesn't change.
+				- There is one administrator.
+				- Transport cost is zero.
+				- The network is homogeneous.
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### can't we fake it?
+
+				use http rpc aka "rest" and think all errors are alike
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Eventual consistency
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="eventual consistency" src="images/eventual_consistency_comic.png" width="70%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### what you might be missing
+
+				- strong consistency
+				- isolation
+				- commits & rollbacks
+				- referential integrity
+				- where clause
+				- ...
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### what we need instead
+
+        - stable api's
+				- idempotent operations
+				- stateless retries
+				- timeout handling
+				- referential integrity
+				- where clause
+				- ...
+
+						</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				# Eventual consistency
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# idempotency & compensation
+						</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
 				### Camunda: company
 
 				- Initially Berlin based consulting company
