@@ -46,7 +46,7 @@
 				computational activity: a single-threaded, step-at-a-time computation.
 
 				The coordination model is the glue that binds separate activities into an ensemble."
-				-	David Gelernter, Nicholas Carriero, 1992
+				-	David Gelernter, Nicholas Carriero
 
 				</textarea>
 				</section>
@@ -60,7 +60,7 @@
 				An activity is a program, process, thread or any agent capable in principle
 				of simulating a Turing Machine. It could be a person;
 				it could be (recursively) another whole ensemble."
-				-	David Gelernter, Nicholas Carriero, 1992
+				-	David Gelernter, Nicholas Carriero
 
 						</textarea>
 				</section>
@@ -73,7 +73,7 @@
 				it serves no purpose. And the environment, insofar as it must ultimately be a person or people, can
 				only be an active agent. A computation must perform operations whose purpose is to get information from
 				or convey it to the environment, and these operations are a coordination language"
-				-	David Gelernter, Nicholas Carriero, 1992
+				-	David Gelernter, Nicholas Carriero
 
 						</textarea>
 				</section>
@@ -201,7 +201,7 @@
 				- joins between entities
 				- where clauses & subqueries
 				- single source of truth
-				- locking possible ...
+				- locking, backups, ...
 
 						</textarea>
 				</section>
@@ -217,7 +217,7 @@
 				- integrity checks need to be programmed
 				- no joins, wheres & subqueries without copies of data or queries to other services
 				- copies of data synced programmatically
-				- no locks ...
+				- no locks, set of backups, ...
 
 						</textarea>
 				</section>
@@ -231,8 +231,44 @@
 				- if retry is not possible compensation might be needed to minimize harm
 				- compensation might not return data to original state
 
-
 						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="bam theorem of eventual inconsistency" src="images/bac_theorem.png" width="70%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="eventual inconsistency and retries" src="images/eventual_inconsistency_retries.png" width="70%">
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### consistency, snapshots and availability
+
+				- backups and restorations are always point in time
+				- distributed systems push "time of consistency" until the "last" transaction gets completed
+				- "eventually consistent backups" are permanently inconsistent, obsolete or have risk of data loss
+
+				Failure of one database would need to push other databases back in time in order to recover to a consistent state.
+
+				Or we just need to deal with inconsistency - orphaned data, broken links, ...
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Technology
+					</textarea>
 				</section>
 
 
