@@ -104,11 +104,11 @@
 					<textarea data-template>
 				#### Oh my 400! What happened?
 
-				<img alt="call failure" src="images/microservices_client_service.jpg" width="40%">
+				<img alt="call failure" src="images/distributed_communication_failures.png" width="70%">
 
-				- The request hasn’t reached the provider
-				- The request has reached the provider, but it blew up during processing
-				-	The provider processed the request, but the response was lost
+				- Provider didn't get request
+				- Provider failed processing
+				-	Request processed, response was lost
 
 						</textarea>
 				</section>
@@ -161,6 +161,17 @@
 				- The same developers work across a large number of microservices
 				- Many of your microservices share a datastore
 				- Your microservices share a lot of the same code or models
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### fragile => resilient
+
+				<img alt="boundary conditions" src="images/boundary_summary_conclusions.png" width="100%">
+
+				In level of systems: computation is simple, coordination and state complex.
+
 						</textarea>
 				</section>
 
@@ -264,6 +275,15 @@
 				Or we just need to deal with inconsistency - orphaned data, broken links, ...
 					</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Choreography, Orchestration, ..
+					</textarea>
+				</section>
+
+
+
 
 				<section data-markdown>
 					<textarea data-template>
