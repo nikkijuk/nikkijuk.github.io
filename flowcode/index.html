@@ -80,7 +80,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				# Distributed computing
+				# Distributed computation
 						</textarea>
 				</section>
 
@@ -115,29 +115,34 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				##### [principles to follow](https://priyalwalpita.medium.com/coupling-and-cohesion-in-microservices-235ed9203843)
+				##### [Microservices principles](https://priyalwalpita.medium.com/coupling-and-cohesion-in-microservices-235ed9203843)
 
 				<img alt="microservices coupling and cohesion" src="images/microservices_coupling_cohesion.png" width="100%">
 
-				Single purpose, high cohesion, loose coupling?
+				All you need is: Single purpose, high cohesion, loose coupling
 
 						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				##### tighter coupling - avoid
-
-				<img alt="high coupling" src="images/coupling_higher.png" width="100%">
+				<img alt="runtime and design time coupling" src="images/coupling_runtime_and_design_time.png" width="80%">
 
 						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				##### looser coupling - prefer
+				<img alt="total coupling" src="images/coupling_degree.png" width="80%">
 
-				<img alt="lower coupling" src="images/coupling_lower.png" width="100%">
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				##### reasons of coupling
+
+				<img alt="reasons of coupling" src="images/coupling_reasons.png" width="80%">
 
 						</textarea>
 				</section>
@@ -166,17 +171,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### fragile => resilient
-
-				<img alt="boundary conditions" src="images/boundary_summary_conclusions.png" width="100%">
-
-				In level of systems: computation is simple, coordination and state complex.
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 
 				<img alt="distributed monolith" src="images/distributed_monolith_strip.jpeg" width="60%">
 
@@ -188,7 +182,18 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				# Eventual consistency
+				#### fragile => resilient
+
+				<img alt="boundary conditions" src="images/boundary_summary_conclusions.png" width="100%">
+
+				In level of systems: computation is simple, coordination and state complex.
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Distributed data
 						</textarea>
 				</section>
 
@@ -235,13 +240,10 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### failures & retries & idempotency & compensation
 
-				- any operation can fail or timeout
-				- operations should be idempotent to support retry
-				- if retry is not possible compensation might be needed to minimize harm
-				- compensation might not return data to original state
+				<img alt="acid vs. base" src="images/acid_base_eric_brewer.png" width="70%">
 
+				BASE = Basically available + Soft-state + Eventually consistent
 						</textarea>
 				</section>
 
@@ -278,12 +280,27 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				# Choreography, Orchestration, ..
+				# distributed coordination
 					</textarea>
 				</section>
 
+				<section data-markdown>
+					<textarea data-template>
+				#### failures & retries & idempotency & compensation
 
+				- any operation can fail or timeout
+				- operations should be idempotent to support retry
+				- if retry is not possible compensation might be needed to minimize harm
+				- compensation might not return data to original state
 
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Choreography, Orchestration, ..
+					</textarea>
+				</section>
 
 				<section data-markdown>
 					<textarea data-template>
@@ -546,6 +563,34 @@
 				but when younger rebellious Princess of Monolithian started on-off relatioship with
 				Prince of Microservian King was happy that he already knew what to expect ...
 
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				##### tighter coupling - avoid
+
+				<img alt="high coupling" src="images/coupling_higher.png" width="100%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				##### looser coupling - prefer
+
+				<img alt="lower coupling" src="images/coupling_lower.png" width="100%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				##### reasons for modularity
+
+				<img alt="parnas decomposing" src="images/parnas_decomposition.png" width="60%">
+
+				In tightly coupled system change in one module usually forces a ripple effect of changes in other modules.
 						</textarea>
 				</section>
 
