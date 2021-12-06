@@ -119,14 +119,7 @@
 
 				<img alt="microservices coupling and cohesion" src="images/microservices_coupling_cohesion.png" width="100%">
 
-				All you need is: Single purpose, high cohesion, loose coupling
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				<img alt="runtime and design time coupling" src="images/coupling_runtime_and_design_time.png" width="80%">
+				All you need is: Single purpose, high cohesion, loose coupling?
 
 						</textarea>
 				</section>
@@ -134,6 +127,13 @@
 				<section data-markdown>
 					<textarea data-template>
 				<img alt="total coupling" src="images/coupling_degree.png" width="80%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				<img alt="runtime and design time coupling" src="images/coupling_runtime_and_design_time.png" width="80%">
 
 						</textarea>
 				</section>
@@ -187,6 +187,15 @@
 				<img alt="boundary conditions" src="images/boundary_summary_conclusions.png" width="100%">
 
 				In level of systems: computation is simple, coordination and state complex.
+
+						</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+
+				"It is still important to realize that microservices represent a trade-off.
+				Microservices should only be used
+				if the benefits outweigh the problems in the concrete scenario." - Eberhard Wolff
 
 						</textarea>
 				</section>
@@ -263,7 +272,6 @@
 					</textarea>
 				</section>
 
-
 				<section data-markdown>
 					<textarea data-template>
 				#### consistency, snapshots and availability
@@ -286,20 +294,88 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### failures & retries & idempotency & compensation
+				#### workflows
 
-				- any operation can fail or timeout
-				- operations should be idempotent to support retry
-				- if retry is not possible compensation might be needed to minimize harm
-				- compensation might not return data to original state
+				"Use process choreography and orchestration, where fitting, to manage long-running system-wide workflows.
+				For simpler long-running business software processes that require limited individual steps,
+				choreography is suitable.
+				For more complex processes with a fair number of processing steps, orchestration works best."
+				-  Vaughn Vernon, Tomasz Jaskula
 
-						</textarea>
+					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				# Choreography, Orchestration, ..
+				#### Choreography
+
+				"Choreography is a process in which the decision to fulfill a given workflow step is
+				left up to the individual subsystems.
+				Each contextual subsystem must understand the stimulus, such as an event notification,
+				that signals that a given step must happen next.
+				Choreography is best reserved for simpler process workflows with few required steps."
+				-  Vaughn Vernon, Tomasz Jaskula
+
 					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Choreography, example
+
+				<img alt="choreography style" src="images/style_choreography.png" width="60%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Choreography, cons
+
+				when the process stalls somewhere, it can be difficult to determine where it went wrong and why.
+
+				event dependencies become coupled to subsystems that don’t own the events, and must be subjectively interpreted and applied to their own purpose.
+
+				dependencies on events can become quite tangled as system and process complexities increase.
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Orchestration
+
+				"Orchestration is a process in which a central control mechanism guides the workflows steps
+				by commanding each one to take place when and as directed.
+				Orchestration is most useful when a process includes several or many complex steps,
+				such as the policy underwriting workflow."
+				-  Vaughn Vernon, Tomasz Jaskula
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Orchestration, example
+
+				<img alt="orchestration style" src="images/style_orchestratio.png" width="60%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Orchestration, cons
+
+				is designed and implemented by the team most interested in its ultimate outcome.
+				They might become a blocker when changes are made across subsystems
+				involved in the process that must be applied inside the orchestrator.
+
+				might be too complex for controlling processes with less complexity.
+
+				must not become a dungeon for business logic; it must be used only to drive steps of the process.
+
+				</textarea>
 				</section>
 
 				<section data-markdown>
@@ -323,25 +399,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				## Technology
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					 <textarea data-template>
-					#### Does it solve important problem?
-
-					“You won’t appreciate the true horror, pain
-					and suffering of microservices until you’re
-					running them in production"
-					― Sam Newman
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 				### Zeebe
 
 				<img alt="zeebe" src="images/zeebe_architecture.png" width="100%">
@@ -355,7 +412,7 @@
 					<textarea data-template>
 				### Camunda
 
-				<img alt="zeebe" src="images/camunda_architecture.png" width="50%">
+				<img alt="camunda" src="images/camunda_architecture.png" width="50%">
 
 				This stuff works - since 2010
 
@@ -378,17 +435,6 @@
 					<textarea data-template>
 				## Embedded microservices workflow engine
 					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				### Does it add accidental complexity?
-
-				"although this isolation can add some overhead,
-				the resulting simplicity makes our distributed system much easier to reason about."
-				― Sam Newman
-
-				</textarea>
 				</section>
 
 				<section data-markdown>
@@ -483,30 +529,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				Total cost of ownership: Before Camunda ..
-
-				".. business processes of several organizations were manual or only partially automated
-				using legacy digital process automation (DPA) suites, making them slow, inefficient,
-				inconsistent, and disorganized. As a result, the enterprises found they were burdened with
-				subpar customer service, and their employees were left frustrated by the time it took
-				to accomplish common tasks."
-				- Forrester, 2021
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					Knowledge work is demanding ..
-
-					<img alt="future lawyers" src="images/future_ready_lawyers.png" width="80%">
-
-					And will thus be optimized, automated, and ..
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 				#### Pitfalls, Solutions & TCO
 
 				[The Role of the Workflow Engine](https://camunda.com/blog/2020/02/the-microservices-workflow-automation-cheat-sheet-the-role-of-the-workflow-engine/)
@@ -592,6 +614,65 @@
 
 				In tightly coupled system change in one module usually forces a ripple effect of changes in other modules.
 						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### failures & retries & idempotency & compensation
+
+				- any operation can fail or timeout
+				- operations should be idempotent to support retry
+				- if retry is not possible compensation might be needed to minimize harm
+				- compensation might not return data to original state
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					 <textarea data-template>
+					#### Does it solve important problem?
+
+					“You won’t appreciate the true horror, pain
+					and suffering of microservices until you’re
+					running them in production"
+					― Sam Newman
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				### Does it add accidental complexity?
+
+				"although this isolation can add some overhead,
+				the resulting simplicity makes our distributed system much easier to reason about."
+				― Sam Newman
+
+				</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				Total cost of ownership: Before Camunda ..
+
+				".. business processes of several organizations were manual or only partially automated
+				using legacy digital process automation (DPA) suites, making them slow, inefficient,
+				inconsistent, and disorganized. As a result, the enterprises found they were burdened with
+				subpar customer service, and their employees were left frustrated by the time it took
+				to accomplish common tasks."
+				- Forrester, 2021
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					Knowledge work is demanding ..
+
+					<img alt="future lawyers" src="images/future_ready_lawyers.png" width="80%">
+
+					And will thus be optimized, automated, and ..
+					</textarea>
 				</section>
 
 
