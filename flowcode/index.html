@@ -31,13 +31,13 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				# Definition of program
+				# 1st Definition of program
 						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Program = Coordination + Computation
+				#### Program = Computation + Coordination
 
 				"We can build a complete programming model out of two separate pieces -
 				the computation model and the coordination model
@@ -86,6 +86,178 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				##### [Microservices principles](https://priyalwalpita.medium.com/coupling-and-cohesion-in-microservices-235ed9203843)
+
+				<img alt="microservices coupling and cohesion" src="images/microservices_coupling_cohesion.png" width="100%">
+
+				All you need is: Single purpose, high cohesion, loose coupling?
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				##### [Microservices tradeoffs](https://martinfowler.com/articles/microservice-trade-offs.html)
+
+				<img alt="microservices premium" src="images/microservices_tradeoffs.png" width="65%">
+
+				"Soft factors such as the quality of people on the team, how well they collaborate with each other,
+				and the degree of communication with domain experts,
+				will have a bigger impact than whether to use microservices or not." - Martin Fowler
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				##### [Microservices premium](https://martinfowler.com/bliki/MicroservicePremium.html)
+
+				<img alt="microservices premium" src="images/microservices_premium_productivity.png" width="40%">
+
+				"don't even consider microservices unless you have a system that's too complex to manage as a monolith.
+				The majority of software systems should be built as a single monolithic application." - Martin Fowler
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# distributed coordination
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### workflows
+
+				"Use process choreography and orchestration, where fitting, to manage long-running system-wide workflows.
+				For simpler long-running business software processes that require limited individual steps,
+				choreography is suitable.
+				For more complex processes with a fair number of processing steps, orchestration works best."
+				-  Vaughn Vernon, Tomasz Jaskula
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Choreography
+
+				"Choreography is a process in which the decision to fulfill a given workflow step is
+				left up to the individual subsystems.
+				Each contextual subsystem must understand the stimulus, such as an event notification,
+				that signals that a given step must happen next.
+				Choreography is best reserved for simpler process workflows with few required steps."
+				-  Vaughn Vernon, Tomasz Jaskula
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Choreography, example
+
+				<img alt="choreography style" src="images/style_choreography.png" width="60%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Choreography, cons
+
+				"when the process stalls somewhere, it can be difficult to determine where it went wrong and why.
+
+				event dependencies become coupled to subsystems that don’t own the events, and must be subjectively interpreted and applied to their own purpose.
+
+				dependencies on events can become quite tangled as system and process complexities increase."  - Vernon & Jaskula
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Orchestration
+
+				"Orchestration is a process in which a central control mechanism guides the workflows steps
+				by commanding each one to take place when and as directed.
+				Orchestration is most useful when a process includes several or many complex steps,
+				such as the policy underwriting workflow."
+				-  Vaughn Vernon, Tomasz Jaskula
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Orchestration, example
+
+				<img alt="orchestration style" src="images/style_orchestratio.png" width="60%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Orchestration, cons
+
+				"is designed and implemented by the team most interested in its ultimate outcome.
+				They might become a blocker when changes are made across subsystems
+				involved in the process that must be applied inside the orchestrator.
+
+				might be too complex for controlling processes with less complexity.
+
+				must not become a dungeon for business logic; it must be used only to drive steps of the process." - Vernon & Jaskula
+
+				</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# 2nd Definition of program
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="algoriths and data structures" src="images/algorithms_cover.png" width="50%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Distributed data
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="eventual consistency" src="images/eventual_consistency_comic.png" width="70%">
+
+						</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+				#### Developer: keep data Consistent!
+
+				"Microservices require multiple resources to update, and distributed transactions are frowned on (for good reason).
+				So now, developers need to be aware of consistency issues,
+				and figure out how to detect when things are out of sync before doing anything the code will regret."
+				- Martin Fowler
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Challenges
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### Fallacies
 
 				- The network is reliable.
@@ -109,107 +281,6 @@
 				- Provider didn't get request
 				- Provider failed processing
 				-	Request processed, response was lost
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				##### [Microservices principles](https://priyalwalpita.medium.com/coupling-and-cohesion-in-microservices-235ed9203843)
-
-				<img alt="microservices coupling and cohesion" src="images/microservices_coupling_cohesion.png" width="100%">
-
-				All you need is: Single purpose, high cohesion, loose coupling?
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				<img alt="total coupling" src="images/coupling_degree.png" width="80%">
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				<img alt="runtime and design time coupling" src="images/coupling_runtime_and_design_time.png" width="80%">
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				##### reasons of coupling
-
-				<img alt="reasons of coupling" src="images/coupling_reasons.png" width="80%">
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				##### types of coupling
-
-				<img alt="types of coupling" src="images/coupling_types.png" width="100%">
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [distributed monolith - symptoms](https://www.simplethread.com/youre-not-actually-building-microservices/)
-
-				- A change to one microservice often requires changes to other microservices
-				- Deploying one microservice requires other microservices to be deployed at the same time
-				- Your microservices are overly chatty
-				- The same developers work across a large number of microservices
-				- Many of your microservices share a datastore
-				- Your microservices share a lot of the same code or models
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-
-				<img alt="distributed monolith" src="images/distributed_monolith_strip.jpeg" width="60%">
-
-				“worst of all worlds. You’ve taken the relative simplicity of a single monolithic codebase,
-				and you’ve traded it in for a deeply intertwined distributed system."	- Justin Etheredge
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### fragile => resilient
-
-				<img alt="boundary conditions" src="images/boundary_summary_conclusions.png" width="100%">
-
-				In level of systems: computation is simple, coordination and state complex.
-
-						</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-
-				"It is still important to realize that microservices represent a trade-off.
-				Microservices should only be used
-				if the benefits outweigh the problems in the concrete scenario." - Eberhard Wolff
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				# Distributed data
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-
-				<img alt="eventual consistency" src="images/eventual_consistency_comic.png" width="70%">
 
 						</textarea>
 				</section>
@@ -288,94 +359,69 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				# distributed coordination
-					</textarea>
+				<img alt="total coupling" src="images/coupling_degree.png" width="80%">
+
+						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### workflows
+				<img alt="runtime and design time coupling" src="images/coupling_runtime_and_design_time.png" width="80%">
 
-				"Use process choreography and orchestration, where fitting, to manage long-running system-wide workflows.
-				For simpler long-running business software processes that require limited individual steps,
-				choreography is suitable.
-				For more complex processes with a fair number of processing steps, orchestration works best."
-				-  Vaughn Vernon, Tomasz Jaskula
-
-					</textarea>
+						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Choreography
+				##### reasons of coupling
 
-				"Choreography is a process in which the decision to fulfill a given workflow step is
-				left up to the individual subsystems.
-				Each contextual subsystem must understand the stimulus, such as an event notification,
-				that signals that a given step must happen next.
-				Choreography is best reserved for simpler process workflows with few required steps."
-				-  Vaughn Vernon, Tomasz Jaskula
+				<img alt="reasons of coupling" src="images/coupling_reasons.png" width="80%">
 
-					</textarea>
+						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Choreography, example
+				##### types of coupling
 
-				<img alt="choreography style" src="images/style_choreography.png" width="60%">
+				<img alt="types of coupling" src="images/coupling_types.png" width="100%">
 
-					</textarea>
+						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Choreography, cons
+				#### [distributed monolith - symptoms](https://www.simplethread.com/youre-not-actually-building-microservices/)
 
-				when the process stalls somewhere, it can be difficult to determine where it went wrong and why.
-
-				event dependencies become coupled to subsystems that don’t own the events, and must be subjectively interpreted and applied to their own purpose.
-
-				dependencies on events can become quite tangled as system and process complexities increase.
-
-					</textarea>
-				</section>
-
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Orchestration
-
-				"Orchestration is a process in which a central control mechanism guides the workflows steps
-				by commanding each one to take place when and as directed.
-				Orchestration is most useful when a process includes several or many complex steps,
-				such as the policy underwriting workflow."
-				-  Vaughn Vernon, Tomasz Jaskula
-					</textarea>
+				- A change to one microservice often requires changes to other microservices
+				- Deploying one microservice requires other microservices to be deployed at the same time
+				- Your microservices are overly chatty
+				- The same developers work across a large number of microservices
+				- Many of your microservices share a datastore
+				- Your microservices share a lot of the same code or models
+						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Orchestration, example
 
-				<img alt="orchestration style" src="images/style_orchestratio.png" width="60%">
+				<img alt="distributed monolith" src="images/distributed_monolith_strip.jpeg" width="60%">
 
-					</textarea>
+				“worst of all worlds. You’ve taken the relative simplicity of a single monolithic codebase,
+				and you’ve traded it in for a deeply intertwined distributed system."	- Justin Etheredge
+
+						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Orchestration, cons
+				#### fragile => resilient
 
-				is designed and implemented by the team most interested in its ultimate outcome.
-				They might become a blocker when changes are made across subsystems
-				involved in the process that must be applied inside the orchestrator.
+				<img alt="boundary conditions" src="images/boundary_summary_conclusions.png" width="100%">
 
-				might be too complex for controlling processes with less complexity.
+				In level of systems: computation is simple, coordination and state complex.
 
-				must not become a dungeon for business logic; it must be used only to drive steps of the process.
-
-				</textarea>
+						</textarea>
 				</section>
 
 				<section data-markdown>
@@ -675,6 +721,16 @@
 					</textarea>
 				</section>
 
+
+				<section data-markdown>
+					<textarea data-template>
+
+				"It is still important to realize that microservices represent a trade-off.
+				Microservices should only be used
+				if the benefits outweigh the problems in the concrete scenario." - Eberhard Wolff
+
+						</textarea>
+				</section>
 
 			</div>
 		</div>
