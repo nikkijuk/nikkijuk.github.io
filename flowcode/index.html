@@ -284,180 +284,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				# Challenges
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Fallacies
-
-				- The network is reliable.
-				- Latency is zero.
-				- Bandwidth is infinite.
-				- The network is secure.
-				- Topology doesn't change.
-				- There is one administrator.
-				- Transport cost is zero.
-				- The network is homogeneous.
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Oh my 400! What happened?
-
-				<img alt="call failure" src="images/distributed_communication_failures.png" width="70%">
-
-				- Provider didn't get request
-				- Provider failed processing
-				-	Request processed, response was lost
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Without distribution (ACID, single db)
-
-				- strong consistency
-				- isolation of operations
-				- atomic commits & rollbacks
-				- changes are durable
-				- referential integrity
-				- joins between entities
-				- where clauses & subqueries
-				- single source of truth
-				- locking, backups, ...
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### With distribution (n services & data sources)
-
-				- consistent at the end of "distributed transaction"
-				- changes visible when "local transaction" commits
-				- need to use compensation instead of rollback
-				- errors might prevent part of state changes and result inconsistent state
-				- integrity checks need to be programmed
-				- no joins, wheres & subqueries without copies of data or queries to other services
-				- copies of data synced programmatically
-				- no locks, set of backups, ...
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-
-				<img alt="acid vs. base" src="images/acid_base_eric_brewer.png" width="70%">
-
-				BASE = Basically available + Soft-state + Eventually consistent
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-
-				<img alt="bam theorem of eventual inconsistency" src="images/bac_theorem.png" width="70%">
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-
-				<img alt="eventual inconsistency and retries" src="images/eventual_inconsistency_retries.png" width="70%">
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### consistency, snapshots and availability
-
-				- backups and restorations are always point in time
-				- distributed systems push "time of consistency" until the "last" transaction gets completed
-				- "eventually consistent backups" are permanently inconsistent, obsolete or have risk of data loss
-
-				Failure of one database would need to push other databases back in time in order to recover to a consistent state.
-
-				Or we just need to deal with inconsistency - orphaned data, broken links, ...
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				<img alt="total coupling" src="images/coupling_degree.png" width="80%">
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				<img alt="runtime and design time coupling" src="images/coupling_runtime_and_design_time.png" width="80%">
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				##### reasons of coupling
-
-				<img alt="reasons of coupling" src="images/coupling_reasons.png" width="80%">
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				##### types of coupling
-
-				<img alt="types of coupling" src="images/coupling_types.png" width="100%">
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [distributed monolith - symptoms](https://www.simplethread.com/youre-not-actually-building-microservices/)
-
-				- A change to one microservice often requires changes to other microservices
-				- Deploying one microservice requires other microservices to be deployed at the same time
-				- Your microservices are overly chatty
-				- The same developers work across a large number of microservices
-				- Many of your microservices share a datastore
-				- Your microservices share a lot of the same code or models
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-
-				<img alt="distributed monolith" src="images/distributed_monolith_strip.jpeg" width="60%">
-
-				“worst of all worlds. You’ve taken the relative simplicity of a single monolithic codebase,
-				and you’ve traded it in for a deeply intertwined distributed system."	- Justin Etheredge
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### fragile => resilient
-
-				<img alt="boundary conditions" src="images/boundary_summary_conclusions.png" width="100%">
-
-				In level of systems: computation is simple, coordination and state complex.
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 				# Technology
 					</textarea>
 				</section>
@@ -530,7 +356,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					#### java delegate
+					#### workflow step -> java delegate
 
 
 						import org.camunda.bpm.engine.delegate.DelegateExecution;
@@ -546,6 +372,8 @@
 						}
 
 					Command Pattern, original GoF goodies
+
+					Can be directly bound to process using @Named annotation
 
 					</textarea>
 				</section>
@@ -798,6 +626,181 @@
 				So now, developers need to be aware of consistency issues,
 				and figure out how to detect when things are out of sync before doing anything the code will regret."
 				- Martin Fowler
+
+						</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				# Challenges
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Fallacies
+
+				- The network is reliable.
+				- Latency is zero.
+				- Bandwidth is infinite.
+				- The network is secure.
+				- Topology doesn't change.
+				- There is one administrator.
+				- Transport cost is zero.
+				- The network is homogeneous.
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Oh my 400! What happened?
+
+				<img alt="call failure" src="images/distributed_communication_failures.png" width="70%">
+
+				- Provider didn't get request
+				- Provider failed processing
+				-	Request processed, response was lost
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Without distribution (ACID, single db)
+
+				- strong consistency
+				- isolation of operations
+				- atomic commits & rollbacks
+				- changes are durable
+				- referential integrity
+				- joins between entities
+				- where clauses & subqueries
+				- single source of truth
+				- locking, backups, ...
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### With distribution (n services & data sources)
+
+				- consistent at the end of "distributed transaction"
+				- changes visible when "local transaction" commits
+				- need to use compensation instead of rollback
+				- errors might prevent part of state changes and result inconsistent state
+				- integrity checks need to be programmed
+				- no joins, wheres & subqueries without copies of data or queries to other services
+				- copies of data synced programmatically
+				- no locks, set of backups, ...
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="acid vs. base" src="images/acid_base_eric_brewer.png" width="70%">
+
+				BASE = Basically available + Soft-state + Eventually consistent
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="bam theorem of eventual inconsistency" src="images/bac_theorem.png" width="70%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="eventual inconsistency and retries" src="images/eventual_inconsistency_retries.png" width="70%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### consistency, snapshots and availability
+
+				- backups and restorations are always point in time
+				- distributed systems push "time of consistency" until the "last" transaction gets completed
+				- "eventually consistent backups" are permanently inconsistent, obsolete or have risk of data loss
+
+				Failure of one database would need to push other databases back in time in order to recover to a consistent state.
+
+				Or we just need to deal with inconsistency - orphaned data, broken links, ...
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				<img alt="total coupling" src="images/coupling_degree.png" width="80%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				<img alt="runtime and design time coupling" src="images/coupling_runtime_and_design_time.png" width="80%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				##### reasons of coupling
+
+				<img alt="reasons of coupling" src="images/coupling_reasons.png" width="80%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				##### types of coupling
+
+				<img alt="types of coupling" src="images/coupling_types.png" width="100%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [distributed monolith - symptoms](https://www.simplethread.com/youre-not-actually-building-microservices/)
+
+				- A change to one microservice often requires changes to other microservices
+				- Deploying one microservice requires other microservices to be deployed at the same time
+				- Your microservices are overly chatty
+				- The same developers work across a large number of microservices
+				- Many of your microservices share a datastore
+				- Your microservices share a lot of the same code or models
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="distributed monolith" src="images/distributed_monolith_strip.jpeg" width="60%">
+
+				“worst of all worlds. You’ve taken the relative simplicity of a single monolithic codebase,
+				and you’ve traded it in for a deeply intertwined distributed system."	- Justin Etheredge
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### fragile => resilient
+
+				<img alt="boundary conditions" src="images/boundary_summary_conclusions.png" width="100%">
+
+				In level of systems: computation is simple, coordination and state complex.
 
 						</textarea>
 				</section>
