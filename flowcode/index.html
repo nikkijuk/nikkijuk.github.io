@@ -124,18 +124,18 @@
 				# distributed coordination
 					</textarea>
 				</section>
-
 				<section data-markdown>
 					<textarea data-template>
 				#### workflows
 
-				"Use process choreography and orchestration, where fitting, to manage long-running system-wide workflows.
-				For simpler long-running business software processes that require limited individual steps,
-				choreography is suitable.
-				For more complex processes with a fair number of processing steps, orchestration works best."
-				-  Vaughn Vernon, Tomasz Jaskula
+				"Coordination refers to how much coordination the workflow modeled by the communication requires.
+				The two common generic patterns for microservices are orchestration and choreography (..).
+				Simple workflows—a single service replying to a request—don’t require special consideration
+				from this dimension.
+				However, as the complexity of the workflow grows, the greater the need for coordination."
+				- Software Architecture: The Hard Parts
 
-					</textarea>
+						</textarea>
 				</section>
 
 				<section data-markdown>
@@ -212,6 +212,18 @@
 
 				<section data-markdown>
 					<textarea data-template>
+
+				<img alt="orchestration usefulness" src="images/orchestration_usefulness.png" width="30%">
+
+				"if an architect has a workflow that needs higher scale and typically has few error conditions,
+				it might be worth trading the higher scale of choreography with the complexity of error handling.
+				However, as workflow complexity goes up, the need for an orchestrator rises proportionally"
+				- Software Architecture: The Hard Parts
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				# 2nd Definition of program
 						</textarea>
 				</section>
@@ -240,24 +252,32 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Databases > 1 && Transactions == LOCAL
+				<img alt="eventual consistency" src="images/hard_parts_no_acid.png" width="50%">
 
+				"to achieve eventual consistency (..) the three main patterns in use today are
+				the background synchronization pattern, orchestrated request-based pattern,
+				and the event-based pattern." - Software Architecture: The Hard Parts
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				<img alt="microservice transactions" src="images/kleppman_half_transaction.png" width="50%">
 
-				"Every sufficiently large deployment of microservices contains an ad-hoc, informally-specified,
-				bug-ridden, slow implementation of half transactions" - [Martin Kleppman](https://martin.kleppmann.com/2015/09/26/transactions-at-strange-loop.html)
+				"transactions in distributed architectures present a number of challenges,
+				which become proportionally worse depending on the complexity of the semantic coupling of the problem."	- Software Architecture: The Hard Parts
 
 						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Developer: it's your job now..
+				#### communication, consistency, coordination
+				<img alt="transaction saga types" src="images/saga_patterns.png" width="55%">
 
-				"Microservices require multiple resources to update, and distributed transactions are frowned on (for good reason).
-				So now, developers need to be aware of consistency issues,
-				and figure out how to detect when things are out of sync before doing anything the code will regret."
-				- Martin Fowler
+				"each option has a gravitation effect on the others.
+				For example, transactionality is easier in synchronous architectures with mediation,
+				whereas higher levels of scale are possible with eventually consistent asynchronous choreographed systems."	- Software Architecture: The Hard Parts
 
 						</textarea>
 				</section>
@@ -743,6 +763,45 @@
 
 						</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Databases > 1 && Transactions == LOCAL
+
+				<img alt="microservice transactions" src="images/kleppman_half_transaction.png" width="50%">
+
+				"Every sufficiently large deployment of microservices contains an ad-hoc, informally-specified,
+				bug-ridden, slow implementation of half transactions" - [Martin Kleppman](https://martin.kleppmann.com/2015/09/26/transactions-at-strange-loop.html)
+
+						</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### workflows
+
+				"Use process choreography and orchestration, where fitting, to manage long-running system-wide workflows.
+				For simpler long-running business software processes that require limited individual steps,
+				choreography is suitable.
+				For more complex processes with a fair number of processing steps, orchestration works best."
+				-  Vaughn Vernon, Tomasz Jaskula
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Developer: it's your job now..
+
+				"Microservices require multiple resources to update, and distributed transactions are frowned on (for good reason).
+				So now, developers need to be aware of consistency issues,
+				and figure out how to detect when things are out of sync before doing anything the code will regret."
+				- Martin Fowler
+
+						</textarea>
+				</section>
+
 
 			</div>
 		</div>
