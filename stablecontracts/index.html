@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+				### Stable Contracts
+
+				"All services, without exception, must be designed from the ground up to be externalizable.
+				That is to say, the team must plan and design to be able to expose the interface to developers in the outside world.
+				No exceptions. Anyone who doesn’t do this will be fired.
+				"	- [Jeff Bezos, Api mandate, 2002](https://nordicapis.com/the-bezos-api-mandate-amazons-manifesto-for-externalization/)
+
+
+					// Name: Jukka Nikki, Identity: Programmer, Since: 6502
+					// TODO: Codeneering - reaching higher level of abstraction
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Design by contract (DbC), 1986, Bertram Meyer](https://en.wikipedia.org/wiki/Design_by_contract)
+
+				<img alt="contracts" src="images/Design_by_contract.svg.png" width="30%">
+
+				"formal, precise and verifiable interface specifications for software components,
+				which extend the ordinary definition of abstract data types with preconditions,
+				postconditions and invariants."
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Open api
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Code first
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Design first
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Hub
+					</textarea>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
