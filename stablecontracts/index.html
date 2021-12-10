@@ -45,21 +45,129 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				## Open api
+				#### The OpenAPI Initiative (OAI)
+
+				"As an open governance structure under the Linux Foundation,
+				the OAI is focused on creating, evolving and promoting a vendor neutral description format.
+				The OpenAPI Specification was originally based on the Swagger Specification,
+				donated by SmartBear Software."
+
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				## Code first
+				#### "Code" or implementation first
+
+				<img alt="code 1st" src="images/code-first.png" width="40%">
+
+				"Proponents of this process believe that writing and maintaining an API description document
+				is difficult and error prone, and that it slows down the development process" - [Kevin Sookocheff](https://sookocheff.com/post/api/the-false-dichotomoy-of-design-first-and-code-first-api-development/)
+
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				## Design first
+				#### Variant: Api Framework
+
+				"API Framework method mixes the API implementation with its description
+
+				Example: [HAL](https://stateless.group/hal_specification.html)+JSON makes [Spring HATEOAS](https://spring.io/projects/spring-hateoas)
+				more closely align to an API description document.
+				(..) generate an API description that conforms to OpenAPI using the [Springdoc](https://springdoc.org/) project." - [Kevin Sookocheff](https://sookocheff.com/post/api/the-false-dichotomoy-of-design-first-and-code-first-api-development/)
+
 					</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Reverse engineering / Documenting
+
+				<img alt="generation" src="images/org-sringdoc-openapi-gradle-plugin.png" width="50%">
+
+					implementation("org.springdoc:springdoc-openapi-ui:1.5.12")
+					implementation("org.springdoc:springdoc-openapi-webmvc-core:1.5.12")
+					implementation("org.springdoc:springdoc-openapi-kotlin:1.5.12")
+					implementation("org.springdoc:springdoc-openapi-javadoc:1.5.12")
+
+					openApi {
+							outputDir.set(file("$buildDir/docs"))
+							outputFileName.set("api.json")
+					}
+
+				Use [Gradle plugin](https://github.com/springdoc/springdoc-openapi-gradle-plugin)
+				with [Springdoc](https://springdoc.org/) dependencies
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### "Design" or Api Description first
+
+				<img alt="design 1st" src="images/design-first.png" width="50%">
+
+				"In theory, a design-first process can help catch potential problems with the API early
+				and avoids wasting time and money writing code which is not going to solve a problem." - [Kevin Sookocheff](https://sookocheff.com/post/api/the-false-dichotomoy-of-design-first-and-code-first-api-development/)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Variant: Coded API Description (DSL)
+
+				"Coded API Description involves leveraging a programming language to create your API description.
+
+				Example: With [Spot](https://github.com/airtasker/spot) TypeScript classes define the API
+				and interfaces are used to represent the request and response bodies.
+				Annotations specific to [Spot](https://github.com/airtasker/spot) are used to fill out the rest of the API description.
+				(..) you can use [Spot](https://github.com/airtasker/spot) to generate your OpenAPI description document" - [Kevin Sookocheff](https://sookocheff.com/post/api/the-false-dichotomoy-of-design-first-and-code-first-api-development/)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Forward engineering / Generation
+
+				<img alt="generation" src="images/org-openapi-generator.png" width="50%">
+
+
+					openApiGenerate {
+							generatorName.set("kotlin-spring")
+							inputSpec.set("$rootDir/api.yaml")
+							outputDir.set("$buildDir/gen")
+							modelPackage.set("com.test.model")
+							apiPackage.set("com.test.api")
+							configOptions.set(..
+
+
+				Use [Gradle plugin](https://plugins.gradle.org/plugin/org.openapi.generator)
+				with ["kotlin-spring"](https://openapi-generator.tech/docs/generators/kotlin-spring/) generator
+
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Generation Gap Pattern](https://en.wikipedia.org/wiki/Generation_gap_(pattern))
+
+				"Modifications should not be made to generated code,
+				as they would be overwritten if the code generation process was ever re-run" - John Vlissides
+					</textarea>
+				</section>
+
+
+
+				<section data-markdown>
+					<textarea data-template>
+				## Mocking
+					</textarea>
+				</section>
+
 
 				<section data-markdown>
 					<textarea data-template>
