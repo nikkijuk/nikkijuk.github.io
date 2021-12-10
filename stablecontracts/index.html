@@ -22,9 +22,7 @@
 
 				"All services, without exception, must be designed from the ground up to be externalizable.
 				That is to say, the team must plan and design to be able to expose the interface to developers in the outside world.
-				No exceptions. Anyone who doesn’t do this will be fired.
-				"	- [Jeff Bezos, Api mandate, 2002](https://nordicapis.com/the-bezos-api-mandate-amazons-manifesto-for-externalization/)
-
+				No exceptions. Anyone who doesn’t do this will be fired." - [Jeff Bezos, Api mandate, 2002](https://nordicapis.com/the-bezos-api-mandate-amazons-manifesto-for-externalization/)
 
 					// Name: Jukka Nikki, Identity: Programmer, Since: 6502
 					// TODO: Codeneering - reaching higher level of abstraction
@@ -45,12 +43,12 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### The OpenAPI Initiative (OAI)
+				#### [The OpenAPI Initiative (OAI)](https://www.openapis.org/)
 
-				"As an open governance structure under the Linux Foundation,
+				"As an open governance structure under the [Linux Foundation](https://www.linuxfoundation.org/),
 				the OAI is focused on creating, evolving and promoting a vendor neutral description format.
-				The OpenAPI Specification was originally based on the Swagger Specification,
-				donated by SmartBear Software."
+				The OpenAPI Specification was originally based on the [Swagger](https://swagger.io/) Specification,
+				donated by [SmartBear Software](https://smartbear.com/)."
 
 					</textarea>
 				</section>
@@ -138,7 +136,7 @@
 					openApiGenerate {
 							generatorName.set("kotlin-spring")
 							inputSpec.set("$rootDir/api.yaml")
-							outputDir.set("$buildDir/gen")
+							outputDir.set("$buildDir/generated")
 							modelPackage.set("com.test.model")
 							apiPackage.set("com.test.api")
 							configOptions.set(..
@@ -157,6 +155,14 @@
 
 				"Modifications should not be made to generated code,
 				as they would be overwritten if the code generation process was ever re-run" - John Vlissides
+
+				With open api
+
+				- Encapsulate generated code within web adapter
+				- Generate data structures, request and response objects, and interfaces for controllers
+				- Make sure generated code matches with your other code (datatypes, naming, ..)
+				- Define clear boundaries - Don't generate too much!
+
 					</textarea>
 				</section>
 
