@@ -31,6 +31,12 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					## Theory & terminology
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### [Design by contract (DbC), 1986, Bertram Meyer](https://en.wikipedia.org/wiki/Design_by_contract)
 
 				<img alt="contracts" src="images/Design_by_contract.svg.png" width="30%">
@@ -48,9 +54,52 @@
 				"As an open governance structure under the [Linux Foundation](https://www.linuxfoundation.org/),
 				the OAI is focused on creating, evolving and promoting a vendor neutral description format.
 				The OpenAPI Specification was originally based on the [Swagger](https://swagger.io/) Specification,
-				donated by [SmartBear Software](https://smartbear.com/)."
+				donated by [SmartBear Software](https://smartbear.com/)." - OAI website
 
 					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="api continuum" src="images/api_continuum.png" width="60%">
+
+				"An application programming interface (API) is a connection between computers or between computer programs.
+				(..) A document or standard that describes how to build or use such a connection or interface is called an
+				API specification." - [Wikipedia](https://en.wikipedia.org/wiki/API)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="api tradeoffs" src="images/design-first-vs-code-first-swaggerhub-graphic.png" width="40%">
+
+				"Programmers know the benefits of everything and the tradeoffs of nothing" - Rich Hickey
+
+				Is this question of Speed vs. Quality?
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Is High Quality Software Worth the Cost?](https://martinfowler.com/articles/is-quality-worth-cost.html)
+
+				<img alt="quality & cost" src="images/quality_tradeoff_pseudo_graph.png" width="40%">
+
+				"(..) there is a period where the low internal quality is more productive than the high track.
+				During this time there is some kind of trade-off between quality and cost.
+				The question, of course, is: how long is that period before the lines cross?" - Martin fowler
+				</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					## Options
+
+					Code? .. Spec?
+						</textarea>
 				</section>
 
 				<section data-markdown>
@@ -76,6 +125,39 @@
 				(..) generate an API description that conforms to OpenAPI using the [Springdoc](https://springdoc.org/) project." - [Kevin Sookocheff](https://sookocheff.com/post/api/the-false-dichotomoy-of-design-first-and-code-first-api-development/)
 
 					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### "Design" or Api Description first
+
+				<img alt="design 1st" src="images/design-first.png" width="50%">
+
+				"In theory, a design-first process can help catch potential problems with the API early
+				and avoids wasting time and money writing code which is not going to solve a problem." - [Kevin Sookocheff](https://sookocheff.com/post/api/the-false-dichotomoy-of-design-first-and-code-first-api-development/)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Variant: Coded API Description (DSL)
+
+				"Coded API Description involves leveraging a programming language to create your API description.
+
+				Example: With [Spot](https://github.com/airtasker/spot) TypeScript classes define the API
+				and interfaces are used to represent the request and response bodies.
+				Annotations specific to [Spot](https://github.com/airtasker/spot) are used to fill out the rest of the API description.
+				(..) you can use [Spot](https://github.com/airtasker/spot) to generate your OpenAPI description document" - [Kevin Sookocheff](https://sookocheff.com/post/api/the-false-dichotomoy-of-design-first-and-code-first-api-development/)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					## Case study
+					Sping Boot + Spring Hateoas + springdoc
+						</textarea>
 				</section>
 
 				<section data-markdown>
@@ -111,33 +193,6 @@
 				- /swagger-ui.html
 				- /v3/api-docs	(json)
 				- /v3/api-docs.yaml (yaml download)
-
-					</textarea>
-				</section>
-
-
-				<section data-markdown>
-					<textarea data-template>
-				#### "Design" or Api Description first
-
-				<img alt="design 1st" src="images/design-first.png" width="50%">
-
-				"In theory, a design-first process can help catch potential problems with the API early
-				and avoids wasting time and money writing code which is not going to solve a problem." - [Kevin Sookocheff](https://sookocheff.com/post/api/the-false-dichotomoy-of-design-first-and-code-first-api-development/)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Variant: Coded API Description (DSL)
-
-				"Coded API Description involves leveraging a programming language to create your API description.
-
-				Example: With [Spot](https://github.com/airtasker/spot) TypeScript classes define the API
-				and interfaces are used to represent the request and response bodies.
-				Annotations specific to [Spot](https://github.com/airtasker/spot) are used to fill out the rest of the API description.
-				(..) you can use [Spot](https://github.com/airtasker/spot) to generate your OpenAPI description document" - [Kevin Sookocheff](https://sookocheff.com/post/api/the-false-dichotomoy-of-design-first-and-code-first-api-development/)
 
 					</textarea>
 				</section>
@@ -199,7 +254,6 @@
 				## Events
 					</textarea>
 				</section>
-
 
 			</div>
 		</div>
