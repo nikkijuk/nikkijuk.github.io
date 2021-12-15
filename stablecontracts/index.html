@@ -218,6 +218,18 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					#### Get 2nd signature
+
+					<img alt="signature get 2" src="images/signature_get_2.png" width="70%">
+
+					curl -v localhost:8080/signatures/1 | json_pp
+
+						</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
 				#### Reverse engineering / Documenting
 
 				<img alt="generation" src="images/org-sringdoc-openapi-gradle-plugin.png" width="50%">
@@ -259,11 +271,10 @@
 
 				<img alt="live docs" src="images/signatures-create-json.png" width="50%">
 
-				Post **/signatures** return type is not parsed correctly by [springdoc](https://springdoc.org/),
+				Post **/signatures** return type is not parsed correctly by [SpringDoc](https://springdoc.org/),
 				should use same as RequestBody
 					</textarea>
 				</section>
-
 
 				<section data-markdown>
 					<textarea data-template>
@@ -319,7 +330,6 @@
 					## Templating
 						</textarea>
 				</section>
-
 
 				<section data-markdown>
 					<textarea data-template>
