@@ -159,13 +159,60 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					## Controller
+					#### Models and data mapping
+
+					<img alt="mapping data" src="images/signature_mapping_domain.png" width="70%">
+
+					Domain class has [import alias](https://kotlinlang.org/docs/packages.html#imports) to reduce name clashes
+
+					Immutable [data class](https://kotlinlang.org/docs/data-classes.html) with 4 attributes
+
+					[Extension functions](https://kotlinlang.org/docs/extensions.html#extension-functions) for api <-> domain mapping
+
 						</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-					## Mapper
+					#### Hateoas and creating Hal representation
+
+					<img alt="hal representation" src="images/signature_assembling_representation_v1.png" width="70%">
+
+					Domain and Api classes have [import aliases](https://kotlinlang.org/docs/packages.html#imports) to reduce name clashes
+
+
+					toModel (..) uses [Sping-hateoas](https://spring.io/projects/spring-hateoas) to create [hal](https://stateless.group/hal_specification.html) representations
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### Controller: create
+
+					<img alt="hateoas controller create" src="images/signature_controller_create_v1.png" width="70%">
+
+					use domain services
+
+					assemble [entity model](https://docs.spring.io/spring-hateoas/docs/current/api/org/springframework/hateoas/EntityModel.html)
+
+					return [entity model](https://docs.spring.io/spring-hateoas/docs/current/api/org/springframework/hateoas/EntityModel.html)
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### Controller: get one, get all
+
+					<img alt="hateoas controller get" src="images/signature_controller_one_all_v1.png" width="70%">
+
+					use domain services
+
+					for one item return [entity model](https://docs.spring.io/spring-hateoas/docs/current/api/org/springframework/hateoas/EntityModel.html)
+
+					for multiple items return [collection model](https://docs.spring.io/spring-hateoas/docs/current/api/org/springframework/hateoas/CollectionModel.html)
+
 						</textarea>
 				</section>
 
@@ -206,17 +253,25 @@
 					</textarea>
 				</section>
 
-
 				<section data-markdown>
 					<textarea data-template>
-					## Editing, idea, plugin
-						</textarea>
+				#### Json in Firefox
+
+				<img alt="live docs" src="images/signatures-create-json.png" width="50%">
+
+				Post **/signatures** return type is not parsed correctly by [springdoc](https://springdoc.org/),
+				should use same as RequestBody
+					</textarea>
 				</section>
 
+
 				<section data-markdown>
 					<textarea data-template>
-					## Linting
-						</textarea>
+				#### Swagger-ui view
+
+				<img alt="live docs" src="images/signatures-swagger-ui.png" width="50%">
+
+					</textarea>
 				</section>
 
 				<section data-markdown>
@@ -240,6 +295,23 @@
 
 
 					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### Editing open api at idea as yaml
+
+					<img alt="live docs" src="images/edit_user_post.png" width="40%">
+
+					Checks format, highlights keywords, but still only text.
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					## Linting
+						</textarea>
 				</section>
 
 				<section data-markdown>
