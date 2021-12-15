@@ -120,7 +120,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### "Design" or Api Description First
+				#### "Design" or Api First
 
 				<img alt="design 1st" src="images/design-first.png" width="50%">
 
@@ -230,6 +230,12 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					## Use cases, ideas, tools, ..
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### Mock before you Rock
 
 				<img alt="live mocs" src="images/prism-open-api-mocking.png" width="50%">
@@ -261,21 +267,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Events and asynchronous messaging
-
-				<img alt="events" src="images/zalando-events-api-guidelines.png" width="70%">
-
-				Define [Events](https://opensource.zalando.com/restful-api-guidelines/#events) using clear conventions.
-
-				"What distinguishes events from other kinds of data is the delivery style used,
-				asynchronous publish-subscribe messaging.
-				But there is no reason why they could not be made available using a REST API"	- [Zalando](https://opensource.zalando.com/restful-api-guidelines/#events)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 					## Thoughts
 					</textarea>
 				</section>
@@ -295,13 +286,41 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### promised advantages of HATEOAS
+
+				<img alt="api tradeoffs" src="images/must_api_first.png" width="70%">
+
+				"API First obviously is in conflict with the bad practice of publishing API definition
+				and asking for peer review after the service integration or
+				even the service productive operation has started." - [Zalando](https://opensource.zalando.com/restful-api-guidelines/#api-first)
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Events and asynchronous messaging
+
+				<img alt="events" src="images/zalando-events-api-guidelines.png" width="70%">
+
+				Define [Events](https://opensource.zalando.com/restful-api-guidelines/#events) using clear conventions.
+
+				"What distinguishes events from other kinds of data is the delivery style used,
+				asynchronous publish-subscribe messaging.
+				But there is no reason why they could not be made available using a REST API"	- [Zalando](https://opensource.zalando.com/restful-api-guidelines/#events)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 
 				<img alt="may use hateoas" src="images/may_use_hateoas.png" width="70%">
 
 				"However, we do not forbid HATEOAS; you could use it,
 				if you checked its limitations and still see clear value for your usage scenario
 				that justifies its additional complexity." - [Zalando](https://opensource.zalando.com/restful-api-guidelines/#163)
+
+				"(..) in today’s industry full HATEOAS compliant APIs are a very rare exception." - [Zalando](https://opensource.zalando.com/restful-api-guidelines/#_footnotedef_1)
 
 						</textarea>
 				</section>
