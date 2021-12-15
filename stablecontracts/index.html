@@ -323,11 +323,11 @@
 					<textarea data-template>
 					#### Linting using Zalando Rules
 
-						<img alt="linting" src="images/linter_zally_violations.png" width="40%">
+					<img alt="linting" src="images/linter_zally_violations.png" width="70%">
 
-					Build [Zally](https://github.com/zalando/zally), start it as server, call with URL to Api Specification
+					Start [Zally](https://github.com/zalando/zally) server, see [api docs](https://github.com/zalando/zally/blob/master/server/zally-server/src/main/resources/api/zally-api.yaml), lint
 
-					Post localhost:8000/api-violations { "api_definition_url": "https://raw.githubusercontent.com/nikkijuk/pigeongram/main/specs/api.yaml"}
+					POST localhost:8000/api-violations { "api_definition_url": ["../api.yaml"]("https://raw.githubusercontent.com/nikkijuk/pigeongram/main/specs/api.yaml")}
 
 						</textarea>
 				</section>
