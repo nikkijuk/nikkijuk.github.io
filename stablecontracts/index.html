@@ -87,6 +87,20 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### Hypertext Application Language
+
+				<img alt="hal model" src="images/hal_model.png" width="40%">
+
+				"[HAL](https://stateless.group/hal_specification.html) has two simple concepts.
+				Resources with Links, Embedded Resources and State.
+				Links with target, relation aka. 'rel' and A few optional properties"
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
 					## Options
 
 					Code? .. Spec?
@@ -161,7 +175,7 @@
 					<textarea data-template>
 					#### Models and data mapping
 
-					<img alt="mapping data" src="images/signature_mapping_domain.png" width="70%">
+					<img alt="mapping data" src="images/signature_mapping_domain.png" width="90%">
 
 					Domain class has [import alias](https://kotlinlang.org/docs/packages.html#imports) to reduce name clashes
 
@@ -176,12 +190,12 @@
 					<textarea data-template>
 					#### Hateoas and creating Hal representation
 
-					<img alt="hal representation" src="images/signature_assembling_representation_v1.png" width="70%">
+					<img alt="hal representation" src="images/signature_assembling_representation_v1.png" width="90%">
 
-					Domain and Api classes have [import aliases](https://kotlinlang.org/docs/packages.html#imports) to reduce name clashes
+					Domain and Api classes have [import aliases](https://kotlinlang.org/docs/packages.html#imports)
 
 
-					toModel (..) uses [Sping-hateoas](https://spring.io/projects/spring-hateoas) to create [hal](https://stateless.group/hal_specification.html) representations
+					toModel (..) uses [Sping-hateoas](https://spring.io/projects/spring-hateoas) classes to create [hal](https://stateless.group/hal_specification.html) representations
 
 						</textarea>
 				</section>
@@ -190,7 +204,7 @@
 					<textarea data-template>
 					#### Controller: create
 
-					<img alt="hateoas controller create" src="images/signature_controller_create_v1.png" width="70%">
+					<img alt="hateoas controller create" src="images/signature_controller_create_v1.png" width="90%">
 
 					use domain services
 
@@ -205,9 +219,7 @@
 					<textarea data-template>
 					#### Controller: get one, get all
 
-					<img alt="hateoas controller get" src="images/signature_controller_one_all_v1.png" width="70%">
-
-					use domain services
+					<img alt="hateoas controller get" src="images/signature_controller_one_all_v1.png" width="90%">
 
 					for one item return [entity model](https://docs.spring.io/spring-hateoas/docs/current/api/org/springframework/hateoas/EntityModel.html)
 
@@ -323,7 +335,7 @@
 					<textarea data-template>
 					#### Visual editors might fit to some users
 
-					<img alt="live docs" src="images/visual-editor.png" width="60%">
+					<img alt="live docs" src="images/reverse-engineered-signature.png" width="90%">
 
 					Try standalone and web based editors
 					[Apicurio](https://www.apicur.io/),
