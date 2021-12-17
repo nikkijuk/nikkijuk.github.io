@@ -101,9 +101,11 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					## Options
+					## Where to start
 
 					Code? .. Spec?
+
+					every software architecture is cute at the start
 						</textarea>
 				</section>
 
@@ -167,7 +169,10 @@
 				<section data-markdown>
 					<textarea data-template>
 					## Case study
-					Sping Boot + Spring Hateoas + springdoc
+					Sping Boot + Spring Hateoas + Spring Data MongoDb + springdoc
+
+					[Test project](https://github.com/nikkijuk/pigeongram/) contains
+					[handwritten Open Api docs](https://github.com/nikkijuk/pigeongram/blob/main/specs/api.yaml) and open api docs generation from code
 						</textarea>
 				</section>
 
@@ -208,9 +213,9 @@
 
 					use domain services
 
-					assemble [entity model](https://docs.spring.io/spring-hateoas/docs/current/api/org/springframework/hateoas/EntityModel.html)
+					assemble [entity model](https://docs.spring.io/spring-hateoas/docs/current/api/org/springframework/hateoas/EntityModel.html) from api model
 
-					return [entity model](https://docs.spring.io/spring-hateoas/docs/current/api/org/springframework/hateoas/EntityModel.html)
+					return [entity model](https://docs.spring.io/spring-hateoas/docs/current/api/org/springframework/hateoas/EntityModel.html) within response
 
 						</textarea>
 				</section>
@@ -283,8 +288,9 @@
 
 				<img alt="live docs" src="images/signatures-create-json.png" width="50%">
 
-				Post **/signatures** return type is not parsed correctly by [SpringDoc](https://springdoc.org/),
-				should use same as RequestBody
+				Post **/signatures** return type missed by [SpringDoc](https://springdoc.org/)
+
+				Created OpenApi document does not match implementation
 					</textarea>
 				</section>
 
