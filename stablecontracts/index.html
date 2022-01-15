@@ -277,7 +277,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					#### mocked unit test
+					#### mocked unit test for controller class
 
 					<img alt="hateoas controller test" src="images/signature_controller_test.png" width="90%">
 
@@ -294,6 +294,24 @@
 					<img alt="hateoas controller test with mockmvc" src="images/signature_controller_webmvctest.png" width="90%">
 
 					[mock dependencies](https://reflectoring.io/spring-boot-web-controller-test/), call http endpoint, check result
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### differences of testing method
+
+					Unit test tests *controller class* in isolation
+
+					Integration test tests whole http roundtrip
+
+					* http listening (@PostMapping, ..)
+					* input serialization (@RequestParam, ..)
+					* validation (@Valid, ..)
+					* *controller class*
+					* output serialization
+					* http status codes (producer error responses)
+
 						</textarea>
 				</section>
 
