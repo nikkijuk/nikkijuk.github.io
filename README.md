@@ -6,7 +6,7 @@ Very opinionated slidesets and presentation.
 
 [slides](https://nikkijuk.github.io/stablecontracts/)
 
-while models driven development (DSLs) and generating code reduces errors
+while model driven development (DSLs) and generating code reduces errors
 
 ## Becoming Software Developer
 
