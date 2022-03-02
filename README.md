@@ -2,6 +2,12 @@
 
 Very opinionated slidesets and presentation. 
 
+## Contract: open api specification or hateoas? modelling or coding?
+
+[slides](https://nikkijuk.github.io/stablecontracts/)
+
+while models driven development (DSLs) and generating code reduces errors
+
 ## Becoming Software Developer
 
 [slides](https://nikkijuk.github.io/becomingdeveloper/)
