@@ -10,6 +10,18 @@ api driven: while model driven development (DSLs) and generating code reduces er
 
 code first: while it looks easy and there's fancy examples at stack overflow
 
+## Software evolution: when learnings come code
+
+[slides](http://localhost:63342/nikkijuk.github.io/infinitecode/)
+
+If team is managing to embed to software everything they learn by observing how
+users are using system it evonves.
+
+If gap between what is known of users needs 
+and what software provides grows 
+it's only a matter of time when users 
+dissatisfaction forces them to abandon software they hoped to provide value to them.
+
 ## distributed program flow
 
 [slides](http://localhost:63342/nikkijuk.github.io/flowcode/)
