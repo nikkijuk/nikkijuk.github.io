@@ -2,11 +2,20 @@
 
 Very opinionated slidesets and presentation. 
 
-## Contract: open api specification or hateoas? modelling or coding?
+## Contract: open api specification or full hateoas? modelling or coding?
 
 [slides](https://nikkijuk.github.io/stablecontracts/)
 
-while model driven development (DSLs) and generating code reduces errors
+api driven: while model driven development (DSLs) and generating code reduces errors
+
+code first: while it looks easy and there's fancy examples at stack overflow
+
+## distributed program flow
+
+[slides](http://localhost:63342/nikkijuk.github.io/flowcode/)
+
+what is microservices architecture?
+what kind of coordination is required when local data and local computation needs to work in context of distributed systems.
 
 ## Becoming Software Developer
 
