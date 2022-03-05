@@ -16,20 +16,21 @@ api driven: while model driven development (DSLs) and generating code reduces er
 
 code first: while it looks easy and there's fancy examples at stack overflow.
 
-Decision lies on your culture, usecase and legacy codebase. I have very strong opinion that modelling and sharing contracts openly would be valuable, but also that it's capability which many companies might not have. 
+Decision lies on your culture, usecase and legacy codebase. I have very strong opinion that modelling and sharing contracts openly would be valuable, but also that it's rare capability, which many companies might not have. 
 
-Related, and important, [Uwe Friedrichsen, Getting API design right](https://speakerdeck.com/ufried/getting-api-design-right)
+Related, and important, [Uwe Friedrichsen, Getting API design right, slides](https://speakerdeck.com/ufried/getting-api-design-right) and [video, in German](https://www.youtube.com/watch?v=2xgplCQS1bY&t=1161s)
 
 ## Software evolution: when learnings come code
 
 [slides](http://localhost:63342/nikkijuk.github.io/infinitecode/)
 
-If team is managing to embed to software everything they learn by observing how users are using system it evolves.
+If team is managing to embed to software everything they learn by observing how users are using system, it evolves. If team is not learning or not capable of changing their system according their growing knowledge, it suffers, and is in danger.
 
-If gap between what is known of users needs 
-and what software provides grows 
+If gap between what is known of users needs and what software provides grows 
 it's only a matter of time when users 
-dissatisfaction forces them to abandon software they hoped to provide value to them.
+dissatisfaction forces them to abandon software they hoped to provide value.
+
+Related, and important, [Einar Høst, Technical debt isn't technical, slides](https://www.slideshare.net/einarwh/technical-debt-isnt-technical-pdf-ndc-oslo-2018) and [video](https://www.youtube.com/watch?v=CXyNZYDO07Q)
 
 ## distributed program flow
 
