@@ -22,7 +22,7 @@ Related, and important, [Uwe Friedrichsen, Getting API design right, slides](htt
 
 ## Software evolution: when learnings come code
 
-[slides](http://localhost:63342/nikkijuk.github.io/infinitecode/)
+[slides](https://nikkijuk.github.io/infinitecode/)
 
 If team is managing to embed to software everything they learn by observing how users are using system, it evolves. If team is not learning or not capable of changing their system according their growing knowledge, it suffers, and is in danger.
 
@@ -34,7 +34,7 @@ Related, and important, [Einar Høst, Technical debt isn't technical, slides](ht
 
 ## distributed program flow
 
-[slides](http://localhost:63342/nikkijuk.github.io/flowcode/)
+[slides](http://nikkijuk.github.io/flowcode/)
 
 what is microservices architecture?
 what kind of coordination is required when local data and local computation needs to work in context of distributed systems.
