@@ -134,6 +134,15 @@
 					<textarea data-template>
 					<img alt="flutter arch" src="images/flutter-architecture.png" width="50%">
 
+					["extensible, layered system exists as a series of independent libraries that each depend on the underlying layer .. every part of the framework level is designed to be optional and replaceable."](https://docs.flutter.dev/resources/architectural-overview)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					<img alt="dart toolchain" src="images/dart-platforms.svg" width="60%">
+
 					["During development .. apps run in a VM that offers stateful hot reload of changes without needing a full recompile. For release .. apps are compiled directly to machine code."](https://docs.flutter.dev/resources/architectural-overview)
 
 					</textarea>
@@ -167,23 +176,19 @@
 					<textarea data-template>
 				## Flutter: missing pieces?
 
-				Flutter, like [React](https://reactjs.org/), is library for building user interfaces
-				- no extras for your most important use case
-				- no state management
-				- no router
-				- nothing  ..
-
-				.. but compact well thought core which is extensible for future innovation
+				Flutter, like [React](https://reactjs.org/), is library for building user interfaces - it's very focused single purpose solution without compromises
+				- some [1st party plugins](https://github.com/flutter/plugins) from flutter team are included - use them or not
+				- plenty of [3rd party plugins](https://pub.dev/) are also present - best are [flutter favorites](https://docs.flutter.dev/development/packages-and-plugins/favorites)
+				- and nothing prevents you from implementing your [own plugins](https://docs.flutter.dev/development/packages-and-plugins/developing-packages)
 
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				## Flutter: platform channels
+				<img alt="flutter platform channels" src="images/flutter-platform-channels.png" width="40%">
 
-					<img alt="flutter platform channels" src="images/flutter-platform-channels.png" width="50%">
-
+				[Flutter allows you to call into custom code through a platform channel, which is a mechanism for communicating between your Dart code and the platform-specific code of your host app.](https://docs.flutter.dev/resources/architectural-overview#platform-channels)
 
 					</textarea>
 				</section>
