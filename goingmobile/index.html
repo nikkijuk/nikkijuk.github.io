@@ -35,16 +35,77 @@
 				- sandboxed: process can be killed by os at any point if os needs resources
 					</textarea>
 				</section>
+
 				<section data-markdown>
 					<textarea data-template>
-				## Mobile programming languages
+				## implementation styles
+				|  Style | Characteristics    |
+				| ------ | -------------------|
+				|  Web/Hybrid | We Love Web. And accept given tradeoffs. PWA, embedded WebView, Javascript bridge, .. |
+				|  Native | We need control. And have team per platform. Android, Ios, Web, Desktop, Embedded, .. |
+				|  Multiplatform | We value reuse. And MVP showed it works for us. Tradeoffs are clear, native skills still needed. |
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				## Which style fits to me
+				|  Style | When to use  |
+				| ------ | ------------ |
+				|  Web/Hybrid | Web app already exists, mobile app will be simple, I know how it works |
+				|  Native | Only one platform will be ever needed, multiplatform doesn't fit to me, very tight platform integration  |
+				|  Multiplatform | Multiplatform fits to me, my app isn't dead simple, I don't want to have team per platform |
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Technologies to use
 				|  Style | Languages             | Environments |
 				| ------ | --------------------- | ------------ |
 				|  Web/Hybrid | JS, ES, TS | Ng, Vue, React, ReactNative, .., Ionic |
 				|  Native | Swift, Kotlin | Xcode, Android studio |
-				|  Crossplatform | C#, Dart | Xamarin, Flutter |
+				|  Multiplatform | C#, Dart | Xamarin, .Net Maui, Flutter |
 
-				Web/Hybrid means here technologies like PWA, embedded Webview, Javascript bridge
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Multiplatform options
+				|  Environment |  Notes |
+				| ------------ | ------ |
+				|  Xamarin | ["support will end on May 1, 2024 for all Xamarin SDKs. "](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) |
+				|  .NET MAUI | ["a cross-platform framework for creating mobile and desktop apps with C# and XAML."](https://github.com/dotnet/maui) |
+				|  Flutter | ["Google's SDK for crafting beautiful, fast user experiences for mobile, web, and desktop from a single codebase."](https://github.com/flutter/flutter) |
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Xamarin => .NET MAUI
+
+				[NEW! HOT! .NET MAUI 6 Published 23rd may 2022](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
+				- ["This is just the beginning of our journey to create a desktop and mobile app experience that delights .NET developers."](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
+				- [".NET MAUI is built on top of Xamarin.Forms"](https://www.syncfusion.com/blogs/post/xamarin-versus-net-maui.aspx)
+				- [".NET MAUI does not bring many new innovations to the cross-platform domain.](https://protovate.com/blog/tech-talk-flutter-3-vs-net-maui/)
+				- ["Another problem with .NET MAUI is that, at least in its current state, is a bit of a mess."](https://medium.com/pragmatic-programmers/google-flutter-vs-microsoft-net-maui-which-one-will-i-use-3015ec3f99a5)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Flutter
+
+				[OLD! COOL! Flutter 1.0 Published 04th dec 2018](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
+				- ["Flutter .. can either embed into an existing app or use for an entirely new app."](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
+				- ["Flutter is powered by Dart"](https://flutter.dev/)
+				- ["The pool of available Dart developers is small, but luckily it is not a particularly difficult language to learn.](https://protovate.com/blog/tech-talk-flutter-3-vs-net-maui/)
+				- ["When using Flutter, I feel like I have to throw caution to the wind and hope for the best when pulling down those third-party libraries."](https://medium.com/pragmatic-programmers/google-flutter-vs-microsoft-net-maui-which-one-will-i-use-3015ec3f99a5)
 					</textarea>
 				</section>
 
@@ -52,16 +113,15 @@
 					<textarea data-template>
 				## DX: Nulls
 
-				Mentioned native and crossplaform languages are statically typed with native null support
-				- C#
-				- Dart
-				- Kotlin
-				- Swift
+				Mentioned native and multiplatform languages are statically typed with native null safety support
+				- C# (Xamarin, .net MAUI)
+				- Dart (Flutter)
+				- Kotlin (Android Native)
+				- Swift (iOS Native)
 
 				https://en.wikipedia.org/wiki/Nullable_type
 
-				JS, ES, TS can be tweaked to do some null checks, but null safety is not part of type system.
-
+				Duck typing is kinda not static and not very safe. JS & ES & TS can be used in evil ways. With power comes responsibility.
 					</textarea>
 				</section>
 
