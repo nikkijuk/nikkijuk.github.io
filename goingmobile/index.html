@@ -32,7 +32,7 @@
 				- limited: memory, disk, battery, screen size, ..
 				- fragmented: new and old, premium and basic devices, many os versions, vendors, ..
 				- connected: speed and data availability vary
-				- secured: use of device capabilities if user allows access
+				- secured: use of device capabilities only if user allows access
 				- sandboxed: process can be killed by os at any point if os needs resources
 					</textarea>
 				</section>
@@ -42,12 +42,12 @@
 				## app characteristics
 				- essential complexity: high / low
 				- technical complexity: novel / high / some / low
-				- connectivity: used offline / needs net / autodetect
+				- connectivity: used offline / needs net / adaptive
 				- storage: local / network / autosync / realtime
 				- information: strictly private / public / socially shared
 				- locales / languages: one / many / global / RTL
 				- users: few / many / communities / peak usage
-				- user groups: casual users / experts
+				- user groups: casual / experts / admins
 					</textarea>
 				</section>
 
@@ -58,7 +58,7 @@
 				|  Style | When to consider  |
 				| ------ | ------------ |
 				|  Web/Hybrid | Web app already exists, mobile app will be simple, we know how JS works (been there, done that). |
-				|  Native | Only one platform required, tight platform integration needed, we feel this is technically complex  |
+				|  Native | Only one platform required, tight platform integration needed, app is technically complex  |
 				|  *platform | We need to support several platforms, our app isn't dead simple, we don't want to have team per platform |
 
 					</textarea>
@@ -71,7 +71,7 @@
 				| ------ | --------------------- | ------------ |
 				|  Web/Hybrid | JS, ES, TS | PWA: Ng, Vue, React, Other: ReactNative, NativeScript, Cordova, Ionic, .. |
 				|  Native | Swift, Kotlin | Xcode, Android studio |
-				|  *platform | C#, Dart | Xamarin / .Net Maui, Flutter,  .. |
+				|  *platform | C#, Dart | Xamarin / .Net Maui, Flutter, Unity, .. |
 
 					</textarea>
 				</section>
@@ -81,8 +81,8 @@
 				#### We believe it works, but ..
 				|  Style | Reconsider & test & decide   |
 				| ------ | -----------------------------|
-				|  Web/Hybrid | Select PWA or embedded WebView, Javascript bridge, .. based stack. Do Web/Hybrid MVP. Enjoy smell of CSS. |
-				|  Native | We need control. Android, Ios, Web, Desktop, Embedded, .. are different. Ok, but still .. Do Multiplatform MVP. |
+				|  Web/Hybrid | Select PWA or some other stack. Do Web/Hybrid MVP. Enjoy smell of CSS. |
+				|  Native | Android, Ios, Web, Desktop, Embedded, .. are different. Native seems only possibility. Ok, but still .. Do Multiplatform MVP. |
 				|  *platform | We value reuse. MVP showed it works for us. Tradeoffs are clear, native skills still needed in team. Fine to go. |
 
 					</textarea>
@@ -96,6 +96,7 @@
 
 					<img alt="native platforms" src="images/jetbrains-survey-native-platform-development-2021.png" width="45%">
 
+					and, frankly, it's hard to say how much of Native development can be replaced with multiplatform.
 					</textarea>
 				</section>
 
@@ -147,7 +148,7 @@
 				#### Valid *platform options
 				|  Environment |  Notes |
 				| ------------ | ------ |
-				|  Xamarin | ["support will end on May 1, 2024 for all Xamarin SDKs. "](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) |
+				|  Xamarin | EOL 2024. ["support will end on May 1, 2024 for all Xamarin SDKs. "](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) |
 				|  .NET MAUI | ["for creating mobile and desktop apps with C# and XAML."](https://github.com/dotnet/maui) |
 				|  Flutter | ["for mobile, web, and desktop from a single codebase."](https://github.com/flutter/flutter) |
 				|  Unity | ["create apps for Android, iOS, and Windows."](https://www.androidauthority.com/make-unity-apps-1073017/) |
@@ -160,7 +161,7 @@
 				## Xamarin => .NET MAUI
 
 				[NEW! HOT! .NET MAUI 6 Published 23rd may 2022](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
-				- ["This is just the beginning of our journey to create a desktop and mobile app experience that delights .NET developers."](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
+				- ["This is just the beginning of our journey to create a desktop and mobile app experience that delights .NET developers."](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/) (Beginning? Xamarin = 2011)
 				- [".NET MAUI is built on top of Xamarin.Forms"](https://www.syncfusion.com/blogs/post/xamarin-versus-net-maui.aspx)
 				- [".NET MAUI does not bring many new innovations to the cross-platform domain.](https://protovate.com/blog/tech-talk-flutter-3-vs-net-maui/)
 				- ["Another problem with .NET MAUI is that, at least in its current state, is a bit of a mess."](https://medium.com/pragmatic-programmers/google-flutter-vs-microsoft-net-maui-which-one-will-i-use-3015ec3f99a5)
