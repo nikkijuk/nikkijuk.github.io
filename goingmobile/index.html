@@ -211,6 +211,15 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					<img alt="flutter ui tree" src="images/flutter-ui-trees-white.png" width="80%">
+
+					["It would be a rare application that drew only a single widget. An important part of any UI framework is therefore the ability to efficiently lay out a hierarchy of widgets, determining the size and position of each element before they are rendered on the screen."](https://docs.flutter.dev/resources/architectural-overview#layout-and-rendering)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 					<img alt="flutter arch" src="images/flutter-architecture.png" width="50%">
 
 					["extensible, layered system exists as a series of independent libraries that each depend on the underlying layer .. every part of the framework level is designed to be optional and replaceable."](https://docs.flutter.dev/resources/architectural-overview)
@@ -265,6 +274,24 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### Dart - sister of C & C# & JS & Java
+				```
+				void main() {
+				  var number = 42;
+				  print('Solution is $number.');
+				  int? aNullableInt = null;
+				  print('Problem is $aNullableInt.');
+				}
+				```
+
+				Dart offers [sound null safety](https://dart.dev/null-safety), meaning that values can’t be null unless you say they can be.
+
+				Experiment further using [DartPad](https://dartpad.dev/)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### [C interop using dart:ffi](https://dart.dev/guides/libraries/c-interop)
 
 				- use the [dart:ffi](https://api.dart.dev/stable/2.18.2/dart-ffi/dart-ffi-library.html) library to call native C APIs, and to read, write, allocate, and deallocate native memory.
@@ -279,7 +306,7 @@
 				## DX: Nulls
 
 				Mentioned native and multiplatform languages are statically typed with native null safety support
-				- C# (Xamarin, .net MAUI)
+				- C# (Xamarin, .net MAUI, Unity)
 				- Dart (Flutter)
 				- Kotlin (Android Native)
 				- Swift (iOS Native)
