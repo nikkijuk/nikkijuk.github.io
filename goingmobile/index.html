@@ -278,8 +278,8 @@
 				#### Dart - sister of C & C# & JS & Java
 				```
 				void main() {
-				  var number = 42;
-				  print('Solution is $number.');
+				  int aNonNullableInt = 42;
+				  print('Solution is $aNonNullableInt.');
 				  int? aNullableInt = null;
 				  print('Problem is $aNullableInt.');
 				}
@@ -304,6 +304,65 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### React Native - [sister of Flutter](https://docs.flutter.dev/get-started/flutter-for/react-native-devs)
+
+				```
+				// React Native
+				import React from 'react';
+				import { StyleSheet, Text, View } from 'react-native';
+
+				export default class App extends React.Component {
+				  render() {
+					return (
+					  <View style={styles.container}>
+						<Text>Hello world!</Text>
+					  </View>
+					);
+				  }
+				}
+
+				const styles = StyleSheet.create({
+				  container: {
+					flex: 1,
+					backgroundColor: '#fff',
+					alignItems: 'center',
+					justifyContent: 'center'
+				  }
+				});
+				```
+
+				HelloWorldApp class extends React.Component and implements the render method by returning a view component
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Flutter - [sister of React Native](https://docs.flutter.dev/get-started/flutter-for/react-native-devs)
+
+				```
+				/// Flutter
+				import 'package:flutter/material.dart';
+
+				void main() {
+				  runApp(
+					const Center(
+					  child: Text(
+						'Hello, world!',
+						textDirection: TextDirection.ltr,
+					  ),
+					),
+				  );
+				}
+				```
+
+				The Center widget becomes the root of the widget tree and has one child, the Text widget.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				## DX: Nulls
 
 				Mentioned native and multiplatform languages are statically typed with native null safety support
@@ -317,6 +376,20 @@
 				Duck typing is kinda not static and not very safe. JS & ES & TS can be used in evil ways. With power comes responsibility.
 					</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Flutter Recap
+				- Can be embedded or used independently
+				- Almost everything is a widget
+				- UI is reactive and declarative
+				- Usage of native / foreign code is possible
+				- Dart enables hot reload, JIT and AOT
+				- React/ReactNative have similarities to Flutter
+				- Starting with MPV is good choice
+					</textarea>
+				</section>
+
 
 			</div>
 		</div>
