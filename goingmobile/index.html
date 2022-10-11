@@ -25,6 +25,7 @@
 				Jukka Nikki, Amiga programmer
 					</textarea>
 				</section>
+
 				<section data-markdown>
 					<textarea data-template>
 				## Mobile programming
@@ -38,40 +39,113 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				## Which style fits to me
-				|  Style | When to use  |
+				## app characteristics
+				- essential complexity: high / low
+				- technical complexity: novel / high / some / low
+				- connectivity: used offline / needs net / autodetect
+				- storage: local / network / autosync / realtime
+				- information: strictly private / public / socially shared
+				- locales / languages: one / many / global / RTL
+				- users: few / many / communities / peak usage
+				- user groups: casual users / experts
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Which style fits to me
+				|  Style | When to consider  |
 				| ------ | ------------ |
-				|  Web/Hybrid | Web app already exists, mobile app will be simple, I know how it works |
-				|  Native | Only one platform required, multiplatform doesn't fit to me, tight platform integration needed  |
-				|  Multiplatform | Multiplatform fits to me, my app isn't dead simple, I don't want to have team per platform |
+				|  Web/Hybrid | Web app already exists, mobile app will be simple, we know how JS works (been there, done that). |
+				|  Native | Only one platform required, tight platform integration needed, we feel this is technically complex  |
+				|  *platform | Multiplatform feels good to us, our app isn't dead simple, we don't want to have team per platform |
 
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				## Technologies to use
+				#### It seems to work, but ..
+				|  Style | Reconsider once more   |
+				| ------ | -------------------|
+				|  Web/Hybrid | Select PWA or embedded WebView, Javascript bridge, .. based stack. Do Web/Hybrid MVP. |
+				|  Native | We need control. Android, Ios, Web, Desktop, Embedded, .. are different. Ok, but still .. Do Multiplatform MVP. |
+				|  *platform | We value reuse. MVP showed it works for us. Tradeoffs are clear, native skills still needed in team. |
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Technologies to use
 				|  Style | Languages             | Environments |
 				| ------ | --------------------- | ------------ |
-				|  Web/Hybrid | JS, ES, TS | Ng, Vue, React, ReactNative, NativeScript, Cordova, Ionic, .. |
+				|  Web/Hybrid | JS, ES, TS | PWA: Ng, Vue, React, Other: ReactNative, NativeScript, Cordova, Ionic, .. |
 				|  Native | Swift, Kotlin | Xcode, Android studio |
-				|  Multiplatform | C#, Dart | Xamarin, .Net Maui, Flutter,  .. |
+				|  *platform | C#, Dart | Xamarin / .Net Maui, Flutter,  .. |
 
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-					#### Technology trends
+					#### Technology trends (2019 - 2021)
 
-					<img alt="cross platform trends" src="images/jetbrains-survey-multiplatform-use-2019-to-2021.jpeg" width="70%">
+					<img alt="cross platform trends" src="images/jetbrains-survey-multiplatform-use-2019-to-2021.jpeg" width="85%">
 					</textarea>
 				</section>
 
+				<section data-markdown>
+					<textarea data-template>
+					#### [2021: native development still common](https://www.jetbrains.com/lp/devecosystem-2021/miscellaneous/)
+
+					<img alt="native devs" src="images/jetbrains-survey-native-use-2021.jpeg" width="40%">
+
+					<img alt="native platforms" src="images/jetbrains-survey-native-platform-development-2021.png" width="40%">
+
+					</textarea>
+				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				## Multiplatform options
+					#### [2021: 2 strong *platform options](https://www.jetbrains.com/lp/devecosystem-2021/miscellaneous/)
+
+					<img alt="multiplatform strongest" src="images/jetbrains-survey-cross-platform-use-2021.jpeg" width="40%">
+
+					["Flutter .. has surpassed React Native to become the most popular cross-platform mobile framework. In 2019, it had a 30% share, and it now leads with a share of 42%."](https://www.jetbrains.com/lp/devecosystem-2021/miscellaneous/)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### where Flutter > React Native
+
+				- you want to build a high-quality, mobile-first app from a single codebase.
+				- you want to build a very custom UI, or if you have a lot of animations.
+
+				[React native should be preferred if there's already front end skills present, and mobile is "nice to have" and not main platform.](https://blog.udemy.com/flutter-vs-react-native/)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### where React Native > Flutter
+
+				- you want to build simple cross-platform apps on mobile and web with a single codebase.
+				- you want to build apps using the native components on iOS and Android.
+				- you’re already familiar with JavaScript and React.js, and you don’t want to learn a new language.
+
+				[Don’t use Flutter if you need a web-first experience, and mobile is not essential to your strategy.](https://blog.udemy.com/flutter-vs-react-native/)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### More Multiplatform options
 				|  Environment |  Notes |
 				| ------------ | ------ |
 				|  Xamarin | ["support will end on May 1, 2024 for all Xamarin SDKs. "](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) |
@@ -128,9 +202,30 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					<img alt="flutter state mgmt" src="images/flutter-state-management.png" width="50%">
+
+					["Flutter is a reactive, pseudo-declarative UI framework, in which the developer provides a mapping from application state to interface state, and the framework takes on the task of updating the interface at runtime when the application state changes."](https://docs.flutter.dev/resources/architectural-overview)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 					<img alt="flutter arch" src="images/flutter-architecture.png" width="50%">
 
 					["extensible, layered system exists as a series of independent libraries that each depend on the underlying layer .. every part of the framework level is designed to be optional and replaceable."](https://docs.flutter.dev/resources/architectural-overview)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Flutter: missing pieces?
+
+				Flutter, like [React](https://reactjs.org/), is library for building user interfaces - it's very focused single purpose solution without compromises
+				- some [1st party plugins](https://github.com/flutter/plugins) from flutter team are included - use them or not
+				- plenty of [3rd party plugins](https://pub.dev/) are also present - best are [flutter favorites](https://docs.flutter.dev/development/packages-and-plugins/favorites)
+				- and nothing prevents you from implementing your [own plugins](https://docs.flutter.dev/development/packages-and-plugins/developing-packages)
 
 					</textarea>
 				</section>
@@ -161,27 +256,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					<img alt="flutter state mgmt" src="images/flutter-state-management.png" width="50%">
-
-					["Flutter is a reactive, pseudo-declarative UI framework, in which the developer provides a mapping from application state to interface state, and the framework takes on the task of updating the interface at runtime when the application state changes."](https://docs.flutter.dev/resources/architectural-overview)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				## Flutter: missing pieces?
-
-				Flutter, like [React](https://reactjs.org/), is library for building user interfaces - it's very focused single purpose solution without compromises
-				- some [1st party plugins](https://github.com/flutter/plugins) from flutter team are included - use them or not
-				- plenty of [3rd party plugins](https://pub.dev/) are also present - best are [flutter favorites](https://docs.flutter.dev/development/packages-and-plugins/favorites)
-				- and nothing prevents you from implementing your [own plugins](https://docs.flutter.dev/development/packages-and-plugins/developing-packages)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 				<img alt="flutter platform channels" src="images/flutter-platform-channels.png" width="40%">
 
 				[Flutter allows you to call into custom code through a platform channel, which is a mechanism for communicating between your Dart code and the platform-specific code of your host app.](https://docs.flutter.dev/resources/architectural-overview#platform-channels)
@@ -198,63 +272,6 @@
 				- how you bundle and load a C library depends on your platform and the type of library.
 
 						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### [2021: native development still common](https://www.jetbrains.com/lp/devecosystem-2021/miscellaneous/)
-
-					<img alt="native devs" src="images/jetbrains-survey-native-use-2021.jpeg" width="40%">
-
-					<img alt="native platforms" src="images/jetbrains-survey-native-platform-development-2021.png" width="40%">
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### [2021: 2 strong multiplatform options](https://www.jetbrains.com/lp/devecosystem-2021/miscellaneous/)
-
-					<img alt="multiplatform strongest" src="images/jetbrains-survey-cross-platform-use-2021.jpeg" width="40%">
-
-					["Flutter .. has surpassed React Native to become the most popular cross-platform mobile framework. In 2019, it had a 30% share, and it now leads with a share of 42%."](https://www.jetbrains.com/lp/devecosystem-2021/miscellaneous/)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Flutter > React Native
-
-				- you want to build a high-quality, mobile-first app from a single codebase.
-				- you want to build a very custom UI, or if you have a lot of animations.
-
-				[Don’t use Flutter if you need a web-first experience, and mobile is not essential to your strategy.](https://blog.udemy.com/flutter-vs-react-native/)
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### React Native > Flutter
-
-				- you want to build simple cross-platform apps on mobile and web with a single codebase.
-				- you want to build apps using the native components on iOS and Android.
-				- you’re already familiar with JavaScript and React.js, and you don’t want to learn a new language.
-
-				[React native should be preferred if there's already front end skills present, and mobile is "nice to have" and not main platform.](https://blog.udemy.com/flutter-vs-react-native/)
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				## implementation styles
-				|  Style | Characteristics    |
-				| ------ | -------------------|
-				|  Web/Hybrid | We Love Web. And accept given tradeoffs. PWA, embedded WebView, Javascript bridge, .. |
-				|  Native | We need control. And have team per platform. Android, Ios, Web, Desktop, Embedded, .. |
-				|  Multiplatform | We value reuse. And MVP showed it works for us. Tradeoffs are clear, native skills still needed. |
-
-					</textarea>
 				</section>
 
 				<section data-markdown>
