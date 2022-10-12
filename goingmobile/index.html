@@ -28,7 +28,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				## Mobile is complex
+				## "Telephone" is still complex
 				- limited: memory, disk, battery, screen size, ..
 				- fragmented: new and old, premium and basic devices, many os versions, vendors, ..
 				- connected: speed and data availability vary
@@ -158,7 +158,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Valid *platform options
+				#### Some more *platform options?
 				|  Environment |  Notes |
 				| ------------ | ------ |
 				|  Xamarin | EOL 2024. ["support will end on May 1, 2024 for all Xamarin SDKs. "](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) |
@@ -173,11 +173,11 @@
 					<textarea data-template>
 				## Xamarin => .NET MAUI
 
-				[NEW! HOT! .NET MAUI 6 Published 23rd may 2022](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
-				- ["This is just the beginning of our journey to create a desktop and mobile app experience that delights .NET developers."](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/) (Beginning? Xamarin = 2011)
-				- [".NET MAUI is built on top of Xamarin.Forms"](https://www.syncfusion.com/blogs/post/xamarin-versus-net-maui.aspx)
-				- [".NET MAUI does not bring many new innovations to the cross-platform domain.](https://protovate.com/blog/tech-talk-flutter-3-vs-net-maui/)
-				- ["Another problem with .NET MAUI is that, at least in its current state, is a bit of a mess."](https://medium.com/pragmatic-programmers/google-flutter-vs-microsoft-net-maui-which-one-will-i-use-3015ec3f99a5)
+				[.NET MAUI 6 was published 23rd may 2022](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
+				- ["built on top of Xamarin.Forms"](https://www.syncfusion.com/blogs/post/xamarin-versus-net-maui.aspx)
+				- ["just the beginning of our journey to create a desktop and mobile app experience that delights .NET developers."](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
+				- ["does not bring many new innovations to the cross-platform domain.](https://protovate.com/blog/tech-talk-flutter-3-vs-net-maui/)
+				- [".NET MAUI is, at least in its current state, bit of a mess."](https://medium.com/pragmatic-programmers/google-flutter-vs-microsoft-net-maui-which-one-will-i-use-3015ec3f99a5)
 					</textarea>
 				</section>
 
@@ -198,7 +198,7 @@
 
 					<img alt=".NET MAUI architecture" src="images/maui-architecture.png" width="50%">
 
-					["In a .NET MAUI app, you write code that primarily interacts with the .NET MAUI API (1). .NET MAUI then directly consumes the native platform APIs (3). In addition, app code may directly exercise platform APIs (2), if required."](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)
+					["you write code that primarily interacts with the .NET MAUI API (1). .NET MAUI then directly consumes the native platform APIs (3). In addition, app code may directly exercise platform APIs (2), if required."](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)
 
 					</textarea>
 				</section>
@@ -207,8 +207,8 @@
 					<textarea data-template>
 				## Flutter
 
-				[OLD! COOL! Flutter 1.0 Published 04th dec 2018](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
-				- ["Flutter .. can either embed into an existing app or use for an entirely new app."](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
+				[Flutter 1.0 was published 04th dec 2018](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
+				- ["embed into an existing app or use for an entirely new app."](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
 				- ["The pool of available Dart developers is small, but luckily it is not a particularly difficult language to learn."](https://protovate.com/blog/tech-talk-flutter-3-vs-net-maui/)
 				- ["When using Flutter, I feel like I have to throw caution to the wind and hope for the best when pulling down those third-party libraries."](https://medium.com/pragmatic-programmers/google-flutter-vs-microsoft-net-maui-which-one-will-i-use-3015ec3f99a5)
 					</textarea>
@@ -299,11 +299,11 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### [Architecture is about the important stuff. Whatever that is - Ralph Johnson](https://martinfowler.com/architecture/)
+				#### ["Architecture is about the important stuff. Whatever that is." - Ralph Johnson](https://martinfowler.com/architecture/)
 
 				- Within the Flutter community, [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) and [Architecture](https://martinfowler.com/architecture/) are often used synonymously
 				- [Any architecture for a Flutter application]((https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/200-Architecting-a-Flutter-App#state-management-vs-architecture)) will have [some sort of State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
-				- [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) is not an architecture by itself
+				- [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) is not an [architecture by itself](https://bloclibrary.dev/#/architecture)
 
 						</textarea>
 				</section>
@@ -312,22 +312,71 @@
 					<textarea data-template>
 				#### [Bloc state management library](https://bloclibrary.dev/#/)
 
-				<img alt="bloc arch" src="images/bloc_library_white.png" width="50%">
+				<img alt="bloc arch" src="images/widget-bloc-communication.png" width="50%">
 
-				The goal of this library is to make it easy to separate presentation from business logic, facilitating testability and reusability.
+				Use [Bloc](https://bloclibrary.dev/#/whybloc) to separate [presentation](https://bloclibrary.dev/#/architecture?id=presentation-layer) from [business logic](https://bloclibrary.dev/#/architecture?id=business-logic-layer), facilitating testability and reusability.
 
+				Each Bloc has one sink (1) and [stream](https://dart.dev/tutorials/language/streams) (1), but can emit several types of states (N) and handle several types of events (N). [Naming things](https://bloclibrary.dev/#/blocnamingconventions) consistently is vital.
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				#### [Blocs role in architecture](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
+				#### [Example: CounterBloc](https://pub.dev/packages/bloc)
+				```
+				// Base event and Increment Event
+				abstract class CounterEvent {}
+				class CounterIncrementPressed extends CounterEvent {}
+
+				/// handles converting `CounterEvent`s into `int`s.
+				class CounterBloc extends Bloc<CounterEvent, int> {
+				  /// The initial state of the `CounterBloc` is 0.
+				  CounterBloc() : super(0) {
+					/// When a `CounterIncrementPressed` event is added,
+					/// current `state` is accessed via the `state` property
+					/// and a new state is emitted via `emit`.
+					on<CounterIncrementPressed>((event, emit) => emit(state + 1));
+				  }
+				}
+				```
+
+						</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Bloc within Layered architecture](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
 
 				<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="60%">
 
 						</textarea>
 				</section>
 
+				<section data-markdown>
+					<textarea data-template>
+				#### [Sources: by layer/type+domain](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/400-Conventions)
+				```
+				lib
+				|
+				├── blocs
+				├── data
+				├── models
+				├── repositories
+				├── ui
+				|   ├── pages
+				|   |   ├── home_page.dart
+				|   |   └── ...
+				|   └── widgets
+				|       ├── image_card.dart
+				|       └── ...
+				└── main.dart
+				```
+				Stick to one way of organizing files: [by feature/type](https://medium.com/flutter-community/scalable-folder-structure-for-flutter-applications-183746bdc320) is viable option
+				if features can be clearly defined
+
+						</textarea>
+				</section>
 
 				<section data-markdown>
 					<textarea data-template>
@@ -437,14 +486,25 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				## Examples
+
+
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
 				## Flutter Recap
 				- Can be embedded or used independently
 				- Almost everything is a widget
 				- UI is reactive and declarative
-				- Usage of native / foreign code is possible
+				- Usage of native / foreign code is supported
 				- Dart enables hot reload, JIT and AOT
+				- Architecture != State Management, you need both
 				- React/ReactNative have similarities to Flutter
-				- Starting with MPV is good choice
+				- Starting with MPV is good decision
 					</textarea>
 				</section>
 
