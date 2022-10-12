@@ -69,7 +69,7 @@
 				#### Technologies to use
 				|  Style | Languages             | Environments |
 				| ------ | --------------------- | ------------ |
-				|  Web/Hybrid | JS, ES, TS | PWA: Ng, Vue, React, Other: ReactNative, NativeScript, Cordova, Ionic, .. |
+				|  Web/Hybrid | JS, ES, TS | PWA: Ng, Vue, React, Bridge: ReactNative, Webview: Cordova, Ionic, .. |
 				|  Native | Swift, Kotlin | Xcode, Android studio |
 				|  *platform | C#, Dart | Xamarin / .Net Maui, Flutter, Unity, .. |
 
@@ -78,11 +78,24 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					#### [Disclaimer: Embedded WebView might not be for you](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/110-Under-the-Hood#embedded-webapp-approach)
+
+					<img alt="embedded webview" src="images/app-webview-rendering.png" width="40%">
+
+					This was fancy at 2010s, but HTML + CSS might not easily work on every native WebView as you expect
+					and even [getting it secure might be tricky.](https://blog.ostorlab.co/webviews-security-android-ios.html)
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
 				#### We believe it works, but ..
 				|  Style | Reconsider & test & decide   |
 				| ------ | -----------------------------|
-				|  Web/Hybrid | Select PWA or some other stack. Do Web/Hybrid MVP. Enjoy smell of CSS. |
-				|  Native | Android, Ios, Web, Desktop, Embedded, .. are different. Native seems only possibility. Ok, but still .. Do Multiplatform MVP. |
+				|  Web/Hybrid | Select PWA or other stack. Do Web/Hybrid MVPs as long as needed. |
+				|  Native | Our target plaforms have differences. Native seems only possibility. Ok, but still .. Do Multiplatform MVP. |
 				|  *platform | We value reuse. MVP showed it works for us. Tradeoffs are clear, native skills still needed in team. Fine to go. |
 
 					</textarea>
@@ -363,6 +376,19 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					#### [Architectures still differ](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/110-Under-the-Hood)
+
+					<img alt="reactive rendering" src="images/app-reactive-rendering.png" width="45%">
+
+					<img alt="flutter rendering" src="images/app-flutter-rendering.png" width="45%">
+
+					Flutter app runs native and uses own ui components.
+					React app runs js inside sandbox and communicates with platform widgets using bridge.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				## DX: Nulls
 
 				Mentioned native and multiplatform languages are statically typed with native null safety support
@@ -389,7 +415,6 @@
 				- Starting with MPV is good choice
 					</textarea>
 				</section>
-
 
 			</div>
 		</div>
