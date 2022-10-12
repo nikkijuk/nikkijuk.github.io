@@ -202,7 +202,8 @@
 				}
 				```
 
-				The Center [widget](https://docs.flutter.dev/development/ui/widgets-intro) becomes the root of the widget tree and has one child, the Text widget.
+				The Center [widget](https://docs.flutter.dev/development/ui/widgets-intro) becomes the root of the widget tree and has one child, the [Text](https://docs.flutter.dev/development/ui/widgets/text) widget.
+				Flutter UI is [composed](https://docs.flutter.dev/resources/architectural-overview#composition) in a flexible way from high amount of [simple single purpose widgets](https://docs.flutter.dev/resources/faq#can-i-extend-and-customize-the-bundled-widgets). It might look verbose, but it's precise and easy to understand.
 
 					</textarea>
 				</section>
@@ -216,7 +217,9 @@
 					<img alt="flutter rendering" src="images/app-flutter-rendering.png" width="45%">
 
 					Flutter app runs native and uses own ui components.
-					React app runs js inside sandbox and communicates with platform widgets using bridge.
+
+					ReactNative app runs js inside sandbox and communicates with platform widgets using bridge,
+					which reduces performance, but is probably for most projects acceptable.
 					</textarea>
 				</section>
 
