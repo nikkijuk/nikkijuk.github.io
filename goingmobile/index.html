@@ -134,6 +134,45 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### where React Native > Flutter
+
+				- you want to build simple cross-platform apps on mobile and web with a single codebase.
+				- you want to build apps using the native components on iOS and Android.
+				- you’re already familiar with JavaScript and React.js, and you don’t want to learn a new language.
+
+
+				[React native should be preferred if there's already front end skills present, and mobile is "nice to have" and not main platform.](https://blog.udemy.com/flutter-vs-react-native/)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### React Native - [Hello World](https://docs.flutter.dev/get-started/flutter-for/react-native-devs)
+
+				```
+				import React from 'react';
+				import { StyleSheet, Text, View } from 'react-native';
+
+				export default class App extends React.Component {
+				  render() {
+					return (
+					  <View style={styles.container}>
+						<Text>Hello world!</Text>
+					  </View>
+					);}}
+
+				const styles = StyleSheet.create({
+				  container: {flex: 1, backgroundColor: '#fff',
+					alignItems: 'center', justifyContent: 'center'}});
+				```
+
+				HelloWorldApp class extends [React.Component](https://reactjs.org/docs/react-component.html) and implements the render method by returning a view component
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### where Flutter > React Native
 
 				- you want to build a high-quality, mobile-first app from a single codebase.
@@ -146,14 +185,38 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### where React Native > Flutter
+				#### Flutter - [Hello World](https://docs.flutter.dev/get-started/flutter-for/react-native-devs)
 
-				- you want to build simple cross-platform apps on mobile and web with a single codebase.
-				- you want to build apps using the native components on iOS and Android.
-				- you’re already familiar with JavaScript and React.js, and you don’t want to learn a new language.
+				```
+				import 'package:flutter/material.dart';
 
+				void main() {
+				  runApp(
+					const Center(
+					  child: Text(
+						'Hello, world!',
+						textDirection: TextDirection.ltr,
+					  ),
+					),
+				  );
+				}
+				```
 
-				[React native should be preferred if there's already front end skills present, and mobile is "nice to have" and not main platform.](https://blog.udemy.com/flutter-vs-react-native/)
+				The Center [widget](https://docs.flutter.dev/development/ui/widgets-intro) becomes the root of the widget tree and has one child, the Text widget.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### [Architectures still differ](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/110-Under-the-Hood)
+
+					<img alt="reactive rendering" src="images/app-reactive-rendering.png" width="45%">
+
+					<img alt="flutter rendering" src="images/app-flutter-rendering.png" width="45%">
+
+					Flutter app runs native and uses own ui components.
+					React app runs js inside sandbox and communicates with platform widgets using bridge.
 					</textarea>
 				</section>
 
@@ -275,6 +338,26 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### [Dart](https://dart.dev/overview) - with C & [C#](https://www.toptal.com/dart/dartlang-guide-for-csharp-java-devs) & [JS](https://blog.codemagic.io/dart-vs-javascript/) & Java in Algol Family
+				```
+				void main() {
+				  int aNonNullableInt = 42;
+				  print('Solution is $aNonNullableInt.');
+				  int? aNullableInt = null;
+				  print('Problem is $aNullableInt.');
+				}
+				```
+
+				Dart offers [sound null safety](https://dart.dev/null-safety) since 2.12, meaning that values can’t be null unless you say they can be.
+
+				Experiment further using [DartPad](https://dartpad.dev/)
+
+				Dart is at [Tiebo index](https://www.tiobe.com/tiobe-index/) at position 33.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				## Flutter platforms
 				|  Environment | Versions |
 				| ------------ | -------- |
@@ -313,8 +396,8 @@
 				#### ["Architecture is about the important stuff. Whatever that is." - Ralph Johnson](https://martinfowler.com/architecture/)
 
 				- Within the Flutter community, [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) and [Architecture](https://martinfowler.com/architecture/) are often used synonymously
-				- [Any architecture for a Flutter application]((https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/200-Architecting-a-Flutter-App#state-management-vs-architecture)) will have [some sort of State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
-				- [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) is not an [architecture by itself](https://bloclibrary.dev/#/architecture)
+				- [Any architecture for a Flutter application](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/200-Architecting-a-Flutter-App#state-management-vs-architecture) will have [some sort of State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
+				- [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) is not an [architecture by itself](https://bloclibrary.dev/#/architecture), even if bloc library documentation contains [architecture proposition]((https://bloclibrary.dev/#/architecture)).
 
 						</textarea>
 				</section>
@@ -335,7 +418,7 @@
 					<textarea data-template>
 				#### [Example: CounterBloc](https://pub.dev/packages/bloc)
 				```
-				// Base event and Increment Event
+				/// Base event and Increment Event
 				abstract class CounterEvent {}
 				class CounterIncrementPressed extends CounterEvent {}
 
@@ -346,10 +429,11 @@
 					/// When a `CounterIncrementPressed` event is added,
 					/// current `state` is accessed via the `state` property
 					/// and a new state is emitted via `emit`.
-					on<CounterIncrementPressed>((event, emit) => emit(state + 1));
+					on<CounterIncrementPressed>((event, emit)=>emit(state+1));
 				  }
 				}
 				```
+				one event (increment pressed), state as int (counters current value), initial value of state = 0.
 
 						</textarea>
 				</section>
@@ -401,83 +485,11 @@
 				}
 				```
 
-				Dart offers [sound null safety](https://dart.dev/null-safety), meaning that values can’t be null unless you say they can be.
+				Dart offers [sound null safety](https://dart.dev/null-safety) since 2.12, meaning that values can’t be null unless you say they can be.
 
 				Experiment further using [DartPad](https://dartpad.dev/)
 
 				Dart is at [Tiebo index](https://www.tiobe.com/tiobe-index/) at position 33.
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### React Native - [sister of Flutter](https://docs.flutter.dev/get-started/flutter-for/react-native-devs)
-
-				```
-				// React Native
-				import React from 'react';
-				import { StyleSheet, Text, View } from 'react-native';
-
-				export default class App extends React.Component {
-				  render() {
-					return (
-					  <View style={styles.container}>
-						<Text>Hello world!</Text>
-					  </View>
-					);
-				  }
-				}
-
-				const styles = StyleSheet.create({
-				  container: {
-					flex: 1,
-					backgroundColor: '#fff',
-					alignItems: 'center',
-					justifyContent: 'center'
-				  }
-				});
-				```
-
-				HelloWorldApp class extends React.Component and implements the render method by returning a view component
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Flutter - [sister of React Native](https://docs.flutter.dev/get-started/flutter-for/react-native-devs)
-
-				```
-				/// Flutter
-				import 'package:flutter/material.dart';
-
-				void main() {
-				  runApp(
-					const Center(
-					  child: Text(
-						'Hello, world!',
-						textDirection: TextDirection.ltr,
-					  ),
-					),
-				  );
-				}
-				```
-
-				The Center widget becomes the root of the widget tree and has one child, the Text widget.
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### [Architectures still differ](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/110-Under-the-Hood)
-
-					<img alt="reactive rendering" src="images/app-reactive-rendering.png" width="45%">
-
-					<img alt="flutter rendering" src="images/app-flutter-rendering.png" width="45%">
-
-					Flutter app runs native and uses own ui components.
-					React app runs js inside sandbox and communicates with platform widgets using bridge.
 					</textarea>
 				</section>
 
