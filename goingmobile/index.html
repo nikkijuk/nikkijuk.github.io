@@ -467,8 +467,8 @@
 				  }
 				}
 				```
-				on increment event get current state, update it and emit new state.
-				["on" exists since Bloc 7.2.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
+				[Bloc 7.2.0 has on < event > () registration method.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
+				Here we register handling of "Increment" event and define logic for it as single expression lambda.
 
 						</textarea>
 				</section>
@@ -492,7 +492,7 @@
 				void main() => runApp(CounterApp()); // Creation of app
 				```
 				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) takes care of creating single instance of [Bloc](https://pub.dev/documentation/bloc/latest/bloc/Bloc-class.html), lazily by default.
-
+				Usage of [BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) loosely relates to Dependency Injection as concept.
 						</textarea>
 				</section>
 
@@ -516,8 +516,8 @@
 						onPressed:()=>context.read<CounterBloc>().add(Increment()),
 					  ),);}}
 				```
-				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) draws ui when state changes.
-				CounterBloc can be found from [BuildContext](https://api.flutter.dev/flutter/widgets/BuildContext-class.html)
+				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) renders when state is read from stream.
+				CounterBloc can be found with Context.read < blocType >
 				and has [add](https://pub.dev/documentation/bloc/latest/bloc/Bloc/add.html) method which is sink for events.
 						</textarea>
 				</section>
