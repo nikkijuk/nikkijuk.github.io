@@ -41,7 +41,7 @@
 					<textarea data-template>
 					#### [Traditional way: Native development](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/110-Under-the-Hood)
 
-					<img alt="native rendering" src="images/app-native-rendering.png" width="45%">
+					<img alt="native rendering" src="images/app-native-rendering.png" width="40%">
 
 					["requires different teams, different code bases, different workflows, different tools, etc.
 					Developers want an easier, better way to use a single codebase to build mobile apps for multiple target platforms, and they don’t want to sacrifice quality, control, or performance."](https://docs.flutter.dev/resources/faq#can-i-extend-and-customize-the-bundled-widgets)
@@ -93,9 +93,8 @@
 
 					<img alt="embedded webview" src="images/app-webview-rendering.png" width="40%">
 
-					This was fancy at 2010s, but HTML + CSS might not easily work on every native WebView as you expect
+					This was fancy at 2010s, but HTML + CSS might not work consistently and performant on every native WebView (legacy & ios alert!)
 					and even [getting it secure might be tricky.](https://blog.ostorlab.co/webviews-security-android-ios.html)
-
 					</textarea>
 				</section>
 
@@ -186,8 +185,9 @@
 					<textarea data-template>
 				#### where Flutter > React Native
 
-				- you want to build a high-quality, mobile-first app from a single codebase.
-				- you want to build a very custom UI, or if you have a lot of animations.
+				- your goal is a high-quality, mobile-first app from a single codebase.
+				- UI should be custom, or contains complex animations and interactions.
+				- Part of app requires use if native tools & code (ex. app has apple watch ui using swift ui)
 
 				[Don’t use Flutter if you need a web-first experience, and mobile is not essential to your strategy.](https://blog.udemy.com/flutter-vs-react-native/)
 
@@ -227,10 +227,10 @@
 
 					<img alt="flutter rendering" src="images/app-flutter-rendering.png" width="45%">
 
-					Flutter app runs native and uses own ui components.
-
-					ReactNative app runs js inside sandbox and communicates with platform widgets using bridge,
+					ReactNative js app accesses platform widgets and services using bridge,
 					which reduces performance, but is probably for most projects acceptable.
+
+					Flutter native app uses own ui components and integrates tightly with platform using method channels.
 					</textarea>
 				</section>
 
@@ -242,7 +242,7 @@
 				|  Xamarin | EOL 2024. ["support will end on May 1, 2024 for all Xamarin SDKs. "](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) |
 				|  .NET MAUI | ["for creating mobile and desktop apps with C# and XAML."](https://github.com/dotnet/maui) |
 				|  Flutter | ["for mobile, web, and desktop from a single codebase."](https://github.com/flutter/flutter) |
-				|  Unity | ["create apps for Android, iOS, and Windows."](https://www.androidauthority.com/make-unity-apps-1073017/) |
+				|  Unity | For special cases only? ["create apps for Android, iOS, and Windows."](https://www.androidauthority.com/make-unity-apps-1073017/) |
 
 					</textarea>
 				</section>
@@ -335,9 +335,9 @@
 				#### Flutter: missing pieces?
 
 				Flutter, like [React](https://reactjs.org/), is library for building user interfaces - it's very focused single purpose solution without compromises
-				- some [1st party plugins](https://github.com/flutter/plugins) from flutter team are included - use them or not
-				- plenty of [3rd party plugins](https://pub.dev/) are also present - best are [flutter favorites](https://docs.flutter.dev/development/packages-and-plugins/favorites)
-				- and nothing prevents you from implementing your [own plugins](https://docs.flutter.dev/development/packages-and-plugins/developing-packages)
+				- some [1st party plugins](https://github.com/flutter/plugins) from flutter team are included - use them or not (very short list)
+				- plenty of [3rd party plugins](https://pub.dev/) are also present - best are [flutter favorites](https://docs.flutter.dev/development/packages-and-plugins/favorites) (very long list)
+				- and nothing prevents you from implementing your [own plugins](https://docs.flutter.dev/development/packages-and-plugins/developing-packages) (ask yourself: is it worth sharing?)
 
 					</textarea>
 				</section>
@@ -355,9 +355,16 @@
 					<textarea data-template>
 				#### [Dart](https://dart.dev/overview) - with C & [C#](https://www.toptal.com/dart/dartlang-guide-for-csharp-java-devs) & [JS](https://blog.codemagic.io/dart-vs-javascript/) & Java in Algol Family
 				```
+				import 'dart:math';
+
+				extension MyIterable on Iterable<int> {
+				  int get big => reduce(max);
+				  int get small => reduce(min);
+				}
+
 				void main() {
-				  int aNonNullableInt = 42;
-				  print('Solution is $aNonNullableInt.');
+				  var numbers = [25,42,13,40];
+				  print('Solution is ${numbers.big} and not ${numbers.small} .');
 				  int? aNullableInt = null;
 				  print('Problem is $aNullableInt.');
 				}
@@ -365,9 +372,9 @@
 
 				Dart offers [sound null safety](https://dart.dev/null-safety) since 2.12, meaning that values can’t be null unless you say they can be.
 
-				Experiment further using [DartPad](https://dartpad.dev/)
-
 				Dart is at [Tiebo index](https://www.tiobe.com/tiobe-index/) at position 33.
+				Try it using [DartPad](https://dartpad.dev/)
+
 					</textarea>
 				</section>
 
@@ -460,7 +467,8 @@
 				  }
 				}
 				```
-				on increment event get current state, update it and emit new state
+				on increment event get current state, update it and emit new state.
+				["on" exists since Bloc 7.2.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
 
 						</textarea>
 				</section>
