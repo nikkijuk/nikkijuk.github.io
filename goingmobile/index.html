@@ -89,6 +89,23 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				## DX: Nulls
+
+				Mentioned native and multiplatform languages are statically typed with native null safety support
+				- C# (Xamarin, .net MAUI, Unity)
+				- Dart (Flutter)
+				- Kotlin (Android Native)
+				- Swift (iOS Native)
+
+				https://en.wikipedia.org/wiki/Nullable_type
+
+				Duck typing is kinda not static and not very safe. JS & ES & TS can be used in evil ways. With power comes responsibility.
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
 					#### [Disclaimer: Embedded WebView might not be for you](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/110-Under-the-Hood#embedded-webapp-approach)
 
 					<img alt="embedded webview" src="images/app-webview-rendering.png" width="40%">
@@ -561,37 +578,16 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Dart - sister of C & C# & JS & Java
-				```
-				void main() {
-				  int aNonNullableInt = 42;
-				  print('Solution is $aNonNullableInt.');
-				  int? aNullableInt = null;
-				  print('Problem is $aNullableInt.');
-				}
-				```
-
-				Dart offers [sound null safety](https://dart.dev/null-safety) since 2.12, meaning that values can’t be null unless you say they can be.
-
-				Experiment further using [DartPad](https://dartpad.dev/)
-
-				Dart is at [Tiebo index](https://www.tiobe.com/tiobe-index/) at position 33.
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				## DX: Nulls
-
-				Mentioned native and multiplatform languages are statically typed with native null safety support
-				- C# (Xamarin, .net MAUI, Unity)
-				- Dart (Flutter)
-				- Kotlin (Android Native)
-				- Swift (iOS Native)
-
-				https://en.wikipedia.org/wiki/Nullable_type
-
-				Duck typing is kinda not static and not very safe. JS & ES & TS can be used in evil ways. With power comes responsibility.
+				## Flutter Recap
+				- Flutter UI is reactive and declarative
+				- Almost everything is a widget
+				- Dart enables hot reload, JIT and AOT
+				- Dart is easy to learn and has sound null safety
+				- Usage of native / foreign code is supported
+				- Architecture != State Management, you need both
+				- Bloc is popular state management option
+				- React/ReactNative have similarities to Flutter
+				- Starting with MVP is good decision
 					</textarea>
 				</section>
 
@@ -603,22 +599,6 @@
 				- [i/o Pinball, 2022](https://verygood.ventures/success-stories/i-o-pinball)
 				- [ranch game, 2022](https://verygood.ventures/blog/very-good-ranch-game)
 
-					</textarea>
-				</section>
-
-
-				<section data-markdown>
-					<textarea data-template>
-				## Flutter Recap
-				- Flutter UI is reactive and declarative
-				- Almost everything is a widget
-				- Dart enables hot reload, JIT and AOT
-				- Dart is easy to learn and has sound null safety
-				- Usage of native / foreign code is supported
-				- Architecture != State Management, you need both
-				- Bloc is popular state management option
-				- React/ReactNative have similarities to Flutter
-				- Starting with MVP is good decision
 					</textarea>
 				</section>
 
