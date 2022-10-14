@@ -58,8 +58,8 @@
 				|  Style | When to consider  |
 				| ------ | ------------ |
 				|  Web/Hybrid | Web app already exists, mobile app will be simple, we know how JS works (been there, done that). |
-				|  Native | Only one platform required, tight platform integration needed, app is technically complex  |
-				|  *platform | We need to support several platforms, our app isn't dead simple, we don't want to have team per platform |
+				|  Native | Only one platform required, tight platform integration needed, app is novel or technically complex.  |
+				|  *platform | We need to support several platforms, our app isn't dead simple, we don't want to have team per platform. |
 
 					</textarea>
 				</section>
@@ -420,25 +420,86 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### [Example: CounterBloc](https://pub.dev/packages/bloc)
+				#### [Example: Counter app](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+				<img alt="counter bloc app" src="images/counter_bloc_example.png" width="70%">
+
+				"+" adds increment event to sink, counter is rendered when state is received from stream.
+				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) controls lifecycle of bloc instance.
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Example: CounterBloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 				```
 				/// Base event and Increment Event
 				abstract class CounterEvent {}
-				class CounterIncrementPressed extends CounterEvent {}
+				class Increment extends CounterEvent {}
 
 				/// handles converting `CounterEvent`s into `int`s.
 				class CounterBloc extends Bloc<CounterEvent, int> {
 				  /// The initial state of the `CounterBloc` is 0.
 				  CounterBloc() : super(0) {
-					/// When a `CounterIncrementPressed` event is added,
+					/// When `Increment` event is added,
 					/// current `state` is accessed via the `state` property
 					/// and a new state is emitted via `emit`.
-					on<CounterIncrementPressed>((event, emit)=>emit(state+1));
+					on<Increment>((event, emit) => emit(state + 1));
 				  }
 				}
 				```
-				one event (increment pressed), state as int (counters current value), initial value of state = 0.
+				on increment event get current state, update it and emit new state
 
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Example: CounterApp](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				```
+				class CounterApp extends StatelessWidget {
+				  @override
+				  Widget build(BuildContext context) {
+					return MaterialApp(
+					  home: BlocProvider( /// DI: provide always same instance
+						create: (_) => CounterBloc(), /// create bloc
+						child: CounterPage(),         /// Actual UI
+					  ),
+					);
+				  }
+				}
+
+				void main() => runApp(CounterApp()); // Creation of app
+				```
+				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) takes care of creating single instance of [Bloc](https://pub.dev/documentation/bloc/latest/bloc/Bloc-class.html), lazily by default.
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Example: CounterPage](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				```
+				class CounterPage extends StatelessWidget {
+				  @override
+				  Widget build(BuildContext context) {
+					return Scaffold(
+					  appBar: AppBar(title: const Text('Counter')),
+					  body: Center(
+						child: BlocBuilder<CounterBloc, int>(
+						  builder: (context, count) {
+							return Text('$count', style: Theme.of(context).textTheme.headline1);
+						  },),
+					  ),
+					  floatingActionButton: FloatingActionButton(
+						child: const Icon(Icons.add),
+						onPressed:()=>context.read<CounterBloc>().add(Increment()),
+					  ),);}}
+				```
+				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) draws ui when state changes.
+				CounterBloc can be found from [BuildContext](https://api.flutter.dev/flutter/widgets/BuildContext-class.html)
+				and has [add](https://pub.dev/documentation/bloc/latest/bloc/Bloc/add.html) method which is sink for events.
 						</textarea>
 				</section>
 
@@ -451,6 +512,8 @@
 
 						</textarea>
 				</section>
+
+
 
 				<section data-markdown>
 					<textarea data-template>
