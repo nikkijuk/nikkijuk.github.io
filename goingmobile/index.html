@@ -455,7 +455,7 @@
 					<textarea data-template>
 				#### [Example: Counter app](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
-				<img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="70%">
+				<img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="80%">
 
 				"+" adds increment event to sink, counter is rendered when state is received from stream.
 				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) controls lifecycle of bloc instance.
@@ -481,8 +481,8 @@
 				  }
 				}
 				```
-				[Bloc 7.2.0 has on < event > () registration method.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
-				Here we register handling of "Increment" event and define logic for it as single expression lambda.
+				[Bloc 7.2.0 provides < event > () registration method.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
+					Register handling of "Increment" event and define logic as single expression lambda.
 
 						</textarea>
 				</section>
@@ -494,19 +494,20 @@
 				void main() {
 				  group('CounterBloc', () {
 					test('initial state is 0', () {
-					  expect(CounterBloc().state, equals(0));
+					  expect(CounterBloc().state, 0);
 					});
 
 					blocTest<CounterBloc, int>(
 					  'emits [1] when increment is called',
 					  build: CounterBloc.new,
 					  act: (bloc) => bloc.add(Increment()),
-					  expect: () => [equals(1)],
+					  expect: () => [1],
 					);
 				  });
 				}
 				```
 				[bloc_test](https://pub.dev/packages/bloc_test) allows testing reactive code in isolation.
+				Mocking, setup, delays, etc. are supported but not needed in this example.
 
 						</textarea>
 				</section>
@@ -543,7 +544,7 @@
 				  @override
 				  Widget build(BuildContext context) {
 					return Scaffold(
-					  appBar: AppBar(title: const Text('Counter')),
+					  appBar: AppBar(title: const Text('Bloc Counter')),
 					  body: Center(
 						child: BlocBuilder<CounterBloc, int>(
 						  builder: (context, count) {
