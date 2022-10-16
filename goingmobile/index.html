@@ -491,22 +491,22 @@
 					<textarea data-template>
 				#### [Example: CounterBlocTest](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 				```
-				blocTest(
-				  'emits [1] when CounterEvent.increment is added',
-				  build: () => counterBloc,
-				  act: (bloc) => bloc.add(CounterEvent.increment),
-				  expect: () => [1],
-				);
+				void main() {
+				  group('CounterBloc', () {
+					test('initial state is 0', () {
+					  expect(CounterBloc().state, equals(0));
+					});
 
-				blocTest(
-				  'emits [-1] when CounterEvent.decrement is added',
-				  build: () => counterBloc,
-				  act: (bloc) => bloc.add(CounterEvent.decrement),
-				  expect: () => [-1],
-				);
+					blocTest<CounterBloc, int>(
+					  'emits [1] when increment is called',
+					  build: CounterBloc.new,
+					  act: (bloc) => bloc.add(Increment()),
+					  expect: () => [equals(1)],
+					);
+				  });
+				}
 				```
-				[bloc_test]() removes the complexity of testing reactive code,
-				and allows you to unit test your code with almost no setup required.
+				[bloc_test](https://pub.dev/packages/bloc_test) allows testing reactive code in isolation.
 
 						</textarea>
 				</section>
