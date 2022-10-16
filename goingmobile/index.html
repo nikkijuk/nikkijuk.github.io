@@ -455,13 +455,12 @@
 					<textarea data-template>
 				#### [Example: Counter app](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
-				<img alt="counter bloc app" src="images/counter_bloc_example.png" width="70%">
+				<img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="70%">
 
 				"+" adds increment event to sink, counter is rendered when state is received from stream.
 				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) controls lifecycle of bloc instance.
 					</textarea>
 				</section>
-
 
 				<section data-markdown>
 					<textarea data-template>
@@ -487,6 +486,31 @@
 
 						</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Example: CounterBlocTest](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				```
+				blocTest(
+				  'emits [1] when CounterEvent.increment is added',
+				  build: () => counterBloc,
+				  act: (bloc) => bloc.add(CounterEvent.increment),
+				  expect: () => [1],
+				);
+
+				blocTest(
+				  'emits [-1] when CounterEvent.decrement is added',
+				  build: () => counterBloc,
+				  act: (bloc) => bloc.add(CounterEvent.decrement),
+				  expect: () => [-1],
+				);
+				```
+				[bloc_test]() removes the complexity of testing reactive code,
+				and allows you to unit test your code with almost no setup required.
+
+						</textarea>
+				</section>
+
 
 				<section data-markdown>
 					<textarea data-template>
