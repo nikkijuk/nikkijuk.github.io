@@ -182,11 +182,11 @@
 				  render() {
 					return (
 					  <View style={styles.container}>
-						<Text>Hello world!</Text>
+						<Text>Hello world!</Text> // JSX is JS, but feels HTML
 					  </View>
 					);}}
 
-				const styles = StyleSheet.create({
+				const styles = StyleSheet.create({ // Smells like CSS
 				  container: {flex: 1, backgroundColor: '#fff',
 					alignItems: 'center', justifyContent: 'center'}});
 				```
@@ -217,7 +217,7 @@
 				import 'package:flutter/material.dart';
 
 				void main() {
-				  runApp(
+				  runApp( /// UI is built with Dart code
 					const Center(
 					  child: Text(
 						'Hello, world!',
@@ -379,16 +379,17 @@
 
 				void main() {
 				  var numbers = [25,42,13,40];
-				  print('Solution is ${numbers.big} and not ${numbers.small} .');
+				  print('Solution is ${numbers.big}, not ${numbers.small}');
 				  int? aNullableInt = null;
 				  print('Problem is $aNullableInt.');
 				}
 				```
 
 				Dart offers [sound null safety](https://dart.dev/null-safety) since 2.12, meaning that values can’t be null unless you say they can be.
+				Extending classes is supported since Dart 2.7.
 
 				Dart is at [Tiebo index](https://www.tiobe.com/tiobe-index/) at position 33.
-				Try it using [DartPad](https://dartpad.dev/)
+				Try [DartPad](https://dartpad.dev/)
 
 					</textarea>
 				</section>
@@ -445,7 +446,8 @@
 
 				<img alt="bloc arch" src="images/widget-bloc-communication.png" width="50%">
 
-				Use [Bloc](https://bloclibrary.dev/#/whybloc) to separate [presentation](https://bloclibrary.dev/#/architecture?id=presentation-layer) from [business logic](https://bloclibrary.dev/#/architecture?id=business-logic-layer), facilitating testability and reusability.
+				Theory: [Bloc](https://bloclibrary.dev/#/whybloc) separates [presentation](https://bloclibrary.dev/#/architecture?id=presentation-layer) from [business logic](https://bloclibrary.dev/#/architecture?id=business-logic-layer).
+				Practice: Bloc is very close to UI.
 
 				Each Bloc has one input (sink) and output ([stream](https://dart.dev/tutorials/language/streams)), but can emit (output) several types of states and handle (input) several types of events. [Naming things](https://bloclibrary.dev/#/blocnamingconventions) consistently is vital.
 					</textarea>
@@ -458,7 +460,8 @@
 				<img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="80%">
 
 				"+" adds increment event to sink, counter is rendered when state is received from stream.
-				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) controls lifecycle of bloc instance.
+				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) controls lifecycle,
+				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) rendering.
 					</textarea>
 				</section>
 
@@ -481,8 +484,8 @@
 				  }
 				}
 				```
-				[Bloc 7.2.0 provides < event > () registration method.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
-					Register handling of "Increment" event and define logic as single expression lambda.
+				[Bloc 7.2.0 provides on < event > () registration method.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
+				Blocs super constructor sets initial state, CounterBlocs constructor defines handling of "Increment" using single expression lambda.
 
 						</textarea>
 				</section>
@@ -521,9 +524,9 @@
 				  @override
 				  Widget build(BuildContext context) {
 					return MaterialApp(
-					  home: BlocProvider( /// DI: provide always same instance
-						create: (_) => CounterBloc(), /// create bloc
-						child: CounterPage(),         /// Actual UI
+					  home: BlocProvider( /// DI: always same bloc instance
+						create: (_) => CounterBloc(),
+						child: CounterPage(),
 					  ),
 					);
 				  }
@@ -565,7 +568,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### [Bloc within Layered architecture](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
+				#### [Organizing code: Layered architecture](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
 
 				<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="60%">
 
