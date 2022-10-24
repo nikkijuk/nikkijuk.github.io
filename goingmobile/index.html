@@ -22,7 +22,7 @@
 
 				“This ‘telephone’ has too many shortcomings to be seriously considered as a means of communication. The device is inherently of no value to us.” - Western Union telegraph company memo, 1877
 
-				Jukka Nikki, Amiga programmer
+				xJukka Nikki, Amiga programmer
 					</textarea>
 				</section>
 
@@ -77,17 +77,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					#### [Disclaimer: Embedded WebView might not be for you](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/110-Under-the-Hood#embedded-webapp-approach)
-
-					<img alt="embedded webview" src="images/app-webview-rendering.png" width="45%">
-
-					This was fancy at 2010s, but HTML + CSS might not work consistently and performant on every native WebView (legacy & ios alert!)
-					and even [getting it secure might be tricky.](https://blog.ostorlab.co/webviews-security-android-ios.html)
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 				#### Technologies to use
 				|  Style | Languages             | Environments |
 				| ------ | --------------------- | ------------ |
@@ -95,6 +84,17 @@
 				|  Native | Swift, Kotlin | Xcode, Android studio |
 				|  *platform | C#, Dart | Xamarin / .Net Maui, Flutter, Unity, .. |
 
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### [Disclaimer: Embedded WebView might not be for you](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/110-Under-the-Hood#embedded-webapp-approach)
+
+					<img alt="embedded webview" src="images/app-webview-rendering.png" width="45%">
+
+					This was fancy at 2010s, but HTML + CSS might not work consistently and performant on every native WebView (legacy & ios alert!)
+					and even [getting it secure might be tricky.](https://blog.ostorlab.co/webviews-security-android-ios.html)
 					</textarea>
 				</section>
 
@@ -339,6 +339,23 @@
 					<img alt="flutter arch" src="images/flutter-architecture.png" width="50%">
 
 					["extensible, layered system exists as a series of independent libraries that each depend on the underlying layer .. every part of the framework level is designed to be optional and replaceable."](https://docs.flutter.dev/resources/architectural-overview)
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Flutter Platform adaptation](https://docs.flutter.dev/resources/platform-adaptations)
+
+				|  Type       |  Description |
+				| ----------- | ------------ |
+				| automatic | prevents ‘wrong’ behavior for given OS (ex. scrolling, text input) |
+				| supported | provides tools to implement OS conventions (ex. tabs, alert dialog) |
+
+				most widgets don't [adapt automatically](https://docs.google.com/document/d/14mxhVeVk1lClPkBi6VmB260_7fKUlZTM-Vn1bOres7M/edit),
+				but developer can decide to use [cupertino](https://docs.flutter.dev/development/ui/widgets/cupertino)
+				or [material](https://docs.flutter.dev/development/ui/widgets/material) widgets.
 
 					</textarea>
 				</section>
