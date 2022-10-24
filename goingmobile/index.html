@@ -22,13 +22,13 @@
 
 				“This ‘telephone’ has too many shortcomings to be seriously considered as a means of communication. The device is inherently of no value to us.” - Western Union telegraph company memo, 1877
 
-				xJukka Nikki, Amiga programmer
+				- Jukka Nikki, Amiga programmer
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-				## "Telephone" is still complex
+				## 'Telephone' is still complex
 				- limited: memory, disk, battery, screen size, ..
 				- fragmented: new and old, premium and basic devices, many os versions, vendors, ..
 				- connected: speed and data availability vary
@@ -590,8 +590,6 @@
 						</textarea>
 				</section>
 
-
-
 				<section data-markdown>
 					<textarea data-template>
 				#### [Sources: by layer/type+domain](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/400-Conventions)
@@ -619,14 +617,26 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### [MVVM anywhere?](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+
+				<img alt="bloc mvvm comparison" src="images/mvvm_bloc.png" width="50%">
+
+				in "[MVVM (Model-View-ViewModel) pattern .. BLoC is the replacement for ViewModel](https://medium.com/@aaron.chu/flutter-state-management-bloc-pattern-9cd6011c699)."
+
+				- BLoC is responsible for managing the state for View
+				- Model (or Repository) helps the BLoC to access data
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### Tradeoffs / Fears / ..
 
-				[Why Flutter Isn’t the Next Big Thing - by ios consult](https://betterprogramming.pub/why-flutter-isnt-the-next-big-thing-e268488521f4)
+				- &cross; [Additional layer on top of native adds complexity](https://betterprogramming.pub/why-flutter-isnt-the-next-big-thing-e268488521f4)
+				- &cross; ReactNative and Native development will win
+				- &cross; Googles [pet sematery](https://killedbygoogle.com/) waiting?
+				- &check; [Google has a clear financial incentive to invest in adoption of a cross platform language](https://redmonk.com/jgovernor/2022/05/16/flutter-propels-dart-frameworks-language-adoption-and-cross-platform-development/)
 
-				- ReactNative and Native development have their role
-				- native look might require multiple specific UIs
-				- additional layer on top of native adds complexity
-				- googles [pet sematery](https://killedbygoogle.com/) waiting?
 
 					</textarea>
 				</section>
@@ -641,6 +651,7 @@
 				- Usage of native / foreign code is supported
 				- Architecture != State Management, you need both
 				- Bloc is popular state management option
+				- It's not so far from MVVM as it looks like
 				- React/ReactNative have similarities to Flutter
 				- Starting with MVP is good decision
 					</textarea>
