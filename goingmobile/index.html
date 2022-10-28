@@ -580,15 +580,26 @@
 						</textarea>
 				</section>
 
-
 				<section data-markdown>
 					<textarea data-template>
-				#### [Organizing code: Layered architecture](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
 
-				<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="60%">
+				<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="70%">
+
+				[layers](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
 
 						</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="multimodule monorepo arch" src="images/multimodule_repo_example.png" width="80%">
+
+				[layers and packages](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
+
+						</textarea>
+				</section>
+
 
 				<section data-markdown>
 					<textarea data-template>
@@ -702,6 +713,33 @@
 				Duck typing is kinda not static and not very safe. JS & ES & TS can be used in evil ways. With power comes responsibility.
 					</textarea>
 				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Sources: by layer/type+domain](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/400-Conventions)
+				```
+				lib
+				|
+				├── blocs
+				├── data
+				├── models
+				├── repositories
+				├── ui
+				|   ├── pages
+				|   |   ├── home_page.dart
+				|   |   └── ...
+				|   └── widgets
+				|       ├── image_card.dart
+				|       └── ...
+				└── main.dart
+				```
+				Stick to one way of organizing files: [by feature/type](https://medium.com/flutter-community/scalable-folder-structure-for-flutter-applications-183746bdc320) is viable option
+				if features can be clearly defined
+
+						</textarea>
+				</section>
+
 
 				<section data-markdown>
 					<textarea data-template>
