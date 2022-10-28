@@ -470,6 +470,39 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### [Bloc architecture](https://bloclibrary.dev/#/architecture)
+
+				<img alt="bloc architecture" src="images/bloc_architecture_full_white.png" width="60%">
+
+				UI, bloc and data might not map to layers,
+				but illustrate existence of separate responsibilities.
+
+				BLoC (Business Logic Component) is grand name.
+				BLoC is pretty simple component close to UI.
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [MVVM anywhere?](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+
+				<img alt="bloc mvvm comparison" src="images/mvvm_bloc.png" width="60%">
+
+				in "[MVVM (Model-View-ViewModel) pattern .. BLoC is the replacement for ViewModel](https://medium.com/@aaron.chu/flutter-state-management-bloc-pattern-9cd6011c699)."
+
+				- BLoC is responsible for managing the state for View
+				- Model (or Repository) helps the BLoC to access data
+
+				Communication between UI (V) and BLoC (VM) has changed.
+				Stream has replaced data binding.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### [Example: Counter app](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
 				<img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="80%">
@@ -600,45 +633,33 @@
 						</textarea>
 				</section>
 
-
 				<section data-markdown>
 					<textarea data-template>
-				#### [Sources: by layer/type+domain](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/400-Conventions)
-				```
-				lib
-				|
-				├── blocs
-				├── data
-				├── models
-				├── repositories
-				├── ui
-				|   ├── pages
-				|   |   ├── home_page.dart
-				|   |   └── ...
-				|   └── widgets
-				|       ├── image_card.dart
-				|       └── ...
-				└── main.dart
-				```
-				Stick to one way of organizing files: [by feature/type](https://medium.com/flutter-community/scalable-folder-structure-for-flutter-applications-183746bdc320) is viable option
-				if features can be clearly defined
 
-						</textarea>
+					<img alt="lib and packages" src="images/app_lib_packages_structure.png" width="30%">
+
+					<img alt="single feature" src="images/lib_feature_structure.png" width="30%">
+
+					lib:features, packages:domain/repository, data/client
+
+					</textarea>
 				</section>
 
+
 				<section data-markdown>
 					<textarea data-template>
-				#### [MVVM anywhere?](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+				#### [summary of organizing principles](https://verygood.ventures/blog/very-good-flutter-architecture)
 
-				<img alt="bloc mvvm comparison" src="images/mvvm_bloc.png" width="60%">
+				lib contains presentation
+				- features match to functional requirements
+				- found from software design and named clearly
 
-				in "[MVVM (Model-View-ViewModel) pattern .. BLoC is the replacement for ViewModel](https://medium.com/@aaron.chu/flutter-state-management-bloc-pattern-9cd6011c699)."
+				packages contain domain and data
 
-				- BLoC is responsible for managing the state for View
-				- Model (or Repository) helps the BLoC to access data
-
-				Communication between UI (View) and BLoC (ViewModel) has changed.
-				Data binding is replaced with stream.
+				- domain consists of repositories
+				- repositories transform raw data to apps domain
+				- data consists of clients
+				- clients are built to be reusable
 
 					</textarea>
 				</section>
