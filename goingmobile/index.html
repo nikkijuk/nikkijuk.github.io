@@ -575,7 +575,6 @@
 						</textarea>
 				</section>
 
-
 				<section data-markdown>
 					<textarea data-template>
 				#### [Example: CounterApp](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
@@ -624,6 +623,32 @@
 				and has [add](https://pub.dev/documentation/bloc/latest/bloc/Bloc/add.html) method which is sink for events.
 						</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Example: Widget Test
+				```
+				void main() {
+				  testWidgets('Counter++ test', (WidgetTester tester) async {
+					await tester.pumpWidget(CounterApp()); // build, trigger frame
+
+					expect(find.text('0'), findsOneWidget);
+					expect(find.text('1'), findsNothing);
+
+					await tester.tap(find.byIcon(Icons.add)); // tap '+'
+					await tester.pump(); // trigger a frame
+
+					expect(find.text('0'), findsNothing);
+					expect(find.text('1'), findsOneWidget);
+				  });
+				}
+				```
+				[widget testing](https://docs.flutter.dev/cookbook/testing/widget/introduction)
+				allows initiating actions and testing ui components state changes frame by frame.
+
+						</textarea>
+				</section>
+
 
 				<section data-markdown>
 					<textarea data-template>
