@@ -8,6 +8,10 @@ Not all of slidesets are finished. They might still be worth browsing, for which
 
 Why bother to think, iterate your ideas, ask why? Isn't it enough to just write next line of code? Read [Uwe Friedrichsen, Essential Architectural Thinking](https://speakerdeck.com/ufried/essential-architectural-thinking)
 
+## Going Mobile: native, web, pwa, hybrid, crossplaform, whatever, .. 
+
+[slides](https://nikkijuk.github.io/goingmobile/)
+
 ## Contract: open api specification or full hateoas? modelling or coding?
 
 [slides](https://nikkijuk.github.io/stablecontracts/)
