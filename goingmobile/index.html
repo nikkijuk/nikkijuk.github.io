@@ -341,6 +341,21 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					#### [Flutter + Dart + Skia = ❤](https://medium.com/@georgetk1996/flutter-how-cross-platform-made-possible-47576976c5c1)
+					<img alt="flutter dart skia" src="images/flutter-dart-skia.png" width="50%">
+
+					Flutter has only 2 "legacy" components
+
+					- [Skia](https://skia.org/) for rendering
+					- [Dart](https://dart.dev/) for runtime
+
+					[Skia](https://skia.org/), [Dart](https://dart.dev/) and Flutter
+					are all developed by Google and closely related to Chrome.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 					#### [UI = f(state)](https://docs.flutter.dev/development/data-and-backend/state-mgmt/declarative)
 					<img alt="flutter state mgmt" src="images/flutter-state-management.png" width="50%">
 
@@ -354,10 +369,36 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					#### [Functional Reactive Programming (FRP)](https://quickbirdstudios.com/blog/what-is-functional-reactive-programming-frp/)
+					<img alt="flutter state mgmt" src="images/functional-reactive-programming.png" width="70%">
+
+					Reactive libraries or programming languages…
+
+					- allow you to easily express data flows.
+					- automatically evaluate your data flows and propagate data changes.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### [Flutter element & render trees](https://docs.flutter.dev/resources/inside-flutter)
+
 					<img alt="flutter ui tree" src="images/flutter-ui-trees-white.png" width="80%">
 
 					["It would be a rare application that drew only a single widget. An important part of any UI framework is therefore the ability to efficiently lay out a hierarchy of widgets, determining the size and position of each element before they are rendered on the screen."](https://docs.flutter.dev/resources/architectural-overview#layout-and-rendering)
 
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### Compare: Reacts Virtual Dom
+
+					<img alt="react virtual dom" src="images/raeact-virtual-dom.png" width="80%">
+
+					[DOM operations are expensive](https://medium.com/technogise/dom-manipulation-in-browser-59b793bee559).
+					React renders only diff of initial and updated [Virtual DOMs](https://blog.logrocket.com/what-virtual-dom-react/).
 					</textarea>
 				</section>
 
@@ -369,7 +410,6 @@
 
 					</textarea>
 				</section>
-
 
 				<section data-markdown>
 					<textarea data-template>
@@ -760,29 +800,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Tradeoffs / Fears / ..
-
-				- &cross; [Additional layer on top of native adds complexity](https://betterprogramming.pub/why-flutter-isnt-the-next-big-thing-e268488521f4)
-				- &cross; ReactNative and Native development will win
-				- &cross; Googles [pet sematery](https://killedbygoogle.com/) waiting?
-				- &check; [Google has a clear financial incentive to invest in adoption of a cross platform language](https://redmonk.com/jgovernor/2022/05/16/flutter-propels-dart-frameworks-language-adoption-and-cross-platform-development/)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				## Examples
-
-				- [wisgen, 2019, no null safety used](https://github.com/Fasust/wisgen)
-				- [i/o Pinball, 2022](https://verygood.ventures/success-stories/i-o-pinball)
-				- [ranch game, 2022](https://verygood.ventures/blog/very-good-ranch-game)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 				#### History / Presentations
 
 				- [React: rethinking best practices, 10/2013](https://www.youtube.com/watch?v=x7cQ3mrcKaYx)
@@ -809,6 +826,28 @@
 					</textarea>
 				</section>
 
+				<section data-markdown>
+					<textarea data-template>
+				## Examples
+
+				- [wisgen, 2019, no null safety used](https://github.com/Fasust/wisgen)
+				- [i/o Pinball, 2022](https://verygood.ventures/success-stories/i-o-pinball)
+				- [ranch game, 2022](https://verygood.ventures/blog/very-good-ranch-game)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Tradeoffs / Fears / ..
+
+				- &cross; [Additional layer on top of native adds complexity](https://betterprogramming.pub/why-flutter-isnt-the-next-big-thing-e268488521f4)
+				- &cross; ReactNative and Native development will win
+				- &cross; Googles [pet sematery](https://killedbygoogle.com/) waiting?
+				- &check; [Google has a clear financial incentive to invest in adoption of a cross platform language](https://redmonk.com/jgovernor/2022/05/16/flutter-propels-dart-frameworks-language-adoption-and-cross-platform-development/)
+
+					</textarea>
+				</section>
 
 				<section data-markdown>
 					<textarea data-template>
