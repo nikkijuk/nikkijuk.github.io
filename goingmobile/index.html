@@ -598,17 +598,6 @@
 					</textarea>
 				</section>
 
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Compare: [Redux dataflow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
-
-				<img alt="redux flow" src="images/redux-dataflow-diagram.gif" width="60%">
-
-				The only way to update the state is to call store.dispatch() and pass in an action object.
-						</textarea>
-				</section>
-
 				<section data-markdown>
 					<textarea data-template>
 				#### Compare: [Counter reducer](https://redux.js.org/tutorials/fundamentals/part-1-overview)
@@ -664,6 +653,22 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				## Flutter Recap
+				- [React](https://reactjs.org/)/[ReactNative](https://reactnative.dev/) have similarities to Flutter
+				- Flutter UI is [reactive](https://docs.flutter.dev/resources/inside-flutter) and [declarative](https://docs.flutter.dev/get-started/flutter-for/declarative)
+				- [UI's are composed](https://docs.flutter.dev/development/ui/layout) - [widgets](https://docs.flutter.dev/development/ui/widgets-intro) everywhere!
+				- Dart is [typed](https://dart.dev/guides/language/type-system), [null safe](https://dart.dev/null-safety), [top 20](https://redmonk.com/sogrady/2022/10/20/language-rankings-6-22/) language
+				- Dart enables [hot reload](https://docs.flutter.dev/development/tools/hot-reload), [JIT](https://dart.dev/tools/dart-compile) and [AOT](https://dart.dev/tools/dart-compile)
+				- Usage of [native / foreign code](https://docs.flutter.dev/development/platform-integration/platform-channels) is supported
+				- Architecture != State Management, you need both
+				- [Bloc](https://bloclibrary.dev/#/) is popular [state management option](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
+				- Bloc works as [VM](https://developer.android.com/topic/libraries/architecture/viewmodel) at [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+				- Starting with [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) is good decision
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### [Example: Counter app](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
 				<img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="80%">
@@ -672,6 +677,29 @@
 				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) controls lifecycle,
 				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) rendering.
 					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Example: CounterApp](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				```
+				class CounterApp extends StatelessWidget {
+				  @override
+				  Widget build(BuildContext context) {
+					return MaterialApp(
+					  home: BlocProvider( /// DI: always same bloc instance
+						create: (_) => CounterBloc(),
+						child: CounterPage(),
+					  ),
+					);
+				  }
+				}
+
+				void main() => runApp(CounterApp()); // Creation of app
+				```
+				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) takes care of creating single instance of [Bloc](https://pub.dev/documentation/bloc/latest/bloc/Bloc-class.html), lazily by default.
+				Usage of [BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) loosely relates to Dependency Injection as concept.
+						</textarea>
 				</section>
 
 				<section data-markdown>
@@ -721,29 +749,6 @@
 				[bloc_test](https://pub.dev/packages/bloc_test) allows testing reactive code in isolation.
 				Mocking, setup, delays, etc. are supported but not needed in this example.
 
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Example: CounterApp](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
-				```
-				class CounterApp extends StatelessWidget {
-				  @override
-				  Widget build(BuildContext context) {
-					return MaterialApp(
-					  home: BlocProvider( /// DI: always same bloc instance
-						create: (_) => CounterBloc(),
-						child: CounterPage(),
-					  ),
-					);
-				  }
-				}
-
-				void main() => runApp(CounterApp()); // Creation of app
-				```
-				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) takes care of creating single instance of [Bloc](https://pub.dev/documentation/bloc/latest/bloc/Bloc-class.html), lazily by default.
-				Usage of [BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) loosely relates to Dependency Injection as concept.
 						</textarea>
 				</section>
 
@@ -799,6 +804,16 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### Compare: [Redux dataflow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+
+				<img alt="redux flow" src="images/redux-dataflow-diagram.gif" width="60%">
+
+				The only way to update the state is to call store.dispatch() and pass in an action object.
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 
 				<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="70%">
 
@@ -844,22 +859,6 @@
 				- data consists of clients
 				- clients are built to be reusable
 
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				## Flutter Recap
-				- [React](https://reactjs.org/)/[ReactNative](https://reactnative.dev/) have similarities to Flutter
-				- Flutter UI is [reactive](https://docs.flutter.dev/resources/inside-flutter) and [declarative](https://docs.flutter.dev/get-started/flutter-for/declarative)
-				- [UI's are composed](https://docs.flutter.dev/development/ui/layout) - [widgets](https://docs.flutter.dev/development/ui/widgets-intro) everywhere!
-				- Dart is [typed](https://dart.dev/guides/language/type-system), [null safe](https://dart.dev/null-safety), [top 20](https://redmonk.com/sogrady/2022/10/20/language-rankings-6-22/) language
-				- Dart enables [hot reload](https://docs.flutter.dev/development/tools/hot-reload), [JIT](https://dart.dev/tools/dart-compile) and [AOT](https://dart.dev/tools/dart-compile)
-				- Usage of [native / foreign code](https://docs.flutter.dev/development/platform-integration/platform-channels) is supported
-				- Architecture != State Management, you need both
-				- [Bloc](https://bloclibrary.dev/#/) is popular [state management option](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
-				- Bloc works as [VM](https://developer.android.com/topic/libraries/architecture/viewmodel) at [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
-				- Starting with [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) is good decision
 					</textarea>
 				</section>
 
