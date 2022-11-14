@@ -561,15 +561,76 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### [Compare: Reacts Redux store](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
+
+				<img alt="state management" src="images/redux-store-usage-sharing-data.png" width="80%">
+
+				The state of the whole application is stored in the form of a JS object tree in a single [store](https://redux.js.org/api/store).
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
 				#### [Bloc state management library](https://bloclibrary.dev/#/)
 
 				<img alt="bloc arch" src="images/widget-bloc-communication.png" width="50%">
 
 				Theory: [Bloc](https://bloclibrary.dev/#/whybloc) separates [presentation](https://bloclibrary.dev/#/architecture?id=presentation-layer) from [business logic](https://bloclibrary.dev/#/architecture?id=business-logic-layer).
-				Practice: Bloc is very close to UI.
+				Practice: Bloc is part of presentation layer.
 
-				Each Bloc has one input (sink) and output ([stream](https://dart.dev/tutorials/language/streams)), but can emit (output) several types of states and handle (input) several types of events. [Naming things](https://bloclibrary.dev/#/blocnamingconventions) consistently is vital.
+				Each Bloc has one input (sink) and output ([stream](https://dart.dev/tutorials/language/streams)),
+				but can emit (output) several types of states and handle (input) several types of events.
+				[Naming things](https://bloclibrary.dev/#/blocnamingconventions) consistently is vital.
 					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Compare: Reacts Redux/Flux](https://redux.js.org/)
+
+				<img alt="redux flux" src="images/redux-store-usage.png" width="50%">
+
+				Redux is a pattern and library for managing and updating application state, using events called "actions".
+				Redux implements [Flux pattern](https://facebook.github.io/flux/docs/in-depth-overview/).
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Compare: [Redux dataflow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+
+				<img alt="redux flow" src="images/redux-dataflow-diagram.gif" width="60%">
+
+				The only way to update the state is to call store.dispatch() and pass in an action object.
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Compare: [Counter reducer](https://redux.js.org/tutorials/fundamentals/part-1-overview)
+				```
+				// Create a "reducer" function that determines what the new state
+				// should be when something happens in the app
+				function counterReducer(state = initialState, action) {
+				  // Reducers usually look at the type of action that happened
+				  // to decide how to update the state
+				  switch (action.type) {
+					case 'counter/incremented':
+					  return { ...state, value: state.value + 1 } // create copy
+					default:
+					  // If the reducer doesn't care about this action type,
+					  // return the existing state unchanged
+					  return state
+				  }
+				}
+				```
+				The store will run its reducer function and save the new state value.
+				Reducers are [pure functions](https://www.geeksforgeeks.org/pure-functions-in-javascript/) that take the previous state and an action, and return the next state.
+						</textarea>
 				</section>
 
 				<section data-markdown>
@@ -578,15 +639,11 @@
 
 				<img alt="bloc architecture" src="images/bloc_architecture_full_white.png" width="60%">
 
-				UI, bloc and data might not map to layers,
-				but illustrate existence of separate responsibilities.
-
-				BLoC (Business Logic Component) is grand name.
-				BLoC is pretty simple component close to UI.
+				Bloc attempts to make state changes predictable by regulating when a state change can occur
+				and enforcing a single way to change state throughout an entire application.
 
 					</textarea>
 				</section>
-
 
 				<section data-markdown>
 					<textarea data-template>
