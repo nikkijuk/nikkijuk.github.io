@@ -119,6 +119,9 @@
 
 					[Using progressive enhancement, new capabilities are enabled in modern browsers. (..)
 					If the new capabilities aren't available, users still get the core experience.](https://web.dev/what-are-pwas/)
+
+					Prediction: [PWAs success](https://www.pwastats.com/) might be limited to consumer sector
+					(fast to load simple apps).
 					</textarea>
 				</section>
 
@@ -147,7 +150,95 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					#### [real numbers? real options? Jetbrains 2021](https://www.jetbrains.com/lp/devecosystem-2021/miscellaneous/)
+				#### *platform options?
+				|  Environment |  Notes |
+				| ------------ | ------ |
+				|  Xamarin | EOL 2024. ["support will end on May 1, 2024 for all Xamarin SDKs. "](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) |
+				|  .NET MAUI | ["for creating mobile and desktop apps with C# and XAML."](https://github.com/dotnet/maui) |
+				|  Flutter | ["for mobile, web, and desktop from a single codebase."](https://github.com/flutter/flutter) |
+				|  Unity | For special cases only? ["create apps for Android, iOS, and Windows."](https://www.androidauthority.com/make-unity-apps-1073017/) |
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Xamarin => .NET MAUI
+
+				[.NET MAUI 6 was published 23rd may 2022](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
+				- ["built on top of Xamarin.Forms"](https://www.syncfusion.com/blogs/post/xamarin-versus-net-maui.aspx)
+				- ["just the beginning of our journey to create a desktop and mobile app experience that delights .NET developers."](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
+				- ["does not bring many new innovations to the cross-platform domain.](https://protovate.com/blog/tech-talk-flutter-3-vs-net-maui/)
+				- [".NET MAUI is, at least in its current state, bit of a mess."](https://medium.com/pragmatic-programmers/google-flutter-vs-microsoft-net-maui-which-one-will-i-use-3015ec3f99a5)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### .Net MAUI targets
+
+					<img alt=".NET MAUI" src="images/maui.png" width="40%">
+
+					["single shared project that can target Android, iOS, macOS, and Windows."](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### .Net MAUI architecture
+
+					<img alt=".NET MAUI architecture" src="images/maui-architecture.png" width="50%">
+
+					["you write code that primarily interacts with the .NET MAUI API (1). .NET MAUI then directly consumes the native platform APIs (3). In addition, app code may directly exercise platform APIs (2), if required."](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Flutter
+
+				Started as Sky Engine 2014. First limited demo 2015. [1.0 published 2018](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
+
+				When flutter was fresh it got critic because of
+
+				- low availability of experienced Dart programmers
+				- compromised quality of some provided libraries
+				- limited amount of libraries at it's core
+				- Fast pace of change
+
+				2.0 came 2021 with [sound null safety](https://dart.dev/null-safety), which broke whole ecosystem.
+                Flutter 3.0 came out 2022.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				## Mobile development Recap
+				- Native is still used a lot
+				- WebView never worked well (thanks apple)
+				- Consumers value PWAs fast loading times
+				- PWA browser compatibility is critical
+				- React Native is solid option
+				- Xamarin is dead, does new name help?
+				- Unity surely works, but is it for you?
+				- Flutter is Googles new bet for *platform
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					## Evidence
+
+					Statistics, lies and damn lies
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### [Jetbrains 2021](https://www.jetbrains.com/lp/devecosystem-2021/miscellaneous/)
 
 					<img alt="multiplatform strongest" src="images/jetbrains-survey-cross-platform-use-2021.jpeg" width="40%">
 
@@ -157,7 +248,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					#### [Hear Professionals. StackOverflow 2022](https://survey.stackoverflow.co/2022/#section-most-popular-technologies-other-frameworks-and-libraries)
+					#### [Professionals. StackOverflow 2022](https://survey.stackoverflow.co/2022/#section-most-popular-technologies-other-frameworks-and-libraries)
 
 					<img alt="multiplatform strongest" src="images/professional_devs_flutter_2022.png" width="40%">
 
@@ -189,6 +280,23 @@
 					</textarea>
 				</section>
 
+				<section data-markdown>
+					<textarea data-template>
+				## Evidence Recap
+				- Flutter and React Native are alive
+				- Webview based technologies die slowly
+				- React is strong at web
+				- Reacts popularity will benefit Flutter
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					## React Native or Flutter?
+
+					How to select when time and money matter..
+					</textarea>
+				</section>
 
 				<section data-markdown>
 					<textarea data-template>
@@ -283,66 +391,11 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Some more *platform options?
-				|  Environment |  Notes |
-				| ------------ | ------ |
-				|  Xamarin | EOL 2024. ["support will end on May 1, 2024 for all Xamarin SDKs. "](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) |
-				|  .NET MAUI | ["for creating mobile and desktop apps with C# and XAML."](https://github.com/dotnet/maui) |
-				|  Flutter | ["for mobile, web, and desktop from a single codebase."](https://github.com/flutter/flutter) |
-				|  Unity | For special cases only? ["create apps for Android, iOS, and Windows."](https://www.androidauthority.com/make-unity-apps-1073017/) |
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				## Xamarin => .NET MAUI
-
-				[.NET MAUI 6 was published 23rd may 2022](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
-				- ["built on top of Xamarin.Forms"](https://www.syncfusion.com/blogs/post/xamarin-versus-net-maui.aspx)
-				- ["just the beginning of our journey to create a desktop and mobile app experience that delights .NET developers."](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/)
-				- ["does not bring many new innovations to the cross-platform domain.](https://protovate.com/blog/tech-talk-flutter-3-vs-net-maui/)
-				- [".NET MAUI is, at least in its current state, bit of a mess."](https://medium.com/pragmatic-programmers/google-flutter-vs-microsoft-net-maui-which-one-will-i-use-3015ec3f99a5)
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### .Net MAUI targets
-
-					<img alt=".NET MAUI" src="images/maui.png" width="40%">
-
-					["single shared project that can target Android, iOS, macOS, and Windows."](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### .Net MAUI architecture
-
-					<img alt=".NET MAUI architecture" src="images/maui-architecture.png" width="50%">
-
-					["you write code that primarily interacts with the .NET MAUI API (1). .NET MAUI then directly consumes the native platform APIs (3). In addition, app code may directly exercise platform APIs (2), if required."](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				## Flutter
-
-				[Flutter 1.0 was published 04th dec 2018](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
-
-				When flutter was fresh it got critic because of
-
-				- low availability of experienced Dart programmers
-				- compromised quality of some provided libraries
-				- limited amount of libraries at it's core
-				- Fast pace of change
-
-				And then 2021 Flutter 2.0 introduced [sound null safety](https://dart.dev/null-safety), which broke whole ecosystem and [everyone was migrating at the same time](https://dart.dev/null-safety/migration-guide).
-                Flutter 3.0 came out 2022.
+				## React Native or Flutter Recap
+				- Decision should be based on your requirements
+				- But don't forget culture of your company
+				- If your devs love JS let them use it
+				- But remember your customers needs also
 					</textarea>
 				</section>
 
@@ -350,7 +403,7 @@
 					<textarea data-template>
 					## Flutter
 
-					Technology deep dive
+					Pros & Cons, Comparison to other popular models
 					</textarea>
 				</section>
 
