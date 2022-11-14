@@ -252,7 +252,6 @@
 
 					<img alt="multiplatform strongest" src="images/professional_devs_flutter_2022.png" width="40%">
 
-					- Both platforms have engaged users
 					- Professionals have not abandoned React Native
 					- Flutter is ahead on headcount because of learners
 					- Where are users of Flutter coming? Students? Fresh developers? From other platforms? Sideprojects?
@@ -283,10 +282,12 @@
 				<section data-markdown>
 					<textarea data-template>
 				## Evidence Recap
-				- Flutter and React Native are alive
-				- Webview based technologies die slowly
+				- WebView based technologies die slowly
+				- Xamarin has lost over 50% of users
+				- Popularity of PWA is unclear
+				- Flutter and React Native are well alive
 				- React is strong at web
-				- Reacts popularity will benefit Flutter
+				- Reacts popularity might benefit Flutter
 					</textarea>
 				</section>
 
@@ -394,8 +395,9 @@
 				## React Native or Flutter Recap
 				- Decision should be based on your requirements
 				- But don't forget culture of your company
-				- If your devs love JS let them use it
+				- If your devs love JS let them use React Native
 				- But remember your customers needs also
+				- If you need Fast animations select Flutter
 					</textarea>
 				</section>
 
@@ -419,6 +421,8 @@
 
 					[Skia](https://skia.org/), [Dart](https://dart.dev/) and Flutter
 					are all developed by Google and closely related to Chrome.
+
+					Limited dependencies allow fast evolution.
 					</textarea>
 				</section>
 
@@ -524,6 +528,8 @@
 					<textarea data-template>
 					<img alt="dart toolchain" src="images/dart-platforms.svg" width="60%">
 
+					Dart is a client-optimized language for developing fast apps on any platform.
+
 					["During development .. apps run in a VM that offers stateful hot reload of changes without needing a full recompile. For release .. apps are compiled directly to machine code."](https://docs.flutter.dev/resources/architectural-overview)
 
 					</textarea>
@@ -559,7 +565,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### [Supported platforms](https://docs.flutter.dev/development/tools/sdk/release-notes/supported-platforms)
+				#### [Flutter platforms](https://docs.flutter.dev/development/tools/sdk/release-notes/supported-platforms)
 				|  Environment | Versions |
 				| ------------ | -------- |
 				| Android |	API 16 (Android 4.1) & above |
@@ -616,7 +622,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### [Bloc architecture](https://bloclibrary.dev/#/architecture)
+				#### [Bloc library/pattern](https://bloclibrary.dev/#/architecture)
 
 				<img alt="bloc architecture" src="images/bloc_architecture_full_white.png" width="60%">
 
@@ -673,7 +679,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				# Test app
+				# Simple over Complex
 
 				Flutter example Counter app implemented using Bloc
 					</textarea>
@@ -833,14 +839,12 @@
 					<textarea data-template>
 				#### Compare: Redux [Counter reducer](https://redux.js.org/tutorials/fundamentals/part-1-overview)
 				```
-				// Create a "reducer" function that determines what the new state
-				// should be when something happens in the app
 				function counterReducer(state = initialState, action) {
 				  // Reducers usually look at the type of action that happened
 				  // to decide how to update the state
 				  switch (action.type) {
 					case 'counter/incremented':
-					  return { ...state, value: state.value + 1 } // create copy
+					  return { ...state, value: state.value + 1 } // new copy
 					default:
 					  // If the reducer doesn't care about this action type,
 					  // return the existing state unchanged
@@ -915,7 +919,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Design: [Simple](https://www.infoq.com/presentations/Simple-Made-Easy/) over [complex](https://www.infoworld.com/article/3639050/complexity-is-killing-software-developers.html)
+				#### [Simple](https://www.infoq.com/presentations/Simple-Made-Easy/) over [complex](https://www.infoworld.com/article/3639050/complexity-is-killing-software-developers.html) recap
 
 				[.. value the items on the left more](https://agilemanifesto.org/)
 
@@ -936,6 +940,7 @@
 				#### History / Presentations
 
 				- [React: rethinking best practices, 10/2013](https://www.youtube.com/watch?v=x7cQ3mrcKaYx)
+				- [Flux: Rethinking Web App Development, 5/2014](https://www.youtube.com/watch?v=nYkdrAPrdcw&list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v)
 				- [Open the Sky, 23.10.2014](https://github.com/flutter/flutter/commit/00882d626a478a3ce391b736234a768b762c853a)
 				- [Sky Engine Demo, 4/2015](https://www.youtube.com/watch?v=PnIWl33YMwA)
 				- [The Mahogany Staircase - Flutter's Layered Design, 3/2016](https://www.youtube.com/watch?v=dkyY9WCGMi0)
