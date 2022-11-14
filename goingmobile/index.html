@@ -32,6 +32,14 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					## Mobile development
+
+					Where we are, how it's going, can we do better?
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				## 'Telephone' is still complex
 				- limited: memory, disk, battery, screen size, ..
 				- fragmented: new and old, premium and basic devices, many os versions, vendors, ..
@@ -353,6 +361,14 @@
 
 				<section data-markdown>
 					<textarea data-template>
+					## Flutter
+
+					Technology deep dive
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 					#### [Flutter + Dart + Skia = ❤](https://medium.com/@georgetk1996/flutter-how-cross-platform-made-possible-47576976c5c1)
 					<img alt="flutter dart skia" src="images/flutter-dart-skia.png" width="50%">
 
@@ -538,24 +554,12 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### ["Architecture is about the important stuff. Whatever that is." - Ralph Johnson](https://martinfowler.com/architecture/)
-
-				- Within the Flutter community, [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) and [Architecture](https://martinfowler.com/architecture/) are often used synonymously
-				- [Any architecture for a Flutter application](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/200-Architecting-a-Flutter-App#state-management-vs-architecture) will have [some sort of State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
-				- [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) is not an [architecture by itself](https://bloclibrary.dev/#/architecture), even if [bloc library](https://bloclibrary.dev/) documentation contains [architecture proposition]((https://bloclibrary.dev/#/architecture)).
-				- Compare: [Redux](https://redux.js.org/), Reacts state management solution
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [State management is useful](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro)
+				#### [Flutter has n State management options](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro)
 
 				<img alt="state management" src="images/state-management-explainer.gif" width="80%">
 
-				[when you need to share application state between screens, across your app](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro)
-
+				Use [state management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro)
+				when you need to share application state between screens, across your app
 					</textarea>
 				</section>
 
@@ -570,34 +574,6 @@
 					</textarea>
 				</section>
 
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Bloc state management library](https://bloclibrary.dev/#/)
-
-				<img alt="bloc arch" src="images/widget-bloc-communication.png" width="50%">
-
-				Theory: [Bloc](https://bloclibrary.dev/#/whybloc) separates [presentation](https://bloclibrary.dev/#/architecture?id=presentation-layer) from [business logic](https://bloclibrary.dev/#/architecture?id=business-logic-layer).
-				Practice: Bloc is part of presentation layer.
-
-				Each Bloc has one input (sink) and output ([stream](https://dart.dev/tutorials/language/streams)),
-				but can emit (output) several types of states and handle (input) several types of events.
-				[Naming things](https://bloclibrary.dev/#/blocnamingconventions) consistently is vital.
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Compare: Reacts Redux/Flux](https://redux.js.org/)
-
-				<img alt="redux flux" src="images/redux-store-usage.png" width="50%">
-
-				Redux is a pattern and library for managing and updating application state, using events called "actions".
-				Redux implements [Flux pattern](https://facebook.github.io/flux/docs/in-depth-overview/).
-
-					</textarea>
-				</section>
-
 				<section data-markdown>
 					<textarea data-template>
 				#### [Bloc architecture](https://bloclibrary.dev/#/architecture)
@@ -606,6 +582,18 @@
 
 				Bloc attempts to make state changes predictable by regulating when a state change can occur
 				and enforcing a single way to change state throughout an entire application.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Compare: React / Redux / Flux](https://redux.js.org/)
+
+				<img alt="redux flux" src="images/redux-store-usage.png" width="50%">
+
+				Redux is a pattern and library for managing and updating application state, using events called "actions".
+				Redux implements [Flux pattern](https://facebook.github.io/flux/docs/in-depth-overview/).
 
 					</textarea>
 				</section>
@@ -640,6 +628,29 @@
 				- [Bloc](https://bloclibrary.dev/#/) is popular [state management option](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
 				- Bloc works as [VM](https://developer.android.com/topic/libraries/architecture/viewmodel) at [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
 				- Starting with [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) is good decision
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# Test app
+
+				Flutter example Counter app implemented using Bloc
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [State management using Bloc](https://bloclibrary.dev/#/)
+
+				<img alt="bloc arch" src="images/widget-bloc-communication.png" width="50%">
+
+				Theory: [Bloc](https://bloclibrary.dev/#/whybloc) separates [presentation](https://bloclibrary.dev/#/architecture?id=presentation-layer) from [business logic](https://bloclibrary.dev/#/architecture?id=business-logic-layer).
+				Practice: Bloc is part of presentation layer.
+
+				Each Bloc has one input (sink) and output ([stream](https://dart.dev/tutorials/language/streams)),
+				but can emit (output) several types of states and handle (input) several types of events.
+				[Naming things](https://bloclibrary.dev/#/blocnamingconventions) consistently is vital.
 					</textarea>
 				</section>
 
@@ -780,7 +791,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Compare: [Counter reducer](https://redux.js.org/tutorials/fundamentals/part-1-overview)
+				#### Compare: Redux [Counter reducer](https://redux.js.org/tutorials/fundamentals/part-1-overview)
 				```
 				// Create a "reducer" function that determines what the new state
 				// should be when something happens in the app
@@ -804,7 +815,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Compare: [Redux dataflow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+				#### Compare: [Redux one-way dataflow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
 
 				<img alt="redux flow" src="images/redux-dataflow-diagram.gif" width="60%">
 
@@ -870,6 +881,7 @@
 
 				- Types: Static/Safe over Dynamic/Nullable
 				- State: Immutable over Mutable
+				- Flow: One-Way/Events&Streams over bidirectional
 				- Presentation: Code over Templates
 				- Rendering: Reactive/Declarative over Imperative
 				- Components: Composition over Inheritance
@@ -928,6 +940,18 @@
 				- &check; [Google has a clear financial incentive to invest in adoption of a cross platform language](https://redmonk.com/jgovernor/2022/05/16/flutter-propels-dart-frameworks-language-adoption-and-cross-platform-development/)
 
 					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### ["Architecture is about the important stuff. Whatever that is." - Ralph Johnson](https://martinfowler.com/architecture/)
+
+				- Within the Flutter community, [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) and [Architecture](https://martinfowler.com/architecture/) are often used synonymously
+				- [Any architecture for a Flutter application](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/200-Architecting-a-Flutter-App#state-management-vs-architecture) will have [some sort of State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
+				- [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) is not an [architecture by itself](https://bloclibrary.dev/#/architecture), even if [bloc library](https://bloclibrary.dev/) documentation contains [architecture proposition]((https://bloclibrary.dev/#/architecture)).
+				- Compare: [Redux](https://redux.js.org/), Reacts state management solution
+
+						</textarea>
 				</section>
 
 				<section data-markdown>
