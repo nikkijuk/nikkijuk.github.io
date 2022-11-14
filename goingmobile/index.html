@@ -600,30 +600,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Compare: [Counter reducer](https://redux.js.org/tutorials/fundamentals/part-1-overview)
-				```
-				// Create a "reducer" function that determines what the new state
-				// should be when something happens in the app
-				function counterReducer(state = initialState, action) {
-				  // Reducers usually look at the type of action that happened
-				  // to decide how to update the state
-				  switch (action.type) {
-					case 'counter/incremented':
-					  return { ...state, value: state.value + 1 } // create copy
-					default:
-					  // If the reducer doesn't care about this action type,
-					  // return the existing state unchanged
-					  return state
-				  }
-				}
-				```
-				The store will run its reducer function and save the new state value.
-				Reducers are [pure functions](https://www.geeksforgeeks.org/pure-functions-in-javascript/) that take the previous state and an action, and return the next state.
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 				#### [Bloc architecture](https://bloclibrary.dev/#/architecture)
 
 				<img alt="bloc architecture" src="images/bloc_architecture_full_white.png" width="60%">
@@ -704,6 +680,56 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### [Example: CounterPage](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				```
+				class CounterPage extends StatelessWidget {
+				  @override
+				  Widget build(BuildContext context) {
+					return Scaffold(
+					  appBar: AppBar(title: const Text('Bloc Counter')),
+					  body: Center(
+						child: BlocBuilder<CounterBloc, int>(
+						  builder: (context, count) {
+							return Text('$count', style: Theme.of(context).textTheme.headline1);
+						  },),
+					  ),
+					  floatingActionButton: FloatingActionButton(
+						child: const Icon(Icons.add),
+						onPressed:()=>context.read<CounterBloc>().add(Increment()),
+					  ),);}}
+				```
+				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) renders when state is read from stream.
+				CounterBloc can be found with Context.read < blocType >
+				and has [add](https://pub.dev/documentation/bloc/latest/bloc/Bloc/add.html) method which is sink for events.
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Example: Widget Test
+				```
+				void main() {
+				  testWidgets('Counter++ test', (WidgetTester tester) async {
+					await tester.pumpWidget(CounterApp()); // build, trigger frame
+
+					expect(find.text('0'), findsOneWidget);
+					expect(find.text('1'), findsNothing);
+
+					await tester.tap(find.byIcon(Icons.add)); // tap '+'
+					await tester.pump(); // trigger a frame
+
+					expect(find.text('0'), findsNothing);
+					expect(find.text('1'), findsOneWidget);
+				  });
+				}
+				```
+				[widget testing](https://docs.flutter.dev/cookbook/testing/widget/introduction)
+				allows initiating actions and testing ui components state changes frame by frame.
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### [Example: CounterBloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 				```
 				/// Base event and Increment Event
@@ -754,51 +780,25 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### [Example: CounterPage](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				#### Compare: [Counter reducer](https://redux.js.org/tutorials/fundamentals/part-1-overview)
 				```
-				class CounterPage extends StatelessWidget {
-				  @override
-				  Widget build(BuildContext context) {
-					return Scaffold(
-					  appBar: AppBar(title: const Text('Bloc Counter')),
-					  body: Center(
-						child: BlocBuilder<CounterBloc, int>(
-						  builder: (context, count) {
-							return Text('$count', style: Theme.of(context).textTheme.headline1);
-						  },),
-					  ),
-					  floatingActionButton: FloatingActionButton(
-						child: const Icon(Icons.add),
-						onPressed:()=>context.read<CounterBloc>().add(Increment()),
-					  ),);}}
-				```
-				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) renders when state is read from stream.
-				CounterBloc can be found with Context.read < blocType >
-				and has [add](https://pub.dev/documentation/bloc/latest/bloc/Bloc/add.html) method which is sink for events.
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Example: Widget Test
-				```
-				void main() {
-				  testWidgets('Counter++ test', (WidgetTester tester) async {
-					await tester.pumpWidget(CounterApp()); // build, trigger frame
-
-					expect(find.text('0'), findsOneWidget);
-					expect(find.text('1'), findsNothing);
-
-					await tester.tap(find.byIcon(Icons.add)); // tap '+'
-					await tester.pump(); // trigger a frame
-
-					expect(find.text('0'), findsNothing);
-					expect(find.text('1'), findsOneWidget);
-				  });
+				// Create a "reducer" function that determines what the new state
+				// should be when something happens in the app
+				function counterReducer(state = initialState, action) {
+				  // Reducers usually look at the type of action that happened
+				  // to decide how to update the state
+				  switch (action.type) {
+					case 'counter/incremented':
+					  return { ...state, value: state.value + 1 } // create copy
+					default:
+					  // If the reducer doesn't care about this action type,
+					  // return the existing state unchanged
+					  return state
+				  }
 				}
 				```
-				[widget testing](https://docs.flutter.dev/cookbook/testing/widget/introduction)
-				allows initiating actions and testing ui components state changes frame by frame.
+				The store will run its reducer function and save the new state value.
+				Reducers are [pure functions](https://www.geeksforgeeks.org/pure-functions-in-javascript/) that take the previous state and an action, and return the next state.
 						</textarea>
 				</section>
 
