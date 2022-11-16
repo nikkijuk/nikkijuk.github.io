@@ -432,7 +432,8 @@
 				- But don't forget culture of your company
 				- If your devs love JS let them use React Native
 				- But remember your customers needs also
-				- If you need Fast animations select Flutter
+				- For most use cases both work just fine
+				- But there's things Flutter can do better
 					</textarea>
 				</section>
 
@@ -473,6 +474,21 @@
 
 					</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### [Compare: React / Redux One-way data flow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+
+					<img alt="flutter state mgmt" src="images/one-way-data-flow.png" width="50%">
+
+					- State is condition of the app at a point in time
+					- The UI is rendered based on that state
+					- When something happens state is updated
+					- The UI re-renders based on the new state
+
+					</textarea>
+				</section>
+
 
 				<section data-markdown>
 					<textarea data-template>
@@ -615,9 +631,11 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### [platform channel](https://docs.flutter.dev/resources/architectural-overview#platform-channels)
+
 				<img alt="flutter platform channels" src="images/flutter-platform-channels.png" width="40%">
 
-				[Flutter allows you to call into custom code through a platform channel, which is a mechanism for communicating between your Dart code and the platform-specific code of your host app.](https://docs.flutter.dev/resources/architectural-overview#platform-channels)
+				platform channel is a mechanism for communicating between your Dart code and the platform-specific code of your host app.
 
 					</textarea>
 				</section>
