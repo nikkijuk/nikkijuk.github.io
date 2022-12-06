@@ -259,7 +259,6 @@
 				- Unity surely works, but is it for you?
 				- Compose Multiplatform 1.0 misses iOS
 				- Flutter is Googles new bet for *platform
-
 					</textarea>
 				</section>
 
@@ -336,11 +335,20 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### [RN: JS + native UI // F: Native + Non native UI](https://orthogonal.io/insights/medical-device-software-development/developing-cross-platform-medical-device-apps-with-flutter/)
+
+´					<img alt="how apps work" src="images/how_apps_work.png" width="85%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### where React Native > Flutter
 
-				- you want to build simple cross-platform apps on mobile and web with a single codebase.
-				- you want to build apps using the native components on iOS and Android.
-				- you’re already familiar with JavaScript and React.js, and you don’t want to learn a new language.
+				- target: simple cross-platform apps on mobile and web with a single codebase.
+				- ui/ux: native components on iOS and Android.
+				- devs: familiar with JavaScript and React.js, and you don’t want to learn a new language.
 
 				[React native should be preferred if there's already front end skills present, and mobile is "nice to have" and not main platform.](https://blog.udemy.com/flutter-vs-react-native/)
 					</textarea>
@@ -367,7 +375,8 @@
 					alignItems: 'center', justifyContent: 'center'}});
 				```
 
-				HelloWorldApp class extends [React.Component](https://reactjs.org/docs/react-component.html) and implements the render method by returning a view component
+				HelloWorldApp class extends [React.Component](https://reactjs.org/docs/react-component.html)
+				and implements the render method by returning a view component.
 
 					</textarea>
 				</section>
@@ -376,9 +385,9 @@
 					<textarea data-template>
 				#### where Flutter > React Native
 
-				- your goal is a high-quality, mobile-first app from a single codebase.
-				- UI should be custom, or contains complex animations and interactions.
-				- Part of app requires use of native tools & code (ex. app has apple watch ui using swift ui)
+				- target: high-quality, mobile-first app from a single codebase.
+				- ui/ux: custom, complex animations and interactions, integrated to native features.
+				- devs: app skills present, native tools needed (ex. app has apple watch ui using swift ui)
 
 				[Don’t use Flutter if you need a web-first experience, and mobile is not essential to your strategy.](https://blog.udemy.com/flutter-vs-react-native/)
 
@@ -631,6 +640,18 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### [Migration projects: Native -> Flutter](https://www.youtube.com/watch?v=JVRPIittNaE)
+
+				<img alt="native to flutter" src="images/migrating_native_to_flutter.png" width="65%">
+
+				Compiled dart code runs at host platform and accesses legacy
+				native code using method channels.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
 				#### [platform channel](https://docs.flutter.dev/resources/architectural-overview#platform-channels)
 
 				<img alt="flutter platform channels" src="images/flutter-platform-channels.png" width="40%">
@@ -713,6 +734,19 @@
 
 					</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Example: Value of App Architecture](https://www.youtube.com/watch?v=JVRPIittNaE)
+
+				<img alt="app architecture" src="images/cost_of_app_architecture.png" width="80%">
+
+				Every system has architecture, planned or accidental,
+				planned being mostly preferable.
+				Pros & Cons depend on stakeholder, personal preferences, project & phase.
+					</textarea>
+				</section>
+
 
 				<section data-markdown>
 					<textarea data-template>
