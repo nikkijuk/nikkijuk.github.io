@@ -181,14 +181,14 @@
 				<section data-markdown>
 					<textarea data-template>
 				#### Cloud Functions (FaaS)
-				- limited amount of supported languages / frameworks
-				- price: events + compute + networking
+				- use [Node.js, Python, Go, Java, .NET, Ruby, or PHP](https://cloud.google.com/functions/docs/concepts/execution-environment)
+				- write function as "code snippet" which is executed on demand
+				- no concurrency support, no stateful functions
 				- no cost when function is idle
-				- just write your logic with supported language
-				- no need to manage infrastructure
+				- price: events + compute + networking
+				- use cases: react on pub/sub events, http requests, scheduled jobs, etc..
 					</textarea>
 				</section>
-
 
 				<section data-markdown>
 					<textarea data-template>
@@ -201,12 +201,13 @@
 				<section data-markdown>
 					<textarea data-template>
 				#### Cloud run (CaaS)
-				- Supports wide variety of languages and frameworks
-				- price: requests + cpu + memory + networking
+				- use any language and framework
+				- implement service as [OCI container](https://opencontainers.org/)
+				- concurrency and stateful logic possible
+				- own domain supported
 				- always free tier + pay when code runs
-				- write logic with language you want
-				- package your code as container
-				- no need to manage infrastructure
+				- price: requests + cpu + memory + networking
+				- use cases: web apps, apis, microservices, etc..
 					</textarea>
 				</section>
 
