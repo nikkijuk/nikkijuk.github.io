@@ -41,11 +41,13 @@
 				<section data-markdown>
 					<textarea data-template>
 
-					## State management paradox
+					## Why bloc?
 
 					global mutable state is evil...
 
 					but every app needs to manage state.
+
+					if you fail on this, your app will fail.
 
 					</textarea>
 				</section>
@@ -171,6 +173,21 @@
 
 				― Brian Goetz, Java Concurrency in Practice
 
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					### Immutable models in dart
+
+					- define a constructor + the properties
+					- override toString, operator ==, hashCode
+					- implement a copyWith method to clone the object
+					- implement handling of de/serialization
+
+					It's possible, but a bit tedious.
+
+					Freezed library helps to generate immutable models.
 					</textarea>
 				</section>
 
