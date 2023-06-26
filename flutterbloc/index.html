@@ -160,7 +160,6 @@
 					</textarea>
 				</section>
 
-
 				<section data-markdown>
 					<textarea data-template>
 				### Why immutability?
@@ -178,16 +177,50 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					### Immutable models in dart
+					### [Immutable data? is it enough?](https://docs.google.com/presentation/d/14u_h-lMn7f1rXE1nDiLX0azS3IkgjGl5uxp5jGJ75RE/edit#slide=id.g2a5e9c4a8_05)
+
+					<img alt="value types" src="images/value_type_autovalue.png" width="60%">
+
+					Well, no.. We need value types. Immutable data is not enough.
+					What can Dart offer?
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					### [Freezed: motivation](https://pub.dev/packages/freezed#motivation)
+
+					<img alt="frrezed motivation" src="images/freezed_motivation.png" width="80%">
+
+					Missing language level value types is a problem,
+					but generating code from annotations is a powerful fix.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					### [Freezed: other fixes](https://pub.dev/packages/freezed#legacy-union-types-and-sealed-classes)
+
+					<img alt="freezed unions" src="images/freezed_unions.png" width="80%">
+
+					Freezed can also generate sealed classes and union types.
+					It is useful, but Dart 3 may be better solution.
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+					### Immutable value types in dart
 
 					- define a constructor + the properties
 					- override toString, operator ==, hashCode
 					- implement a copyWith method to clone the object
 					- implement handling of de/serialization
 
-					It's possible, but a bit tedious.
+					It's possible, but a bit tedious, and error prone.
 
-					Freezed library helps to generate immutable models.
+					Freezed helps to generate immutable value types.
 					</textarea>
 				</section>
 
