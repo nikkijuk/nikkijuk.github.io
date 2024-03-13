@@ -18,13 +18,15 @@ I have programmed for a long time. It's fun.
 
 [slides](https://nikkijuk.github.io/backingmobile/)
 
+You need backend for mobile? Here discussion notes for my collegues.
+
 ## Going Mobile: native, web, pwa, hybrid, crossplaform, whatever, .. 
 
 [slides](https://nikkijuk.github.io/goingmobile/)
 
 This is mostly sales for Flutter. It's partly outdated, partly still valid.
 
-Flutter is cool, so maybe I'll update this someday.
+Flutter is cool, so maybe I'll update this someday. 
 
 ## Contract: open api specification or full hateoas? modelling or coding?
 
