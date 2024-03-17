@@ -14,6 +14,17 @@ Why bother to think, iterate your ideas, ask why? Isn't it enough to just write 
 
 I have programmed for a long time. It's fun.
 
+## Brainhacks: How to enhance human potential usage for software development?
+
+[slides](https://nikkijuk.github.io/brainhacs/)
+
+This is really a random collection of slides is random order. 
+
+- Your team is not performing? Maybe it's not team at all.
+- Where did happy go? and where comes motivation.
+- Trust is the key. Now, has someone seen the key?
+- Fact: Happiness is on your relationships to others. 
+
 ## Backing Mobile: what can cloud do for mobile?
 
 [slides](https://nikkijuk.github.io/backingmobile/)
