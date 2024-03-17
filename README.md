@@ -22,8 +22,14 @@ This is really a random collection of slides is random order.
 
 - Your team is not performing? Maybe it's not team at all.
 - Where did happy go? and where comes motivation.
-- Trust is the key. Now, has someone seen the key?
-- Fact: Happiness is on your relationships to others. 
+- Trust is the key. But how to build it?
+- Happiness is on your relationships to others. 
+
+Slides were prepared for a discussion 
+about how to make software development teams perform better.
+
+No, not once more this technical stuff, 
+but how enable people to work together better.
 
 ## Backing Mobile: what can cloud do for mobile?
 
