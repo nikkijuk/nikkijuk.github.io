@@ -16,7 +16,7 @@ I have programmed for a long time. It's fun.
 
 ## Brainhacks: How to enhance human potential usage for software development?
 
-[slides](https://nikkijuk.github.io/brainhacs/)
+[slides](https://nikkijuk.github.io/brainhacks/)
 
 This is really a random collection of slides is random order. 
 
