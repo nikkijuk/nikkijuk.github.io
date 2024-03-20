@@ -1,5 +1,7 @@
 # Simple graph
 
+this is on the same line as the text
+
 ```mermaid
   graph TD;
       A-->B;
