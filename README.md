@@ -31,6 +31,13 @@ about how to make software development teams perform better.
 No, not once more this technical stuff, 
 but how enable people to work together better.
 
+Or just see video [Teresa Amabile - The Progress Principle](https://www.youtube.com/watch?v=XD6N8bsjOEE&t=935s)
+
+which says for example:
+
+"dissatisfaction leads to slower revenue growth and lower profitability, 
+in other words,  employee engagement drives the bottom line" - Teresa Amabile
+
 ## Backing Mobile: what can cloud do for mobile?
 
 [slides](https://nikkijuk.github.io/backingmobile/)
