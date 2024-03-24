@@ -12,18 +12,34 @@ Why bother to think, iterate your ideas, ask why? Isn't it enough to just write 
 
 [slides](https://nikkijuk.github.io/about/)
 
-I have programmed for a long time. It's fun.
+I have programmed for a long time. It's fun. 
+Currently I'm in mid way to understand that the whole power of what I have done is not a skill of decoding commands to computer. 
+It's all on persons, interaction, within team, with customers. I'm curious to understand more of it.
+
+I propose that cou could also think [How to activate the ‘seeking system’ of your brain | Dan Cable](https://www.youtube.com/watch?v=E4yVofxXpT0)
+
+"what's interesting is if you start with humanity, and you start with 
+"you're a person, 
+there are probably things about you that are unique,
+that we should know about".
+Why don't we start by socializing
+some of the ways that were unique, and that we add value to the team. 
+And I think by humanizing that relationship, it's so simple, 
+but it actually stands out as being rare." - Dan Cable
+
+https://www.youtube.com/watch?v=E4yVofxXpT0
 
 ## Brainhacks: How to enhance human potential usage for software development?
 
 [slides](https://nikkijuk.github.io/brainhacks/)
 
-This is really a random collection of slides is random order. 
+Themes
 
 - Your team is not performing? Maybe it's not team at all.
 - Where did happy go? and where comes motivation.
 - Trust is the key. But how to build it?
-- Happiness is on your relationships to others. 
+- It's not just bricks. We build cathedrals.
+- Happiness is on your relationships to others.
 
 Slides were prepared for a discussion 
 about how to make software development teams perform better.
@@ -31,7 +47,7 @@ about how to make software development teams perform better.
 No, not once more this technical stuff, 
 but how enable people to work together better.
 
-Or just see video [Teresa Amabile - The Progress Principle](https://www.youtube.com/watch?v=XD6N8bsjOEE&t=935s)
+More on video of [Teresa Amabile - The Progress Principle](https://www.youtube.com/watch?v=XD6N8bsjOEE&t=935s)
 
 which says for example:
 
