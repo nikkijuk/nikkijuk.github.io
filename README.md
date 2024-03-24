@@ -16,7 +16,8 @@ I have programmed for a long time. It's fun.
 Currently I'm in mid way to understand that the whole power of what I have done is not a skill of decoding commands to computer. 
 It's all on persons, interaction, within team, with customers. I'm curious to understand more of it.
 
-I propose that cou could also think [How to activate the ‘seeking system’ of your brain | Dan Cable](https://www.youtube.com/watch?v=E4yVofxXpT0)
+I propose that cou could also think 
+[How to activate the ‘seeking system’ of your brain - Dan Cable](https://www.youtube.com/watch?v=E4yVofxXpT0)
 
 "what's interesting is if you start with humanity, and you start with 
 "you're a person, 
@@ -26,8 +27,6 @@ Why don't we start by socializing
 some of the ways that were unique, and that we add value to the team. 
 And I think by humanizing that relationship, it's so simple, 
 but it actually stands out as being rare." - Dan Cable
-
-https://www.youtube.com/watch?v=E4yVofxXpT0
 
 ## Brainhacks: How to enhance human potential usage for software development?
 
