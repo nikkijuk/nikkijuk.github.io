@@ -12,12 +12,29 @@ Why bother to think, iterate your ideas, ask why? Isn't it enough to just write 
 
 [slides](https://nikkijuk.github.io/about/)
 
-I have programmed for a long time. It's fun. 
+I have programmed for a long time. It's still fun and I enjoy it.
+
 Currently I'm in mid way to understand that the whole power of what I have done is not a skill of decoding commands to computer. 
 It's all on persons, interaction, within team, with customers. I'm curious to understand more of it.
 
-I propose that could also think 
-[How to activate the ‘seeking system’ of your brain - Dan Cable](https://www.youtube.com/watch?v=E4yVofxXpT0)
+To understand where I am and why I am I tend to think organisations and environments where I have worked.
+All of those environments have influenced me, but currently I'm more aware about what they do to me.
+I one of the global few persons who doesn't need to work for money, but I still see how 
+[the Way We Think about Work is Broken - Barry Schwartz](https://www.youtube.com/watch?v=DKl-C-VMqYA)
+
+"(..) what Adam Smith was telling us there is,
+that the very shape of the institution,
+within which people work, creates people
+who are fitted to the demands of that
+institution and deprives people of the
+opportunity to derive the kinds of
+satisfactions from their work that we
+take for granted" - Barry Schwartz
+
+I'm motivated by search of understanding boundaries and possibilities, 
+what I can professionally offer to others and what I need.
+Curiousity has lead me to wonder
+[how to activate the ‘seeking system’ of your brain - Dan Cable](https://www.youtube.com/watch?v=E4yVofxXpT0)
 
 "what's interesting is if you start with humanity, and you start with 
 "you're a person, 
@@ -27,6 +44,17 @@ Why don't we start by socializing
 some of the ways that were unique, and that we add value to the team. 
 And I think by humanizing that relationship, it's so simple, 
 but it actually stands out as being rare." - Dan Cable
+
+Mindsets are important. 
+Developing Growth mindset can be learned.
+Enjoy [the power of 'yet' with Zoe and Elmo from Sesame Street](https://www.youtube.com/watch?v=46UhAtPyXw4)
+
+"Making mistakes and coming up with solutions
+to solve your problems is exercise for your brain. 
+Whoa! It's brainercize!
+Right! When you believe you can do it and you keep trying,
+that's when your brain is growing and you're learning
+new things." - Sesame Street
 
 ## Brainhacks: How to enhance human potential usage for software development?
 
