@@ -19,14 +19,14 @@ It's all on persons, interaction, within team, with customers. I'm curious to un
 
 To understand where I am and why I am I tend to think organisations and environments where I have worked.
 All of those environments have influenced me, but currently I'm more aware about what they do to me.
-I one of the global few persons who doesn't need to work for money, but I still see how 
+I am one of the global few persons who doesn't need to work for money, but I still see how 
 [the Way We Think about Work is Broken - Barry Schwartz](https://www.youtube.com/watch?v=DKl-C-VMqYA)
 
-"(..) what Adam Smith was telling us there is,
+"(..) what Adam Smith was telling us there is
 that the very shape of the institution,
 within which people work, creates people
 who are fitted to the demands of that
-institution and deprives people of the
+institution, and deprives people of the
 opportunity to derive the kinds of
 satisfactions from their work that we
 take for granted" - Barry Schwartz
