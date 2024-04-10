@@ -1,0 +1,1033 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+				### Git Basics
+
+				"I'm an egotistical bastard,
+				and I name all my projects after myself.
+				First Linux, now git. "  - Linus Torvalds
+
+						// Name: Jukka Nikki, Identity: Programmer, Since: 6502
+						// "Software development is a team sport built on trust"
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Readme: first sentences 1/2](https://github.com/git/git/blob/master/README.md)
+
+				"Git is a fast, scalable, distributed revision control system
+				with an unusually rich command set that provides both high-level operations
+				and full access to internals."
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Readme: first sentences 2/2](https://github.com/git/git/blob/master/README.md)
+
+				- distributed - local (your) and remote (others) state
+				- revision control - tracks changes of files
+				- unusually rich command set - AARRGGH!
+				- high-level operations - easy to use?
+				- full access to internals - you can do (and break) anything!
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Readme: last sentences 1/2](https://github.com/git/git/blob/master/README.md)
+
+				<img alt="git name" src="images/git-readme-name.png" width="80%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Readme: last sentences 2/2](https://github.com/git/git/blob/master/README.md)
+
+				- git & linux communities are meritocratic
+				- skills are valued
+				- bad ideas are not
+				- be prepared to defend your ideas, but be open to better ones
+				- "talk is cheap, show me the code" - Linus Torvalds
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Some git operations](https://support.nesi.org.nz/hc/en-gb/articles/360001508515-Git-Reference-Sheet)
+
+				<img alt="git flow" src="images/git-diagram.svg" width="70%">
+
+				- add file, commit locally, push to remote
+				- pull changes from remote
+				- reset to previous commit
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+					Software is both a craft and a science, both a work of passion
+					and a work of principle. Writing good software requires both
+					wild flights of imagination and creativity, as well as the hard
+					reality of engineering tradeoffs. Software, like any other worthwhile
+					human endeavor, is a hybrid between the left and right brain.
+					- Robert Martin
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Agile Principles: Team reflection](https://agilemanifesto.org/principles.html)
+
+				"At regular intervals, the team reflects on how
+				to become more effective, then tunes and adjusts
+				its behavior accordingly."
+
+				team, effective, behavior
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Team](https://en.wikipedia.org/wiki/Team)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Katzenbach & smith: teams and groups 1/2](https://hbr.org/2005/07/the-discipline-of-teams)
+
+				<img alt="is this team?" src="images/group_team_difference.png" width="70%">
+
+				[A team is a small number of people with complementary skills who are committed
+				to a common purpose, performance goals, and approach for which they
+				hold themselves mutually accountable.](https://hbr.org/2005/07/the-discipline-of-teams)
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Groups and Teams are different](https://www.sciencedirect.com/science/article/abs/pii/S1541461216000823)
+
+				<img alt="group vs team goals" src="images/group_vs_team_focus_on_goals.png" width="50%">
+
+				[Groups work with parallel interdependence,
+				meaning they work independently with the assumption the work is
+				coordinated by other providers.
+				They do not include the relationship qualities or shared accountability.](https://www.sciencedirect.com/science/article/abs/pii/S1541461216000823)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Katzenbach & smith: teams and groups 2/2](https://hbr.org/2005/07/the-discipline-of-teams)
+
+				<img alt="is this team or group" src="images/katzenback_smith_group_team.png" width="80%">
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [When teams are needed](https://books.google.de/books/about/Managing_Learning_in_Organizations.html?id=Q_0JAQAAMAAJ)
+
+				<img alt="uncertainty" src="images/casey_uncertainty_team.png" width="50%">
+
+				The more uncertainty related to the task, the more there is a need for a team approach.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Effective](https://en.wikipedia.org/wiki/Team)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [katzenback & smith: team effectiviness 1/3](https://teamleadsky.com/katzenbach-smith-model)
+
+				<img alt="hygiene" src="images/katzenback_smith_team_performance.png" width="50%">
+
+				‘In pseudo-teams, the sum of the whole is less than the potential of the individual parts’ - Katzenbach & Smith
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [katzenback & smith: team effectiviness 2/3](https://teamleadsky.com/katzenbach-smith-model)
+
+				The ***working group*** provides a comfortable and low-risk environment where there is no need for an
+				individual to take responsibility beyond their assigned accountability for delivery of the assigned task.
+
+				The ***pseudo team*** is the weakest of all the groups in terms of performance,
+				often because the energy used in interacting with each other reduces
+				the individual performance of group members without providing the desired joint team benefit.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [katzenback & smith: team effectiviness 3/3](https://teamleadsky.com/katzenbach-smith-model)
+
+				***Potential team*** needs often more clarity about its purpose and goals and more discipline
+				in establishing a common approach. Has not yet achieved collective accountability.
+
+				***Real teams*** members have complementary skills.
+				Individuals have same level of commitment to a common purpose.
+
+				A ***high-performing team*** is a ‘real’ team that
+				‘has members who are also deeply committed to each other’s personal growth and success’
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Behaviour](https://en.wikipedia.org/wiki/Team)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Hackman: WHY TEAMS DON’T WORK 1/2](https://hbr.org/2009/05/why-teams-dont-work)
+
+				even the best leader on the planet can’t make a team do well.
+				All anyone can do is increase the likelihood that a team will be great
+				by putting into place five conditions.
+
+				1. teams must be real.
+				2. teams need a compelling direction.
+				3. teams need enabling structures.
+				4. teams need a supportive organization.
+				5. teams need expert coaching.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Hackman: WHY TEAMS DON’T WORK 2/2](https://hbr.org/2009/05/why-teams-dont-work)
+
+				There are many cases where collaboration, particularly in truly creative endeavors,
+				is a hindrance rather than a help (groupthinking,..).
+
+				The challenge for a leader is to find a balance between individual autonomy
+				and collective action.
+
+				Either extreme is bad, though we
+				are generally more aware of the downside of individualism
+				in organizations.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Agile Principles: Motivated team](https://agilemanifesto.org/principles.html)
+
+				"Build projects around motivated individuals.
+				Give them the environment and support they need,
+				and trust them to get the job done."
+
+				motivated, individuals, environment, support, trust ..
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Motivated](https://en.wikipedia.org/wiki/Motivation)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Herzberg: Two-Factor Theory 1/3](https://en.wikipedia.org/wiki/Two-factor_theory)
+
+				***Motivators*** are factors that increase our motivation,
+				such as challenge, accomplishment, or growth.
+
+				***Hygiene factors*** cannot increase our motivation,
+				but must be present to prevent decreasing our motivation.
+				Factors that don't motivate us include pay, benefits, and job status —
+				they can only dissatisfy us.
+
+				</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Herzberg: Hygiene factors 2/3](https://www.gallup.com/workplace/471830/germany-engagement-index-report.aspx)
+
+				<img alt="hygiene" src="images/herzberg_hygiene_list.png" width="40%">
+
+				Ask workers what makes them unhappy at work, and you’ll hear about an annoying boss,
+				a low salary, an uncomfortable work space, or stupid rules.
+
+				[Managed badly, environmental factors make people miserable,
+				and they can certainly be de-motivating.](https://www.leadingsapiens.com/herzberg-hygiene-motivation-theory/)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Herzberg: motivation factors 3/3](https://www.gallup.com/workplace/471830/germany-engagement-index-report.aspx)
+
+				<img alt="motivation" src="images/herzberg_motivators_list_2.png" width="40%">
+
+				But even if managed brilliantly, hygiene factors don’t motivate anybody to work much harder or smarter.
+
+				[People are motivated, instead, by interesting work, challenge, and increased responsibility.
+				These intrinsic factors answer people’s deep-seated need for growth and achievement.](https://www.leadingsapiens.com/herzberg-hygiene-motivation-theory/)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [SELF-DETERMINATION THEORY 1/3](https://selfdeterminationtheory.org/SDT/documents/2005_GagneDeci_JOB_SDTtheory.pdf)
+
+				<img alt="motivation self regulation" src="images/sdt_needs.png" width="60%">
+
+				employees in environments where their needs are actively thwarted,
+				whereby they experience feelings of rejection, incompetence, and/or oppression,
+				are more likely to experience dysfunction at work
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [SELF-DETERMINATION THEORY 2/3](https://selfdeterminationtheory.org/SDT/documents/2005_GagneDeci_JOB_SDTtheory.pdf)
+
+				<img alt="motivation self regulation" src="images/sdt_motivation.png" width="70%">
+
+ 				autonomous regulation can be promoted by work
+				contexts that encourage the satisfaction of
+				the three basic psychological needs
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [SELF-DETERMINATION THEORY 3/3](https://selfdeterminationtheory.org/SDT/documents/2005_GagneDeci_JOB_SDTtheory.pdf)
+
+				controlled regulation
+
+				- External,  acts on demand or reward from outside
+				- Introjected, act because of internal pressure
+
+				autonomous regulation
+
+				- Identified, goal or regulation accepted as important
+				- Integrated, goal or regulation part of self evaluation
+
+				intrinsic motivation refers to carrying out a task for the sheer
+				pleasure and enjoyment the task brings.
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Individuals](https://en.wikipedia.org/wiki/Work_engagement)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Gallup: Meanwhile in Germany 1/2 (2023)](https://www.gallup.com/workplace/471830/germany-engagement-index-report.aspx)
+
+				<img alt="germany 2022 engagement index" src="images/germany_2023_engagement_percents.png" width="50%">
+
+				in average company of 100 employees:
+				- 14% experience an engaging work environment
+				- 67% not engaged ("dienst nach vorschrift")
+				- 19% actively disengaged ("innere kündigung")
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Gallup: Meanwhile in Germany 2/2 (2022)](https://www.gallup.com/workplace/471830/germany-engagement-index-report.aspx)
+
+				many managers focus on their employees’ weaknesses
+				rather than on their strengths and positive attributes.
+
+				- 25% are extremely satisfied with direct manager
+				- 30% say manager is always available and has time
+				- 14% say manager inspires them to try new
+
+				managers have potential to lead employees
+				in a way that enables them to do their jobs better and with greater motivation
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Gallup: Engagement: positive outcomes](https://www.gallup.com/workplace/355082/employee-engagement-strategy-paper.aspx?utm_source=report&utm_medium=email&utm_campaign=ee_meta_analysis_full_report&utm_content=High_Development_Text_Link_2&elqTrackId=575ba1f247ba4cacac0b367edb8e7bfe&elq=7042246384414745a09398a329856681)
+
+				<img alt="engagement positive outcomes" src="images/engagement_positive_outcomes.png" width="70%">
+
+				business units and teams in the top quartile of employee engagement achieved
+				higher performance on positive outcomes
+				(customer loyalty, sales, productivity, profitability, wellbeing and
+				organizational citizenship)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Gallup: Engagement: negative outcomes](https://www.gallup.com/workplace/355082/employee-engagement-strategy-paper.aspx?utm_source=report&utm_medium=email&utm_campaign=ee_meta_analysis_full_report&utm_content=High_Development_Text_Link_2&elqTrackId=575ba1f247ba4cacac0b367edb8e7bfe&elq=7042246384414745a09398a329856681)
+
+				<img alt="engagement negative outcomes" src="images/engagement_negative_outcomes.png" width="70%">
+
+				.. and realized fewer negative outcomes (absenteeism, turnover, shrinkage, safety
+				incidents and quality defects) than those in the bottom quartile
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Environment](https://en.wikipedia.org/wiki/Organizational_culture)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+					"Why is it that we often design organizations
+					as if people naturally shirk responsibility,
+					do only what is required, resist learning,
+					and can’t be trusted to do the right thing?"
+					— Abraham Maslow
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [McGregor: theory x and y 1/2](https://en.wikipedia.org/wiki/Theory_X_and_Theory_Y)
+
+				<img alt="theory x and y" src="images/theory_x_y.png" width="70%">
+
+				X: heightened supervision, external rewards, penalties.
+
+				Y: motivating role of job satisfaction, encourages workers to approach tasks without direct supervision.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [McGregor: theory x and y 2/2](https://en.wikipedia.org/wiki/Theory_X_and_Theory_Y)
+
+				Extrinsic rewards associated with Theory X management tend to motivate the specific behaviors that are being rewarded or punished.
+
+				Intrinsic rewards associated with Theory Y — such as engaging and fulfilling work — tend to broaden thinking and decision-making.
+
+				Intrinsic rewards are more common in knowledge jobs, in which employees are expected to use some amount of discretionary judgment
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [theory x and agile](https://medium.com/@giullianagoianaviana/theories-x-and-y-and-agile-failure-in-organizations-2a29c7b32eda)
+
+				Agile methodologies are built on the pillars of self-organization,
+				self-reflection, and self-adjustment.
+
+				They are based on creating an environment in which people can agree and commit
+				to the organizational goals, and they are given trust to make their own decisions
+				about how they organize the work.
+
+				These frameworks cannot fit in an organizational environment in which Theory X beliefs are predominant.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Gallup: German job market 1/2 (2023)](https://www.gallup.com/workplace/355082/employee-engagement-strategy-paper.aspx?utm_source=report&utm_medium=email&utm_campaign=ee_meta_analysis_full_report&utm_content=High_Development_Text_Link_2&elqTrackId=575ba1f247ba4cacac0b367edb8e7bfe&elq=7042246384414745a09398a329856681)
+
+				business success depends on whether companies can retain their employees over the long term.
+
+				- recruitment costs and time are increasing
+				- around 13 million people – nearly a third of the German workforce – will retire by 2036
+				- although an increase in salary is often the key deciding factor for changing jobs, more money is not sufficient to make employees stay if other circumstances, such as organisational culture, are inadequate.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Gallup: German job market 2/2 (2023)](https://www.gallup.com/workplace/355082/employee-engagement-strategy-paper.aspx?utm_source=report&utm_medium=email&utm_campaign=ee_meta_analysis_full_report&utm_content=High_Development_Text_Link_2&elqTrackId=575ba1f247ba4cacac0b367edb8e7bfe&elq=7042246384414745a09398a329856681)
+
+				surprisingly high number of new team members quickly become disillusioned.
+
+				Within the first year, 15% say they are already actively looking for another new job,
+				and 25% of new hires say they are open to new opportunities.
+
+				In other words, four in 10 new hires have such a poor or frustrating experience
+				at their new place of work that they are looking for the exit within a year.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				“It doesn't make sense to hire smart people and then tell them what to do.
+				We hire smart people so they can tell us what to do.”
+				― Steve Jobs
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Support](https://en.wikipedia.org/wiki/Work_engagement)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Gallup: Workplace wellbeing 1/2
+
+				Employees who strongly agree employer cares about their overall wellbeing
+				vs. those who don’t
+
+				- 3x more likely to be engaged at work
+				- 69% less likely to actively search for a new job
+				- 71% less likely to report experiencing a lot of burnout
+				- 5x more likely to strongly advocate for their company as a place to work
+				- 5x more likely to strongly agree that they trust the leadership of their organization
+				- 36% more likely to be thriving in their overall lives
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Gallup: Workplace wellbeing 2/2
+
+				The best-run organizations build cultures
+				where employees feel leadership genuinely cares them.
+
+				- build trust in leadership by making decisions that reflect the organization’s values
+				- embrace flexible work environments while developing plans for the future
+				- take employee wellbeing (mental health) seriously
+				- use transparent and creative multichannel communication with employees and customers
+				- upskill managers to coach through times of change
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Deloitte: engagement drivers](https://www2.deloitte.com/us/en/insights/deloitte-review/issue-16/employee-engagement-strategies.html)
+
+				<img alt="engagemengt drivers" src="images/engagement_drivers_deloitte.png" width="70%">
+
+				five major elements and 20 underlying strategies make organizations “irresistible.”
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Trust](https://en.wikipedia.org/wiki/Trust_(social_science))
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Edmondson: Psychological safety 1/3](https://en.wikipedia.org/wiki/Psychological_safety)
+
+				<img alt="4 Stages of Psychological Safety" src="images/Stages_of_Psychological_Safety.png" width="40%">
+
+				"a condition in which human beings feel (1) included, (2) safe to learn, (3) safe to contribute, and (4) safe to challenge the status quo"
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Edmondson: Psychological safety 2/3](https://www.oxford-group.com/wp-content/uploads/2022/05/Unlock20innovation20with20psychological20safety_Webv2_FINAL201.pdf)
+
+				<img alt="risk benefit analysis" src="images/risk_benefit_analysis.png" width="50%">
+
+				“Leadership at its core is about harnessing others' efforts
+				to achieve something no one can achieve alone.”
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Edmondson: Psychological safety 3/3](https://www.oxford-group.com/wp-content/uploads/2022/05/Unlock20innovation20with20psychological20safety_Webv2_FINAL201.pdf)
+
+				<img alt="risk benefit analysis" src="images/psychological_safety_missing.png" width="70%">
+
+				“High standards in a context where there is uncertainty or interdependence (or both)
+				combined with a lack of psychological safety comprise a recipe for suboptimal performance.”
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Google: Project Aristotle](https://www.thinkwithgoogle.com/intl/en-emea/consumer-insights/consumer-trends/five-dynamics-effective-team/)
+
+				[what sets apart our most effective teams](https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html)
+
+				- [Who is on a team matters much less than how team members interact,
+				structure their work, and view their contributions.](https://www.inc.com/larry-kim/the-results-of-googles-team-effectiveness-research-will-make-you-rethink-how-you-build-teams.html)
+				- [best teams created a climate of openness
+				where team members admit to their errors and discuss them more often.](https://www.thinkwithgoogle.com/intl/en-emea/consumer-insights/consumer-trends/five-dynamics-effective-team/)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				"An organization that treats its programmers as morons
+				will soon have programmers that are willing and able to act like morons only." - Bjarne Stroustrup
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Agile Principles: Sustainable pace](https://agilemanifesto.org/principles.html)
+
+				"Agile processes promote sustainable development.
+				The sponsors, developers, and users should be able
+				to maintain a constant pace indefinitely."
+
+				sustainable, pace, indefinitely
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Sustainable](https://en.wikipedia.org/wiki/Trust_(social_science))
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				#### [human sustainability perspective](https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html#when-people-thrive-business-thrives)
+
+				The people connected to your organization have the power to affect it in important ways.
+				Your organization has the power to affect each of them.
+				And by understanding and creating value for each other,
+				your organization and its people can improve business, work, and life for everyone.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Bendix, 1956](https://queue.acm.org/detail.cfm?id=3595878)
+
+				To be effective, authority depends on the assumption that
+				subordinates will follow instructions in terms of the spirit rather
+				than the letter of the rules. Two things are implied here: that the
+				subordinate will adopt the behavior alternatives selected for him,
+				and that he will give his “good will” to carrying out his orders.
+				As this formulation suggests, “good will” involves judgment and
+				initiative. . .[which can be] withheld by a “withdrawal of
+				efficiency”. . . a slavish clinging to the letter of the rules…
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Quiet Quitting / Work-to-rule / DnV](https://www.gallup.com/workplace/398306/quiet-quitting-real.aspx)
+
+				 People seem to be tired of being driven to work
+				harder and harder by companies and their immediate bosses if they conclude
+				that neither the company nor the boss cares about them. In response, quiet
+				quitters appear to be doing the least they can “get away with” in exchange for
+				their pay.
+
+				“Work-to-rule” ("Dienst nach Vorschrift") of which [quiet quitting](https://www.gallup.com/workplace/398306/quiet-quitting-real.aspx) is a special case, means
+				doing what is specified in one’s job description, no more, no less
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Akerlof & Kranton, Identity Economics 1/3](https://queue.acm.org/detail.cfm?id=3595878)
+
+ 				“insider” Labor
+				- committed to the norms and goals of the Firm
+				- supplies “high” effort
+				- sees itself as “building a cathedral”
+
+				“outsider” Labor
+				- “rational” agent of orthodox economics
+				- supplies “low” effort.
+				- laying bricks in exchange for a paycheck.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Akerlof & Kranton, Identity Economics 2/3](https://queue.acm.org/detail.cfm?id=3595878)
+
+				Insider Labor conforms to a different set of norms than outsider Labor.
+
+				It is no longer doing what one
+				does just because the boss says so. It is about doing what one does because
+				one believes it is the right thing to do, according to the norms of the entity
+				with which one has chosen to identify. Insiders would not look “good” or
+				could even look “bad” to themselves if they did otherwise.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Akerlof & Kranton, Identity Economics 3/3](https://queue.acm.org/detail.cfm?id=3595878)
+
+				.. attempt to secure Labor’s commitment to the “cathedral” it is building.
+				It may still be laying bricks, but as long as it “cares” about the cathedral,
+				the total utility it derives from its efforts exceeds the income utility
+				it would derive from its pay if pay were its only incentive.
+				Its commitment to the cathedral implies it is likely to do more than
+				it might otherwise “get away with.”
+				(..) once Labor is committed to its “cathedral” (..)
+				it would look bad to itself if it failed to do the “right
+				things”.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Solution to quiet quitting](https://queue.acm.org/detail.cfm?id=3595878)
+
+				The solution is not just to make
+				employees “feel” appreciated. That can easily devolve into shallow and readily
+				detected attempts at manipulation, which can be ineffective and might even
+				backfire. It is to actually appreciate them, to treat them like rational adults, to
+				teach them, and when they have been sufficiently taught, to engage them in a
+				bilateral conversation about how they should go about their work, framed in
+				the context of a compelling, higher purpose. That means they have the right to
+				speak with the correlative obligation of the boss to listen.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				“Good bosses have some universal traits: they
+				coach and teach and offer insight into the strategy of the firm and the worker’s
+				career goals in light of that strategy” - Katherine Shaw
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Herzberg, one more time](https://www.leadingsapiens.com/herzberg-hygiene-motivation-theory/)
+
+				idleness, indifference and irresponsibility are healthy responses to absurd work.
+
+				If you want people motivated to do a good job, give them a good job to do.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [Pace](https://en.wikipedia.org/wiki/Trust_(social_science))
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Amabile: Progress Principle 1/4](https://queue.acm.org/detail.cfm?id=3595878)
+
+				Our hunt for inner work life triggers led us to the progress principle.
+
+				most common event triggering
+				- a “best day” was any progress in the work by the individual or the team.
+				- a “worst day” was a setback.
+
+				what motivates people on a day-to-day basis is the sense that they are making progress.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Amabile: Progress Principle 2/4](https://queue.acm.org/detail.cfm?id=3595878)
+
+				inner work life triggers
+				- Catalysts, actions that directly support work, including help from a person or group
+				- Nourishers, events such as shows of respect and words of encouragement.
+				- Inhibitors, actions that fail to support or actively hinder work
+				- Toxins, discouraging or undermining events.
+
+				Catalysts and inhibitors are directed at the project, nourishers and toxins are directed at the person.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Daily progress checklist
+
+				<img alt="workplace boredom" src="images/daily_progress_checklist.png" width="100%">
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Amabile: Progress Principle 3/4](https://queue.acm.org/detail.cfm?id=3595878)
+
+				Even ordinary, incremental progress can increase people’s engagement in the work
+				and their happiness during the workday.
+
+				Small losses or setbacks can have an extremely negative effect on inner work life.
+				Negative events can have a more powerful impact on inner work life than positive events.
+				It is especially important for managers to minimize daily hassles.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Amabile: Progress Principle 4/4](https://queue.acm.org/detail.cfm?id=3595878)
+
+				Managers can help employees see how their work is contributing.
+				Most important, they can avoid actions that negate its value.
+
+				If managers fail to support progress and the people trying to make it,
+				inner work life suffers and so does performance;
+				and degraded performance further undermines inner work life.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [DevEx: Concept 1/4](https://queue.acm.org/detail.cfm?id=3595878)
+
+				Developer experience
+
+				- encompasses how developers feel about, think about, and value their work.
+				- negatively affected by interruptions, unrealistic deadlines, and friction in development tools
+				- improved by having clear tasks, well-organized code, and pain-free releases
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [DevEx: Dimensions 2/4](https://queue.acm.org/detail.cfm?id=3595878)
+
+				<img alt="risk benefit analysis" src="images/devex_dimensions.png" width="30%">
+
+				- Fast feedback loops => complete work quickly with minimal friction.
+				- Cognitive load impedes developers' most important responsibility: delivering value to customers.
+				- Frequent experiences of flow state => higher productivity, innovation, employee development.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [DevEx: Metrics 3/4](https://queue.acm.org/detail.cfm?id=3595878)
+
+				<img alt="risk benefit analysis" src="images/devex_metrics.png" width="80%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [DevEx: Github Formula 4/4](https://queue.acm.org/detail.cfm?id=3595878)
+
+				<img alt="risk benefit analysis" src="images/devex_formula.png" width="60%">
+
+				- Productivity: speed and ease of development
+				- Impact: smoothness from idea to production
+				- Satisfaction: how the environment, workflows, and tools affect developer happiness
+				- Collaboration: multiplier across the entire DevEx.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Abrahamsson & al: Developer happiness](https://www.sciencedirect.com/science/article/pii/S0164121218300323?via%3Dihub#fig0002)
+
+				happiness and unhappiness is experienced on
+				development productivity and quality as expressed by cognitive performance,
+				including creativity and flow, and process-related performance.
+
+				developers experience happiness more as benefiting themselves,
+				and unhappiness more as being detrimental to others.
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+
+				<img alt="developer happiness" src="images/developer_happiness.jpg" width="70%">
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Progress Principle & DevEx](https://queue.acm.org/detail.cfm?id=3595878)
+
+				Because inner work life has such a potent effect on creativity and productivity,
+				and because small but consistent steps forward, shared by many people,
+				can accumulate into excellent execution, progress events that often go unnoticed
+				are critical to the overall performance of organizations.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				# [forever](https://en.wikipedia.org/wiki/Trust_(social_science))
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### George Gallup, 1958
+
+				While the standard retirement age
+				for men in the 1950s was closer to 65, men who
+				lived to see 95 did not retire until they were 80 years old on
+				average. Even more remarkable, 93% of these men reported
+				getting a great deal of satisfaction out of the work they did, and
+				86% reported having fun doing their job.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Rath: Career Wellbeing 1/2](https://www.gallup.com/workplace/237020/five-essential-elements.aspx)
+
+				Three Recommendations
+
+				1. Every day, use your strengths.
+				2. Identify someone with a shared mission who encourages your growth. Spend more time with this person.
+				3. Opt into more social time with the people and teams you enjoy being around at work.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Rath: Career Wellbeing 2/2](https://www.gallup.com/workplace/237020/five-essential-elements.aspx)
+
+				single biggest threat to our own well-being tends to be ourselves.
+				Without even giving it much thought,
+				we allow our short-term decisions to override what's
+				best for our long-term well-being.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				if you’re going to make that one choice,
+				that single decision that could best ensure your own health and happiness,
+				science tells us that your choice should be to cultivate warm relationships.
+
+				But it’s not always an easy one to make.
+				As human beings, even with the best intentions,
+				we get in our own way, make mistakes, and get hurt by the people we love.
+
+				The path to the good life, after all,
+				isn’t easy, but successfully navigating its twists and turns is entirely possible.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				# END
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [workplace boredom](https://journals.sagepub.com/doi/pdf/10.1177/1059601115575148)
+
+				<img alt="workplace boredom" src="images/workplace_boredom_model.png" width="80%">
+
+				paradox: level of reported boredom is increasing,
+				even while the job market appears to
+				have fewer inherently boring jobs.
+					</textarea>
+				</section>
+
+				</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
