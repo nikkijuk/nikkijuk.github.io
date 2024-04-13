@@ -74,19 +74,23 @@ That's not technical stuff, but how to enable people to work together better.
 "dissatisfaction leads to slower revenue growth and lower profitability, 
 in other words,  employee engagement drives the bottom line".
 
-So, there's lot of good reasons to solve conflict between 
-software developers and managers 
-- between creatives and administrators.
-
 Important to you is also [Does your job match your personality?](https://www.youtube.com/watch?v=WEvqMN75sCI),
 which [Jordan Peterson](https://bigthink.com/videos/how-important-is-it-that-your-job-matches-your-personality-extremely/)
-comments with 
+comments
+
 “If you’re a creative person who is open to trying new things 
 — openness being one of the Big Five personality traits 
 — you’re more likely to succeed at jobs that require novel solutions over efficient ones. 
 On the other hand, if you’re conscientious 
 — another Big Five personality trait 
 — you’re likely to be better off in a management or administrative position.”
+
+There's good reason to solve conflict between
+software developers and managers,
+or said otherwise: between creative - open - and administrative - consious - persons / roles..
+
+As [Jordan Peterson](https://bigthink.com/videos/how-important-is-it-that-your-job-matches-your-personality-extremely/)
+states: 
 
 “So there’s this terrible tension in organizations, 
 and I think what generally happens is all the creative people are there at the beginning. 
