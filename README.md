@@ -69,15 +69,14 @@ Themes
 - Happiness is on your relationships to others.
 
 That's not technical stuff, but how to enable people to work together better.
-
-[Teresa Amabile - The Progress Principle](https://www.youtube.com/watch?v=XD6N8bsjOEE&t=935s) states that
+Sure it's also about money and profitabilty, as
+[Teresa Amabile - The Progress Principle - ](https://www.youtube.com/watch?v=XD6N8bsjOEE&t=935s) states that
 "dissatisfaction leads to slower revenue growth and lower profitability, 
 in other words,  employee engagement drives the bottom line".
 
 Important to you is also [Does your job match your personality?](https://www.youtube.com/watch?v=WEvqMN75sCI),
 which [Jordan Peterson](https://bigthink.com/videos/how-important-is-it-that-your-job-matches-your-personality-extremely/)
 comments
-
 “If you’re a creative person who is open to trying new things 
 — openness being one of the Big Five personality traits 
 — you’re more likely to succeed at jobs that require novel solutions over efficient ones. 
@@ -87,11 +86,10 @@ On the other hand, if you’re conscientious
 
 There's good reason to solve conflict between
 software developers and managers,
-or said otherwise: between creative - open - and administrative - consious - persons / roles..
+or said otherwise: between creative - open - and administrative - conscientious - persons / roles..
 
 As [Jordan Peterson](https://bigthink.com/videos/how-important-is-it-that-your-job-matches-your-personality-extremely/)
-states: 
-
+observes
 “So there’s this terrible tension in organizations, 
 and I think what generally happens is all the creative people are there at the beginning. 
 They get chased out until you have nothing but managers and administrators. 
