@@ -68,18 +68,38 @@ Themes
 - It's not just bricks. We build cathedrals.
 - Happiness is on your relationships to others.
 
-Slides were prepared for a discussion 
-about how to make software development teams perform better.
+That's not technical stuff, but how to enable people to work together better.
 
-No, not once more this technical stuff, 
-but how enable people to work together better.
-
-More on video of [Teresa Amabile - The Progress Principle](https://www.youtube.com/watch?v=XD6N8bsjOEE&t=935s)
-
-which says for example:
-
+[Teresa Amabile - The Progress Principle](https://www.youtube.com/watch?v=XD6N8bsjOEE&t=935s) states that
 "dissatisfaction leads to slower revenue growth and lower profitability, 
-in other words,  employee engagement drives the bottom line" - Teresa Amabile
+in other words,  employee engagement drives the bottom line".
+
+So, there's lot of good reasons to solve conflict between 
+software developers and managers 
+- between creatives and administrators.
+
+Important to you is also [Does your job match your personality?](https://www.youtube.com/watch?v=WEvqMN75sCI),
+which [Jordan Peterson](https://bigthink.com/videos/how-important-is-it-that-your-job-matches-your-personality-extremely/)
+comments with 
+“If you’re a creative person who is open to trying new things 
+— openness being one of the Big Five personality traits 
+— you’re more likely to succeed at jobs that require novel solutions over efficient ones. 
+On the other hand, if you’re conscientious 
+— another Big Five personality trait 
+— you’re likely to be better off in a management or administrative position.”
+
+“So there’s this terrible tension in organizations, 
+and I think what generally happens is all the creative people are there at the beginning. 
+They get chased out until you have nothing but managers and administrators. 
+Then the environment shifts, then the company dies. 
+And so the way that capitalism solves the problem of the tension between the creative types 
+and the managerial types is it just lets companies die.
+
+Now you might think, “Well I don’t want my company to die.” 
+It’s like okay then, you need to understand the difference between these two kinds of people
+— which you probably won’t and you probably won’t admit to even if you knew. 
+And then you have to figure out how to get the balance right. 
+And so that’s extraordinarily complicated.”
 
 ## Backing Mobile: what can cloud do for mobile?
 
