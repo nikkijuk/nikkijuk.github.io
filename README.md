@@ -56,6 +56,25 @@ Right! When you believe you can do it and you keep trying,
 that's when your brain is growing and you're learning
 new things." - Sesame Street
 
+## Scrum basics
+
+[slides](https://nikkijuk.github.io/scrumbasics/)
+
+"agile, adjective - able to move quickly and easily" - Oxford Dictionary
+
+Agile isn't "done" by following Scrum. Scrum is just a tool to help you to communicate.
+If you don't understand why you are doing Scrum, maybe you should not do it.
+Or: you can try to understand it better.
+
+This is my take on Scrum basics. 
+It's written for non-professional purpose, and is partially in German, but it might be useful for you also.
+
+But if you want to learn, then, where to start? See A S C R U M B O O K, it's free to browse online:
+
+https://scrumbook.org/
+
+But you might also want to see [Scrum Guide](https://scrumguides.org/)
+
 ## Brainhacks: How to enhance human potential usage for software development?
 
 [slides](https://nikkijuk.github.io/brainhacks/)
