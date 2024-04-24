@@ -69,11 +69,14 @@ Or: you can try to understand it better.
 This is my take on Scrum basics. 
 It's written for non-professional purpose, and is partially in German, but it might be useful for you also.
 
-But if you want to learn, then, where to start? See A S C R U M B O O K, it's free to browse online:
+But if you want to learn, then, where to start? See [A S C R U M B O O K](https://scrumbook.org/), it's free to browse online.
 
-https://scrumbook.org/
+All golden? No, see ["Agile Methods The Good, the Hype and the Ugly," Bertrand Meyer](https://www.youtube.com/watch?v=ffkIQrq-m34) or read his book.
 
-But you might also want to see [Scrum Guide](https://scrumguides.org/)
+But you might also want to see [Scrum Guide](https://scrumguides.org/) as it's "the" official source of Scrum. 
+
+Whatever you do; remember, many projects fail. Regardless of methodology. 
+Is Agile better? Is Scrum better? Maybe, but it's not a a secure way to success.
 
 ## Brainhacks: How to enhance human potential usage for software development?
 
