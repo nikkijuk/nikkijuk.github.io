@@ -77,6 +77,10 @@ But you might also want to see [Scrum Guide](https://scrumguides.org/) as it's "
 
 Whatever you do; remember, many projects fail. Regardless of methodology. 
 Is Agile better? Is Scrum better? Maybe, but it's not a a secure way to success.
+Pay close attention to feeling of people working on topic,
+if they believe in what they do, if they respect each other, if they are happy.
+It's not Scrum that does the work, it's your team, or: you and me and whoever we are working with.
+It's not sticking to rules, it's understanding why we are doing what we are doing.
 
 ## Brainhacks: How to enhance human potential usage for software development?
 
