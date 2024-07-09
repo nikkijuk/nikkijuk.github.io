@@ -123,7 +123,6 @@ They get chased out until you have nothing but managers and administrators.
 Then the environment shifts, then the company dies. 
 And so the way that capitalism solves the problem of the tension between the creative types 
 and the managerial types is it just lets companies die.
-
 Now you might think, “Well I don’t want my company to die.” 
 It’s like okay then, you need to understand the difference between these two kinds of people
 — which you probably won’t and you probably won’t admit to even if you knew. 
@@ -142,7 +141,13 @@ You need backend for mobile? Here discussion notes for my collegues.
 
 This is mostly sales for Flutter. It's partly outdated, partly still valid.
 
-Flutter is cool, so maybe I'll update this someday. 
+Flutter and Dart form ecosystem which looks to me first really promising way to build hybrid mobile apps.
+Dart is flexible, easy to learn and develops constantly.It's modern, null safe and has good tooling.
+Flutter is starting to be mature, and migrations between versions are not too painful.
+It is possible to develop Android and iOS apps with same codebase, and other 
+platforms like linux, windows, osx and web are also supported.
+
+Flutter is cool, so maybe I'll update this someday. Not it's quick snapshot from 2022. 
 
 ## Contract: open api specification or full hateoas? modelling or coding?
 
@@ -192,6 +197,19 @@ or [Kevlin Henney's "Old is The New New"](https://www.youtube.com/watch?v=Abgsfe
 ## Why Kotlin?
 
 [slides](https://nikkijuk.github.io/whykotlin/)
+
+This discussion is about Kotlin in backend. Solely. 
+
+Kotlin seems to be promise that comes reality so slow that Java takes over.
+But is it really so?
+
+Hmm.. Think again. Null safety is important and 
+Kotlin is safer than Java even if java is getting better.
+Additionally, Kotlin is more concise and expressive than Java,
+making it easier to read and write.
+Extension functions and operator overloading are also nice features
+which makes it easier to write clean and readable code, 
+especially for domain specific languages.
 
 ## Scrum patterns
 
