@@ -6,7 +6,7 @@ Slides were made for presenting ideas in context of current project and company,
 
 Not all of slidesets are finished. They might still be worth browsing, for which reason they are shared.
 
-Why bother to think, iterate your ideas, a  sk why? Isn't it enough to just write next line of code? Read [Uwe Friedrichsen, Essential Architectural Thinking](https://speakerdeck.com/ufried/essential-architectural-thinking)
+Why bother to think, iterate your ideas, ask constantly "why?". Isn't it enough to just write next line of code? Read [Uwe Friedrichsen, Essential Architectural Thinking](https://speakerdeck.com/ufried/essential-architectural-thinking)
 
 ## About me
 
