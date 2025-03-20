@@ -219,7 +219,6 @@
 					</textarea>
 				</section>
 
-
 				<section data-markdown>
 					<textarea data-template>
 
@@ -271,6 +270,19 @@
 				<img alt="aromi" src="images/bank-arch.png" width="70%">
 
 				- example use-case: Transactions are validated nightly to make sure that money doesn't get lost. All information is analyzed and saved to database so that possible problems can be solved by administrators and reported further.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				#### [Architectural styles]()
+
+				<img alt="aromi" src="images/monolith-vs-microservices.png" width="80%">
+
+				- Monoliths have single codebase and database
+				- Microservices divide work and isolate complexity
 
 					</textarea>
 				</section>
@@ -390,6 +402,20 @@
 					</textarea>
 				</section>
 
+				<section data-markdown>
+					<textarea data-template>
+
+				#### [Design pattern: Blackboard]()
+
+				<img alt="aromi" src="images/blackboard.png" width="80%">
+
+				- Services read signals (temperature, water level)
+				- Services write signals (heating power)
+				- Schedulers coordinate execution and data access
+				- Data is kept on blackboard (shared, global)
+
+					</textarea>
+				</section>
 
 				<section data-markdown>
 					<textarea data-template>
@@ -404,6 +430,32 @@
 				- Project still ongoing (3/2025)
 					</textarea>
 				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				#### [Medical devices: UI]()
+
+				- Measurement UI with Flutter + Dart
+				- Runs at kiosk mode on windows device
+				- Reads data over Bluetooth
+				- Stores measurements to local database
+				- Uses external services for analysis
+				- Measurements and analysis results are sent to hospital information system
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+				#### [Medical device]()
+
+				<img alt="aromi" src="images/cardio-arch.png" width="70%">
+
+				- example use-case: Nurse connects patch. Measurement is started, results are saved and sent to hospital information system. Doctors are able to see data and diagnose patients condition.
+				</textarea>
+				</section>
+
 
 				<section data-markdown>
 					<textarea data-template>
