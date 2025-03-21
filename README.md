@@ -58,7 +58,16 @@ new things." - Sesame Street
 
 ## Career changes
 
+World changes while you work. Your work changes also. 
+My career started as operator trainee for minicomputers.
+You see those computers in museums novadays. 
+
 [slides](https://nikkijuk.github.io/career/)
+
+Currently we are in the middle of AI hype. 
+Together with changes that internet has driven since 2000s we see that all that can be automated will be automated.
+Some algorithms that will influence us in future work well, some not.
+All biases in current world will be seen on data that AI uses.
 
 
 ## Scrum basics
