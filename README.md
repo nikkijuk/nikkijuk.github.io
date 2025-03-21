@@ -56,6 +56,11 @@ Right! When you believe you can do it and you keep trying,
 that's when your brain is growing and you're learning
 new things." - Sesame Street
 
+## Career changes
+
+[slides](https://nikkijuk.github.io/career/)
+
+
 ## Scrum basics
 
 [slides](https://nikkijuk.github.io/scrumbasics/)
