@@ -91,21 +91,28 @@ If you don't understand why you are doing Scrum, maybe you should not do it.
 Or: you can try to understand it better.
 
 This is my take on Scrum basics. 
-It's written for non-professional purpose, and is partially in German, but it might be useful for you also.
+It's written for non-professional purpose to help a group of young people to start up the project, 
+and is partially in German, but it might be useful for you also.
 
-But if you want to learn, then, where to start? See [A S C R U M B O O K](https://scrumbook.org/), it's free to browse online.
+But if you want to learn, then, where to start? See [A S C R U M B O O K](https://scrumbook.org/), 
+it's free to browse online.
 
-All golden? No, see ["Agile Methods The Good, the Hype and the Ugly," Bertrand Meyer](https://www.youtube.com/watch?v=ffkIQrq-m34) or read his book.
+All golden? No, see ["Agile Methods The Good, the Hype and the Ugly," Bertrand Meyer](https://www.youtube.com/watch?v=ffkIQrq-m34) 
+or read his book.
 
 But you might also want to see [Scrum Guide](https://scrumguides.org/) as it's "the" official source of Scrum. 
+Don't expect too much clarity from Scrum Guide, it's short and intentionally 
+open to different interpretations and perspectives.
 
-Whatever you do; remember, many projects fail. Regardless of methodology. 
-Is Agile better? Is Scrum better? Maybe, but it's not a a secure way to success.
+Whatever you do; remember, many projects fail. 
+This happens regularly regardless of the methodology followed. 
+Is Agile better? Is Scrum better? 
+Maybe, but it's not a secure way to success.
 
-Pay close attention to feeling of people working on topic,
+Pay close attention to feelings of people working on the project,
 if they believe in what they do, if they respect each other, if they are happy.
 It's not Scrum that does the work, it's your team, or: you and me and whoever we are working with.
-It's not sticking to rules, it's understanding why we are doing what we are doing.
+It's not sticking to rules; it's understanding why we are doing what we are doing.
 
 ## Brainhacks: How to enhance human potential usage for software development?
 
