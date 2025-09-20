@@ -56,6 +56,9 @@ Right! When you believe you can do it and you keep trying,
 that's when your brain is growing and you're learning
 new things." - Sesame Street
 
+I wrote these slides to reflect what I have done, how I see my role, and my strengths.
+It's all random, but tasks like this direct thinking. 
+
 ## Career changes
 
 World changes while you work. Your work changes also. 
@@ -69,6 +72,13 @@ Together with changes that internet has driven since 2000s we see that all that 
 Some algorithms that will influence us in future work well, some not.
 All biases in current world will be seen on data that AI uses.
 
+These slides were prepared for 10th-grade students as the teacher asked me to present what 
+I have done during my 30+ years career as a software developer. 
+I tried to illustrate how radically IT has changed over last decades, 
+and how we work on IT has also changed. 
+If anything I hope they got an idea that new things are not especially new, 
+and that lot of things are about to change after they're about to graduate 
+and start working.
 
 ## Scrum basics
 
