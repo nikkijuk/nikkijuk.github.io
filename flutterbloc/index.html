@@ -365,96 +365,6 @@
 					</textarea>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-					<img alt="flutter arch" src="images/flutter-architecture.png" width="50%">
-
-					["extensible, layered system exists as a series of independent libraries that each depend on the underlying layer .. every part of the framework level is designed to be optional and replaceable."](https://docs.flutter.dev/resources/architectural-overview)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Platform adaptation](https://docs.flutter.dev/resources/platform-adaptations)
-
-				|  Type       |  Description |
-				| ----------- | ------------ |
-				| automatic | prevents ‘wrong’ behavior for given OS (ex. scrolling, text input) |
-				| supported | provides tools to implement OS conventions (ex. tabs, alert dialog) |
-
-				most widgets don't [adapt automatically](https://docs.google.com/document/d/14mxhVeVk1lClPkBi6VmB260_7fKUlZTM-Vn1bOres7M/edit),
-				but developer can decide to use [cupertino](https://docs.flutter.dev/development/ui/widgets/cupertino) ([iOS style](https://developer.apple.com/design/human-interface-guidelines/platforms/designing-for-ios/))
-				or [material](https://docs.flutter.dev/development/ui/widgets/material) ([Googles Open source style system](https://m3.material.io/)) widgets.
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### missing pieces?
-
-				Flutter, like [React](https://reactjs.org/), is library for building user interfaces - it's very focused single purpose solution without compromises
-				- some [1st party plugins](https://github.com/flutter/plugins) from flutter team are included - use them or not (very short list)
-				- plenty of [3rd party plugins](https://pub.dev/) are also present - best are [flutter favorites](https://docs.flutter.dev/development/packages-and-plugins/favorites) (very long list)
-				- and nothing prevents you from implementing your [own plugins](https://docs.flutter.dev/development/packages-and-plugins/developing-packages) (ask yourself: is it worth sharing?)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					<img alt="dart toolchain" src="images/dart-platforms.svg" width="60%">
-
-					Dart is a client-optimized language for developing fast apps on any platform.
-
-					["During development .. apps run in a VM that offers stateful hot reload of changes without needing a full recompile. For release .. apps are compiled directly to machine code."](https://docs.flutter.dev/resources/architectural-overview)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Dart](https://dart.dev/overview) - with C & [C#](https://www.toptal.com/dart/dartlang-guide-for-csharp-java-devs) & [JS](https://blog.codemagic.io/dart-vs-javascript/) & Java in Algol Family
-				```
-				import 'dart:math';
-
-				extension MyIterable on Iterable<int> {
-				  int get big => reduce(max);
-				  int get small => reduce(min);
-				}
-
-				void main() {
-				  var numbers = [25,42,13,40];
-				  print('Solution is ${numbers.big}, not ${numbers.small}');
-				  int? aNullableInt = null;
-				  print('Problem is $aNullableInt.');
-				}
-				```
-
-				Dart offers [sound null safety](https://dart.dev/null-safety) since 2.12, meaning that values can’t be null unless you say they can be.
-				Extending classes is supported since Dart 2.7.
-
-				Dart [Tiebo index = 35](https://www.tiobe.com/tiobe-index/) & [Github usage = 16](https://madnight.github.io/githut/#/pull_requests/2022/3).
-				Try [DartPad](https://dartpad.dev/).
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Flutter platforms](https://docs.flutter.dev/development/tools/sdk/release-notes/supported-platforms)
-				|  Environment | Versions |
-				| ------------ | -------- |
-				| Android |	API 16 (Android 4.1) & above |
-				| iOS |	iOS 11 & above |
-				| Linux | Debian, 64-bit |
-				| macOS |	El Capitan (10.11) & above |
-				| Web |	Chrome >= 84, Firefox >= 72.0, Safari on El Capitan & above, Edge >= 1.2.0 |
-				| Windows |	Windows 7 & above |
-
-					</textarea>
-				</section>
 
 				<section data-markdown>
 					<textarea data-template>
@@ -466,28 +376,6 @@
 				native code using method channels.
 
 					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [platform channel](https://docs.flutter.dev/resources/architectural-overview#platform-channels)
-
-				<img alt="flutter platform channels" src="images/flutter-platform-channels.png" width="40%">
-
-				platform channel is a mechanism for communicating between your Dart code and the platform-specific code of your host app.
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [C interop using dart:ffi](https://dart.dev/guides/libraries/c-interop)
-
-				- use the [dart:ffi](https://api.dart.dev/stable/2.18.2/dart-ffi/dart-ffi-library.html) library to call native C APIs, and to read, write, allocate, and deallocate native memory.
-				- use the [package:ffigen](https://pub.dev/packages/ffigen) binding generator to automatically create FFI wrappers from C header files.
-				- how you bundle and load a C library depends on your platform and the type of library.
-
-						</textarea>
 				</section>
 
 				<section data-markdown>
@@ -708,7 +596,7 @@
 				  }
 				}
 				```
-				[Bloc 7.2.0 provides on < event > () registration method.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
+				[on < event > () registers event handler.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
 				Blocs super constructor sets initial state, CounterBlocs constructor defines handling of "Increment" using single expression lambda.
 
 						</textarea>
@@ -932,18 +820,6 @@
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Tradeoffs / Fears / ..
-
-				- &cross; [Additional layer on top of native adds complexity](https://betterprogramming.pub/why-flutter-isnt-the-next-big-thing-e268488521f4)
-				- &cross; ReactNative and Native development will win
-				- &cross; Googles [pet sematery](https://killedbygoogle.com/) waiting?
-				- &check; [Google has a clear financial incentive to invest in adoption of a cross platform language](https://redmonk.com/jgovernor/2022/05/16/flutter-propels-dart-frameworks-language-adoption-and-cross-platform-development/)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 				#### ["Architecture is about the important stuff. Whatever that is." - Ralph Johnson](https://martinfowler.com/architecture/)
 
 				- Within the Flutter community, [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) and [Architecture](https://martinfowler.com/architecture/) are often used synonymously
@@ -952,35 +828,6 @@
 				- Compare: [Redux](https://redux.js.org/), Reacts state management solution
 
 						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				## DX: Nulls
-
-				Mentioned native and multiplatform languages are statically typed with native null safety support
-				- C# (Xamarin, .net MAUI, Unity)
-				- Dart (Flutter)
-				- Kotlin (Android Native, Compose Multiplatform)
-				- Swift (iOS Native)
-
-				https://en.wikipedia.org/wiki/Nullable_type
-
-				Duck typing is kinda not static and not very safe. JS & ES & TS can be used in evil ways. With power comes responsibility.
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### [Native development still common. Jetbrains 2021](https://www.jetbrains.com/lp/devecosystem-2021/miscellaneous/)
-
-					<img alt="native devs" src="images/jetbrains-survey-native-use-2021.jpeg" width="45%">
-
-					<img alt="native platforms" src="images/jetbrains-survey-native-platform-development-2021.png" width="45%">
-
-					It's hard to say how much of native development could be replaced with multiplatform.
-					It's possible that you needed native 3 years ago, but there's options now. Try it out.
-					</textarea>
 				</section>
 
 				<section data-markdown>
@@ -1007,31 +854,6 @@
 
 						</textarea>
 				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [S-curve](https://sketchplanations.com/the-s-curve): Native -> *Platform
-
-				<img alt="s-curve" src="images/s_curve.png" width="60%">
-
-				- Experts of current game know rules and limitations
-				- Changing game is not easy and contains risks
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Chasm](https://sketchplanations.com/understanding-the-chasm): Change -> Productivity
-
-				<img alt="chasm" src="images/chasm.png" width="60%">
-
-				- Visionaries thrive for change and tolerate difficulties
-				- Pragmatists follow if it is proven to work for them
-
-					</textarea>
-				</section>
-
 
 			</div>
 		</div>
