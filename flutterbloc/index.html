@@ -16,17 +16,19 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+
 				<section data-markdown>
 					<textarea data-template>
-				### Flutter Bloc
+				### App State & Flutter Bloc
 
-				“Programming is about managing complexity:
-				the complexity of the problem, laid upon the complexity of the machine.
-				Because of this complexity, most of our programming projects fail.” ― [Bruce Eckel](https://www.goodreads.com/quotes/9875145-programming-is-about-managing-complexity-the-complexity-of-the-problem)
+				"Many of the classic problems of developing software products
+				derive from this essential complexity and its nonlinear increases with size.
+				From the complexity comes the difficulty of communication among team members,
+				which leads to product flaws, cost overruns, schedule delays.
+				From the complexity comes the difficulty of enumerating, much less understanding,
+				all the possible states of the program, and from that comes the unreliability." - [Frederick P. Brooks](http://sunnyday.mit.edu/16.355/BrooksNoSilverBullet2.html)
 
-				“Simplicity is prerequisite for reliability.” ― [Edsger W. Dijkstra](https://www.goodreads.com/quotes/1174581-simplicity-is-prerequisite-for-reliability)
-
-				Jukka Nikki, Hopelessly Naive Programmer & Mutable Object
+				Jukka Nikki, Programmer & Mutable Object
 
 					</textarea>
 				</section>
@@ -42,14 +44,112 @@
 
 				<section data-markdown>
 					<textarea data-template>
+				#### Design: [Simple](https://www.infoq.com/presentations/Simple-Made-Easy/) over [complex](https://www.infoworld.com/article/3639050/complexity-is-killing-software-developers.html)
 
-					## Why bloc?
+				[.. value the items on the left more](https://agilemanifesto.org/)
 
-					global mutable state is evil...
+				Manifesto for simple UI's
 
-					but every app needs to manage state.
+				- Components: [Composition](https://docs.flutter.dev/resources/inside-flutter#aggressive-composability) over Inheritance
+				- Rendering: Reactive/[Declarative](https://docs.flutter.dev/get-started/flutter-for/declarative) over Imperative
+				- Flow: One-Way/Events&Streams over Bidirectional
+				- Actions: Async Events over Sync methods
+				- State: Immutable over Mutable
+				- Structure: Modular/Layered over Unstructured
+				- Code: Generated over Handwritten
+					</textarea>
+				</section>
 
-					if you fail on this, your app will fail.
+				<section data-markdown>
+					<textarea data-template>
+					#### User interface is function of state
+
+					[UI = f(state)](https://docs.flutter.dev/development/data-and-backend/state-mgmt/declarative)
+
+					<img alt="flutter state mgmt" src="images/flutter-state-management.png" width="50%">
+
+					Developer provides a mapping from App state to UI components by implementing a Builder method.
+					Builder method is called when the App state changes.
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Flutter - [Hello World](https://docs.flutter.dev/get-started/flutter-for/react-native-devs)
+
+				```
+				import 'package:flutter/material.dart';
+
+				void main() {
+				  runApp( /// UI is built with Dart code
+					const Center(
+					  child: Text(
+						'Hello, world!',
+						textDirection: TextDirection.ltr,
+					  ),
+					),
+				  );
+				}
+				```
+
+				[runApp](https://api.flutter.dev/flutter/widgets/runApp.html) takes UI as parameter.
+				The Center [widget](https://docs.flutter.dev/development/ui/widgets-intro) becomes
+				the root of the widget tree and has one child,
+				the [Text](https://docs.flutter.dev/development/ui/widgets/text) widget.
+				UI is [composed](https://docs.flutter.dev/resources/architectural-overview#composition)
+				using [simple widgets](https://docs.flutter.dev/resources/faq#can-i-extend-and-customize-the-bundled-widgets).
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### [Functional Reactive Programming (FRP)](https://quickbirdstudios.com/blog/what-is-functional-reactive-programming-frp/)
+					<img alt="flutter state mgmt" src="images/functional-reactive-programming.png" width="70%">
+
+					- events and state changes are uni-directional flows.
+					- business logic is executed as event is received.
+					- business logic may emit state changes.
+					- ui is rendered as reaction to received state change.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Bloc = Business Logic Components](https://bloclibrary.dev/#/)
+
+				<img alt="bloc arch" src="images/widget-bloc-communication.png" width="60%">
+
+				Each Bloc has one input (sink, add method) and output ([stream](https://dart.dev/tutorials/language/streams)).
+				Bloc emits (output) states and handles (input) several types of events.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					#### [Compare: React / Redux One-way data flow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+
+					<img alt="flutter state mgmt" src="images/one-way-data-flow.png" width="40%">
+
+					- State is condition of the app at a point in time
+					- View is rendered based on current state
+					- View can initiate actions
+					- Actions update state when needed
+					- View re-renders based on the updated state
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Bloc library/pattern](https://bloclibrary.dev/#/architecture)
+
+				<img alt="bloc architecture" src="images/bloc_architecture_full_white.png" width="60%">
+
+				Bloc attempts to make state changes predictable by regulating when a state change can occur
+				and enforcing a single way to change state throughout an entire application.
 
 					</textarea>
 				</section>
@@ -101,65 +201,152 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					### Reactive programming
-
-					<img alt="reactive" src="images/widgets_streams.png" width="40%">
-
-					Widget listens stream of states emitted by Bloc.
-
-					Widget sends events to Blocs sink.
-
-					Bloc works as events => states transformer.
-
-					State is only changed by Bloc.
-
-					Events are simple: Something has happened.
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 					### [Reactive Flutter Bloc, 1/1 (2018)](https://www.youtube.com/watch?v=RS36gBEp8OI)
 
-					<img alt="reactive bloc principle" src="images/reactive_bloc_principle.png" width="80%">
+					<img alt="reactive bloc principle" src="images/reactive_bloc_principle.png" width="70%">
 
 					It's all streams.
-					Widgets position at widget tree is irrelevant.
-					But may I suggest immutable objects?
+					Bloc is saved at widget tree.
+					Any widget under bloc at widget tree can interact with bloc and send events.
+					Builder methods build part of widget tree when new state is emitted.
 
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-					### Bloc library (2019)
+				#### [Example: Counter app](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
-					<img alt="bloc architecture" src="images/bloc_architecture_full_white.png" width="60%">
+				<img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="80%">
 
-					Bloc library helps to implement BLoC pattern.
-
-					Bloc Test library helps to write tests.
-
-					Flutter independent and Flutter dependent libraries.
-
-					Extensions like hydrated bloc and bloc concurrency.
+				"+" adds increment event to sink, counter is rendered when state is received from stream.
+				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) controls lifecycle,
+				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) rendering.
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-					TL;DR
+				#### [Example: CounterApp](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				```
+				class CounterApp extends StatelessWidget {
+				  @override
+				  Widget build(BuildContext context) {
+					return MaterialApp(
+					  home: BlocProvider( /// DI: always same bloc instance
+						create: (_) => CounterBloc(),
+						child: CounterPage(),
+					  ),
+					);
+				  }
+				}
 
-					Bloc is a
+				void main() => runApp(CounterApp()); // Creation of app
+				```
+				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) takes care of creating single instance of [Bloc](https://pub.dev/documentation/bloc/latest/bloc/Bloc-class.html), lazily by default.
+				Usage of [BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) loosely relates to Dependency Injection as concept.
+						</textarea>
+				</section>
 
-					- way of separating presentation from business logic.
-					- used to share state and control state changes.
-					- uses sinks and streams as api.
-					- transforms events to states.
-					- enables reactive programming.
-					- high quality bloc library available.
-					</textarea>
+				<section data-markdown>
+					<textarea data-template>
+				#### [Example: CounterPage](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				```
+				class CounterPage extends StatelessWidget {
+				  @override Widget build(BuildContext context) {
+					return Scaffold(
+					  appBar: AppBar(title: const Text('Bloc Counter')),
+					  body: Center(
+						child: BlocBuilder<CounterBloc, int>(
+						  builder: (context, count) {
+							return Text('$count', style: Theme.of(context).textTheme.headline1);
+						  },),
+					  ),
+					  floatingActionButton: FloatingActionButton(
+						child: const Icon(Icons.add),
+						onPressed:()=>context.read<CounterBloc>().add(Increment()),
+					  ),);}}
+				```
+				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html)
+				builds UI.
+				Context.read < CounterBloc > acquires bloc.
+				[add](https://pub.dev/documentation/bloc/latest/bloc/Bloc/add.html) method sends events.
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### Example: Widget Test
+				```
+				void main() {
+				  testWidgets('Counter++ test', (WidgetTester tester) async {
+					await tester.pumpWidget(CounterApp()); // build, trigger frame
+
+					expect(find.text('0'), findsOneWidget);
+					expect(find.text('1'), findsNothing);
+
+					await tester.tap(find.byIcon(Icons.add)); // tap '+'
+					await tester.pump(); // trigger a frame
+
+					expect(find.text('0'), findsNothing);
+					expect(find.text('1'), findsOneWidget);
+				  });
+				}
+				```
+				[widget testing](https://docs.flutter.dev/cookbook/testing/widget/introduction)
+				allows initiating actions and testing ui components state changes frame by frame.
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Example: CounterBloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				```
+				/// Base event and Increment Event
+				abstract class CounterEvent {}
+				class Increment extends CounterEvent {}
+
+				/// handles converting `CounterEvent`s into `int`s.
+				class CounterBloc extends Bloc<CounterEvent, int> {
+				  /// The initial state of the `CounterBloc` is 0.
+				  CounterBloc() : super(0) {
+					/// When `Increment` event is added,
+					/// current `state` is accessed via the `state` property
+					/// and a new state is emitted via `emit`.
+					on<Increment>((event, emit) => emit(state + 1));
+				  }
+				}
+				```
+				Blocs super constructor sets initial state.
+				[on < event > () registers event handler.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
+				"Increment" event handler is lambda, which emits new state.
+
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+				#### [Example: CounterBlocTest](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+				```
+				void main() {
+				  group('CounterBloc', () {
+					test('initial state is 0', () {
+					  expect(CounterBloc().state, 0);
+					});
+
+					blocTest<CounterBloc, int>(
+					  'emits [1] when increment is called',
+					  build: CounterBloc.new,
+					  act: (bloc) => bloc.add(Increment()),
+					  expect: () => [1],
+					);
+				  });
+				}
+				```
+				[bloc_test](https://pub.dev/packages/bloc_test) allows testing reactive code in isolation.
+				Mocking, setup, delays, etc. are supported.
+
+						</textarea>
 				</section>
 
 				<section data-markdown>
@@ -179,12 +366,17 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					### [Immutable data? is it enough?](https://docs.google.com/presentation/d/14u_h-lMn7f1rXE1nDiLX0azS3IkgjGl5uxp5jGJ75RE/edit#slide=id.g2a5e9c4a8_05)
+					### Immutable value types in dart
 
-					<img alt="value types" src="images/value_type_autovalue.png" width="60%">
+					Dart does not have value types, but you can write your own data classes.
 
-					Well, no.. We need value types. Immutable data is not enough.
-					What can Dart offer?
+					- define a constructor + the properties
+					- override toString, operator ==, hashCode
+					- implement a copyWith method to clone the object
+					- implement handling of json de/serialization
+
+					It's possible, but tedious and error prone.
+
 					</textarea>
 				</section>
 
@@ -192,7 +384,7 @@
 					<textarea data-template>
 					### [Freezed: motivation](https://pub.dev/packages/freezed#motivation)
 
-					<img alt="frrezed motivation" src="images/freezed_motivation.png" width="80%">
+					<img alt="freezed motivation" src="images/freezed_motivation.png" width="80%">
 
 					Missing language level value types is a problem,
 					but generating code from annotations is a powerful fix.
@@ -201,35 +393,32 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					### [Freezed: other fixes](https://pub.dev/packages/freezed#legacy-union-types-and-sealed-classes)
+					### [Example: Restaurant review](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
+					```
+					@freezed
+					class Review with _$Review {
+					  factory Review({
+						required double score, String? review,
+					  }) = _Review;
 
-					<img alt="freezed unions" src="images/freezed_unions.png" width="80%">
+					  factory Review.fromJson(Map<String, dynamic> json)
+						 => _$ReviewFromJson(json);
+					}
+					```
 
-					Freezed can also generate sealed classes and union types.
-					It is useful, but Dart 3 may be better solution.
+					[@freezed](https://pub.dev/packages/freezed) annotation makes
+					[Build runner](https://pub.dev/packages/build_runner) to generate _$Review mixin, _Review constructor
+					and _$ReviewFromJson method for [json handling](https://pub.dev/packages/json_serializable).
+					Generated code is saved to repository,
+					as generation takes some time.
+
 					</textarea>
 				</section>
 
 
 				<section data-markdown>
 					<textarea data-template>
-					### Immutable value types in dart
-
-					- define a constructor + the properties
-					- override toString, operator ==, hashCode
-					- implement a copyWith method to clone the object
-					- implement handling of de/serialization
-
-					It's possible, but a bit tedious, and error prone.
-
-					Freezed helps to generate immutable value types.
-					</textarea>
-				</section>
-
-
-				<section data-markdown>
-					<textarea data-template>
-					## Safe programming
+					## Result: Safe programming
 
 					Programs are safer if we prevent
 					hardcoded dependencies,
@@ -250,132 +439,11 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					### Bloc library (2019?)
-
-					<img alt="bloc architecture" src="images/bloc_architecture_full_white.png" width="60%">
-
-					Bloc library helps to implement BLoC pattern.
-
-					- retrieve bloc and react to state changes
-					- register event handlers and emit new states
-
-					Bloc Test library helps to write tests.
-
-					Flutter independent and Flutter dependent libraries.
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Flutter - [Hello World](https://docs.flutter.dev/get-started/flutter-for/react-native-devs)
-
-				```
-				import 'package:flutter/material.dart';
-
-				void main() {
-				  runApp( /// UI is built with Dart code
-					const Center(
-					  child: Text(
-						'Hello, world!',
-						textDirection: TextDirection.ltr,
-					  ),
-					),
-				  );
-				}
-				```
-
-				The Center [widget](https://docs.flutter.dev/development/ui/widgets-intro) becomes the root of the widget tree and has one child, the [Text](https://docs.flutter.dev/development/ui/widgets/text) widget.
-				Flutter UI is [composed](https://docs.flutter.dev/resources/architectural-overview#composition) in a flexible way from high amount of [simple single purpose widgets](https://docs.flutter.dev/resources/faq#can-i-extend-and-customize-the-bundled-widgets). It might look verbose, but it's precise and easy to understand.
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### [UI = f(state)](https://docs.flutter.dev/development/data-and-backend/state-mgmt/declarative)
-					<img alt="flutter state mgmt" src="images/flutter-state-management.png" width="50%">
-
-					[Flutter is a reactive, pseudo-declarative UI framework](https://docs.flutter.dev/resources/architectural-overview).
-					Developer provides a mapping from App state to UI state, and the framework updates UI at runtime when the App state changes.
-					This model is inspired by [work that came from Facebook for their React framework](https://www.youtube.com/watch?v=x7cQ3mrcKaY&t=2s),
-					which includes a rethinking of many traditional design principles.
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### [Compare: React / Redux One-way data flow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
-
-					<img alt="flutter state mgmt" src="images/one-way-data-flow.png" width="50%">
-
-					- State is condition of the app at a point in time
-					- The UI is rendered based on that state
-					- When something happens state is updated
-					- The UI re-renders based on the new state
-
-					</textarea>
-				</section>
-
-
-				<section data-markdown>
-					<textarea data-template>
-					#### [Functional Reactive Programming (FRP)](https://quickbirdstudios.com/blog/what-is-functional-reactive-programming-frp/)
-					<img alt="flutter state mgmt" src="images/functional-reactive-programming.png" width="70%">
-
-					Reactive libraries or programming languages…
-
-					- allow you to easily express data flows.
-					- automatically evaluate your data flows and propagate data changes.
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### [Excel explains .. ](https://quickbirdstudios.com/blog/what-is-functional-reactive-programming-frp/)
-					<img alt="reactive excel" src="images/excel-reactive.jpg" width="50%">
-
-					functional and reactive programming
-
-					- calculates stuff reliably (functional – same input, same output)
-					- propagates changes through excel sheet (reactive – through defined data flows).
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
 					#### [Flutter element & render trees](https://docs.flutter.dev/resources/inside-flutter)
 
 					<img alt="flutter ui tree" src="images/flutter-ui-trees-white.png" width="80%">
 
 					["It would be a rare application that drew only a single widget. An important part of any UI framework is therefore the ability to efficiently lay out a hierarchy of widgets, determining the size and position of each element before they are rendered on the screen."](https://docs.flutter.dev/resources/architectural-overview#layout-and-rendering)
-
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					#### Compare: Reacts Virtual Dom
-
-					<img alt="react virtual dom" src="images/raeact-virtual-dom.png" width="80%">
-
-					[DOM operations are expensive](https://medium.com/technogise/dom-manipulation-in-browser-59b793bee559).
-					React renders only diff of initial and updated [Virtual DOMs](https://blog.logrocket.com/what-virtual-dom-react/).
-					</textarea>
-				</section>
-
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Migration projects: Native -> Flutter](https://www.youtube.com/watch?v=JVRPIittNaE)
-
-				<img alt="native to flutter" src="images/migrating_native_to_flutter.png" width="65%">
-
-				Compiled dart code runs at host platform and accesses legacy
-				native code using method channels.
 
 					</textarea>
 				</section>
@@ -402,17 +470,6 @@
 					</textarea>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-				#### [Bloc library/pattern](https://bloclibrary.dev/#/architecture)
-
-				<img alt="bloc architecture" src="images/bloc_architecture_full_white.png" width="60%">
-
-				Bloc attempts to make state changes predictable by regulating when a state change can occur
-				and enforcing a single way to change state throughout an entire application.
-
-					</textarea>
-				</section>
 
 				<section data-markdown>
 					<textarea data-template>
@@ -479,155 +536,7 @@
 					</textarea>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-				#### [State management using Bloc](https://bloclibrary.dev/#/)
 
-				<img alt="bloc arch" src="images/widget-bloc-communication.png" width="50%">
-
-				[Bloc](https://bloclibrary.dev/#/whybloc) separates [presentation](https://bloclibrary.dev/#/architecture?id=presentation-layer) from [business logic](https://bloclibrary.dev/#/architecture?id=business-logic-layer).
-
-				Each Bloc has one input (sink) and output ([stream](https://dart.dev/tutorials/language/streams)),
-				but can emit (output) several types of states and handle (input) several types of events.
-
-				[Naming things](https://bloclibrary.dev/#/blocnamingconventions) consistently is vital.
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Example: Counter app](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
-
-				<img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="80%">
-
-				"+" adds increment event to sink, counter is rendered when state is received from stream.
-				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) controls lifecycle,
-				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) rendering.
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Example: CounterApp](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
-				```
-				class CounterApp extends StatelessWidget {
-				  @override
-				  Widget build(BuildContext context) {
-					return MaterialApp(
-					  home: BlocProvider( /// DI: always same bloc instance
-						create: (_) => CounterBloc(),
-						child: CounterPage(),
-					  ),
-					);
-				  }
-				}
-
-				void main() => runApp(CounterApp()); // Creation of app
-				```
-				[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) takes care of creating single instance of [Bloc](https://pub.dev/documentation/bloc/latest/bloc/Bloc-class.html), lazily by default.
-				Usage of [BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) loosely relates to Dependency Injection as concept.
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Example: CounterPage](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
-				```
-				class CounterPage extends StatelessWidget {
-				  @override
-				  Widget build(BuildContext context) {
-					return Scaffold(
-					  appBar: AppBar(title: const Text('Bloc Counter')),
-					  body: Center(
-						child: BlocBuilder<CounterBloc, int>(
-						  builder: (context, count) {
-							return Text('$count', style: Theme.of(context).textTheme.headline1);
-						  },),
-					  ),
-					  floatingActionButton: FloatingActionButton(
-						child: const Icon(Icons.add),
-						onPressed:()=>context.read<CounterBloc>().add(Increment()),
-					  ),);}}
-				```
-				[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) renders when state is read from stream.
-				CounterBloc can be found with Context.read < blocType >
-				and has [add](https://pub.dev/documentation/bloc/latest/bloc/Bloc/add.html) method which is sink for events.
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### Example: Widget Test
-				```
-				void main() {
-				  testWidgets('Counter++ test', (WidgetTester tester) async {
-					await tester.pumpWidget(CounterApp()); // build, trigger frame
-
-					expect(find.text('0'), findsOneWidget);
-					expect(find.text('1'), findsNothing);
-
-					await tester.tap(find.byIcon(Icons.add)); // tap '+'
-					await tester.pump(); // trigger a frame
-
-					expect(find.text('0'), findsNothing);
-					expect(find.text('1'), findsOneWidget);
-				  });
-				}
-				```
-				[widget testing](https://docs.flutter.dev/cookbook/testing/widget/introduction)
-				allows initiating actions and testing ui components state changes frame by frame.
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Example: CounterBloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
-				```
-				/// Base event and Increment Event
-				abstract class CounterEvent {}
-				class Increment extends CounterEvent {}
-
-				/// handles converting `CounterEvent`s into `int`s.
-				class CounterBloc extends Bloc<CounterEvent, int> {
-				  /// The initial state of the `CounterBloc` is 0.
-				  CounterBloc() : super(0) {
-					/// When `Increment` event is added,
-					/// current `state` is accessed via the `state` property
-					/// and a new state is emitted via `emit`.
-					on<Increment>((event, emit) => emit(state + 1));
-				  }
-				}
-				```
-				[on < event > () registers event handler.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
-				Blocs super constructor sets initial state, CounterBlocs constructor defines handling of "Increment" using single expression lambda.
-
-						</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-				#### [Example: CounterBlocTest](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
-				```
-				void main() {
-				  group('CounterBloc', () {
-					test('initial state is 0', () {
-					  expect(CounterBloc().state, 0);
-					});
-
-					blocTest<CounterBloc, int>(
-					  'emits [1] when increment is called',
-					  build: CounterBloc.new,
-					  act: (bloc) => bloc.add(Increment()),
-					  expect: () => [1],
-					);
-				  });
-				}
-				```
-				[bloc_test](https://pub.dev/packages/bloc_test) allows testing reactive code in isolation.
-				Mocking, setup, delays, etc. are supported but not needed in this example.
-
-						</textarea>
-				</section>
 
 				<section data-markdown>
 					<textarea data-template>
