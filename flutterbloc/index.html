@@ -393,24 +393,71 @@
 
 				<section data-markdown>
 					<textarea data-template>
-					### [Example: Restaurant review](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
+					### [Example model: User](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
 					```
 					@freezed
-					class Review with _$Review {
-					  factory Review({
-						required double score, String? review,
-					  }) = _Review;
+					abstract class User with _$User {
+					  const factory User({
+						required String id,
+						required String username,
+						required String password,
+					  }) = _User;
 
-					  factory Review.fromJson(Map<String, dynamic> json)
-						 => _$ReviewFromJson(json);
+					  // json serialization
+					  factory User.fromJson(Map<String, dynamic> json) =>
+						  _$UserFromJson(json);
 					}
 					```
 
 					[@freezed](https://pub.dev/packages/freezed) annotation makes
-					[Build runner](https://pub.dev/packages/build_runner) to generate _$Review mixin, _Review constructor
-					and _$ReviewFromJson method for [json handling](https://pub.dev/packages/json_serializable).
+					[Build runner](https://pub.dev/packages/build_runner) to generate
+					_$User mixin, _User constructor and _$UserFromJson method
+					for [json handling](https://pub.dev/packages/json_serializable).
 					Generated code is saved to repository,
 					as generation takes some time.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					### [Example events: authentication](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
+					```
+					@freezed
+					abstract class AuthenticationEvent with _$AuthenticationEvent {
+					  const factory AuthenticationEvent.login(
+						String username,
+						String password,
+					  ) = Login;
+					  const factory AuthenticationEvent.logout() = Logout;
+					}
+					```
+
+					Login and Logout events are generated.
+					Login has required parameters, which are passed to bloc.
+					Bloc will have own handlers for both Login and Logout events.
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					### [Example state: authentication](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
+					```
+					@freezed
+					abstract class AuthenticationState with _$AuthenticationState {
+
+					  const factory AuthenticationState.authenticated(User user)
+						= Authenticated;
+
+					  const factory AuthenticationState.unauthenticated()
+						= Unauthenticated;
+					}
+					```
+
+					BlocListeners and BlocBuilders can react on different states that bloc emits.
+					Authenticated state contains User instance, which UI can use to
+					decide what user can do in app.
 
 					</textarea>
 				</section>
