@@ -462,6 +462,40 @@
 					</textarea>
 				</section>
 
+				<section data-markdown>
+					<textarea data-template>
+					### [Structure: principles]()
+
+					- Code is on monorepo
+					- Monorepo may contain multiple apps
+					- Each app uses set of features
+					- Features are on their own modules
+					- Modules export their public classes
+					- Modules are kept in sync using task runner
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+					### [Structure: monorepo](https://melos.invertase.dev/getting-started)
+					```
+					my_project
+					├── apps
+					│   ├── apps_1
+					│   └── apps_2
+					├── packages
+					│   ├── package_1
+					│   └── package_2
+					├── pubspec.yaml
+					└── README.md
+					```
+					All code is on single repository.
+					Apps are under */apps* directory
+					App is composition of features.
+					Each feature has own package under */packages*.
+					</textarea>
+				</section>
 
 				<section data-markdown>
 					<textarea data-template>
