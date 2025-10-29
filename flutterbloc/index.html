@@ -116,6 +116,19 @@ using [simple widgets](https://docs.flutter.dev/resources/faq#can-i-extend-and-c
 				<section data-markdown>
 					<label>
 <textarea data-template>
+#### [Flutter element & render trees](https://docs.flutter.dev/resources/inside-flutter)
+
+<img alt="flutter ui tree" src="images/flutter-ui-trees-white.png" width="80%">
+
+["It would be a rare application that drew only a single widget. An important part of any UI framework is therefore the ability to efficiently lay out a hierarchy of widgets, determining the size and position of each element before they are rendered on the screen."](https://docs.flutter.dev/resources/architectural-overview#layout-and-rendering)
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
 #### [Functional Reactive Programming (FRP)](https://quickbirdstudios.com/blog/what-is-functional-reactive-programming-frp/)
 <img alt="flutter state mgmt" src="images/functional-reactive-programming.png" width="70%">
 
@@ -636,19 +649,6 @@ single responsibility principle.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Flutter element & render trees](https://docs.flutter.dev/resources/inside-flutter)
-
-<img alt="flutter ui tree" src="images/flutter-ui-trees-white.png" width="80%">
-
-["It would be a rare application that drew only a single widget. An important part of any UI framework is therefore the ability to efficiently lay out a hierarchy of widgets, determining the size and position of each element before they are rendered on the screen."](https://docs.flutter.dev/resources/architectural-overview#layout-and-rendering)
-
-</textarea>
-					</label>
-				</section>
-
-				<section data-markdown>
-					<label>
-<textarea data-template>
 #### [Example: Value of App Architecture](https://www.youtube.com/watch?v=JVRPIittNaE)
 
 <img alt="app architecture" src="images/cost_of_app_architecture.png" width="80%">
@@ -681,54 +681,6 @@ Pros & Cons depend on stakeholder, personal preferences, project & phase.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-# Simple over Complex
-
-Flutter example Counter app implemented using Bloc
-</textarea>
-					</label>
-				</section>
-
-
-
-				<section data-markdown>
-					<label>
-<textarea data-template>
-#### Compare: Redux [Counter reducer](https://redux.js.org/tutorials/fundamentals/part-1-overview)
-```
-function counterReducer(state = initialState, action) {
-// Reducers usually look at the type of action that happened
-// to decide how to update the state
-switch (action.type) {
-case 'counter/incremented':
-  return { ...state, value: state.value + 1 } // new copy
-default:
-  // If the reducer doesn't care about this action type,
-  // return the existing state unchanged
-  return state
-}
-}
-```
-The store will run its reducer function and save the new state value.
-Reducers are [pure functions](https://www.geeksforgeeks.org/pure-functions-in-javascript/) that take the previous state and an action, and return the next state.
-	</textarea>
-					</label>
-				</section>
-
-				<section data-markdown>
-					<label>
-<textarea data-template>
-#### Compare: [Redux one-way dataflow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
-
-<img alt="redux flow" src="images/redux-dataflow-diagram.gif" width="60%">
-
-The only way to update the state is to call store.dispatch() and pass in an action object.
-	</textarea>
-					</label>
-				</section>
-
-				<section data-markdown>
-					<label>
-<textarea data-template>
 #### [Volatility-based decomposition](https://www.informit.com/articles/article.aspx?p=2995357&seqNum=2)
 
 identify and encapsulates areas of potential change.
@@ -744,7 +696,6 @@ goal => high [cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science
 </textarea>
 					</label>
 				</section>
-
 
 				<section data-markdown>
 					<label>
