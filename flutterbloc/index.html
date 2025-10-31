@@ -285,6 +285,22 @@ and enforcing a single way to change state throughout an entire application.
 					</label>
 				</section>
 
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Bloc-to-bloc communication / layers](https://bloclibrary.dev/architecture/#bloc-to-bloc-communication)
+
+<img alt="bloc layers" src="images/bloc-layers.png" width="50%">
+
+Blocs don't know of each other.
+App may connect blocs at presentation layer.
+Multiple blocks may also use same repositories and share data.
+
+</textarea>
+                    </label>
+                </section>
+
+
 				<section data-markdown>
 					<label>
 <textarea data-template>
@@ -350,6 +366,31 @@ Builder methods build part of widget tree when new state is emitted.
 </textarea>
 					</label>
 				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Most important classes]()
+
+Creation
+
+- BlocProvider creates bloc
+
+Business Logic
+
+- Bloc is base class for blocs
+
+State change operations
+
+- BlocBuilder build widget tree
+- BlocListener runs function
+
+</textarea>
+                    </label>
+                </section>
+
+
+
 
 				<section data-markdown>
 					<label>
@@ -654,6 +695,20 @@ for example error information is useful only in failure state.
 					</label>
 				</section>
 
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [State modelling / usecases](https://www.youtube.com/watch?v=JVRPIittNaE)
+
+<img alt="single state" src="images/event-bloc-state-1.png" width="29%"> <img alt="several states" src="images/event-bloc-state-2.png" width="37%">
+
+State modelling style depends on use case.
+One should use both styles in same app where appropriate.
+
+</textarea>
+                    </label>
+                </section>
 
 				<section data-markdown>
 					<label>
