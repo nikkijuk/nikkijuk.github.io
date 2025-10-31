@@ -392,12 +392,36 @@ State change operations
                 <section data-markdown>
                     <label>
 <textarea data-template>
+#### [Additional classes]()
+
+Creation
+
+- MultiBlocProvider to create multiple blocs
+
+Business Logic
+
+- BlocBase is base class for Bloc and Cubit
+- Cubit is like Bloc, but has methods instead of events
+
+State change operations
+
+- BlocSelector selects part of state
+- BlocConsumer combines builder and listener
+
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
 #### [Creating bloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
 <img alt="bloc provider" src="images/widget-tree-1-bloc-provider.png" width="40%">
 
-Bloc provider is widget, which creates bloc lazily.
-All widgets in enclosed context can find and use bloc.
+Bloc provider widget creates bloc eagerly or lazily.
+Widgets in enclosed context can find and use bloc.
 </textarea>
                     </label>
                 </section>
@@ -437,7 +461,7 @@ Example: successful login as "CredentialsAccepted".
 <img alt="bloc events" src="images/widget-tree-4-bloc-builder.png" width="45%">
 
 Ui is built when bloc emits new state.
-Example: successful login as "AuthenticationSuccess".
+Example: "AuthenticationSuccess" with user information.
 
 </textarea>
                     </label>
@@ -446,7 +470,7 @@ Example: successful login as "AuthenticationSuccess".
                 <section data-markdown>
                     <label>
 <textarea data-template>
-#### [Refreshing needed part of tree](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+#### [Building needed part of tree](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
 <img alt="bloc events" src="images/widget-tree-5-bloc-builder-success-failure-states.png" width="70%">
 
@@ -460,11 +484,14 @@ Example: Success or Failure trees are rendered differently.
                 <section data-markdown>
                     <label>
 <textarea data-template>
-#### [Visual summary](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
-<img alt="bloc events" src="images/widget-tree-6-bloc-summary.png" width="70%">
+<img alt="bloc events" src="images/widget-tree-6-bloc-summary.png" width="60%">
 
-
+Example:
+Bloc is created in initial state. Ui is built.
+Event with username and password is sent.
+Api is called and as result additional event is created.
+Event handler emits state. State is used to rebuild ui.
 </textarea>
                     </label>
                 </section>
@@ -795,10 +822,11 @@ One should use both styles in same app where appropriate.
 
 - Code is on monorepo
 - Monorepo may contain multiple apps
-- Each app uses set of features
+- Each app has set of features
 - Features are on their own modules
 - Modules export their public classes
-- Modules are kept in sync using task runner
+- Modules are is kept in sync using task runner
+- Task runner runs same commands in each module
 </textarea>
 					</label>
 				</section>
@@ -820,7 +848,7 @@ my_project
 └── README.md
 ```
 All code is on single repository.
-Apps are under */apps* directory
+Apps are under */apps* directory.
 App is composition of features.
 Each feature has own package under */packages*.
 </textarea>
@@ -877,7 +905,7 @@ Pros & Cons depend on stakeholder, personal preferences, project & phase.
 - Architecture != State Management, you need both
 - [Bloc](https://bloclibrary.dev/#/) is popular [state management option](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
 - Bloc works as [VM](https://developer.android.com/topic/libraries/architecture/viewmodel) at [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
-- Starting with [Spike](https://wiki.c2.com/?SpikeSolution) / [PoC](https://en.wikipedia.org/wiki/Proof_of_concept) is good decision
+- Bloc requires knowledge of reactive programming.
 </textarea>
 					</label>
 				</section>
