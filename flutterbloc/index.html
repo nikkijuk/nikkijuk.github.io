@@ -128,7 +128,6 @@ and which are completely re-rendered often create performance problems.
                     </label>
                 </section>
 
-
 				<section data-markdown>
 					<label>
 <textarea data-template>
@@ -193,16 +192,15 @@ App State
 					</label>
 				</section>
 
-
 				<section data-markdown>
 					<label>
 <textarea data-template>
 #### [Compare: Reacts Redux store](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
 
-<img alt="state management" src="images/redux-store-usage-sharing-data.png" width="80%">
+<img alt="state management" src="images/redux-store-usage-sharing-data.png" width="70%">
 
-The state of the whole application is stored in the form of a JS object tree in a single [store](https://redux.js.org/api/store).
-
+With Redux application state is stored in the form of a JS object tree in a single [store](https://redux.js.org/api/store).
+Bloc approach has [multiple Blocs](https://bloclibrary.dev/faqs/#bloc-vs-redux) and each contains part of app's state.
 </textarea>
 					</label>
 				</section>
@@ -215,8 +213,10 @@ The state of the whole application is stored in the form of a JS object tree in 
 
 <img alt="redux flux" src="images/redux-store-usage.png" width="50%">
 
-Redux is a pattern and library for managing and updating application state, using events called "actions".
+Redux manages application state using events called "actions".
 Redux implements [Flux pattern](https://facebook.github.io/flux/docs/in-depth-overview/).
+Bloc library uses events to initiate state change operations.
+Bloc library implements bloc pattern.
 
 </textarea>
 					</label>
@@ -231,6 +231,7 @@ Redux implements [Flux pattern](https://facebook.github.io/flux/docs/in-depth-ov
 
 Each Bloc has one input (sink, add method) and output ([stream](https://dart.dev/tutorials/language/streams)).
 Bloc emits (output) states and handles (input) several types of events.
+State is distributed across multiple blocs.
 </textarea>
 					</label>
 				</section>
@@ -280,7 +281,7 @@ Communication between V(UI) and [VM](https://developer.android.com/topic/librari
 
 Bloc attempts to make state changes predictable by regulating when a state change can occur
 and enforcing a single way to change state throughout an entire application.
-
+Ui and Data layer may share data types, but do not interact with each other.
 </textarea>
 					</label>
 				</section>
@@ -292,10 +293,9 @@ and enforcing a single way to change state throughout an entire application.
 
 <img alt="bloc layers" src="images/bloc-layers.png" width="50%">
 
-Blocs don't know of each other.
-App may connect blocs at presentation layer.
-Multiple blocks may also use same repositories and share data.
-
+Blocs don't know each other.
+App may coordinate usage of blocs at presentation layer.
+Multiple blocks may also use same repositories to share data.
 </textarea>
                     </label>
                 </section>
@@ -378,7 +378,7 @@ Creation
 
 Business Logic
 
-- Bloc is base class for blocs
+- Bloc is base class for custom blocs
 
 State change operations
 
