@@ -534,7 +534,7 @@ but generating code from annotations is a powerful fix.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-### [Example model: User](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
+### [Model: User](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
 ```
 @freezed
 abstract class User with _$User {
@@ -564,21 +564,22 @@ as generation takes some time.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-### [Example events: authentication](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
+### [Events: authentication](https://bloclibrary.dev/naming-conventions/#event-conventions)
 ```
 @freezed
 abstract class AuthenticationEvent with _$AuthenticationEvent {
-  const factory AuthenticationEvent.login(
+  const factory AuthenticationEvent.loginRequested(
 	String username,
 	String password,
   ) = Login;
-  const factory AuthenticationEvent.logout() = Logout;
+  const factory AuthenticationEvent.logoutRequested()
+    = Logout;
 }
 ```
 
-Login and Logout events are generated.
-Login has required parameters, which are passed to bloc.
 Bloc will have own handlers for both Login and Logout events.
+Login has required parameters, which are passed to bloc.
+Event names should be in past tense, ie. LoginRequested, LogoutRequested.
 
 </textarea>
 					</label>
@@ -587,7 +588,7 @@ Bloc will have own handlers for both Login and Logout events.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-### [Example state: authentication](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
+### [State: Class per State](https://bloclibrary.dev/modeling-state/#sealed-class-and-subclasses)
 ```
 @freezed
 abstract class AuthenticationState with _$AuthenticationState {
@@ -600,13 +601,43 @@ abstract class AuthenticationState with _$AuthenticationState {
 }
 ```
 
-BlocListeners and BlocBuilders can react on different states that bloc emits.
-Authenticated state contains User instance, which UI can use to
-decide what user can do in app.
+Bloc creates state. Bloc listeners and bloc builders react on state change.
+Each state has own class. State contains only needed attributes.
+Type safe, easy to use, but can become verbose and complex.
 
 </textarea>
 					</label>
 				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [State: Single class](https://bloclibrary.dev/modeling-state/#concrete-class-and-status-enum)
+```
+enum GameStatus { initial, playing, success, failure }
+@freezed
+abstract class GameState with _$GameState {
+  const factory GameState({
+    @Default(GameStatus.initial) status,
+    @Default(5) int boardSize,
+    @Default({}) Set<int> selectedElements,
+    @Default([]) List<String> gameElements,
+  }) = _GameState;
+
+  factory GameState.fromJson(Map<String, Object?> json) =>
+      _$GameStateFromJson(json);
+}
+```
+
+User interface tracks status field of state class.
+Easy to model. Not type safe.
+Results easily bloated class with conflicting attributes,
+for example error information is useful only in failure state.
+
+</textarea>
+					</label>
+				</section>
+
 
 				<section data-markdown>
 					<label>
