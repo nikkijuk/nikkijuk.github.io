@@ -389,7 +389,85 @@ State change operations
                     </label>
                 </section>
 
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Creating bloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
+<img alt="bloc provider" src="images/widget-tree-1-bloc-provider.png" width="40%">
+
+Bloc provider is widget, which creates bloc lazily.
+All widgets in enclosed context can find and use bloc.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [User interacts with bloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc events" src="images/widget-tree-2-bloc-events.png" width="40%">
+
+Widgets send events to bloc.
+Example: "LoginRequested" with username and password.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Receiving events from apis](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc events" src="images/widget-tree-3-api-results.png" width="50%">
+
+Event is created based on received data.
+Example: successful login as "CredentialsAccepted".
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Building ui](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc events" src="images/widget-tree-4-bloc-builder.png" width="45%">
+
+Ui is built when bloc emits new state.
+Example: successful login as "AuthenticationSuccess".
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Refreshing needed part of tree](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc events" src="images/widget-tree-5-bloc-builder-success-failure-states.png" width="70%">
+
+State type influences how UI is built.
+Example: Success or Failure trees are rendered differently.
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Visual summary](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc events" src="images/widget-tree-6-bloc-summary.png" width="70%">
+
+
+</textarea>
+                    </label>
+                </section>
 
 
 				<section data-markdown>
