@@ -956,44 +956,6 @@ goal => high [cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science
 				<section data-markdown>
 					<label>
 <textarea data-template>
-
-<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="70%">
-
-[layers](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
-
-	</textarea>
-					</label>
-				</section>
-
-				<section data-markdown>
-					<label>
-<textarea data-template>
-
-<img alt="multimodule monorepo arch" src="images/multimodule_repo_example.png" width="80%">
-
-[layers and packages](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
-
-	</textarea>
-					</label>
-				</section>
-
-				<section data-markdown>
-					<label>
-<textarea data-template>
-
-<img alt="lib and packages" src="images/app_lib_packages_structure.png" width="30%">
-
-<img alt="single feature" src="images/lib_feature_structure.png" width="30%">
-
-lib:features, packages:domain/repository, data/client
-
-</textarea>
-					</label>
-				</section>
-
-				<section data-markdown>
-					<label>
-<textarea data-template>
 #### [summary of organizing principles](https://verygood.ventures/blog/very-good-flutter-architecture)
 
 lib contains presentation
@@ -1020,7 +982,6 @@ packages contains domain and data
 - shorten feedback loops using small tests
 - use one-way flows to help reason code
 - only support immutable data at ui
-- don't use templates, use code
 - render changes same way as initial values
 - use simple components
 - write code only when absolutely necessary
