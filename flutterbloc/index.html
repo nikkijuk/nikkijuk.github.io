@@ -55,13 +55,14 @@ Jukka Nikki, Programmer & Mutable Object
 
 Manifesto for simple UI's
 
-- Components: [Composition](https://docs.flutter.dev/resources/inside-flutter#aggressive-composability) over Inheritance
-- Rendering: [Reactive](https://en.wikipedia.org/wiki/Reactive_programming)/[Declarative](https://docs.flutter.dev/get-started/flutter-for/declarative) over Imperative
-- Flow: One-Way/Events&Streams over Bidirectional
-- Actions: Async Events over Sync methods
-- State: Immutable over Mutable
-- Structure: Modular/Layered over Unstructured
-- Code: Generated over Handwritten
+- Widgets: [Composition](https://docs.flutter.dev/resources/inside-flutter#aggressive-composability) over Inheritance
+- Views: [Reactive](https://en.wikipedia.org/wiki/Reactive_programming)/[Declarative](https://docs.flutter.dev/get-started/flutter-for/declarative) over Imperative
+- Data flow: One-Way over Bidirectional
+- State Management: Distributed over centralized
+- State changes: Async Events over Sync methods
+- Domain model: Immutable over Mutable
+- Value types: Generated over Handwritten
+- Architecture: Modular/Layered over Unstructured
 </textarea>
 					</label>
 				</section>
@@ -91,13 +92,13 @@ Builder method is called when the App state changes.
 import 'package:flutter/material.dart';
 
 void main() {
-runApp( /// UI is built with Dart code
-const Center(
-  child: Text(
-	'Hello, world!',
-	textDirection: TextDirection.ltr,
-  ),
-),
+runApp(
+    const Center(
+      child: Text(
+        'Hello, world!',
+        textDirection: TextDirection.ltr,
+      ),
+    ),
 );
 }
 ```
@@ -160,7 +161,7 @@ and which are completely re-rendered often create performance problems.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Flutter has n State management options](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro)
+#### [State management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro)
 
 <img alt="state management" src="images/state-management-explainer.gif" width="80%">
 
@@ -175,9 +176,8 @@ when you need to share application state between screens, across your app
 <textarea data-template>
 #### [Types of State]()
 
-Ephemeral
+Ephemeral / UI / Local
 
-- UI state or local state
 - associated with a particular widget
 - possibly contained within a single widget
 - no state management techniques needed
@@ -195,7 +195,7 @@ App State
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Compare: Reacts Redux store](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
+#### [React/Redux: Centralized state](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
 
 <img alt="state management" src="images/redux-store-usage-sharing-data.png" width="70%">
 
@@ -204,7 +204,6 @@ Bloc approach has [multiple Blocs](https://bloclibrary.dev/faqs/#bloc-vs-redux) 
 </textarea>
 					</label>
 				</section>
-
 
 				<section data-markdown>
 					<label>
@@ -215,6 +214,7 @@ Bloc approach has [multiple Blocs](https://bloclibrary.dev/faqs/#bloc-vs-redux) 
 
 Redux manages application state using events called "actions".
 Redux implements [Flux pattern](https://facebook.github.io/flux/docs/in-depth-overview/).
+
 Bloc library uses events to initiate state change operations.
 Bloc library implements bloc pattern.
 
@@ -231,7 +231,7 @@ Bloc library implements bloc pattern.
 
 Each Bloc has one input (sink, add method) and output ([stream](https://dart.dev/tutorials/language/streams)).
 Bloc emits (output) states and handles (input) several types of events.
-State is distributed across multiple blocs.
+App state is distributed across multiple custom blocs.
 </textarea>
 					</label>
 				</section>
@@ -239,17 +239,17 @@ State is distributed across multiple blocs.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [MVVM anywhere?](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+#### [Compare: MVVM pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
 
-<img alt="bloc mvvm comparison" src="images/mvvm_bloc.png" width="60%">
+<img alt="bloc mvvm comparison" src="images/mvvm_bloc.png" width="55%">
 
-in "[MVVM (Model-View-ViewModel) pattern .. BLoC is the replacement for ViewModel](https://medium.com/@aaron.chu/flutter-state-management-bloc-pattern-9cd6011c699)."
+in "[MVVM (Model-View-ViewModel) .. BLoC is the replacement for ViewModel](https://medium.com/@aaron.chu/flutter-state-management-bloc-pattern-9cd6011c699)."
 
 - [VM](https://developer.android.com/topic/libraries/architecture/viewmodel)(BLoC) is responsible for managing the state
 - [VM](https://developer.android.com/topic/libraries/architecture/viewmodel)(BLoC) uses Model (Repository) to access data
 
-Communication between V(UI) and [VM](https://developer.android.com/topic/libraries/architecture/viewmodel)(BLoC) has changed.
-[Stream](https://dart.dev/tutorials/language/streams) has replaced data binding.
+How V(UI) and [VM](https://developer.android.com/topic/libraries/architecture/viewmodel)(BLoC) communicate has changed.
+[Stream / One way flow](https://dart.dev/tutorials/language/streams) has replaced data binding.
 
 </textarea>
 					</label>
@@ -281,7 +281,7 @@ Communication between V(UI) and [VM](https://developer.android.com/topic/librari
 
 Bloc attempts to make state changes predictable by regulating when a state change can occur
 and enforcing a single way to change state throughout an entire application.
-Ui and Data layer may share data types, but do not interact with each other.
+Ui and Data layer share domain model, but do not interact directly.
 </textarea>
 					</label>
 				</section>
@@ -382,8 +382,8 @@ Business Logic
 
 State change operations
 
-- BlocBuilder build widget tree
-- BlocListener runs function
+- BlocBuilder builds widget tree
+- BlocListener runs functions
 
 </textarea>
                     </label>
@@ -407,6 +407,19 @@ State change operations
 
 - BlocSelector selects part of state
 - BlocConsumer combines builder and listener
+
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+
+## Imaginary example flow
+
+[Pictures taken from this article](https://timothystepro.medium.com/visualizing-flutter-bloc-399d79701f3a)
 
 </textarea>
                     </label>
@@ -474,7 +487,7 @@ Example: "AuthenticationSuccess" with user information.
 
 <img alt="bloc events" src="images/widget-tree-5-bloc-builder-success-failure-states.png" width="70%">
 
-State type influences how UI is built.
+State object type or content of state object (eg. status enum or other information) influences how UI is built.
 Example: Success or Failure trees are rendered differently.
 
 </textarea>
@@ -487,11 +500,23 @@ Example: Success or Failure trees are rendered differently.
 
 <img alt="bloc events" src="images/widget-tree-6-bloc-summary.png" width="60%">
 
-Example:
+Summary of example:
 Bloc is created in initial state. Ui is built.
-Event with username and password is sent.
+Event with required information is sent.
 Api is called and as result additional event is created.
 Event handler emits state. State is used to rebuild ui.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+
+## Example application with tests
+
+[Code taken from bloc counter app](https://bloclibrary.dev/tutorials/flutter-counter/)
+
 </textarea>
                     </label>
                 </section>
@@ -524,9 +549,7 @@ return MaterialApp(
 	create: (_) => CounterBloc(),
 	child: CounterPage(),
   ),
-);
-}
-}
+);}}
 
 void main() => runApp(CounterApp()); // Creation of app
 ```
@@ -750,7 +773,7 @@ Event names should be in past tense, ie. LoginRequested, LogoutRequested.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-### [State: Class per State](https://bloclibrary.dev/modeling-state/#sealed-class-and-subclasses)
+### [State: Class per State style](https://bloclibrary.dev/modeling-state/#sealed-class-and-subclasses)
 ```
 @freezed
 abstract class AuthenticationState with _$AuthenticationState {
@@ -774,7 +797,7 @@ Type safe, easy to use, but can become verbose and complex.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-### [State: Single class](https://bloclibrary.dev/modeling-state/#concrete-class-and-status-enum)
+### [State: Single class style](https://bloclibrary.dev/modeling-state/#concrete-class-and-status-enum)
 ```
 enum GameStatus { initial, playing, success, failure }
 @freezed
@@ -804,11 +827,11 @@ for example error information is useful only in failure state.
                 <section data-markdown>
                     <label>
 <textarea data-template>
-#### [State modelling / usecases](https://www.youtube.com/watch?v=JVRPIittNaE)
+#### [State modeling / usecases](https://www.youtube.com/watch?v=JVRPIittNaE)
 
 <img alt="single state" src="images/event-bloc-state-1.png" width="29%"> <img alt="several states" src="images/event-bloc-state-2.png" width="37%">
 
-State modelling style depends on use case.
+State modeling style depends on use case.
 One should use both styles in same app where appropriate.
 
 </textarea>
@@ -818,7 +841,7 @@ One should use both styles in same app where appropriate.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-### [Structure: principles]()
+### [Modularity: principles]()
 
 - Code is on monorepo
 - Monorepo may contain multiple apps
@@ -881,13 +904,14 @@ single responsibility principle.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Example: Value of App Architecture](https://www.youtube.com/watch?v=JVRPIittNaE)
+#### [Value of App Architecture](https://www.youtube.com/watch?v=JVRPIittNaE)
 
 <img alt="app architecture" src="images/cost_of_app_architecture.png" width="80%">
 
 Every system has architecture, planned or accidental,
 planned being mostly preferable.
 Pros & Cons depend on stakeholder, personal preferences, project & phase.
+Architectural decisions should be recorded.
 </textarea>
 					</label>
 				</section>
