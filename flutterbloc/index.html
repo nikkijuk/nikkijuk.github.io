@@ -878,6 +878,32 @@ Each feature has own package under */packages*.
 					</label>
 				</section>
 
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+### [Structure: feature](https://melos.invertase.dev/getting-started)
+```
+features
+├── authentication
+.   ├── lib
+.   │    ├── authentication.dart (public api)
+    │    └── src
+    │        ├── bloc
+    │        ├── view
+    │        └── ..
+    └── test
+        ├── bloc
+        ├── view
+        └── ..
+```
+Features public api is directly under lib.
+lib/src includes private implementation of feature.
+Blocs and views are implemented and tested separately.
+</textarea>
+                    </label>
+                </section>
+
+
 				<section data-markdown>
 					<label>
 <textarea data-template>
@@ -953,21 +979,36 @@ goal => high [cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science
 					</label>
 				</section>
 
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+
+<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="50%">
+
+[layers](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
+
+</textarea>
+                    </label>
+                </section>
+
+
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [summary of organizing principles](https://verygood.ventures/blog/very-good-flutter-architecture)
+#### [Example of organizing principles](https://verygood.ventures/blog/very-good-flutter-architecture)
 
-lib contains presentation
+app as composition of features
+
+- app contains navigation, dependency injection, ..
+
+packages for features, domain and data
+
 - features match to functional requirements
 - found from software design and named clearly
-
-packages contains domain and data
-
-- domain layer consists of repositories
-- repositories transform raw data to apps domain
-- data layer consists of clients
-- clients are built to be reusable
+- features contain views and blocs
+- domain layer consists of repositories and models
+- repositories transform raw data to domain model
+- data layer consists of reusable clients
 
 </textarea>
 					</label>
