@@ -881,6 +881,33 @@ Each feature has own package under */packages*.
                 <section data-markdown>
                     <label>
 <textarea data-template>
+### [Structure: app](https://melos.invertase.dev/getting-started)
+```
+app
+├── lib
+│   ├── app
+│   │   ├── config
+│   │   └── view
+│   │       └── app.dart
+│   ├── app_bloc_observer.dart (log bloc activity, only dev)
+│   ├── bootstrap.dart
+│   ├── main_development.dart (enty point, dev)
+│   ├── main_production.dart (enty point, prod)
+│   └── main_staging.dart (enty point, staging)
+├── pubspec.yaml
+├── test
+└── windows (embedder / target)
+```
+Dev, Prod and Staging entry points bootstrap app.dart with right configuration.
+Config directory contains navigation routes and other configuration.
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
 ### [Structure: feature](https://melos.invertase.dev/getting-started)
 ```
 features
