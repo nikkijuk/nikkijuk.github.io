@@ -195,7 +195,7 @@ App State
                 <section data-markdown>
                     <label>
 <textarea data-template>
-#### [React / Redux / Flux as innovator](https://redux.js.org/)
+#### [React/Redux/Flux as innovator](https://redux.js.org/)
 
 <img alt="redux flux" src="images/redux-store-usage.png" width="50%">
 
@@ -212,7 +212,7 @@ Bloc library implements bloc pattern.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [React/Redux centralized state](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
+#### [React/Redux has centralized state](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
 
 <img alt="state management" src="images/redux-store-usage-sharing-data.png" width="70%">
 
@@ -225,7 +225,7 @@ Bloc approach has [multiple Blocs](https://bloclibrary.dev/faqs/#bloc-vs-redux) 
                 <section data-markdown>
                     <label>
 <textarea data-template>
-#### [React / Redux One-way data flow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+#### [React/Redux uses one-way data flow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
 
 <img alt="flutter state mgmt" src="images/one-way-data-flow.png" width="40%">
 
@@ -419,7 +419,7 @@ State change operations
 
 ## Imaginary example flow
 
-[Pictures taken from this article](https://timothystepro.medium.com/visualizing-flutter-bloc-399d79701f3a)
+[Pictures taken from article of Timothy Stepro](https://timothystepro.medium.com/visualizing-flutter-bloc-399d79701f3a)
 
 </textarea>
                     </label>
@@ -512,10 +512,9 @@ Event handler emits state. State is used to rebuild ui.
                 <section data-markdown>
                     <label>
 <textarea data-template>
+## Example application
 
-## Example application with tests
-
-[Code taken from bloc counter app](https://bloclibrary.dev/tutorials/flutter-counter/)
+[Code taken from bloc library's counter app example](https://bloclibrary.dev/tutorials/flutter-counter/)
 
 </textarea>
                     </label>
@@ -525,7 +524,7 @@ Event handler emits state. State is used to rebuild ui.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Example: Counter app](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+#### [Counter app overview](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 
 <img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="80%">
 
@@ -539,7 +538,7 @@ Event handler emits state. State is used to rebuild ui.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Example: CounterApp](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+#### [CounterApp builds app root](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 ```
 class CounterApp extends StatelessWidget {
 @override
@@ -562,7 +561,7 @@ Usage of [BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutte
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Example: CounterPage](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+#### [CounterPage build ui](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 ```
 class CounterPage extends StatelessWidget {
 @override Widget build(BuildContext context) {
@@ -590,25 +589,25 @@ Context.read < CounterBloc > acquires bloc.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### Example: Widget Test
+#### CounterPageTest tests ui
 ```
 void main() {
 testWidgets('Counter++ test', (WidgetTester tester) async {
-await tester.pumpWidget(CounterApp()); // build, trigger frame
+    // build counter app and trigger first frame
+    await tester.pumpWidget(CounterApp());
 
-expect(find.text('0'), findsOneWidget);
-expect(find.text('1'), findsNothing);
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
 
-await tester.tap(find.byIcon(Icons.add)); // tap '+'
-await tester.pump(); // trigger a frame
+    await tester.tap(find.byIcon(Icons.add)); // tap '+'
+    await tester.pump(); // trigger next frame
 
-expect(find.text('0'), findsNothing);
-expect(find.text('1'), findsOneWidget);
-});
-}
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
+});}
 ```
 [widget testing](https://docs.flutter.dev/cookbook/testing/widget/introduction)
-allows initiating actions and testing ui components state changes frame by frame.
+allows initiating actions and testing visible changes frame by frame.
 	</textarea>
 					</label>
 				</section>
@@ -616,7 +615,7 @@ allows initiating actions and testing ui components state changes frame by frame
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Example: CounterBloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+#### [CounterBloc holds state](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 ```
 /// Base event and Increment Event
 abstract class CounterEvent {}
@@ -624,18 +623,18 @@ class Increment extends CounterEvent {}
 
 /// handles converting `CounterEvent`s into `int`s.
 class CounterBloc extends Bloc<CounterEvent, int> {
-/// The initial state of the `CounterBloc` is 0.
-CounterBloc() : super(0) {
-/// When `Increment` event is added,
-/// current `state` is accessed via the `state` property
-/// and a new state is emitted via `emit`.
-on<Increment>((event, emit) => emit(state + 1));
-}
+    /// The initial state of the `CounterBloc` is 0.
+    CounterBloc() : super(0) {
+    /// When `Increment` event is added,
+    /// current `state` is accessed via the `state` property
+    /// and a new state is emitted via `emit`.
+    on<Increment>((event, emit) => emit(state + 1));
+    }
 }
 ```
-Blocs super constructor sets initial state.
+Blocs super constructor sets initial state to '0'.
 [on < event > () registers event handler.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
-"Increment" event handler is lambda, which emits new state.
+*Increment* event handler is lambda, which emits new state.
 
 	</textarea>
 					</label>
@@ -644,24 +643,24 @@ Blocs super constructor sets initial state.
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Example: CounterBlocTest](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+#### [CounterBlocTest tests bloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
 ```
 void main() {
 group('CounterBloc', () {
-test('initial state is 0', () {
-  expect(CounterBloc().state, 0);
-});
+    test('initial state is 0', () {
+      expect(CounterBloc().state, 0);
+    });
 
-blocTest<CounterBloc, int>(
-  'emits [1] when increment is called',
-  build: CounterBloc.new,
-  act: (bloc) => bloc.add(Increment()),
-  expect: () => [1],
-);
-});
-}
+    blocTest<CounterBloc, int>(
+      'emits [1] when increment is called',
+      build: CounterBloc.new,
+      act: (bloc) => bloc.add(Increment()),
+      expect: () => [1],
+    );
+});}
 ```
 [bloc_test](https://pub.dev/packages/bloc_test) allows testing reactive code in isolation.
+Example: create bloc, send events, check expected state.
 Mocking, setup, delays, etc. are supported.
 
 	</textarea>
