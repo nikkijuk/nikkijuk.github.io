@@ -214,10 +214,11 @@ Bloc library implements bloc pattern.
 <textarea data-template>
 #### [React/Redux has centralized state](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
 
-<img alt="state management" src="images/redux-store-usage-sharing-data.png" width="70%">
+<img alt="state management" src="images/redux-store-usage-sharing-data.png" width="60%">
 
 With Redux application state is stored in the form of a JS object tree in a single [store](https://redux.js.org/api/store).
-Bloc approach has [multiple Blocs](https://bloclibrary.dev/faqs/#bloc-vs-redux) and each contains part of app's state.
+
+Blocs are [distibuted](https://bloclibrary.dev/faqs/#bloc-vs-redux) and there's no single master.
 </textarea>
 					</label>
 				</section>
@@ -761,7 +762,7 @@ abstract class AuthenticationEvent with _$AuthenticationEvent {
 }
 ```
 
-Bloc will have own handlers for both Login and Logout events.
+Bloc has handlers for both Login and Logout events.
 Login has required parameters, which are passed to bloc.
 Event names should be in past tense, ie. LoginRequested, LogoutRequested.
 
@@ -815,8 +816,8 @@ abstract class GameState with _$GameState {
 
 User interface tracks status field of state class.
 Easy to model. Not type safe.
-Results easily bloated class with conflicting attributes,
-for example error information is useful only in failure state.
+Results easily bloated class with conflicting attributes.
+Example: error information is useful only in failure state.
 
 </textarea>
 					</label>
@@ -930,7 +931,19 @@ Blocs and views are implemented and tested separately.
                 </section>
 
 
-				<section data-markdown>
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+### [Structure: repository](https://melos.invertase.dev/getting-started)
+```
+repositories
+.
+```
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
 					<label>
 <textarea data-template>
 ## Result: Safe programming
