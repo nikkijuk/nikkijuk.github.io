@@ -59,7 +59,7 @@ Manifesto for simple UI's
 - Views: [Reactive](https://en.wikipedia.org/wiki/Reactive_programming)/[Declarative](https://docs.flutter.dev/get-started/flutter-for/declarative) over Imperative
 - Data flow: One-Way over Bidirectional
 - State Management: Distributed over centralized
-- State changes: Async Events over Sync methods
+- Operations: Async Events over Sync methods
 - Domain model: Immutable over Mutable
 - Value types: Generated over Handwritten
 - Architecture: Modular/Layered over Unstructured
@@ -192,23 +192,10 @@ App State
 					</label>
 				</section>
 
-				<section data-markdown>
-					<label>
+                <section data-markdown>
+                    <label>
 <textarea data-template>
-#### [React/Redux: Centralized state](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
-
-<img alt="state management" src="images/redux-store-usage-sharing-data.png" width="70%">
-
-With Redux application state is stored in the form of a JS object tree in a single [store](https://redux.js.org/api/store).
-Bloc approach has [multiple Blocs](https://bloclibrary.dev/faqs/#bloc-vs-redux) and each contains part of app's state.
-</textarea>
-					</label>
-				</section>
-
-				<section data-markdown>
-					<label>
-<textarea data-template>
-#### [Compare: React / Redux / Flux](https://redux.js.org/)
+#### [React / Redux / Flux as innovator](https://redux.js.org/)
 
 <img alt="redux flux" src="images/redux-store-usage.png" width="50%">
 
@@ -219,27 +206,43 @@ Bloc library uses events to initiate state change operations.
 Bloc library implements bloc pattern.
 
 </textarea>
-					</label>
-				</section>
+                    </label>
+                </section>
 
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Bloc = Business Logic Components](https://bloclibrary.dev/#/)
+#### [React/Redux centralized state](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
 
-<img alt="bloc arch" src="images/widget-bloc-communication.png" width="60%">
+<img alt="state management" src="images/redux-store-usage-sharing-data.png" width="70%">
 
-Each Bloc has one input (sink, add method) and output ([stream](https://dart.dev/tutorials/language/streams)).
-Bloc emits (output) states and handles (input) several types of events.
-App state is distributed across multiple custom blocs.
+With Redux application state is stored in the form of a JS object tree in a single [store](https://redux.js.org/api/store).
+Bloc approach has [multiple Blocs](https://bloclibrary.dev/faqs/#bloc-vs-redux) and each contains part of app's state.
 </textarea>
 					</label>
 				</section>
 
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [React / Redux One-way data flow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+
+<img alt="flutter state mgmt" src="images/one-way-data-flow.png" width="40%">
+
+- State is condition of the app at a point in time
+- View is rendered based on current state
+- View can initiate actions
+- Actions update state when needed
+- View re-renders based on the updated state
+
+</textarea>
+                    </label>
+                </section>
+
 				<section data-markdown>
 					<label>
 <textarea data-template>
-#### [Compare: MVVM pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+#### [Similarities to MVVM pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
 
 <img alt="bloc mvvm comparison" src="images/mvvm_bloc.png" width="55%">
 
@@ -255,22 +258,19 @@ How V(UI) and [VM](https://developer.android.com/topic/libraries/architecture/vi
 					</label>
 				</section>
 
-				<section data-markdown>
-					<label>
+                <section data-markdown>
+                    <label>
 <textarea data-template>
-#### [Compare: React / Redux One-way data flow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+#### [Bloc = Business Logic Components](https://bloclibrary.dev/#/)
 
-<img alt="flutter state mgmt" src="images/one-way-data-flow.png" width="40%">
+<img alt="bloc arch" src="images/widget-bloc-communication.png" width="60%">
 
-- State is condition of the app at a point in time
-- View is rendered based on current state
-- View can initiate actions
-- Actions update state when needed
-- View re-renders based on the updated state
-
+Each Bloc has one input (sink, add method) and output ([stream](https://dart.dev/tutorials/language/streams)).
+Bloc emits (output) states and handles (input) several types of events.
+App state is distributed across multiple custom blocs.
 </textarea>
-					</label>
-				</section>
+                    </label>
+                </section>
 
 				<section data-markdown>
 					<label>
