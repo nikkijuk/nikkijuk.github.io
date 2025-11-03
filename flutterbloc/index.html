@@ -857,13 +857,69 @@ One should use both styles in same app where appropriate.
 
 <img alt="app architecture" src="images/cost_of_app_architecture.png" width="80%">
 
-
 App with architectural rules and constraints is easier to evolve than one without clear structure.
 When domain is complex feature and layer based division creates repeatable simple idioms.
 </textarea>
                     </label>
                 </section>
 
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Dependency / data flow direction](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
+
+<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="45%">
+
+Example: Repository/domain layer contains interfaces and models,
+which are implemented at data layer.
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Example of organizing principles](https://verygood.ventures/blog/very-good-flutter-architecture)
+
+app as composition of features
+
+- app contains navigation, dependency injection, ..
+
+packages for features, domain and data
+
+- features match to functional requirements
+- found from software design and named clearly
+- features contain views and blocs
+- domain layer consists of repositories and models
+- repositories transform raw data to domain model
+- data layer consists of reusable clients
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Recipe to identify packages](https://www.informit.com/articles/article.aspx?p=2995357&seqNum=2)
+
+use [Volatility-based decomposition](https://www.informit.com/articles/article.aspx?p=2995357&seqNum=2)
+
+- identify and encapsulates [areas of potential change](https://ckoster22.medium.com/architecting-for-change-b12824b35ea3).
+- model behavior as interaction between found areas.
+- name areas as features, repositories and apis.
+- create with [vgv cli](https://cli.vgv.dev/) packages for found components.
+- define dependencies between packages.
+- fill packages with implementation components.
+- start with repository interfaces, models and blocs.
+- or add pages and views first if you feel.
+- let [melos](https://melos.invertase.dev/commands/list#--mermaid) generate dependency graph for packages.
+- let [lakos](https://pub.dev/packages/lakos) generate dependency graph for classes.
+
+</textarea>
+                    </label>
+                </section>
 
 				<section data-markdown>
 					<label>
@@ -1026,59 +1082,6 @@ single responsibility principle.
 					</label>
 				</section>
 
-				<section data-markdown>
-					<label>
-<textarea data-template>
-#### [Volatility-based decomposition](https://www.informit.com/articles/article.aspx?p=2995357&seqNum=2)
-
-identify and encapsulates areas of potential change.
-
-implement behavior as interaction between encapsulated areas.
-
-at app we can use features as one organizing principle
-
-- but how to identify and name them?
-- and should they be coarse or fine granular?
-
-goal => high [cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science)), low [coupling](https://en.wikipedia.org/wiki/Coupling_(computer_programming)#Semantic_coupling), ..
-</textarea>
-					</label>
-				</section>
-
-                <section data-markdown>
-                    <label>
-<textarea data-template>
-
-<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="50%">
-
-[layers](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
-
-</textarea>
-                    </label>
-                </section>
-
-
-				<section data-markdown>
-					<label>
-<textarea data-template>
-#### [Example of organizing principles](https://verygood.ventures/blog/very-good-flutter-architecture)
-
-app as composition of features
-
-- app contains navigation, dependency injection, ..
-
-packages for features, domain and data
-
-- features match to functional requirements
-- found from software design and named clearly
-- features contain views and blocs
-- domain layer consists of repositories and models
-- repositories transform raw data to domain model
-- data layer consists of reusable clients
-
-</textarea>
-					</label>
-				</section>
 
 				<section data-markdown>
 					<label>
