@@ -59,6 +59,23 @@ new things." - Sesame Street
 I wrote these slides to reflect what I have done, how I see my role, and my strengths.
 It's all random, but tasks like this direct thinking. 
 
+## Revisiting Flutter, Bloc and immutable data for UIs
+
+MVC pattern was developed at Xerox during late 70s. 
+It took quite some time before idea reached rest of us
+as web rammed down idea of desktop applications.
+Reactive programming is a variant of MVC 
+for modern times, and it's power really struck me with Flutter
+and immutablel data.
+
+I have collected my notes and thoughts here, 
+since reactive programming and immutable data
+may also impress you as it did for me.
+Resulting clean programming model 
+is a delight to work with.
+
+[slides](https://nikkijuk.github.io/flutterbloc/)
+
 ## Career changes
 
 World changes while you work. Your work changes also. 
