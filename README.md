@@ -61,20 +61,27 @@ It's all random, but tasks like this direct thinking.
 
 ## Revisiting Flutter, Bloc and immutable data for UIs
 
+[slides](https://nikkijuk.github.io/flutterbloc/)
+
 MVC pattern was developed at Xerox during late 70s. 
 It took quite some time before idea reached rest of us
-as web rammed down idea of desktop applications.
+when web rammed down idea of desktop applications at late 90s.
 Reactive programming is a variant of MVC 
 for modern times, and it's power really struck me with Flutter
-and immutablel data.
+and immutable data.
 
 I have collected my notes and thoughts here, 
 since reactive programming and immutable data
 may also impress you as it did for me.
 Resulting clean programming model 
 is a delight to work with.
+For experienced developers letting
+ideas of imperative ui 
+and mutable global state
+to die might feel like losing old friend,
+but it's worth of sacrifice.
 
-[slides](https://nikkijuk.github.io/flutterbloc/)
+[More from Felix](https://www.youtube.com/watch?v=knMvKPKBzGE)
 
 ## Career changes
 
