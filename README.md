@@ -81,7 +81,10 @@ and mutable global state
 to die might feel like losing old friend,
 but it's worth of sacrifice.
 
-[More from Felix](https://www.youtube.com/watch?v=knMvKPKBzGE)
+Bloc has evolved over time from pattern to [small focused library](https://bloclibrary.dev/). 
+Library's api has changed lightly over the course of development, 
+but basic construct follows still ideas [introduced 2018](https://youtu.be/PLHln7wHgPE?t=1377).
+If you'd like to have more information here's [deep dive from Felix Angelov](https://www.youtube.com/watch?v=knMvKPKBzGE).
 
 ## Career changes
 
