@@ -368,6 +368,22 @@ No exceptions! ".. for the sanity of everyone."
 					</label>
 				</section>
 
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+### [Relaxation to rules]()
+
+in feature-driven architecture
+
+- [each feature has one Bloc](https://marcossevilla.dev/cleaner-flutter-vol-10#heading-predictability) assigned to it.
+- few global blocs may share state between features.
+
+blocs still don't know each other
+</textarea>
+                    </label>
+                </section>
+
+
 				<section data-markdown>
 					<label>
 <textarea data-template>
@@ -555,7 +571,6 @@ Event handler emits state. State is used to rebuild ui.
 </textarea>
                     </label>
                 </section>
-
 
 				<section data-markdown>
 					<label>
@@ -818,6 +833,29 @@ Event names should be in past tense, ie. LoginRequested, LogoutRequested.
 </textarea>
 					</label>
 				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [State change diagram / mermaid.js]()
+
+<img alt="authentication states" src="images/authentication_state_diagram.png" width="30%">
+
+```
+stateDiagram-v2
+    [*] --> Unauthenticated
+    Unauthenticated --> Authenticated: login requested
+    Authenticated --> Unauthenticated: logout requested
+    Unauthenticated --> [*]
+    Authenticated --> [*]
+```
+
+Events are operations that trigger state changes
+
+</textarea>
+                    </label>
+                </section>
+
 
 				<section data-markdown>
 					<label>
