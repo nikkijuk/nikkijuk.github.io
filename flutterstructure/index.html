@@ -1,0 +1,1277 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### Apps: 1.0 and beyond
+
+“Simplicity and straightforwardness proceed from conceptual integrity.”
+― Frederick P. Brooks
+
+“A complex system that works is invariably found to have evolved
+from a simple system that works.
+The inverse proposition also appears to be true:
+A complex system designed from scratch never works and cannot be made to work.”
+― John Gall
+
+Jukka Nikki, programmer, active learner
+
+</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### Modern Applications
+
+- Should work on multiple platforms
+- Changes as business model and user needs evolve
+- Is composed of multiple interacting components
+- Is modified by multiple teams over time
+- Limits or enables business opportunities
+- May directly define value of business
+
+"If you can get today’s work done today,
+but you do it in such a way that you can’t possibly get tomorrow’s work done tomorrow,
+then you lose." - Martin Fowler
+
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### Everything changes all the time
+
+Software quality limits
+
+- ability to address users needs
+- ability to change business model
+
+Ability to make localized small changes is vital.
+If system is not modular it resists change.
+
+</textarea>
+                    </label>
+                </section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### Advice: Select [Simple](https://www.infoq.com/presentations/Simple-Made-Easy/) over [complex](https://www.infoworld.com/article/3639050/complexity-is-killing-software-developers.html)
+
+- Architecture: Boring over Exciting
+- Uis: Declarative over Imperative
+- Structure: Modular over Unstructured
+- Code: Readable over Clever
+- Modules: Small over Large
+- Consistency: Conventions over Freedom
+- Data: Immutable over Mutable
+- Tests: Automated over Manual
+- Maintainability: Evolution over Rewriting
+- Documentation: Generated over Handwritten
+- Style: Linting/autoformatting over #NoRules
+
+</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [app using best practices](https://docs.flutter.dev/app-architecture/guide)
+
+<img alt="flutter state mgmt" src="images/flutter-app-architecture.png" width="100%">
+
+- Layers are separated by responsibility.
+- Domain models are shared between highest layers.
+- Api models are shared between lowest layers.
+- Layers depend on layers below them.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### User interface is function of state
+
+[UI = f(state)](https://docs.flutter.dev/development/data-and-backend/state-mgmt/declarative)
+
+<img alt="flutter state mgmt" src="images/flutter-state-management.png" width="40%">
+
+- View render when application state changes.
+- When user interacts with view it may emit events.
+- Events may change application state.
+
+</textarea>
+                    </label>
+                </section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### [Functional Reactive Programming (FRP)](https://quickbirdstudios.com/blog/what-is-functional-reactive-programming-frp/)
+<img alt="flutter state mgmt" src="images/functional-reactive-programming.png" width="70%">
+
+- events and state changes are uni-directional flows.
+- business logic is executed as event is received.
+- business logic may emit state changes.
+- ui is rendered as reaction to received state change.
+
+</textarea>
+					</label>
+				</section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Ai Summary: Imperative vs. Reactive](https://www.linkedin.com/pulse/imperative-vs-reactive-programming-tomas-mikula/)
+
+<img alt="imperative vs reactive" src="images/imperative_reactive_ai_answer.png" width="100%">
+
+Imperative = full control, Reactive = simple clean UI.
+</textarea>
+                    </label>
+                </section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### [State management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro)
+
+<img alt="state management" src="images/state-management-explainer.gif" width="80%">
+
+Use [state management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro)
+when you need to share application state between screens, across your app
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### [Types of State]()
+
+Ephemeral / UI / Local
+
+- associated with a particular widget
+- possibly contained within a single widget
+- no state management techniques needed
+
+App State
+
+- preserved throughout user sessions
+- distributed across different portions of program
+- may be applied globally
+
+</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [React/Redux uses one-way data flow](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+
+<img alt="flutter state mgmt" src="images/one-way-data-flow.png" width="40%">
+
+- State is condition of the app at a point in time
+- View is rendered based on current state
+- View can initiate actions
+- Actions update state when needed
+- View re-renders based on the updated state
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Bloc = Business Logic Components](https://bloclibrary.dev/#/)
+
+<img alt="bloc arch" src="images/widget-bloc-communication.png" width="60%">
+
+Each Bloc has one input (sink, add method) and output ([stream](https://dart.dev/tutorials/language/streams)).
+Bloc emits (output) states and handles (input) several types of events.
+App state is distributed across multiple custom blocs.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Ai summary: Bloc vs. Redux](https://bloclibrary.dev/faqs/#bloc-vs-redux)
+
+<img alt="redux vs. bloc" src="images/ai_redux_bloc_summary_2.png" width="70%">
+
+</textarea>
+                    </label>
+                </section>
+
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### [Bloc library/pattern](https://bloclibrary.dev/#/architecture)
+
+<img alt="bloc architecture" src="images/bloc_architecture_full_white.png" width="60%">
+
+Bloc attempts to make state changes predictable by regulating when a state change can occur
+and enforcing a single way to change state throughout an entire application.
+Ui and Data layer share domain model, but do not interact directly.
+</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Data layer](https://bloclibrary.dev/#/architecture)
+
+<img alt="data layer" src="images/app-architecture-data.png" width="80%">
+
+- Model of MVVM maps to Data layer.
+- Model consists of repositories, services, ..
+- Repository interface has domain models
+- Repository implementation uses services
+- Services use api models
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Bloc-to-bloc communication / layers](https://bloclibrary.dev/architecture/#bloc-to-bloc-communication)
+
+<img alt="bloc layers" src="images/bloc-layers.png" width="50%">
+
+Blocs don't know each other.
+App may coordinate usage of blocs at presentation layer.
+Multiple blocks may also use same repositories to share data.
+</textarea>
+                    </label>
+                </section>
+
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [Bloc rules, 1/3 (2018)](https://youtu.be/PLHln7wHgPE?t=1377)
+
+<img alt="bloc design guidelines" src="images/bloc_design_guidelines.png" width="60%">
+
+bloc has
+simple api,
+injected dependencies,
+is platform independent,
+reactive programming recommended.
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [Bloc rules, 2/3 (2018)](https://youtu.be/PLHln7wHgPE?t=1377)
+
+<img alt="ui design guidelines" src="images/ui_design_guidelines.png" width="60%">
+
+features map to bloc (1:1),
+input (event) and output (state) defined by bloc,
+states are unambiguous.
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [Bloc rules, 3/3 (2018)](https://youtu.be/PLHln7wHgPE?t=1377)
+
+<img alt="tldr design guidelines" src="images/tldr_design_guidelines.png" width="50%">
+
+bloc
+= logic,
+ui
+= interaction.
+Simple & Separated. 1:1.
+
+No exceptions! ".. for the sanity of everyone."
+
+</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+### [Relaxation to rules]()
+
+in feature-driven architecture
+
+- [each feature has one Bloc](https://marcossevilla.dev/cleaner-flutter-vol-10#heading-predictability) assigned to it.
+- few global blocs may share state between features.
+
+blocs still don't know each other
+</textarea>
+                    </label>
+                </section>
+
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [Reactive Flutter Bloc, 1/1 (2018)](https://www.youtube.com/watch?v=RS36gBEp8OI)
+
+<img alt="reactive bloc principle" src="images/reactive_bloc_principle.png" width="70%">
+
+Bloc is saved at widget tree.
+Any widget under bloc at widget tree can interact with bloc and send events.
+Builder methods build part of widget tree when new state is emitted.
+
+</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Most important classes]()
+
+Creation
+
+- BlocProvider creates bloc
+
+Business Logic
+
+- Bloc is base class for custom blocs
+
+State change operations
+
+- BlocBuilder builds widget tree
+- BlocListener runs functions
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Additional classes]()
+
+Creation
+
+- MultiBlocProvider to create multiple blocs
+
+Business Logic
+
+- BlocBase is base class for Bloc and Cubit
+- Cubit is like Bloc, but has methods instead of events
+
+State change operations
+
+- BlocSelector selects part of state
+- BlocConsumer combines builder and listener
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+### Patterns/idioms
+
+[Page-View](https://marcossevilla.dev/cleaner-flutter-vol-10#heading-page-view-pattern)
+
+- Page: creates bloc provider and wraps view
+- View: composes ui
+- Value: enables isolated view testing
+
+[Page-Switcher-View](https://medium.com/flutter-espa%C3%B1a/page-switcher-view-pattern-d045408f872c)
+
+- Switcher: selects active view
+- Value: encapsulates branching logic
+
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+
+## Imaginary example flow
+
+[Pictures taken from article of Timothy Stepro](https://timothystepro.medium.com/visualizing-flutter-bloc-399d79701f3a)
+
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Creating bloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc provider" src="images/widget-tree-1-bloc-provider.png" width="40%">
+
+Bloc provider widget creates bloc eagerly or lazily.
+Widgets in enclosed context can find and use bloc.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [User interacts with bloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc events" src="images/widget-tree-2-bloc-events.png" width="40%">
+
+Widgets send events to bloc.
+Example: "LoginRequested" with username and password.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Receiving events from apis](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc events" src="images/widget-tree-3-api-results.png" width="50%">
+
+Event is created based on received data.
+Example: successful login as "CredentialsAccepted".
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Building ui](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc events" src="images/widget-tree-4-bloc-builder.png" width="45%">
+
+Ui is built when bloc emits new state.
+Example: "AuthenticationSuccess" with user information.
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Building needed part of tree](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="bloc events" src="images/widget-tree-5-bloc-builder-success-failure-states.png" width="70%">
+
+State object type or content of state object (eg. status enum or other information) influences how UI is built.
+Example: Success and Failure trees are different.
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+
+<img alt="bloc events" src="images/widget-tree-6-bloc-summary.png" width="60%">
+
+Summary of example:
+Bloc is created in initial state. Ui is built.
+Event with required information is sent.
+Api is called and as result additional event is created.
+Event handler emits state. State is used to rebuild ui.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+## Example application
+
+[Code taken from bloc library's counter app example](https://bloclibrary.dev/tutorials/flutter-counter/)
+
+</textarea>
+                    </label>
+                </section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### [Counter app overview](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+
+<img alt="counter bloc app" src="images/counter_bloc_example_ui.png" width="80%">
+
+"+" adds increment event to sink, counter is rendered when state is received from stream.
+[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) controls bloc lifecycle,
+[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html) builds view.
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### [CounterApp builds app root](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+```
+class CounterApp extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+  home: BlocProvider( /// DI: always same bloc instance
+	create: (_) => CounterBloc(),
+	child: CounterPage(),
+  ),
+);}}
+
+void main() => runApp(CounterApp()); // Creation of app
+```
+[BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) takes care of creating single instance of [Bloc](https://pub.dev/documentation/bloc/latest/bloc/Bloc-class.html), lazily by default.
+Usage of [BlocProvider](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocProvider-class.html) loosely relates to Dependency Injection as concept.
+	</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### [CounterPage build ui](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+```
+class CounterPage extends StatelessWidget {
+@override Widget build(BuildContext context) {
+return Scaffold(
+  appBar: AppBar(title: const Text('Bloc Counter')),
+  body: Center(
+	child: BlocBuilder<CounterBloc, int>(
+	  builder: (context, count) {
+		return Text('$count', style: Theme.of(context).textTheme.headline1);
+	  },),
+  ),
+  floatingActionButton: FloatingActionButton(
+	child: const Icon(Icons.add),
+	onPressed:()=>context.read<CounterBloc>().add(Increment()),
+  ),);}}
+```
+[BlocBuilder](https://pub.dev/documentation/flutter_bloc/latest/flutter_bloc/BlocBuilder-class.html)
+builds UI.
+Context.read < CounterBloc > acquires bloc.
+[add](https://pub.dev/documentation/bloc/latest/bloc/Bloc/add.html) method sends events.
+	</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### CounterPageTest tests ui
+```
+void main() {
+testWidgets('Counter++ test', (WidgetTester tester) async {
+    // build counter app and trigger first frame
+    await tester.pumpWidget(CounterApp());
+
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
+
+    await tester.tap(find.byIcon(Icons.add)); // tap '+'
+    await tester.pump(); // trigger next frame
+
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
+});}
+```
+[widget testing](https://docs.flutter.dev/cookbook/testing/widget/introduction)
+allows initiating actions and testing visible changes frame by frame.
+	</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### [CounterBloc holds state](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+```
+/// Base event and Increment Event
+abstract class CounterEvent {}
+class Increment extends CounterEvent {}
+
+/// handles converting `CounterEvent`s into `int`s.
+class CounterBloc extends Bloc<CounterEvent, int> {
+    /// The initial state of the `CounterBloc` is 0.
+    CounterBloc() : super(0) {
+    /// When `Increment` event is added,
+    /// current `state` is accessed via the `state` property
+    /// and a new state is emitted via `emit`.
+    on<Increment>((event, emit) => emit(state + 1));
+    }
+}
+```
+Blocs super constructor sets initial state to '0'.
+[on < event > () registers event handler.](https://verygood.ventures/blog/how-to-use-bloc-with-streams-and-concurrency)
+*Increment* event handler is lambda, which emits new state.
+
+	</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### [CounterBlocTest tests bloc](https://gist.github.com/felangel/fc8230776591f0297e6a1d1b5ef46a6c)
+```
+void main() {
+group('CounterBloc', () {
+    test('initial state is 0', () {
+      expect(CounterBloc().state, 0);
+    });
+
+    blocTest<CounterBloc, int>(
+      'emits [1] when increment is called',
+      build: CounterBloc.new,
+      act: (bloc) => bloc.add(Increment()),
+      expect: () => [1],
+    );
+});}
+```
+[bloc_test](https://pub.dev/packages/bloc_test) allows testing reactive code in isolation.
+Example: create bloc, send events, check expected state.
+Mocking, setup, delays, etc. are supported.
+
+	</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+
+## Modeling immutable data
+
+Models, events, states, dto's, json, ..
+
+Most of data can be immutable
+</textarea>
+                    </label>
+                </section>
+
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### Why immutability?
+
+“Immutable objects are simple.
+They can only be in one state, which is carefully controlled by the constructor.
+One of the most difficult elements of program design is reasoning about
+the possible states of complex objects.
+Reasoning about the state of immutable objects, on the other hand, is trivial."
+
+― Brian Goetz, Java Concurrency in Practice
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### Immutable value types in dart
+
+Dart does not have value types, but you can write your own data classes.
+
+- define a constructor + the properties
+- override toString, operator ==, hashCode
+- implement a copyWith method to clone the object
+- implement handling of json de/serialization
+
+It's possible, but tedious and error prone.
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [Freezed: motivation](https://pub.dev/packages/freezed#motivation)
+
+<img alt="freezed motivation" src="images/freezed_motivation.png" width="80%">
+
+Missing language level value types is a problem,
+but generating code from annotations is a powerful fix.
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [Model: User](https://codewithandrea.com/articles/parse-json-dart-codegen-freezed/)
+```
+@freezed
+abstract class User with _$User {
+  const factory User({
+	required String id,
+	required String username,
+	required String password,
+  }) = _User;
+
+  // json serialization
+  factory User.fromJson(Map<String, dynamic> json) =>
+	  _$UserFromJson(json);
+}
+```
+
+[@freezed](https://pub.dev/packages/freezed) annotation makes
+[Build runner](https://pub.dev/packages/build_runner) to generate
+_$User mixin, _User constructor and _$UserFromJson method
+for [json handling](https://pub.dev/packages/json_serializable).
+Generated code is saved to repository,
+as generation takes some time.
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [Events: authentication](https://bloclibrary.dev/naming-conventions/#event-conventions)
+```
+@freezed
+abstract class AuthenticationEvent with _$AuthenticationEvent {
+  const factory AuthenticationEvent.loginRequested(
+	String username,
+	String password,
+  ) = Login;
+  const factory AuthenticationEvent.logoutRequested()
+    = Logout;
+}
+```
+
+Bloc has handlers for both Login and Logout events.
+Login has required parameters, which are passed to bloc.
+Event names should be in past tense, ie. LoginRequested, LogoutRequested.
+
+</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [State change diagram / mermaid.js](https://www.mermaidflow.app/editor)
+
+<img alt="authentication states" src="images/authentication_state_diagram.png" width="30%">
+
+```
+stateDiagram-v2
+    [*] --> Unauthenticated
+    Unauthenticated --> Authenticated: login requested
+    Authenticated --> Unauthenticated: logout requested
+    Unauthenticated --> [*]
+    Authenticated --> [*]
+```
+
+Events are operations that trigger state changes
+
+</textarea>
+                    </label>
+                </section>
+
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [State: Class per State style](https://bloclibrary.dev/modeling-state/#sealed-class-and-subclasses)
+```
+@freezed
+abstract class AuthenticationState with _$AuthenticationState {
+
+  const factory AuthenticationState.authenticated(User user)
+	= Authenticated;
+
+  const factory AuthenticationState.unauthenticated()
+	= Unauthenticated;
+}
+```
+
+Bloc creates state. Bloc listeners and bloc builders react on state change.
+Each state has own class. State contains only needed attributes.
+Type safe, easy to use, but can become verbose and complex.
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [State: Single class style](https://bloclibrary.dev/modeling-state/#concrete-class-and-status-enum)
+```
+enum GameStatus { initial, playing, success, failure }
+@freezed
+abstract class GameState with _$GameState {
+  const factory GameState({
+    @Default(GameStatus.initial) status,
+    @Default(5) int boardSize,
+    @Default({}) Set<int> selectedElements,
+    @Default([]) List<String> gameElements,
+  }) = _GameState;
+
+  factory GameState.fromJson(Map<String, Object?> json) =>
+      _$GameStateFromJson(json);
+}
+```
+
+User interface tracks status field of state class.
+Easy to model. Not type safe.
+Results easily bloated class with conflicting attributes.
+Example: error information is useful only in failure state.
+
+</textarea>
+					</label>
+				</section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [State modeling / usecases](https://www.youtube.com/watch?v=JVRPIittNaE)
+
+<img alt="single state" src="images/event-bloc-state-1.png" width="29%"> <img alt="several states" src="images/event-bloc-state-2.png" width="37%">
+
+State modeling style depends on use case.
+One should use both styles in same app where appropriate.
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+
+## Rules for structure
+
+Architecture is only a set of agreements
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Architecture](https://www.youtube.com/watch?v=JVRPIittNaE)
+
+<img alt="app architecture" src="images/cost_of_app_architecture.png" width="80%">
+
+App with architectural rules and constraints is easier to evolve than one without clear structure.
+When domain is complex feature and layer based division creates repeatable simple idioms.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Dependency / data flow direction](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/220-BLoC)
+
+<img alt="bloc as part of arch" src="images/flutter-bloc-architecture-layers.png" width="45%">
+
+Example: Repository/domain layer contains interfaces and models,
+which are implemented at data layer.
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Example of organizing principles](https://verygood.ventures/blog/very-good-flutter-architecture)
+
+app as composition of features
+
+- app contains navigation, dependency injection, ..
+
+packages for features, domain and data
+
+- features match to functional requirements
+- found from software design and named clearly
+- features contain views and blocs
+- domain layer consists of repositories and models
+- repositories transform raw data to domain model
+- data layer consists of reusable clients
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Recipe to identify packages](https://www.informit.com/articles/article.aspx?p=2995357&seqNum=2)
+
+use [Volatility-based decomposition](https://www.informit.com/articles/article.aspx?p=2995357&seqNum=2)
+
+- identify and encapsulates [areas of potential change](https://ckoster22.medium.com/architecting-for-change-b12824b35ea3).
+- model behavior as interaction between found areas.
+- name areas as features, repositories and apis.
+- create with [vgv cli](https://cli.vgv.dev/) packages for found components.
+- define [pubspec](https://dart.dev/tools/pub/pubspec) dependencies between packages.
+- fill packages with implementation components.
+- start with repository interfaces, models and blocs.
+- or add pages and views first if you feel.
+- let [melos](https://melos.invertase.dev/commands/list#--mermaid) generate dependency graph for packages.
+- let [lakos](https://pub.dev/packages/lakos) generate dependency graph for classes.
+
+</textarea>
+                    </label>
+                </section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [Modularity: principles]()
+
+- Code is on monorepo
+- Monorepo may contain multiple apps
+- Each app has set of features
+- Features are on their own modules
+- Modules export their public classes
+- Modules are is kept in sync using task runner
+- [Melos](https://melos.invertase.dev) runs same script in each module
+</textarea>
+					</label>
+				</section>
+
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+### [Structure: monorepo](https://melos.invertase.dev/getting-started)
+```
+my_project
+├── apps
+│   ├── apps_1
+│   └── apps_2
+├── packages
+│   ├── package_1
+│   └── package_2
+├── pubspec.yaml
+└── README.md
+```
+All code is on single repository.
+Apps are under */apps* directory.
+App is composition of features.
+Each feature has own package under */packages*.
+</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+### [Structure: app](https://melos.invertase.dev/getting-started)
+```
+app
+├── lib
+│   ├── app
+│   │   ├── config
+│   │   └── view
+│   │       └── app.dart
+│   ├── app_bloc_observer.dart (log bloc activity, only dev)
+│   ├── bootstrap.dart
+│   ├── main_development.dart (enty point, dev)
+│   ├── main_production.dart (enty point, prod)
+│   └── main_staging.dart (enty point, staging)
+├── pubspec.yaml
+├── test
+└── windows (embedder / target)
+```
+Dev, Prod and Staging entry points bootstrap app.dart with right configuration.
+Config directory contains navigation routes and other configuration.
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+### [Structure: feature](https://melos.invertase.dev/getting-started)
+```
+features
+├── authentication
+.   ├── lib
+.   │    ├── authentication.dart (public api)
+    │    └── src
+    │        ├── bloc
+    │        ├── view
+    │        └── ..
+    └── test
+        ├── bloc
+        ├── view
+        └── ..
+```
+Features public api is directly under lib.
+lib/src includes private implementation of feature.
+Blocs and views are implemented and tested separately.
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+### [Structure: repository](https://melos.invertase.dev/getting-started)
+```
+repositories
+    ├ audit_trail_repository
+    │   ├── lib
+    .   │   └── audit_trail_repository.dart (public api)
+    .   │       └── src
+    .   │           ├── model
+        │           │   └── audit_trail_record.dart
+        │           └── repository
+        │                   ├── audit_trail_repository.dart
+        │                   └── local_audit_trail_repository.dart
+        └── test
+            └── src
+                 └── repository
+                    └── audit_trail_repository_test.dart
+```
+Repository is part of domain, has public api, interface and implementation,
+and defines own model.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+					<label>
+<textarea data-template>
+## Result: Safer programming
+
+Programs are safer if we prevent
+hardcoded dependencies,
+shared mutable state,
+side effects,
+nulls and
+mixed responsibilities
+
+and instead use
+dependency injection,
+immutable objects,
+pure functions,
+null safety and
+single responsibility principle.
+
+</textarea>
+					</label>
+				</section>
+
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### Simple over Complex Recap
+
+- harden code using strong typing
+- shorten feedback loops using small tests
+- use one-way flows to help reason code
+- only support immutable data at ui
+- render changes same way as initial values
+- use simple components
+- write code only when absolutely necessary
+- organize code to minimize ripple effect
+- use uniform programming model in whole app
+</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+### ' Closing quote
+
+“Programming is about managing complexity:
+the complexity of the problem, laid upon the complexity of the machine.
+Because of this complexity, most of our programming projects fail.”
+― [Bruce Eckel](https://www.goodreads.com/quotes/9875145-programming-is-about-managing-complexity-the-complexity-of-the-problem)
+</textarea>
+                    </label>
+                </section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### History / Presentations
+
+- [React: rethinking best practices, 10/2013](https://www.youtube.com/watch?v=x7cQ3mrcKaYx)
+- [Flux: Rethinking Web App Development, 5/2014](https://www.youtube.com/watch?v=nYkdrAPrdcw&list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v)
+- [Open the Sky, 23.10.2014](https://github.com/flutter/flutter/commit/00882d626a478a3ce391b736234a768b762c853a)
+- [Sky Demo, 4/2015](https://www.youtube.com/watch?v=PnIWl33YMwA)
+- [The Mahogany Staircase - (..) Layered Design, 3/2016](https://www.youtube.com/watch?v=dkyY9WCGMi0)
+- [Flutter's Rendering Pipeline, 5/2016](https://www.youtube.com/watch?v=UUfXWzp0-DU)
+- [Flutter: Dart Developer Summit 2016, 10/2016](https://www.youtube.com/watch?v=Mx-AllVZ1VY)
+- [Flutter: (..) UI framework for tomorrow (..), 9/2017](https://www.youtube.com/watch?v=VUiVkDpikDI)
+- [Flutter: The Best Way to Build for Mobile?, 10/2017](https://www.youtube.com/watch?v=1BXg4wfB9pA)
+- [Early Success Story, 2018](https://medium.com/kinandcartacreated/flutter-the-skys-the-limit-84887c8f650d)
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+## More
+
+- [State of Flutter & Dart](https://redmonk.com/jgovernor/2022/05/16/flutter-propels-dart-frameworks-language-adoption-and-cross-platform-development/)
+- [Flutter & Ubuntu](https://ubuntu.com/blog/flutter-and-ubuntu-so-far)
+- [Awesome Flutter](https://github.com/Solido/awesome-flutter)
+- [Riverpod and Bloc comparison](https://otakoyi.software/blog/riverpod-and-bloc-packages-comparison)
+- [Crossing the chasm](https://www.hightechstrategies.com/crossing-the-chasm-summary/)
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+## Examples
+
+- [wisgen, 2019, no null safety used](https://github.com/Fasust/wisgen)
+- [i/o Pinball, 2022](https://verygood.ventures/success-stories/i-o-pinball)
+- [ranch game, 2022](https://verygood.ventures/blog/very-good-ranch-game)
+
+</textarea>
+					</label>
+				</section>
+
+				<section data-markdown>
+					<label>
+<textarea data-template>
+#### ["Architecture is about the important stuff. Whatever that is." - Ralph Johnson](https://martinfowler.com/architecture/)
+
+- Within the Flutter community, [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) and [Architecture](https://martinfowler.com/architecture/) are often used synonymously
+- [Any architecture for a Flutter application](https://github.com/devonfw-forge/devon4flutter-non-bloc-arch/wiki/200-Architecting-a-Flutter-App#state-management-vs-architecture) will have [some sort of State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
+- [State Management](https://docs.flutter.dev/development/data-and-backend/state-mgmt/intro) is not an [architecture by itself](https://bloclibrary.dev/#/architecture), even if [bloc library](https://bloclibrary.dev/) documentation contains [architecture proposition]((https://bloclibrary.dev/#/architecture)).
+- Compare: [Redux](https://redux.js.org/), Reacts state management solution
+
+	</textarea>
+					</label>
+				</section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+## Why Flutter
+- Flutter UI is [reactive](https://docs.flutter.dev/resources/inside-flutter) and [declarative](https://docs.flutter.dev/get-started/flutter-for/declarative)
+- [UI's are composed](https://docs.flutter.dev/development/ui/layout) - [widgets](https://docs.flutter.dev/development/ui/widgets-intro) everywhere!
+- Dart is [typed](https://dart.dev/guides/language/type-system), [null safe](https://dart.dev/null-safety), [top 20](https://redmonk.com/sogrady/2022/10/20/language-rankings-6-22/) language
+- Dart enables [hot reload](https://docs.flutter.dev/development/tools/hot-reload), [JIT](https://dart.dev/tools/dart-compile) and [AOT](https://dart.dev/tools/dart-compile)
+- Usage of [native / foreign code](https://docs.flutter.dev/development/platform-integration/platform-channels) is supported
+- Architecture != State Management, you need both
+- [Bloc](https://bloclibrary.dev/#/) is popular [state management option](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options)
+- Bloc works as [VM](https://developer.android.com/topic/libraries/architecture/viewmodel) at [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+- Bloc requires knowledge of reactive programming.
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+
+| Feature| Imperative UI| Reactive UI|
+|-------:|-------------:|-----------:|
+| Control	     | Explicit, step-by-step control over UI updates. | Declarative, describing the desired end state; framework handles updates automatically. |
+| State Sync	 | Manual synchronization of UI and data, prone to errors. | Automatic synchronization of UI and data; UI reacts to state changes. |
+| Code Verbosity | Often more verbose, with explicit event handling and UI manipulation. | More concise and less code required for managing updates. |
+| Asynchronicity | Typically uses a synchronous, blocking model, which can be inefficient for I/O tasks. |	Designed for asynchronous data streams and event-driven architectures. |
+| Debugging	     | Generally straightforward as execution is sequential and predictable. |	Can be more complex due to the abstracted flow of data streams and automatic updates. |
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### Always code for the current understanding
+
+“I'm never in favor of writing code poorly,
+but I am in favor of writing code to reflect your current understanding
+of a problem (..)
+so that when it does come time to refactor,
+it's clear what you were thinking when you wrote it,
+making it easier to refactor it into what your current thinking is now" - Ward Cunningham
+
+</textarea>
+                    </label>
+                </section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
