@@ -263,6 +263,39 @@ Ui and Data layer share domain model, but do not interact directly.
                     </label>
                 </section>
 
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [App packages set of features](https://fueled.com/blog/build-feature-set/)
+
+App consists of
+
+- user facing features (views, view-models)
+- flows between features (navigation)
+- information architecture (repositories, models)
+- integrations to other systems (services, apis)
+- security mechanisms, etc..
+
+These are often expressed as functional (FR) and non-functional requirements (NFR).
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+
+<img alt="feature" src="images/app-architecture-feature.png" width="100%">
+
+["Every feature in an application will contain one view to describe the UI
+and one view model to handle logic,
+one or more repositories as the sources of truth for your application data,
+and zero or more services that interact with external APIs,
+like client servers and platform plugins."](https://docs.flutter.dev/app-architecture/guide#mvvm)
+</textarea>
+                    </label>
+                </section>
+
 
                 <section data-markdown>
                     <label>
