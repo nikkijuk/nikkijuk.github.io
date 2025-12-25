@@ -20,18 +20,19 @@
 				<section data-markdown>
 					<label>
 <textarea data-template>
-### Apps: 1.0 and beyond
-
-“Simplicity and straightforwardness proceed from conceptual integrity.”
-― Frederick P. Brooks
+#### Apps: 1.0 and beyond
 
 “A complex system that works is invariably found to have evolved
 from a simple system that works.
 The inverse proposition also appears to be true:
-A complex system designed from scratch never works and cannot be made to work.”
-― John Gall
+A complex system designed from scratch never works and cannot be made to work.” - John Gall
 
-Jukka Nikki, programmer, active learner
+“Thus, you should not think of “working code” as your primary goal,
+though of course your code must work.
+Your primary goal must be to produce a great design, which also happens to work.
+This is strategic programming.” - John Ousterhout
+
+Jukka Nikki, programmer, strategic programmer
 
 </textarea>
 					</label>
@@ -72,6 +73,9 @@ Ability to make localized small changes is vital.
 If system is not modular it resists change.
 And, eventually, loses value until it is rewritten.
 
+“Your job as a developer is not just to create code that you can work with easily,
+but to create code that others can also work with easily.” ― John Ousterhout
+
 </textarea>
                     </label>
                 </section>
@@ -100,14 +104,36 @@ And, eventually, loses value until it is rewritten.
                 <section data-markdown>
                     <label>
 <textarea data-template>
-#### [app using best practices](https://docs.flutter.dev/app-architecture/guide)
+#### [boring: Does this code belong here?](https://www.verygood.ventures/blog/boring-code-part-1)
 
-<img alt="flutter state mgmt" src="images/flutter-app-architecture.png" width="100%">
+<img alt="boring architecture" src="images/boring_architecture.png" width="60%">
+
+- Super declarative, crystal clear, zero-surprises APIs.
+- Separated data acquisition, business rules and ui.
+
+“Complexity is anything related to the structure of a software system
+that makes it hard to understand and modify the system.” - John Ousterhout
+
+</textarea>
+                    </label>
+                </section>
+
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [flutter docs: architecture](https://docs.flutter.dev/app-architecture/guide)
+
+<img alt="flutter state mgmt" src="images/flutter-app-architecture.png" width="80%">
 
 - Layers are separated by responsibility.
 - Domain models are shared between highest layers.
 - Api models are shared between lowest layers.
 - Layers depend on layers below them.
+
+“In modular programming, each module provides an abstraction
+in form of its interface.” - John Ousterhout
+
 </textarea>
                     </label>
                 </section>
@@ -115,15 +141,16 @@ And, eventually, loses value until it is rewritten.
                 <section data-markdown>
                     <label>
 <textarea data-template>
-#### User interface is function of state
-
-[UI = f(state)](https://docs.flutter.dev/development/data-and-backend/state-mgmt/declarative)
+#### [UI = f(state)](https://docs.flutter.dev/development/data-and-backend/state-mgmt/declarative)
 
 <img alt="flutter state mgmt" src="images/flutter-state-management.png" width="40%">
 
-- View render when application state changes.
+- Builder function creates view from state.
+- Builder runs when application state changes.
 - When user interacts with view it may emit events.
 - Events may change application state.
+
+“Simplicity and straightforwardness proceed from conceptual integrity.” ― Fred Brooks
 
 </textarea>
                     </label>
@@ -133,12 +160,14 @@ And, eventually, loses value until it is rewritten.
 					<label>
 <textarea data-template>
 #### [Functional Reactive Programming (FRP)](https://quickbirdstudios.com/blog/what-is-functional-reactive-programming-frp/)
-<img alt="flutter state mgmt" src="images/functional-reactive-programming.png" width="70%">
+<img alt="flutter state mgmt" src="images/functional-reactive-programming.png" width="50%">
 
 - events and state changes are uni-directional flows.
 - business logic is executed as event is received.
 - business logic may emit state changes.
 - ui is rendered as reaction to received state change.
+
+“Overall, the best way to reduce bugs is to make software simpler.” - John Ousterhout
 
 </textarea>
 					</label>
