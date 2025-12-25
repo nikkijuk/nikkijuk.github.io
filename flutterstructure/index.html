@@ -89,7 +89,7 @@ but to create code that others can also work with easily.” ― John Ousterhout
 - Uis: Declarative over Imperative
 - Structure: Modular over Unstructured
 - Code: Readable over Clever
-- Modules: Small over Large
+- Modules: Deep over Shallow
 - Consistency: Conventions over Freedom
 - Data: Immutable over Mutable
 - Tests: Automated over Manual
@@ -262,7 +262,6 @@ App state is distributed across multiple custom blocs.
                     </label>
                 </section>
 
-
 				<section data-markdown>
 					<label>
 <textarea data-template>
@@ -330,7 +329,6 @@ that the design isn’t quite right.” - John Ousterhout
                     </label>
                 </section>
 
-
                 <section data-markdown>
                     <label>
 <textarea data-template>
@@ -345,8 +343,45 @@ Multiple blocks may also use same repositories to share data.
                     </label>
                 </section>
 
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+<img alt="modules" src="images/deep_shallow_modules.png" width="60%">
 
-				<section data-markdown>
+“If a module hides a lot of information,
+that tends to increase the amount of functionality provided
+by the module while also reducing its interface.
+This makes the module deeper.
+Conversely, if a module doesn’t hide much information,
+then either it doesn’t have much functionality, or it has a complex interface;
+either way, the module is shallow.” ― John Ousterhout
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Uniform and healthy code]()
+
+- Dart analyzer provides static analysis rules
+- DCM (Dart Code Metrics) provides additional rules
+- All code should be autoformatted with dart format
+- CI checks dependency definitions and licenses
+- CI scans dependencies for security vulnerabilities
+
+“In an obvious system, a developer can quickly understand how the existing code works
+and what is required to make a change.
+An obvious system is one where a developer can make a quick guess about what to do,
+without thinking very hard, and yet be confident that the guess is correct.” - John Ousterhout
+</textarea>
+                    </label>
+                </section>
+
+
+
+                <section data-markdown>
 					<label>
 <textarea data-template>
 ### [Bloc rules, 1/3 (2018)](https://youtu.be/PLHln7wHgPE?t=1377)
@@ -492,7 +527,6 @@ State change operations
 </textarea>
                     </label>
                 </section>
-
 
                 <section data-markdown>
                     <label>
