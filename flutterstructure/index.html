@@ -280,15 +280,17 @@ Ui and Data layer share domain model, but do not interact directly.
                 <section data-markdown>
                     <label>
 <textarea data-template>
-#### [Data layer](https://bloclibrary.dev/#/architecture)
+#### [Flutter docs: Data layer](https://bloclibrary.dev/#/architecture)
 
 <img alt="data layer" src="images/app-architecture-data.png" width="80%">
 
-- Model of MVVM maps to Data layer.
-- Model consists of repositories, services, ..
-- Repository interface has domain models
-- Repository implementation uses services
-- Services use api models
+- MVVM's Model maps to Data layer.
+- Model consists of repositories and services.
+- Repository uses services to access data sources.
+
+“The most fundamental problem in computer science is problem decomposition:
+how to take a complex problem and divide it up into pieces that can be solved independently.” - John Ousterhout
+
 </textarea>
                     </label>
                 </section>
@@ -296,9 +298,7 @@ Ui and Data layer share domain model, but do not interact directly.
                 <section data-markdown>
                     <label>
 <textarea data-template>
-#### [App packages set of features](https://fueled.com/blog/build-feature-set/)
-
-App consists of
+#### [App is composition](https://fueled.com/blog/build-feature-set/)
 
 - user facing features (views, view-models)
 - flows between features (navigation)
@@ -306,7 +306,11 @@ App consists of
 - integrations to other systems (services, apis)
 - security mechanisms, etc..
 
-These are often expressed as functional (FR) and non-functional requirements (NFR).
+“If a system has a clean and obvious design,
+then it will need less documentation.
+The need for extensive documentation is often a red flag
+that the design isn’t quite right.” - John Ousterhout
+
 </textarea>
                     </label>
                 </section>
@@ -314,14 +318,14 @@ These are often expressed as functional (FR) and non-functional requirements (NF
                 <section data-markdown>
                     <label>
 <textarea data-template>
+#### [Flutter docs: every feature](https://docs.flutter.dev/app-architecture/guide#mvvm)
 
 <img alt="feature" src="images/app-architecture-feature.png" width="100%">
 
-["Every feature in an application will contain one view to describe the UI
-and one view model to handle logic,
-one or more repositories as the sources of truth for your application data,
-and zero or more services that interact with external APIs,
-like client servers and platform plugins."](https://docs.flutter.dev/app-architecture/guide#mvvm)
+- contain one view for the UI
+- has one view model to handle logic
+- uses one or more repositories for application data
+- uses zero or more services for external APIs
 </textarea>
                     </label>
                 </section>
