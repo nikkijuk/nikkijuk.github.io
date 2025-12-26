@@ -85,7 +85,7 @@ then you lose." - Martin Fowler
 
 - Architecture: Boring over Exciting
 - Uis: Declarative over Imperative
-- Structure: Modular over Unstructured
+- Structure: Modular over Monolithic
 - Modules: Deep over Shallow
 - Code: Readable over Clever
 - Consistency: Conventions over Freedom
@@ -104,13 +104,32 @@ then you lose." - Martin Fowler
 <textarea data-template>
 #### [boring: Does this code belong here?](https://www.verygood.ventures/blog/boring-code-part-1)
 
-<img alt="boring architecture" src="images/boring_architecture.png" width="60%">
+<img alt="boring architecture" src="images/boring_architecture.png" width="50%">
 
 - Super declarative, crystal clear, zero-surprises APIs.
 - Separated data acquisition, business rules and ui.
 
-“Complexity is anything related to the structure of a software system
-that makes it hard to understand and modify the system.” - John Ousterhout
+"My ideal of program design is to represent the concepts of the application domain directly in code.
+That way, if you understand the application domain, you understand the code and vice versa." - [Bjarne Stroustrup](https://www.stroustrup.com/quotes.html)
+
+</textarea>
+                    </label>
+                </section>
+
+                <section data-markdown>
+                    <label>
+<textarea data-template>
+#### [Object oriented programming 101]()
+
+- Classes define domain models.
+- Interfaces allow several implementations.
+- Business logic calls interfaces methods.
+- Repositories implement interfaces.
+- Repository interface uses domain models.
+- Repositories are injected to business logic.
+
+"The object-oriented version of 'Spaghetti code' is, of course, 'Lasagna code'.
+(Too many layers)." – Roberto Waltman
 
 </textarea>
                     </label>
