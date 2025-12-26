@@ -22,9 +22,8 @@
 <textarea data-template>
 ###### Apps: 1.0 and beyond
 
-“Programming is about managing complexity:
-the complexity of the problem, laid upon the complexity of the machine.
-Because of this complexity, most of our programming projects fail.” -Bruce Eckel
+"The most fundamental problem in software development is complexity.
+There is only one basic way of dealing with complexity: divide and conquer.” - Bjarne Stroustrup
 
 “Thus, you should not think of “working code” as your primary goal,
 though of course your code must work.
@@ -83,10 +82,10 @@ then you lose." - Martin Fowler
 <textarea data-template>
 #### Advice: Select [Simple](https://www.infoq.com/presentations/Simple-Made-Easy/) over [complex](https://www.infoworld.com/article/3639050/complexity-is-killing-software-developers.html)
 
-- Architecture: Boring over Exciting
+- Architecture: [Boring](https://www.verygood.ventures/blog/boring-code-part-1) over Exciting
 - Uis: Declarative over Imperative
 - Structure: Modular over Monolithic
-- Modules: Deep over Shallow
+- Modules: [Deep](https://vladimirzdrazil.com/posts/deep-shallow-modules/) over Shallow
 - Code: Readable over Clever
 - Consistency: Conventions over Freedom
 - Data: Immutable over Mutable
@@ -363,15 +362,12 @@ Multiple blocks may also use same repositories to share data.
                 <section data-markdown>
                     <label>
 <textarea data-template>
-<img alt="modules" src="images/deep_shallow_modules.png" width="60%">
+#### [Deep vs. Shallow module]()
 
-“If a module hides a lot of information,
-that tends to increase the amount of functionality provided
-by the module while also reducing its interface.
-This makes the module deeper.
-Conversely, if a module doesn’t hide much information,
-then either it doesn’t have much functionality, or it has a complex interface;
-either way, the module is shallow.” ― John Ousterhout
+<img alt="modules" src="images/deep_shallow_modules_2.png" width="50%">
+
+“Isolating complexity in a place where it will never be seen is almost as good
+as eliminating the complexity entirely.” - John Ousterhout
 
 </textarea>
                     </label>
