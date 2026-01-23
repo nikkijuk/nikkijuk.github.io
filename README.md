@@ -76,7 +76,7 @@ Just like when humans write code based on same specifications,
 different developers can write different code.
 
 Using LLM for generating code is flexible approach.
-You can give it just prompt (instructions) and LLM will generate code based on its knowledge
+You can give it just prompt (instructions) and LLM will generate code based on its knowledge.
 It's like writing code by yourself, but you have assistant who helps you.
 You can guide assistant by giving more detailed instructions,
 providing context, setting constraints, and defining architecture.
@@ -85,18 +85,18 @@ SDD allows developer to use AI agents to automate different parts of process dev
 Ai agents can test, document, refactor, and deploy code.
 They can do research, create generation plans, break plan down to tasks, 
 coordinate tasks, and integrate code.
-This allows developer to focus on high-level design and architecture,   
+This allows developer to focus on high-level design and architecture,
 while AI agents handle low-level details.
 
-SDD like having a team of developers who work together to create code.
+SDD is like having a team of developers who work together to create code.
 It's not magic, it's just tool that helps you to write code faster,
 but like real code writing, it requires skill and practice to use it effectively,
 and results can vary depending on the quality of the inputs and the capabilities of the LLM,
 as well as your skill to guide it.
 
-GIGO (garbage in, garbage out) applies to all code generation approaches..
+GIGO (garbage in, garbage out) applies to all code generation approaches.
 If inputs are poor quality, generated code will be poor quality.
-If inputs are high quality, generated code will be high quality.
+If inputs are high quality, generated code will be of better quality.
 
 ## Revisiting Flutter, Bloc and immutable data for UIs
 
