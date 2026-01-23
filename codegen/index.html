@@ -38,9 +38,9 @@ so there will always be code.”
 
 <img alt="nc 1990" src="images/gigo_1.png" width="50%">
 
-"On two occasions I have been asked, "Pray, Mr. Babbage, if you put into the machine wrong figures,
+["On two occasions I have been asked, "Pray, Mr. Babbage, if you put into the machine wrong figures,
 will the right answers come out?" ...
-I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question."
+I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question."](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out)
 — Charles Babbage
 					</textarea>
 				</section>
@@ -50,8 +50,8 @@ I am not able rightly to apprehend the kind of confusion of ideas that could pro
 
 <img alt="nc 1990" src="images/spec-driven-development.png" width="80%">
 
-Spec-driven development means writing a “spec” before writing code with AI.
-The spec becomes the source of truth for the human and the AI.
+["Spec-driven development means writing a “spec” before writing code with AI.
+The spec becomes the source of truth for the human and the AI."](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
 
 Spec has aspects like architecture, domain models, requirements
 and can be refined over time.
@@ -60,12 +60,12 @@ and can be refined over time.
 
                 <section data-markdown>
 					<textarea data-template>
-### Possible Use-cases?
+### [Possible Use-cases?](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
 
 <img alt="nc 1990" src="images/sdd-usecases.png" width="80%">
 
-- Complete solution from spec (e.g. feature, module)
-- Reverse engineer legacy (code as spec)
+- New solution from spec (e.g. feature, module)
+- Renew solutions (code => spec, spec => new code)
 - Spec as DSL for business logic
                     </textarea>
                 </section>
@@ -73,7 +73,7 @@ and can be refined over time.
 
                 <section data-markdown>
 					<textarea data-template>
-### Levels of Spec-driven Development
+### [Levels](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
 
 - Spec-first: A well thought-out spec is written first, and then used in the AI-assisted development workflow for the task at hand.
 - Spec-anchored: The spec is kept even after the task is complete, to continue using it for evolution and maintenance of the respective feature.
@@ -93,7 +93,7 @@ and can be refined over time.
 
 				<section data-markdown>
 					<textarea data-template>
-				### SDD is non-deterministic
+				### [SDD is non-deterministic](https://www.thoughtworks.com/en-de/insights/blog/agile-engineering-practices/spec-driven-development-unpacking-2025-new-engineering-practices)
 
 "Spec drift and hallucination are inherently difficult to avoid.
 We still need highly deterministic CI/CD practices to ensure software quality
@@ -108,7 +108,7 @@ are outdated by SDD. They are more important than ever.
 
 				<section data-markdown>
 					<textarea data-template>
-				#### Workflow: No silver bullet
+				#### [Workflow](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
 
 				<img alt="nc 1990" src="images/sdd-workflow.png" width="45%">
 
@@ -116,9 +116,25 @@ there’s a lack of consensus on the ‘correct’ spec-driven development workf
 					</textarea>
 				</section>
 
+                <section data-markdown>
+					<textarea data-template>
+#### [when the spec becomes the primary artifact](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
+
+- Every developer needs to think like an architect.
+- Organizations must adapt operationally.
+- Architectural clarity must be prioritized.
+- Teams need training to build specification literacy.
+
+Writing or refining specifications requires the same level of systems thinking
+that was once limited to senior technical roles.
+					</textarea>
+                </section>
+
+
+
 				<section data-markdown>
 					<textarea data-template>
-				#### Bold predictions
+				#### [Bold predictions](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
 
 Businesses that rely solely on AI-generated code without structured specs
 accumulate hallucinated logic, inconsistent patterns, and unpredictable failures.
@@ -136,6 +152,7 @@ where specifications drive the entire lifecycle.
 that leverages AI to generate code from structured specifications.
 - SDD can improve code quality, maintainability, and alignment with business goals.
 - Successful adoption of SDD requires new workflows, tools, and mindsets.
+- SDD does not work on all projects equally well. In some it should not be used.
 					</textarea>
 				</section>
 

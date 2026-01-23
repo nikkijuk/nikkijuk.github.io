@@ -38,6 +38,10 @@ sdd = spec + llm + .. => code
 
 ## Articles
 
+https://en.wikipedia.org/wiki/Garbage_in,_garbage_out
+
+https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html
+
 https://medium.com/@wanimohit1/specification-driven-development-how-ai-is-transforming-software-engineering-c01510ea03e3
 
 https://www.thoughtworks.com/en-de/insights/blog/agile-engineering-practices/spec-driven-development-unpacking-2025-new-engineering-practices
