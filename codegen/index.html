@@ -35,6 +35,34 @@ so there will always be code.”
                 <section data-markdown>
 					<textarea data-template>
 
+#### Codegen 1.0
+
+- code from model (MDD, Model driven development, Enterprise Architect, UML / SysML)
+- code from architecture (MDA, Model driven architecture, e.g. ArchiMate)
+- code from domain-specific language, often custom syntax (external DSL, e.g. Xtext, JetBrains MPS)
+
+Deterministic, mature, but limited adoption.
+Tools either proprietary or not feasible for general use (learning curve, license costs).
+                    </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+
+#### Codegen 2.0
+
+- AI-assistants integrated to IDE (eg. github co-pilot, Jetbrains AI, Microsoft Copilot)
+- AI-assisted code generation from specification (SDD, Spec Driven development, eg. GitHub SpecKit, Google Antigravity, Aws Kiro)
+
+Non-Deterministic, non-mature, high adoption potential.
+Tools are emerging rapidly, but still experimental. No standard practices.
+                    </textarea>
+                </section>
+
+
+                <section data-markdown>
+					<textarea data-template>
+
 #### [Spec-Driven Development (SDD)](https://www.infoq.com/articles/spec-driven-development/)
 
 <img alt="nc 1990" src="images/spec-driven-development.png" width="60%">
@@ -125,7 +153,7 @@ are outdated by SDD. They are more important than ever.
 					<textarea data-template>
 				#### [SDD Workflow](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
 
-				<img alt="nc 1990" src="images/sdd-workflow.png" width="45%">
+				<img alt="nc 1990" src="images/sdd-workflow.png" width="55%">
 
 there’s a lack of consensus on the ‘correct’ spec-driven development workflow and what exactly a good spec should look like in the context of AI-assisted coding.
 					</textarea>
@@ -160,9 +188,9 @@ where specifications drive the entire lifecycle.
 
                 <section data-markdown>
 					<textarea data-template>
-				#### [Experiment & fail cleverly](https://www.corporate-rebels.com/blog/right-kind-of-wrong-intelligent-failure)
+				#### [Recommendation: Experiment & fail cleverly](https://www.corporate-rebels.com/blog/right-kind-of-wrong-intelligent-failure)
 
-				<img alt="nc 1990" src="images/intelligent-failure.png" width="30%">
+				<img alt="nc 1990" src="images/intelligent-failure.png" width="40%">
 
 "It’s impossible to calculate the wasted time and resources created by our reluctance
 to take the smart risks that lead to progress." - Amy Edmondson
@@ -171,10 +199,10 @@ to take the smart risks that lead to progress." - Amy Edmondson
 
 				<section data-markdown>
 					<textarea data-template>
-					# Summary
+					### Summary
 
-- Spec-driven development (SDD) is an emerging paradigm
-that leverages AI to generate code from structured specifications.
+- Spec-driven development (SDD) uses AI to generate code from structured specifications.
+- Role of developer shifts from code to describe intent and architecture in specs.
 - SDD can improve code quality, maintainability, and alignment with business goals.
 - Successful adoption of SDD requires new workflows, tools, and mindsets.
 - SDD does not work on all projects equally well. In some it should not be used.
