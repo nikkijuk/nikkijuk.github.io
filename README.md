@@ -59,15 +59,17 @@ new things." - Sesame Street
 I wrote these slides to reflect what I have done, how I see my role, and my strengths.
 It's all random, but tasks like this direct thinking. 
 
-## Generating code in a fancy way
+## Generating code 2.0 - Specification Driven Development (SDD)
 
 [slides](https://nikkijuk.github.io/codegen/)
 
 Code generation is not new. It's old idea that has been used in different forms over decades.
 In early days code generation was used to generate code from models (model driven development).
-Later DSL (domain specific languages) were used to generate code.
+Later DSLs (domain specific languages) were used to generate code.
 MDD and DSL are deterministic approaches for generating code.
-From same inputs, using same generator, always same code is generated.
+From same inputs, using same generator, same code is generated.
+MDD uses graphical or textual models to generate code.
+DSL uses textual models to generate code.
 
 SDD (specification driven development) is non-deterministic approach for generating code.
 It uses large language models (LLM) to generate code from specifications.
@@ -81,8 +83,9 @@ It's like writing code by yourself, but you have assistant who helps you.
 You can guide assistant by giving more detailed instructions,
 providing context, setting constraints, and defining architecture.
 
-SDD allows developer to use AI agents to automate different parts of process development process.
-Ai agents can test, document, refactor, and deploy code.
+SDD allows developer to use AI agents like army of minions 
+to automate different parts of development process.
+AI agents can test, document, refactor, and deploy code.
 They can do research, create generation plans, break plan down to tasks, 
 coordinate tasks, and integrate code.
 This allows developer to focus on high-level design and architecture,
@@ -92,11 +95,13 @@ SDD is like having a team of developers who work together to create code.
 It's not magic, it's just tool that helps you to write code faster,
 but like real code writing, it requires skill and practice to use it effectively,
 and results can vary depending on the quality of the inputs and the capabilities of the LLM,
-as well as your skill to guide it.
+used toolset, agent orchestration as well as your skill to guide it.
 
 GIGO (garbage in, garbage out) applies to all code generation approaches.
 If inputs are poor quality, generated code will be poor quality.
-If inputs are high quality, generated code will be of better quality.
+If inputs are high quality, generated code will be of better quality,
+but as SDD is non-deterministic approach, results can still vary,
+and hallucinations are possible.
 
 ## Revisiting Flutter, Bloc and immutable data for UIs
 

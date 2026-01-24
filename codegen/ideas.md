@@ -48,6 +48,10 @@ https://www.thoughtworks.com/en-de/insights/blog/agile-engineering-practices/spe
 
 https://www.nitorinfotech.com/blog/spec-driven-development-explained/
 
+https://www.corporate-rebels.com/blog/right-kind-of-wrong-intelligent-failure
+
+https://www.linkedin.com/posts/amycedmondson_intelligentfailure-failure-rightkindofwrong-activity-7231424708401938434-7m__/
+
 ## Videos
 
 ## Tutorials
@@ -56,3 +60,14 @@ https://www.nitorinfotech.com/blog/spec-driven-development-explained/
 
 https://www.manning.com/books/vibe-engineering
 
+## Examples
+
+https://geminicli.com/docs/get-started/examples/
+
+## Extensions
+
+https://geminicli.com/docs/extensions/
+
+https://github.com/gemini-cli-extensions/flutter
+
+https://github.com/gemini-cli-extensions/conductor
