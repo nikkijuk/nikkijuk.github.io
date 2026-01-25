@@ -36,6 +36,20 @@ sdd = spec + llm + .. => code
 
 ## Tools
 
+https://gemini.google.com/
+
+https://www.figma.com/make/
+
+https://miro.com/ai/ai-overview/
+
+https://www.thoughtworks.com/en-de/radar/tools/v0
+
+https://github.com/RooCodeInc/Roo-Code
+
+https://kilo.ai/
+
+https://tessl.io/
+
 ## Articles
 
 https://en.wikipedia.org/wiki/Garbage_in,_garbage_out
