@@ -66,6 +66,8 @@ https://www.corporate-rebels.com/blog/right-kind-of-wrong-intelligent-failure
 
 https://www.linkedin.com/posts/amycedmondson_intelligentfailure-failure-rightkindofwrong-activity-7231424708401938434-7m__/
 
+https://www.jetbrains.com/koog/
+
 ## Videos
 
 ## Tutorials

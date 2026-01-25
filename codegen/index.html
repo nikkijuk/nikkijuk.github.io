@@ -34,10 +34,9 @@ so there will always be code.”
 
                 <section data-markdown>
 					<textarea data-template>
-
 #### Codegen 1.0
 
-- code from model (MDD, Model driven development, Enterprise Architect, UML / SysML)
+- code from model (MDD, Model driven development, e.g. Enterprise Architect, IBM Rhapsody)
 - code from architecture (MDA, Model driven architecture, e.g. ArchiMate)
 - code from domain-specific language, often custom syntax (external DSL, e.g. Xtext, JetBrains MPS)
 
@@ -61,6 +60,18 @@ Same challenges as in traditional coding (quality, security, maintainability, ..
                     </textarea>
                 </section>
 
+                <section data-markdown>
+					<textarea data-template>
+#### Codegen 1.0 & 2.0 synergy
+
+- Codegen 1.0 can generate boilerplate code as well as Codegen 2.0 inputs.
+- Codegen 2.0 can transform Codegen 1.0 outputs and orchestrate codegen 1.0 tools usage.
+
+It's possible to combine both approaches for better results.
+Custom MCP servers can be created to wrap Codegen 1.0 tools,
+for example with Jetbrains Koog.ai.
+                    </textarea>
+                </section>
 
                 <section data-markdown>
 					<textarea data-template>
@@ -94,7 +105,7 @@ Implementation code, in contrast, becomes a secondary, generated representation 
 
                 <section data-markdown>
 					<textarea data-template>
-### [Classic vs. SDD model](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
+### [Classic SW Architecture vs. SDD](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
 
 <img alt="nc 1990" src="images/sdd_vs_classical_model.png" width="80%">
 
@@ -209,6 +220,19 @@ to take the smart risks that lead to progress." - Amy Edmondson
 					</textarea>
                 </section>
 
+                <section data-markdown>
+					<textarea data-template>
+					### Challenges
+
+- SDD requires cultural change and shifts power dynamics in teams and organizations.
+- Collaboration with non-technical stakeholders is essential, coder alone cannot deliver.
+- Caps in specs coverage and quality are detected early, not at the end of development.
+- Tooling and processes are immature and evolving rapidly, requiring continuous learning.
+- Existing codebases may not be suitable for SDD adoption, and first projects may be risky.
+					</textarea>
+                </section>
+
+
 				<section data-markdown>
 					<textarea data-template>
 					### Summary
@@ -217,7 +241,7 @@ to take the smart risks that lead to progress." - Amy Edmondson
 - Role of developer shifts from code to describe intent and architecture in specs.
 - SDD can improve code quality, maintainability, and alignment with business goals.
 - Successful adoption of SDD requires new workflows, tools, and mindsets.
-- SDD does not work on all projects equally well. In some it should not be used.
+- SDD does not work on all projects equally well. Careful experimentation is needed.
 					</textarea>
 				</section>
 
