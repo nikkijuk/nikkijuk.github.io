@@ -50,6 +50,8 @@ https://kilo.ai/
 
 https://tessl.io/
 
+https://www.jetbrains.com/koog/
+
 ## Articles
 
 https://en.wikipedia.org/wiki/Garbage_in,_garbage_out
@@ -66,7 +68,7 @@ https://www.corporate-rebels.com/blog/right-kind-of-wrong-intelligent-failure
 
 https://www.linkedin.com/posts/amycedmondson_intelligentfailure-failure-rightkindofwrong-activity-7231424708401938434-7m__/
 
-https://www.jetbrains.com/koog/
+https://www.geocod.io/code-and-coordinates/2026-01-21-hand-chiseling-code/
 
 ## Videos
 
