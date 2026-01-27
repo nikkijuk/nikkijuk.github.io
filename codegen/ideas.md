@@ -72,6 +72,8 @@ https://www.geocod.io/code-and-coordinates/2026-01-21-hand-chiseling-code/
 
 https://intent-driven.dev/knowledge/plan-mode-vs-sdd/
 
+https://blog.logrocket.com/ux-design/double-diamond-design-process/
+
 ## Sources  
 
 # Models
