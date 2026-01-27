@@ -70,9 +70,26 @@ https://www.linkedin.com/posts/amycedmondson_intelligentfailure-failure-rightkin
 
 https://www.geocod.io/code-and-coordinates/2026-01-21-hand-chiseling-code/
 
+https://intent-driven.dev/knowledge/plan-mode-vs-sdd/
+
+## Sources  
+
+# Models
+
+https://models.dev/
+
 ## Videos
 
+
+## Channel
+
+https://www.youtube.com/@mattpocockuk
+
 ## Tutorials
+
+## courses
+
+https://www.aihero.dev/workshops/ai-sdk-v5-crash-course
 
 ## Books
 

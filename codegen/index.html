@@ -18,7 +18,7 @@
 			<div class="slides">
 				<section data-markdown>
 					<textarea data-template>
-#### Codegen 2.0 / Spec-Driven Development
+#### Codegen 2.0 / Collaboration with AI
 “Remember that code is really the language in which we ultimately express
 the requirements. We may create languages that are closer to the requirements.
 We may create tools that help us parse and assemble those requirements
@@ -43,10 +43,25 @@ so there will always be code.”
                     </textarea>
                 </section>
 
+                <section data-markdown>
+					<textarea data-template>
+#### [AI coding evolution](https://medium.com/aimonks/ai-coding-from-code-completion-to-knowledge-alignment-6d4c5a8ee669)
+
+<img alt="nc 1990" src="images/ai-code-evolution.png" width="60%">
+
+- Code completion (IDE plugins)
+- Prompt engineering (within IDE)
+- Monolithic generation (prototype)
+- Context-aware generation (agents)
+- AI Pair programming (Plan mode)
+- Spec-driven development (SDD)
+                    </textarea>
+                </section>
+
 
                 <section data-markdown>
 					<textarea data-template>
-#### Codegen 1.0
+#### Codegen 1.0 / Rules & templates
 
 - code from model (MDD, Model driven development, e.g. Enterprise Architect, IBM Rhapsody)
 - code from architecture (MDA, Model driven architecture, e.g. ArchiMate)
@@ -63,8 +78,8 @@ Tools either proprietary or not feasible for general use (learning curve, licens
 #### Codegen 2.0 / AI-assisted development
 
 - Assistants (eg. Github CoPilot, OpenAI Codex, Google Gemini, Jetbrains AI)
-- IDE's (Eg. Google Antigravity, Kilo AI, Roo-Code)
 - Prototype generators (eg. Figma Make, Miro AI, v0)
+- Toolsets (Eg. Google Antigravity, Kilo AI, Roo-Code, Claude Code)
 - Code from spec (eg. GitHub SpecKit, AWS Kiro, Tessl)
 
 Tools are emerging rapidly, but still experimental. No standard practices.
@@ -85,12 +100,43 @@ for example with Jetbrains Koog.ai.
                     </textarea>
                 </section>
 
+
+                <section data-markdown>
+					<textarea data-template>
+#### [Claude code: Context](https://www.eesel.ai/blog/claude-ai-coding-assistant)
+
+<img alt="nc 1990" src="images/claude-context.png" width="60%">
+
+- Whole codebase as main context
+- Instruction files (e.g. Claude.md) as guidelines.
+- MCP servers can integrate external data sources.
+
+External sources can be specifications, task descriptions, ui mockups, ..
+                    </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### [Claude code: Plan Mode](https://www.eesel.ai/blog/claude-ai-coding-assistant)
+
+<img alt="nc 1990" src="images/explore-plan-code-commit.png" width="60%">
+
+- Collect context from relevant sources
+- iterate over plan until it's accepted by developer
+- generate code and refine plan if needed
+- review and commit results to codebase
+
+Structured approach makes sure you and the AI are aligned before any code is written,
+which can save a lot of time on back-and-forth revisions.
+                    </textarea>
+                </section>
+
                 <section data-markdown>
 					<textarea data-template>
 
 #### [Spec-Driven Development (SDD)](https://www.infoq.com/articles/spec-driven-development/)
 
-<img alt="nc 1990" src="images/spec-driven-development.png" width="60%">
+<img alt="nc 1990" src="images/spec-flow.png" width="100%">
 
 ["Spec-driven development means writing a “spec” before writing code with AI.
 The spec becomes the source of truth for the human and the AI."](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
@@ -117,7 +163,7 @@ Implementation code, in contrast, becomes a secondary, generated representation 
 
                 <section data-markdown>
 					<textarea data-template>
-### [Classic SW Architecture vs. SDD](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
+### [Code is king vs. specs rule](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
 
 <img alt="nc 1990" src="images/sdd_vs_classical_model.png" width="80%">
 
@@ -140,20 +186,6 @@ For decades, software architecture has operated under a largely unchallenged ass
 
                 <section data-markdown>
 					<textarea data-template>
-#### [AI project / time spent](https://www.geocod.io/code-and-coordinates/2026-01-21-hand-chiseling-code/)
-
-<img alt="nc 1990" src="images/sdd-time-division.jpeg" width="60%">
-
-- Spec is continuously refined / validated. Code is mostly byproduct, which needs to be reviewed.
-- Work content changes and adapts. Required skill combination might be rather uncommon.
-- New roles emerge (spec architect, spec engineer, ..). There might be scaling bottlenecks.
-
-                    </textarea>
-                </section>
-
-
-                <section data-markdown>
-					<textarea data-template>
 ### [SDD Levels](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
 
 - Spec-first: A well thought-out spec is written first, and then used in the AI-assisted development workflow for the task at hand.
@@ -164,11 +196,25 @@ For decades, software architecture has operated under a largely unchallenged ass
 
                 <section data-markdown>
 					<textarea data-template>
+#### Generating once is nice, but not enough
 
 <img alt="nc 1990" src="images/sdd-levels.png" width="80%">
 
 - Quality of results rely on input spec quality.
 - Level defines process AI tool is able to support.
+                    </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### [AI project Tasks / time spent](https://www.geocod.io/code-and-coordinates/2026-01-21-hand-chiseling-code/)
+
+<img alt="nc 1990" src="images/sdd-time-division.jpeg" width="60%">
+
+- Spec is continuously refined / validated. Code is mostly byproduct, which needs to be reviewed.
+- Work content changes and adapts. Required skill combination might be rather uncommon.
+- New roles emerge (spec architect, spec engineer, ..). There might be scaling bottlenecks.
+
                     </textarea>
                 </section>
 
@@ -265,10 +311,22 @@ to take the smart risks that lead to progress." - Amy Edmondson
 - Well-defined domains with clear requirements.
 - Teams open to experimentation and new practices.
 - Modular architecture for incremental adoption.
-- Strongly typed, Garbage collected, NULL-safe language and automated build pipeline.
+- Prefer strongly typed, garbage collected, NULL-safe language and automated build pipeline.
 					</textarea>
                 </section>
 
+                <section data-markdown>
+					<textarea data-template>
+#### Sloppy inputs => AI slop
+
+<img alt="nc 1990" src="images/gigo_1.png" width="40%">
+
+["On two occasions I have been asked, "Pray, Mr. Babbage, if you put into the machine wrong figures,
+will the right answers come out?" ...
+I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question."](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out)
+— Charles Babbage
+					</textarea>
+                </section>
 
 				<section data-markdown>
 					<textarea data-template>
@@ -281,18 +339,6 @@ to take the smart risks that lead to progress." - Amy Edmondson
 - SDD does not work on all projects equally well. Careful experimentation is needed.
 					</textarea>
 				</section>
-
-                <section data-markdown>
-					<textarea data-template>
-
-<img alt="nc 1990" src="images/gigo_1.png" width="50%">
-
-["On two occasions I have been asked, "Pray, Mr. Babbage, if you put into the machine wrong figures,
-will the right answers come out?" ...
-I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question."](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out)
-— Charles Babbage
-					</textarea>
-                </section>
 
 				</div>
 		</div>
