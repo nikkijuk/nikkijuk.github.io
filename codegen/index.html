@@ -20,11 +20,14 @@
 					<textarea data-template>
 #### Codegen 2.0 / Collaboration with AI
 
-“being able to type fast is a superpower accessible to everyone
-who is willing to put in the work.”
-― Benjamin Batarseh, Be More Productive: Save 30 Minutes a Day by Learning The Art of Typing
+“I believe the hard part of building software to be the specification, design,
+and testing of this conceptual construct, not the labor of representing it
+and testing the fidelity of the representation."
+― Frederick P. Brooks Jr.
 
-"Programming is not about typing, it's about thinking." — Rich Hickey
+“Conceptual integrity does require that a system reflect a single philosophy
+and that the specification as seen by the user flow from a few minds."
+― Frederick P. Brooks Jr.
 
         // Name: Jukka Nikki, Identity: Programmer
         // Goal: Find the last bug, Since: 6502
@@ -36,10 +39,14 @@ who is willing to put in the work.”
 					<textarea data-template>
 #### DISCLAIMER
 
-- AI is complex topic ..
-- .. You should not believe in simple answers.
-- This is part of my learning journey ..
-- .. I have collected more questions than facts.
+“Life can only be understood backwards; but it must be lived forwards.”
+― Søren Kierkegaard
+
+- To understand AI one needs to experiment ..
+- Experimenting means failing well for a goal ..
+- Failures should be small, backed by hypothesis
+- Each experiment teaches something new ..
+- And prepares you for next experiment ..
                     </textarea>
                 </section>
 
@@ -51,8 +58,8 @@ who is willing to put in the work.”
 
 - Code completion (IDE plugins)
 - Prompt engineering (within IDE)
-- Monolithic generation (prototype)
-- Context-aware generation (agents)
+- Monolithic generation (Vibe coding)
+- Context-aware generation (agents.md)
 - AI Pair programming (Plan mode)
 - Spec-driven development (SDD)
                     </textarea>
@@ -77,10 +84,10 @@ Tools either proprietary or not feasible for general use (learning curve, licens
 
 #### Codegen 2.0 / AI-assisted development
 
-- Assistants (eg. Github CoPilot, OpenAI Codex, Google Gemini, Jetbrains AI)
-- Prototype generators (eg. Figma Make, Miro AI, v0)
-- Toolsets (Eg. Google Antigravity, Kilo AI, Roo-Code, Claude Code)
-- Code from spec (eg. GitHub SpecKit, AWS Kiro, Tessl)
+- Assistants (e.g. Github CoPilot, OpenAI Codex, Google Gemini, Jetbrains AI)
+- Prototype generators (e.g. Figma Make, Miro AI, v0)
+- Toolsets (e.g. Google Antigravity, Kilo AI, Roo-Code, Claude Code)
+- Code from spec (e.g. GitHub SpecKit, AWS Kiro, Tessl Framework, Gemini Cli with Conductor)
 
 Tools are emerging rapidly, but still experimental. No standard practices.
 Same challenges as in traditional coding (quality, security, maintainability, ..)
@@ -103,13 +110,13 @@ for example with Jetbrains Koog.ai.
 
                 <section data-markdown>
 					<textarea data-template>
-#### [Claude code: Context](https://www.eesel.ai/blog/claude-ai-coding-assistant)
+#### [Creating Context: Claude code](https://www.eesel.ai/blog/claude-ai-coding-assistant)
 
 <img alt="nc 1990" src="images/claude-context.png" width="60%">
 
 - Whole codebase as main context
 - Instruction files (e.g. Claude.md) as guidelines.
-- MCP servers can integrate external data sources.
+- MCP servers integrate external data sources.
 
 External sources can be specifications, task descriptions, ui mockups, ..
                     </textarea>
@@ -117,17 +124,18 @@ External sources can be specifications, task descriptions, ui mockups, ..
 
                 <section data-markdown>
 					<textarea data-template>
-#### [Claude code: Plan Mode](https://www.eesel.ai/blog/claude-ai-coding-assistant)
+#### [Plan Mode: Claude code](https://www.eesel.ai/blog/claude-ai-coding-assistant)
 
 <img alt="nc 1990" src="images/explore-plan-code-commit.png" width="60%">
 
 - Collect context from relevant sources
-- iterate over plan until it's accepted by developer
-- generate code and refine plan if needed
-- review and commit results to codebase
+- Create plan, refine until accepted by developer
+- Generate code and run tests based on plan
+- Review and commit results to codebase
 
-Structured approach makes sure you and the AI are aligned before any code is written,
-which can save a lot of time on back-and-forth revisions.
+Structured approach saves time and improves quality.
+Intent is clarified before code generation.
+AI is driver, developer is navigator.
                     </textarea>
                 </section>
 
@@ -141,8 +149,8 @@ which can save a lot of time on back-and-forth revisions.
 ["Spec-driven development means writing a “spec” before writing code with AI.
 The spec becomes the source of truth for the human and the AI."](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
 
-Spec has aspects like architecture, domain models, requirements
-and can be refined over time.
+Spec has aspects like architecture, domain models, requirements,
+and is refined over time.
                     </textarea>
                 </section>
 

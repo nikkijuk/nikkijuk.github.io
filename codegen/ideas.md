@@ -52,6 +52,8 @@ https://tessl.io/
 
 https://www.jetbrains.com/koog/
 
+https://agents.md/
+
 ## Articles
 
 https://en.wikipedia.org/wiki/Garbage_in,_garbage_out
@@ -73,6 +75,8 @@ https://www.geocod.io/code-and-coordinates/2026-01-21-hand-chiseling-code/
 https://intent-driven.dev/knowledge/plan-mode-vs-sdd/
 
 https://blog.logrocket.com/ux-design/double-diamond-design-process/
+
+https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/
 
 ## Sources  
 
@@ -108,3 +112,11 @@ https://geminicli.com/docs/extensions/
 https://github.com/gemini-cli-extensions/flutter
 
 https://github.com/gemini-cli-extensions/conductor
+
+## x
+
+“being able to type fast is a superpower accessible to everyone
+who is willing to put in the work.”
+― Benjamin Batarseh, Be More Productive: Save 30 Minutes a Day by Learning The Art of Typing
+
+"Programming is not about typing, it's about thinking." — Rich Hickey
