@@ -87,11 +87,23 @@ https://models.dev/
 ## Videos
 
 
+## Studies
+
+We Studied 150 Developers Using AI (Here’s What's Actually Changed...)
+
+https://www.youtube.com/watch?v=b9EbCb5A408
+
 ## Channel
 
 https://www.youtube.com/@mattpocockuk
 
 ## Tutorials
+
+AI-first software delivery transformation in a large scale: real-world lessons
+
+https://youtu.be/QjTF8GWGgFw?si=OC5pHDUvNyhTEDiB
+
+
 
 ## courses
 

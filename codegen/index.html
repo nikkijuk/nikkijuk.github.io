@@ -35,42 +35,12 @@ and that the specification as seen by the user flow from a few minds."
 					</textarea>
 				</section>
 
-                <section data-markdown>
-					<textarea data-template>
-#### DISCLAIMER
-
-“Life can only be understood backwards; but it must be lived forwards.”
-― Søren Kierkegaard
-
-- To understand AI one needs to experiment ..
-- Experimenting means failing well for a goal ..
-- Failures should be small, backed by hypothesis
-- Each experiment teaches something new ..
-- And prepares you for next experiment ..
-                    </textarea>
-                </section>
-
-                <section data-markdown>
-					<textarea data-template>
-#### [AI coding evolution](https://medium.com/aimonks/ai-coding-from-code-completion-to-knowledge-alignment-6d4c5a8ee669)
-
-<img alt="nc 1990" src="images/ai-code-evolution.png" width="60%">
-
-- Code completion (IDE plugins)
-- Prompt engineering (within IDE)
-- Monolithic generation (Vibe coding)
-- Context-aware generation (agents.md)
-- AI Pair programming (Plan mode)
-- Spec-driven development (SDD)
-                    </textarea>
-                </section>
-
 
                 <section data-markdown>
 					<textarea data-template>
 #### Codegen 1.0 / Rules & templates
 
-- code from model (MDD, Model driven development, e.g. Enterprise Architect, IBM Rhapsody)
+- code from model (MDD,  Model driven development, e.g. Enterprise Architect, IBM Rhapsody)
 - code from architecture (MDA, Model driven architecture, e.g. ArchiMate)
 - code from domain-specific language, often custom syntax (external DSL, e.g. Xtext, JetBrains MPS)
 
@@ -104,6 +74,70 @@ Same challenges as in traditional coding (quality, security, maintainability, ..
 It's possible to combine both approaches for better results.
 Custom MCP servers can be created to wrap Codegen 1.0 tools,
 for example with Jetbrains Koog.ai.
+                    </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### [AI coding evolution](https://medium.com/aimonks/ai-coding-from-code-completion-to-knowledge-alignment-6d4c5a8ee669)
+
+<img alt="nc 1990" src="images/ai-code-evolution.png" width="60%">
+
+- Code completion (IDE plugins)
+- Prompt engineering (within IDE)
+- Monolithic generation (Vibe coding)
+- Context-aware generation (agents.md)
+- AI Pair programming (Plan mode)
+- Spec-driven development (SDD)
+                    </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### AI autonomy levels
+
+<img alt="nc 1990" src="images/ai_autonomy.png" width="100%">
+
+"Human" (None) to "Superbrain" (All) scale for AI tools.
+                    </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### Measuring AI impact / Study results
+
+"Code written with AI assistance was no
+harder to change, no easier to change,
+no worse in quality and no better in
+quality. From a downstream perspective,
+AI didn't break anything.
+(..)
+AI users were
+about 30% faster to get to a solution.
+(..)
+Habitual AI users were closer to
+55% faster.
+(..)
+AI tends to produce boring, idiomatic,
+unsurprising code. And boring code is
+good.
+(..)
+As always tools matter,
+but how we use them matters more.
+" - Dave Farley
+					</textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### [Context Engineering: Tactical vs. Strategic](https://intent-driven.dev/knowledge/plan-mode-vs-sdd/)
+
+Tactical context engineering (Plan Mode) focuses on immediate task context,
+while strategic context engineering (Spec Driven) builds long-term knowledge structures.
+
+Plan mode is supposed to fit better for greenfield solo projects,
+whereas SDD is better for team projects with evolving requirements.
+
                     </textarea>
                 </section>
 
@@ -224,6 +258,17 @@ that code is the ultimate authority
 - Together they create context for code generation.
 
                     </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### [Context / Layer / responsibility](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
+
+<img alt="nc 1990" src="images/ai_asset_governance.png" width="75%">
+
+Governance of context by responsibility area / role.
+
+					</textarea>
                 </section>
 
 
@@ -352,19 +397,17 @@ to take the smart risks that lead to progress." - Amy Edmondson
 					</textarea>
                 </section>
 
-
-                <section data-markdown>
+				<section data-markdown>
 					<textarea data-template>
-#### Sloppy inputs => AI slop
+					### Summary
 
-<img alt="nc 1990" src="images/gigo_1.png" width="40%">
-
-["On two occasions I have been asked, "Pray, Mr. Babbage, if you put into the machine wrong figures,
-will the right answers come out?" ...
-I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question."](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out)
-— Charles Babbage
+- Spec-driven development (SDD) uses AI to generate code from structured specifications.
+- Role of developer shifts from code to describe intent and architecture in specs.
+- SDD can improve code quality, maintainability, and alignment with business goals.
+- Successful adoption of SDD requires new workflows, tools, and mindsets.
+- SDD does not work on all projects equally well. Careful experimentation is needed.
 					</textarea>
-                </section>
+				</section>
 
                 <section data-markdown>
 					<textarea data-template>
@@ -381,18 +424,46 @@ so there will always be code.”
 					</textarea>
                 </section>
 
-
-				<section data-markdown>
+                <section data-markdown>
 					<textarea data-template>
-					### Summary
+#### Sloppy inputs => AI slop
 
-- Spec-driven development (SDD) uses AI to generate code from structured specifications.
-- Role of developer shifts from code to describe intent and architecture in specs.
-- SDD can improve code quality, maintainability, and alignment with business goals.
-- Successful adoption of SDD requires new workflows, tools, and mindsets.
-- SDD does not work on all projects equally well. Careful experimentation is needed.
+<img alt="nc 1990" src="images/gigo_1.png" width="40%">
+
+["On two occasions I have been asked, "Pray, Mr. Babbage, if you put into the machine wrong figures,
+will the right answers come out?" ...
+I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question."](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out)
+— Charles Babbage
 					</textarea>
-				</section>
+                </section>
+                <section data-markdown>
+					<textarea data-template>
+#### [AI assets / responsibility](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
+
+<img alt="nc 1990" src="images/ai_asset_governance.png" width="70%">
+
+Assets for context can be organized by responsibility areas:
+
+- Business (e.g. requirements, user stories, acceptance criteria)
+- Domain (e.g. domain models, ubiquitous language, glossary)
+- Technical (e.g. architecture diagrams, design patterns, coding standards)
+					</textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### DISCLAIMER
+
+“Life can only be understood backwards; but it must be lived forwards.”
+― Søren Kierkegaard
+
+- To understand AI one needs to experiment ..
+- Experimenting means failing well for a goal ..
+- Failures should be small, backed by hypothesis ..
+- Each experiment teaches something new ..
+- And prepares you for next experiment ..
+                    </textarea>
+                </section>
 
 				</div>
 		</div>
