@@ -132,3 +132,96 @@ who is willing to put in the work.”
 ― Benjamin Batarseh, Be More Productive: Save 30 Minutes a Day by Learning The Art of Typing
 
 "Programming is not about typing, it's about thinking." — Rich Hickey
+
+**
+
+“Domino effects give way to butterfly effects given nonlinearity. “Outsized” conflates with “unpredictable” as a small cause yields disproportionate effects.”
+― Roger Spitz, The Definitive Guide to Thriving on Disruption: Volume IV - Disruption as a Springboard to Value Creation
+
+**
+
+“Geniuses and prophets do not usually excel in professional learning, and their originality, if any, is often due precisely to the fact that they do not.”
+― Joseph Aloïs Schumpeter, Capitalism, Socialism and Democracy
+
+**
+
+The function of entrepreneurs is to reform or revolutionize the pattern of production by exploiting an invention or, more generally, an untried technological possibility for producing a new commodity or producing an old one in a new way, by opening up a new source of supply of materials or a new outlet for products, by reorganizing an industry and so on.
+
+Joseph A. Schumpeter
+
+Success depends on intuition, on seeing what afterwards proves true but cannot be established at the moment.
+
+Joseph A. Schumpeter
+
+Situations emerge in the process of creative destruction in which many firms may have to perish that nevertheless would be able to live on vigorously and usefully if they could weather a particular storm.
+
+Joseph A. Schumpeter
+
+Creative Destruction is the essential fact about capitalism.
+
+Joseph A. Schumpeter
+
+Economic progress, in capitalist society, means turmoil.
+
+Joseph A. Schumpeter
+
+The success of everything depends on intuition, the capacity of seeing things in a way which afterwards proves to be true, even though it cannot be established at the moment, and of grasping the essential fact, discarding the unessential, even though one can give no account of the principles by which this is done.
+
+Joseph A. Schumpeter
+
+The strategic stimulus to economic development in Schumpeter's analysis is innovation, defined as the commercial or industrial application of something new---a new product, process or method of production, a new market or source of supply, a new form of commercial, business or financial organization.
+
+Joseph A. Schumpeter
+
+We always plan too much and always think too little. We resent a call to thinking and hate unfamiliar argument that does not tally with what we already believe or would like to believe.
+
+Joseph A. Schumpeter
+
+The essential point to grasp is that in dealing with capitalism we are dealing with an evolutionary process
+
+Joseph A. Schumpeter
+
+It is however always important to remember that the ability to see things in their correct perspective may be, and often is, divorced from the ability to reason correctly and vice versa. That is why a man may be a very good theorist and yet talk absolute nonsense.
+
+Joseph A. Schumpeter
+
+Pessimistic visions about almost anything always strike the public as more erudite than optimistic ones
+
+Joseph A. Schumpeter
+
+Geniuses and prophets do not usually excel in professional learning, and their originality, if any, is often due precisely to the fact that they do not.
+
+Joseph A. Schumpeter
+
+The capitalist achievement does not typically consist in providing more silk stocking for queens but in bringing them within the reach of factory girls in return for a steadily decreasing amount of effort.
+
+Joseph A. Schumpeter
+
+Those revolutions are not strictly incessant; they occur in discrete rushes which are separated from each other by spans of comparative quiet. The process as a whole works incessantly however, in the sense that there always is either revolution or absorption of the results of revolution, both together forming what are known as business cycles.
+
+Joseph A. Schumpeter
+
+„Schöpferische Zerstörung ist die Basis für Innovation, unternehmerisches Wachstum und Wohlstand“
+
+- "Innovation ist die Markteinführung einer technischen oder organisatorischen Neuheit; und nicht nur die Erfindung."
+- "Das Alte auf eine neue Weise tun – das ist Innovation."
+
+https://aktienmagazin.de/blog/zitate-und-personen/professor-prostituierte-und-schopferische-zerstorung-joseph-schumpeter-10417.html
+
+"Wachstum ist ein Prozess schöpferischer Zerstörung."
+
+- "Im Prozess der schöpferischen Zerstörung entstehen Situationen, in denen viele Firmen sterben, die nichtsdestotrotz in der Lage gewesen wären, eifrig und nützlich fortzubestehen, wenn sie diesen einen Sturm überstanden hätten."
+- "Erfolg basiert auf der Intuition, zu sehen, was sich im Nachhinein als richtig herausstellt, aber im Moment noch nicht nachgewiesen werden kann."
+- - "Wir planen immer zu viel und denken zu wenig."
+
+**
+
+
+“I believe the hard part of building software to be the specification, design,
+and testing of this conceptual construct, not the labor of representing it
+and testing the fidelity of the representation."
+― Frederick P. Brooks Jr.
+
+“Conceptual integrity does require that a system reflect a single philosophy
+and that the specification as seen by the user flow from a few minds."
+― Frederick P. Brooks Jr.

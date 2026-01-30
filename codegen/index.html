@@ -18,64 +18,19 @@
 			<div class="slides">
 				<section data-markdown>
 					<textarea data-template>
-#### Codegen 2.0 / Collaboration with AI
+#### Wachstum ist ein Prozess schöpferischer Zerstörung.
 
-“I believe the hard part of building software to be the specification, design,
-and testing of this conceptual construct, not the labor of representing it
-and testing the fidelity of the representation."
-― Frederick P. Brooks Jr.
+"The success of everything depends on intuition,
+the capacity of seeing things in a way which afterwards proves to be true,
+even though it cannot be established at the moment,
+and of grasping the essential fact, discarding the unessential,
+even though one can give no account of the principles by which this is done." - Joseph A. Schumpeter
 
-“Conceptual integrity does require that a system reflect a single philosophy
-and that the specification as seen by the user flow from a few minds."
-― Frederick P. Brooks Jr.
-
-        // Name: Jukka Nikki, Identity: Programmer
-        // Goal: Find the last bug, Since: 6502
+        // Jukka Nikki, Programmer, Accidental business thinker
 
 					</textarea>
 				</section>
 
-
-                <section data-markdown>
-					<textarea data-template>
-#### Codegen 1.0 / Rules & templates
-
-- code from model (MDD,  Model driven development, e.g. Enterprise Architect, IBM Rhapsody)
-- code from architecture (MDA, Model driven architecture, e.g. ArchiMate)
-- code from domain-specific language, often custom syntax (external DSL, e.g. Xtext, JetBrains MPS)
-
-Deterministic, mature, but limited adoption.
-Tools either proprietary or not feasible for general use (learning curve, license costs).
-                    </textarea>
-                </section>
-
-                <section data-markdown>
-					<textarea data-template>
-
-#### Codegen 2.0 / AI-assisted development
-
-- Assistants (e.g. Github CoPilot, OpenAI Codex, Google Gemini, Jetbrains AI)
-- Prototype generators (e.g. Figma Make, Miro AI, v0)
-- Toolsets (e.g. Google Antigravity, Kilo AI, Roo-Code, Claude Code)
-- Code from spec (e.g. GitHub SpecKit, AWS Kiro, Tessl Framework, Gemini Cli with Conductor)
-
-Tools are emerging rapidly, but still experimental. No standard practices.
-Same challenges as in traditional coding (quality, security, maintainability, ..)
-                    </textarea>
-                </section>
-
-                <section data-markdown>
-					<textarea data-template>
-#### Codegen 1.0 & 2.0 synergy
-
-- Codegen 1.0 can generate boilerplate code as well as Codegen 2.0 inputs.
-- Codegen 2.0 can transform Codegen 1.0 outputs and orchestrate codegen 1.0 tools usage.
-
-It's possible to combine both approaches for better results.
-Custom MCP servers can be created to wrap Codegen 1.0 tools,
-for example with Jetbrains Koog.ai.
-                    </textarea>
-                </section>
 
                 <section data-markdown>
 					<textarea data-template>
@@ -99,6 +54,8 @@ for example with Jetbrains Koog.ai.
 <img alt="nc 1990" src="images/ai_autonomy.png" width="100%">
 
 "Human" (None) to "Superbrain" (All) scale for AI tools.
+Current tools are mostly at "Assistance" level, where AI suggests code,
+but human decides what to accept.
                     </textarea>
                 </section>
 
@@ -136,7 +93,7 @@ Tactical context engineering (Plan Mode) focuses on immediate task context,
 while strategic context engineering (Spec Driven) builds long-term knowledge structures.
 
 Plan mode is supposed to fit better for greenfield solo projects,
-whereas SDD is better for team projects with evolving requirements.
+whereas spec driven development (SDD) is better for team projects with evolving requirements.
 
                     </textarea>
                 </section>
@@ -144,21 +101,21 @@ whereas SDD is better for team projects with evolving requirements.
 
                 <section data-markdown>
 					<textarea data-template>
-#### [Creating Context: Claude code](https://www.eesel.ai/blog/claude-ai-coding-assistant)
+#### [Plan Mode: Creating Context](https://www.eesel.ai/blog/claude-ai-coding-assistant)
 
 <img alt="nc 1990" src="images/claude-context.png" width="60%">
 
-- Whole codebase as main context
-- Instruction files (e.g. Claude.md) as guidelines.
+- Codebase is used as context
+- Instruction files (e.g. Claude.md) define constraints.
 - MCP servers integrate external data sources.
 
-External sources can be specifications, task descriptions, ui mockups, ..
+External sources can provide specifications, task descriptions, ui mockups, ..
                     </textarea>
                 </section>
 
                 <section data-markdown>
 					<textarea data-template>
-#### [Plan Mode: Claude code](https://www.eesel.ai/blog/claude-ai-coding-assistant)
+#### [Plan Mode: Workflow](https://www.eesel.ai/blog/claude-ai-coding-assistant)
 
 <img alt="nc 1990" src="images/explore-plan-code-commit.png" width="60%">
 
@@ -167,9 +124,8 @@ External sources can be specifications, task descriptions, ui mockups, ..
 - Generate code and run tests based on plan
 - Review and commit results to codebase
 
-Structured approach saves time and improves quality as
-intent is clarified before code generation.
-Pair programming: AI is driver, developer is navigator.
+One shot pair programming: AI is driver, developer is navigator.
+Plan is realized when code is committed.
                     </textarea>
                 </section>
 
@@ -221,7 +177,7 @@ that code is the ultimate authority
 
 <img alt="nc 1990" src="images/sdd-usecases.png" width="80%">
 
-- new, renew (code=>spec, spec=>code), or re-architect systems.
+- develop new, renew (code=>spec, spec=>code), or re-architect systems.
 - role of developers changes from code writers to system architects.
                     </textarea>
                 </section>
@@ -264,9 +220,9 @@ that code is the ultimate authority
 					<textarea data-template>
 #### [Context / Layer / responsibility](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
 
-<img alt="nc 1990" src="images/ai_asset_governance.png" width="75%">
+<img alt="nc 1990" src="images/ai_asset_governance.png" width="80%">
 
-Governance of context by responsibility area / role.
+Governance of context is shared responsibility.
 
 					</textarea>
                 </section>
@@ -394,6 +350,7 @@ to take the smart risks that lead to progress." - Amy Edmondson
 - Modular architecture for incremental adoption.
 - Typed, nullsafe, garbage collected language.
 - Controls like automated build pipeline.
+- Backend might be easier than frontend.
 					</textarea>
                 </section>
 
@@ -403,11 +360,27 @@ to take the smart risks that lead to progress." - Amy Edmondson
 
 - Spec-driven development (SDD) uses AI to generate code from structured specifications.
 - Role of developer shifts from code to describe intent and architecture in specs.
-- SDD can improve code quality, maintainability, and alignment with business goals.
-- Successful adoption of SDD requires new workflows, tools, and mindsets.
+- SDD can (if done right) improve code quality, maintainability, and alignment with business goals.
+- Successful adoption of SDD requires new workflows, tools, and mindsets, but also management support.
 - SDD does not work on all projects equally well. Careful experimentation is needed.
 					</textarea>
 				</section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### AI First SW development / Status Quo
+
+"Im Prozess der schöpferischen Zerstörung entstehen Situationen,
+in denen viele Firmen sterben,
+die nichtsdestotrotz in der Lage gewesen wären,
+eifrig und nützlich fortzubestehen,
+wenn sie diesen einen Sturm überstanden hätten." - Joseph A. Schumpeter
+
+"The essential point to grasp is that in dealing with capitalism
+we are dealing with an evolutionary process." - Joseph A. Schumpeter
+					</textarea>
+                </section>
+
 
                 <section data-markdown>
 					<textarea data-template>
@@ -419,7 +392,6 @@ We may create tools that help us parse and assemble those requirements
 into formal structures. But we will never eliminate necessary precision —
 so there will always be code.”
 ― Robert C. Martin
-
 
 					</textarea>
                 </section>
@@ -462,6 +434,47 @@ Assets for context can be organized by responsibility areas:
 - Failures should be small, backed by hypothesis ..
 - Each experiment teaches something new ..
 - And prepares you for next experiment ..
+                    </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### Codegen 1.0 / Rules & templates
+
+- code from model (MDD,  Model driven development, e.g. Enterprise Architect, IBM Rhapsody)
+- code from architecture (MDA, Model driven architecture, e.g. ArchiMate)
+- code from domain-specific language, often custom syntax (external DSL, e.g. Xtext, JetBrains MPS)
+
+Deterministic, mature, but limited adoption.
+Tools either proprietary or not feasible for general use (learning curve, license costs).
+                    </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+
+#### Codegen 2.0 / AI-assisted development
+
+- Assistants (e.g. Github CoPilot, OpenAI Codex, Google Gemini, Jetbrains AI)
+- Prototype generators (e.g. Figma Make, Miro AI, v0)
+- Toolsets (e.g. Google Antigravity, Kilo AI, Roo-Code, Claude Code)
+- Code from spec (e.g. GitHub SpecKit, AWS Kiro, Tessl Framework, Gemini Cli with Conductor)
+
+Tools are emerging rapidly, but still experimental. No standard practices.
+Same challenges as in traditional coding (quality, security, maintainability, ..)
+                    </textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### Codegen 1.0 & 2.0 synergy
+
+- Codegen 1.0 can generate boilerplate code as well as Codegen 2.0 inputs.
+- Codegen 2.0 can transform Codegen 1.0 outputs and orchestrate codegen 1.0 tools usage.
+
+It's possible to combine both approaches for better results.
+Custom MCP servers can be created to wrap Codegen 1.0 tools,
+for example with Jetbrains Koog.ai.
                     </textarea>
                 </section>
 
