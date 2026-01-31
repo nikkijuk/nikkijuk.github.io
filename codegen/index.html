@@ -49,19 +49,29 @@ even though one can give no account of the principles by which this is done." - 
 
                 <section data-markdown>
 					<textarea data-template>
-#### AI autonomy levels
-
 <img alt="nc 1990" src="images/ai_autonomy.png" width="100%">
 
-"Human" (None) to "Superbrain" (All) scale for AI tools.
-Current tools are mostly at "Assistance" level, where AI suggests code,
+"Human" to "Superbrain" scale of AI autonomy.
+Current tools are at "Assistance" (L1) level, where AI suggests code,
 but human decides what to accept.
+Support for team collaboration (L2) is emerging.
                     </textarea>
                 </section>
 
                 <section data-markdown>
 					<textarea data-template>
-#### Measuring AI impact / Study results
+<img alt="nc 1990" src="images/hype-cycle-2025.png" width="100%">
+
+Ai-augmented SW development, currently at the peak of inflated expectations,
+requires 2-5 years for tools to mature and best practices to emerge.
+
+                    </textarea>
+                </section>
+
+
+                <section data-markdown>
+					<textarea data-template>
+#### Current State of Art / Study results
 
 "Code written with AI assistance was no
 harder to change, no easier to change,
@@ -178,7 +188,7 @@ that code is the ultimate authority
 <img alt="nc 1990" src="images/sdd-usecases.png" width="80%">
 
 - develop new, renew (code=>spec, spec=>code), or re-architect systems.
-- role of developers changes from code writers to system architects.
+- role of developers changes from code writers to system architects and coordinators.
                     </textarea>
                 </section>
 
@@ -234,7 +244,7 @@ Governance of context is shared responsibility.
 
 <img alt="nc 1990" src="images/sdd-time-division.jpeg" width="60%">
 
-- Spec / Prompt is continuously refined. Code is mostly byproduct, which needs to be reviewed.
+- Spec / Prompt is continuously refined. Code needs to be reviewed and tested after every iteration.
 - Work content changes and adapts. Required skill combination might be rather uncommon.
 - New roles emerge (spec architect, spec engineer, ..). There might be scaling bottlenecks (skill shortage).
 
@@ -276,21 +286,9 @@ there’s a lack of consensus on the ‘correct’ spec-driven development workf
 
 Writing or refining specifications requires the same level of systems thinking
 that was once limited to senior technical roles.
-					</textarea>
-                </section>
 
-                <section data-markdown>
-					<textarea data-template>
-#### [SDD and Double diamond]()
-
-<img alt="nc 1990" src="images/double-diamond_2.png" width="40%">
-
-- Spec can be created at product discovery.
-- Define can produce working generated prototype.
-- Develop and deliver refine prototype to product.
-
-Reverse double diamond:
-create working solution first, then start research and collect insights.
+Current teams might lack the necessary skills and mindset,
+leading to potential adoption challenges.
 					</textarea>
                 </section>
 
@@ -350,7 +348,7 @@ to take the smart risks that lead to progress." - Amy Edmondson
 - Modular architecture for incremental adoption.
 - Typed, nullsafe, garbage collected language.
 - Controls like automated build pipeline.
-- Backend might be easier than frontend.
+- Backend (no visuals) might be easier than frontend.
 					</textarea>
                 </section>
 
@@ -393,6 +391,21 @@ into formal structures. But we will never eliminate necessary precision —
 so there will always be code.”
 ― Robert C. Martin
 
+					</textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
+#### [SDD and Double diamond]()
+
+<img alt="nc 1990" src="images/double-diamond_2.png" width="40%">
+
+- Spec can be created at product discovery.
+- Define can produce working generated prototype.
+- Develop and deliver refine prototype to product.
+
+Reverse double diamond:
+create working solution first, then start research and collect insights.
 					</textarea>
                 </section>
 
