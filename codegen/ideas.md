@@ -78,6 +78,20 @@ https://blog.logrocket.com/ux-design/double-diamond-design-process/
 
 https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/
 
+https://ordep.dev/posts/writing-code-was-never-the-bottleneck
+
+https://www.linkedin.com/pulse/effort-writing-code-versus-developing-software-vois-peeter/
+
+https://newsletter.pragmaticengineer.com/p/how-ai-will-change-software-engineering
+
+https://medium.com/@ryanwhitwell/ai-exposes-the-physics-of-software-delivery-833290d71a94
+
+## Studies
+
+Echoes of AI: Investigating the Downstream Effects of AI Assistants on Software Maintainability
+
+https://arxiv.org/abs/2507.00788
+
 ## Sources  
 
 # Models

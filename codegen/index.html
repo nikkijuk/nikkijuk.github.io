@@ -71,7 +71,7 @@ requires 2-5 years for tools to mature and best practices to emerge.
 
                 <section data-markdown>
 					<textarea data-template>
-#### Current State of Art / Study results
+#### [AI code maintainability Study 12/25](https://arxiv.org/abs/2507.00788)
 
 "Code written with AI assistance was no
 harder to change, no easier to change,
@@ -94,6 +94,20 @@ but how we use them matters more.
 " - Dave Farley
 					</textarea>
                 </section>
+                <section data-markdown>
+					<textarea data-template>
+### [Physics of software development](https://medium.com/@ryanwhitwell/ai-exposes-the-physics-of-software-delivery-833290d71a94)
+
+"When execution becomes cheap, the dominant costs move upstream:
+problem framing, scope boundaries, success criteria,
+and assumptions about risk and reversibility become king.
+
+Work that can’t be clearly described can’t be safely accelerated.
+
+Work that can’t be decomposed can’t be meaningfully delegated,
+whether to people or to machines (I’m looking at you agents)."
+					</textarea>
+                </section>
 
                 <section data-markdown>
 					<textarea data-template>
@@ -105,6 +119,8 @@ while strategic context engineering (Spec Driven Development) builds long-term k
 Plan mode is supposed to fit better for greenfield solo projects,
 whereas spec driven development (SDD) is better for team projects with evolving requirements.
 
+Spec driven development requires more upfront investment in context creation and maintenance,
+but can yield better long-term results.
                     </textarea>
                 </section>
 
@@ -115,7 +131,7 @@ whereas spec driven development (SDD) is better for team projects with evolving 
 
 <img alt="nc 1990" src="images/claude-context.png" width="60%">
 
-- Codebase is used as context
+- Existing codebase is important part of context
 - Instruction files (e.g. Claude.md) define constraints.
 - MCP servers integrate external data sources.
 
@@ -183,12 +199,13 @@ that code is the ultimate authority
 
                 <section data-markdown>
 					<textarea data-template>
-### [SDD Use-cases](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
+### [Possible SDD Use-cases](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
 
 <img alt="nc 1990" src="images/sdd-usecases.png" width="80%">
 
-- develop new, renew (code=>spec, spec=>code), or re-architect systems.
-- role of developers changes from code writers to system architects and coordinators.
+- develop new or renew (code=>spec, spec=>code).
+- change technologies, replatform or rearchitect.
+- maintain alignment between implementation and evolving business requirements.
                     </textarea>
                 </section>
 
@@ -292,18 +309,22 @@ leading to potential adoption challenges.
 					</textarea>
                 </section>
 
-				<section data-markdown>
+                <section data-markdown>
 					<textarea data-template>
-				#### [SDD Hypothesis](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
+#### [Knowledge paradox](https://addyo.substack.com/p/the-70-problem-hard-truths-about)
 
-Businesses that rely solely on AI-generated code without structured specs
-accumulate hallucinated logic, inconsistent patterns, and unpredictable failures.
+Seniors
+- use AI to accelerate what they already know well
+- build prototypes, skeletons and automate tasks
 
-But those that adopt SDD will shift from code ownership –
-where engineers fight to keep implementations aligned to intent ownership –
-where specifications drive the entire lifecycle.
-					</textarea>
-				</section>
+Juniors
+- try to use AI to learn what to do
+- build fragile systems they don't fully understand
+
+AI is like eager junior developer in your team.
+AI needs to be constantly supervised and corrected.
+                    </textarea>
+                </section>
 
                 <section data-markdown>
 					<textarea data-template>
@@ -342,13 +363,13 @@ to take the smart risks that lead to progress." - Amy Edmondson
 					<textarea data-template>
 					#### SDD adoption: Start here.
 
-- New greenfield projects without legacy constraints.
+- Greenfield projects without legacy constraints.
 - Well-defined domains with clear requirements.
 - Teams open to experimentation and new practices.
 - Modular architecture for incremental adoption.
-- Typed, nullsafe, garbage collected language.
-- Controls like automated build pipeline.
+- Type- & null-safe, garbage collected language.
 - Backend (no visuals) might be easier than frontend.
+- Controls like automated build pipeline exist.
 					</textarea>
                 </section>
 
@@ -411,6 +432,19 @@ create working solution first, then start research and collect insights.
 
                 <section data-markdown>
 					<textarea data-template>
+				#### [SDD Hypothesis](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
+
+Businesses that rely solely on AI-generated code without structured specs
+accumulate hallucinated logic, inconsistent patterns, and unpredictable failures.
+
+But those that adopt SDD will shift from code ownership –
+where engineers fight to keep implementations aligned to intent ownership –
+where specifications drive the entire lifecycle.
+					</textarea>
+                </section>
+
+                <section data-markdown>
+					<textarea data-template>
 #### Sloppy inputs => AI slop
 
 <img alt="nc 1990" src="images/gigo_1.png" width="40%">
@@ -421,6 +455,7 @@ I am not able rightly to apprehend the kind of confusion of ideas that could pro
 — Charles Babbage
 					</textarea>
                 </section>
+
                 <section data-markdown>
 					<textarea data-template>
 #### [AI assets / responsibility](https://www.nitorinfotech.com/blog/spec-driven-development-explained/)
