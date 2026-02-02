@@ -86,6 +86,8 @@ https://newsletter.pragmaticengineer.com/p/how-ai-will-change-software-engineeri
 
 https://medium.com/@ryanwhitwell/ai-exposes-the-physics-of-software-delivery-833290d71a94
 
+https://www.thoughtworks.com/en-de/perspectives/edition36-ai-first-software-engineering/article
+
 ## Studies
 
 Echoes of AI: Investigating the Downstream Effects of AI Assistants on Software Maintainability
@@ -100,6 +102,9 @@ https://models.dev/
 
 ## Videos
 
+AI-First Software Delivery: Balancing Innovation with Proven Practices
+
+https://www.youtube.com/watch?v=wVyQn6QRcT4
 
 ## Studies
 
@@ -239,3 +244,13 @@ and testing the fidelity of the representation."
 “Conceptual integrity does require that a system reflect a single philosophy
 and that the specification as seen by the user flow from a few minds."
 ― Frederick P. Brooks Jr.
+
+"In a situation of rapid change, you've got to be ready to try a dozen different things,
+knowing that most of them won't work -
+but that's the only way you're going to discover the things that do." - Martin Fowler
+
+"Im Prozess der schöpferischen Zerstörung entstehen Situationen,
+in denen viele Firmen sterben,
+die nichtsdestotrotz in der Lage gewesen wären,
+eifrig und nützlich fortzubestehen,
+wenn sie diesen einen Sturm überstanden hätten." - Joseph A. Schumpeter
