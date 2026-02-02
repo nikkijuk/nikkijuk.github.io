@@ -88,11 +88,17 @@ https://medium.com/@ryanwhitwell/ai-exposes-the-physics-of-software-delivery-833
 
 https://www.thoughtworks.com/en-de/perspectives/edition36-ai-first-software-engineering/article
 
+https://www.gartner.com/en/articles/ai-in-software-engineering
+
 ## Studies
 
 Echoes of AI: Investigating the Downstream Effects of AI Assistants on Software Maintainability
 
 https://arxiv.org/abs/2507.00788
+
+We Studied 150 Developers Using AI (Here’s What's Actually Changed...)
+
+https://www.youtube.com/watch?v=b9EbCb5A408
 
 ## Sources  
 
@@ -105,12 +111,6 @@ https://models.dev/
 AI-First Software Delivery: Balancing Innovation with Proven Practices
 
 https://www.youtube.com/watch?v=wVyQn6QRcT4
-
-## Studies
-
-We Studied 150 Developers Using AI (Here’s What's Actually Changed...)
-
-https://www.youtube.com/watch?v=b9EbCb5A408
 
 ## Channel
 
