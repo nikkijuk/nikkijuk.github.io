@@ -254,3 +254,5 @@ in denen viele Firmen sterben,
 die nichtsdestotrotz in der Lage gewesen wären,
 eifrig und nützlich fortzubestehen,
 wenn sie diesen einen Sturm überstanden hätten." - Joseph A. Schumpeter
+
+"We find this space fascinating, though the workflows remain elaborate and opinionated." - Thoughtworks
