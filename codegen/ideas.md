@@ -90,6 +90,8 @@ https://www.thoughtworks.com/en-de/perspectives/edition36-ai-first-software-engi
 
 https://www.gartner.com/en/articles/ai-in-software-engineering
 
+https://uxdesign.cc/how-we-choose-to-use-ai-is-the-new-marshmallow-test-c58c34b47c58
+
 ## Studies
 
 Echoes of AI: Investigating the Downstream Effects of AI Assistants on Software Maintainability
@@ -256,3 +258,18 @@ eifrig und nützlich fortzubestehen,
 wenn sie diesen einen Sturm überstanden hätten." - Joseph A. Schumpeter
 
 "We find this space fascinating, though the workflows remain elaborate and opinionated." - Thoughtworks
+
+"A fool with a tool is still a fool" is a maxim, often attributed to
+Grady Booch, highlighting that technology and tools cannot compensate for a lack of skill, knowledge, or judgment. It emphasizes that effectiveness stems from human competence rather than just adopting sophisticated, new, or automated tools. 
+
+“I believe the hard part of building software to be the specification, design,
+and testing of this conceptual construct, not the labor of representing it
+and testing the fidelity of the representation." ― Fred Brooks
+
+https://jdmeier.com/ai-quotes/
+
+"The success of everything depends on intuition,
+the capacity of seeing things in a way which afterwards proves to be true,
+even though it cannot be established at the moment,
+and of grasping the essential fact, discarding the unessential,
+even though one can give no account of the principles by which this is done." - Joseph A. Schumpeter
