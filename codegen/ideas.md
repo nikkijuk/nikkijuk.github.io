@@ -54,6 +54,10 @@ https://www.jetbrains.com/koog/
 
 https://agents.md/
 
+## Mcp servers
+
+https://mcp.so/server/PolarionMcpServers/peakflames
+
 ## Articles
 
 https://en.wikipedia.org/wiki/Garbage_in,_garbage_out
@@ -273,3 +277,7 @@ the capacity of seeing things in a way which afterwards proves to be true,
 even though it cannot be established at the moment,
 and of grasping the essential fact, discarding the unessential,
 even though one can give no account of the principles by which this is done." - Joseph A. Schumpeter
+
+“What would you attempt to do if you knew you wouldn’t fail?” – Robert H. Schuller
+
+https://playingtheinfinitegame.com/quotes/
