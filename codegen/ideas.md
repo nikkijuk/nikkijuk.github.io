@@ -96,6 +96,12 @@ https://www.gartner.com/en/articles/ai-in-software-engineering
 
 https://uxdesign.cc/how-we-choose-to-use-ai-is-the-new-marshmallow-test-c58c34b47c58
 
+https://www.signifyresearch.net/insights/will-ai-in-medical-imaging-cross-the-chasm/
+
+https://atlan.com/know/ai-value-chasm/
+
+https://www.infoq.com/podcasts/technology-radar-reality-software-development/
+
 ## Studies
 
 Echoes of AI: Investigating the Downstream Effects of AI Assistants on Software Maintainability
@@ -281,3 +287,5 @@ even though one can give no account of the principles by which this is done." - 
 “What would you attempt to do if you knew you wouldn’t fail?” – Robert H. Schuller
 
 https://playingtheinfinitegame.com/quotes/
+
+“The future belongs to those who see possibilities before they become obvious.” - John Sculley
