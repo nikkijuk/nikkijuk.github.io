@@ -289,3 +289,10 @@ even though one can give no account of the principles by which this is done." - 
 https://playingtheinfinitegame.com/quotes/
 
 “The future belongs to those who see possibilities before they become obvious.” - John Sculley
+
+**
+
+Right thing, in right quality, requires right tools,
+but also right processes, and right mindset.
+Irreversible changes and high uncertainty require experimentation and learning.
+
