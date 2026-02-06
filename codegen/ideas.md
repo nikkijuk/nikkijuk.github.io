@@ -122,6 +122,10 @@ We Studied 150 Developers Using AI (Here’s What's Actually Changed...)
 
 https://www.youtube.com/watch?v=b9EbCb5A408
 
+## Workflows
+
+https://github.com/johnpeterman72/CursorRIPER
+
 ## Sources  
 
 # Models
