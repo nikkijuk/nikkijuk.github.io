@@ -102,6 +102,16 @@ https://atlan.com/know/ai-value-chasm/
 
 https://www.infoq.com/podcasts/technology-radar-reality-software-development/
 
+https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-change-agent-goals-decisions-and-implications-for-ceos-in-the-agentic-age#/
+
+https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/empowering-advanced-industries-with-agentic-ai
+
+https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-agentic-organization-contours-of-the-next-paradigm-for-the-ai-era
+
+https://www.mckinsey.de/industries/life-sciences/our-insights/reimagining-life-science-enterprises-with-agentic-ai
+
+https://www.mckinsey.de/industries/life-sciences/our-insights/reimagining-life-science-enterprises-with-agentic-ai
+
 ## Studies
 
 Echoes of AI: Investigating the Downstream Effects of AI Assistants on Software Maintainability
