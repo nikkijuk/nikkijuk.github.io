@@ -341,3 +341,13 @@ but that's the only way you're going to discover the things that do." - Martin F
 
 
 "Das Alte auf eine neue Weise tun – das ist Innovation." - Joseph A. Schumpeter
+
+"The first rule of any technology used in a business is
+that automation applied to an efficient operation
+will magnify the efficiency.
+The second is that automation applied to an inefficient operation
+will magnify the inefficiency." - Bill Gates
+
+"We always overestimate the change that will occur in the next two years
+and underestimate the change that will occur in the next ten.
+Don't let yourself be lulled into inaction." - Bill Gates
