@@ -338,3 +338,6 @@ knowing that most of them won't work -
 but that's the only way you're going to discover the things that do." - Martin Fowler
 
 “The future belongs to those who see possibilities before they become obvious.” - John Sculley
+
+
+"Das Alte auf eine neue Weise tun – das ist Innovation." - Joseph A. Schumpeter
