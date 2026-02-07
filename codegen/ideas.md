@@ -54,6 +54,8 @@ https://www.jetbrains.com/koog/
 
 https://agents.md/
 
+https://www.thoughtworks.com/ai/works
+
 ## Mcp servers
 
 https://mcp.so/server/PolarionMcpServers/peakflames
@@ -122,6 +124,11 @@ We Studied 150 Developers Using AI (Here’s What's Actually Changed...)
 
 https://www.youtube.com/watch?v=b9EbCb5A408
 
+AI/Works
+    
+https://www.youtube.com/watch?v=fTiEI08itvE
+
+
 ## Workflows
 
 https://github.com/johnpeterman72/CursorRIPER
@@ -134,9 +141,15 @@ https://models.dev/
 
 ## Videos
 
-AI-First Software Delivery: Balancing Innovation with Proven Practices
+AI-First Software Delivery: Balancing Innovation with Proven Practices (Thoughtworks)
 
 https://www.youtube.com/watch?v=wVyQn6QRcT4
+
+Moving away from Agile: What's Next (McKinsey)
+
+https://www.youtube.com/watch?v=SZStlIhyTCY
+
+
 
 ## Channel
 
@@ -310,3 +323,18 @@ Right thing, in right quality, requires right tools,
 but also right processes, and right mindset.
 Irreversible changes and high uncertainty require experimentation and learning.
 
+**
+
+
+
+"The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. 
+
+The second is that automation applied to an inefficient operation will magnify the inefficiency."
+
+- Bill Gates
+
+"In a situation of rapid change, you've got to be ready to try a dozen different things,
+knowing that most of them won't work -
+but that's the only way you're going to discover the things that do." - Martin Fowler
+
+“The future belongs to those who see possibilities before they become obvious.” - John Sculley
