@@ -91,17 +91,25 @@ coordinate tasks, and integrate code.
 This allows developer to focus on high-level design and architecture,
 while AI agents handle low-level details.
 
-SDD is like having a team of developers who work together to create code.
-It's not magic, it's just tool that helps you to write code faster,
-but like real code writing, it requires skill and practice to use it effectively,
-and results can vary depending on the quality of the inputs and the capabilities of the LLM,
-used toolset, agent orchestration as well as your skill to guide it.
-
 GIGO (garbage in, garbage out) applies to all code generation approaches.
 If inputs are poor quality, generated code will be poor quality.
 If inputs are high quality, generated code will be of better quality,
 but as SDD is non-deterministic approach, results can still vary,
 and hallucinations are possible.
+
+Using AI assistants for generating code is not without challenges.
+Bad practices are intensified, generations may be wasteful (need lot of iterations), expensive (use lot of tokens),
+and create lot of noise (code changes per each generation might be huge) while codebase is evolving.
+It's possible that amount of code that needs to be reviewed drains developers energy,
+creativity and motivation, and that they might not be able to evolve system as team.
+It should be noted that one can learn style of coworkers,
+and changes to codebase are typically small and local, 
+which makes it easier to review and maintain codebase
+written by humans.
+
+It will take time to understand how to use SDD effectively, and to find best practices for it.
+There's lot of promises done, experiments needed, but also challenges to overcome.
+It is possible that some teams will find it useful, while others might outright hate it.
 
 ## Revisiting Flutter, Bloc and immutable data for UIs
 

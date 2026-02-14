@@ -114,6 +114,16 @@ https://www.mckinsey.de/industries/life-sciences/our-insights/reimagining-life-s
 
 https://www.mckinsey.de/industries/life-sciences/our-insights/reimagining-life-science-enterprises-with-agentic-ai
 
+https://svenbalnojan.medium.com/ais-real-superpower-isn-t-speed-it-s-making-you-ruthless-ee0e894367d3
+
+https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/unlocking-the-value-of-ai-in-software-development
+
+https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-ai-centric-imperative-navigating-the-next-software-frontier
+
+https://dev.to/jmontagne/mckinsey-just-killed-agile-why-commando-units-are-the-only-way-to-survive-legacy-migration-40lk
+
+https://www.linkedin.com/posts/reto-kurmann-b7ba277_rethinking-agile-in-an-ai-driven-sdlc-interesting-activity-7416224361663385600-gSLf/
+
 ## Studies
 
 Echoes of AI: Investigating the Downstream Effects of AI Assistants on Software Maintainability
