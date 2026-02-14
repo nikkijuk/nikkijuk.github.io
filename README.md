@@ -102,10 +102,14 @@ Bad practices are intensified, generations may be wasteful (need lot of iteratio
 and create lot of noise (code changes per each generation might be huge) while codebase is evolving.
 It's possible that amount of code that needs to be reviewed drains developers energy,
 creativity and motivation, and that they might not be able to evolve system as team.
-It should be noted that one can learn style of coworkers,
+
+It should be noted that humans can learn style of coworkers,
 and changes to codebase are typically small and local, 
 which makes it easier to review and maintain codebase
-written by humans.
+written by humans. Humans also learn something while writing code,
+and are communicating together to share knowledge and ideas.
+AI agents are not learning, and it might be impossible or inefficient to correct them,
+so there might be need to just take control and finish tasks by yourself.
 
 It will take time to understand how to use SDD effectively, and to find best practices for it.
 There's lot of promises done, experiments needed, but also challenges to overcome.
